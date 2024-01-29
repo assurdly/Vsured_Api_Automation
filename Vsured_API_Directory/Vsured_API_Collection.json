@@ -1,0 +1,1324 @@
+{
+	"info": {
+		"_postman_id": "a536e47d-3595-469d-b1ca-cc4d4af5b41a",
+		"name": "Vsured-QA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"item": [
+				{
+					"name": "Register- Successful",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "ab85f89b-439e-49dd-b04c-cea107c111bf",
+								"exec": [
+									"pm.globals.set(\"phoneNumber\", parseInt(234 + `${_.random(1000000, 9999999)}`));"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "0e8ebe61-c7f1-4a46-83e9-aa7ec46780ae",
+								"exec": [
+									"pm.test(\"Verify that Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Verify that status returns Success\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.status).to.eql(\"Success\");\r",
+									"});\r",
+									"pm.test(\"Verify that message returns Successfully registered user\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.message).to.eql(\"Successfully registered user\");\r",
+									"});\r",
+									"pm.test(\"Verify that data exist\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.data).to.exist;\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "05c2b252-81d8-44f5-8ed0-66134c657b3d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"FirstName\":\"{{$randomFirstName}}\",\n    \"LastName\":\"{{$randomLastName}}\",\n    \"Gender\":\"Male\",\n    \"Address\":\"lagos,Nigeria\",\n    \"Phone\":\"08057231914\",\n    \"PhotoPath\":\"tetstphoto\",\n    \"Password\":\"Password@12\",\n    \"VerifyChannel\":\"email\",\n    \"Language\":\"english\",\n    \"CompanyType\":\"Banking\",\n    \"DOB\":\"1993/01/01\",\n    \"Email\":\"{{$randomFirstName}}12@yopmail.com\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}/api/register"
+					},
+					"response": []
+				},
+				{
+					"name": "Register- Already registered PhoneNo",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "ab85f89b-439e-49dd-b04c-cea107c111bf",
+								"exec": [
+									"pm.globals.set(\"phoneNumber\", parseInt(234 + `${_.random(1000000, 9999999)}`));"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "0e8ebe61-c7f1-4a46-83e9-aa7ec46780ae",
+								"exec": [
+									"pm.test(\"Verify that Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"Verify that status returns failed\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+									"});\r",
+									"pm.test(\"Verify that message returns User with this Phone already exist\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.message).to.eql(\"User with this Phone already exist\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "5a26ef30-a0bf-415b-b24d-8b5fc48d1d86",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"FirstName\":\"{{$randomFirstName}}\",\n    \"LastName\":\"{{$randomLastName}}\",\n    \"Gender\":\"Male\",\n    \"Address\":\"lagos,Nigeria\",\n    \"Phone\":\"08057231914\",\n    \"PhotoPath\":\"tetstphoto\",\n    \"Password\":\"Password@12\",\n    \"VerifyChannel\":\"email\",\n    \"Language\":\"english\",\n    \"CompanyType\":\"Banking\",\n    \"DOB\":\"1993/01/01\",\n    \"Email\":\"{{$randomFirstName}}12@yopmail.com\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}/api/register"
+					},
+					"response": []
+				},
+				{
+					"name": "Register- Already Registered Email",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "ab85f89b-439e-49dd-b04c-cea107c111bf",
+								"exec": [
+									"pm.globals.set(\"phoneNumber\", parseInt(234 + `${_.random(1000000, 9999999)}`));"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "0e8ebe61-c7f1-4a46-83e9-aa7ec46780ae",
+								"exec": [
+									"pm.test(\"Verify that Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"Verify that status returns failed\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+									"});\r",
+									"pm.test(\"Verify that message returns User with this Email already exist\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.message).to.eql(\"User with this Email already exist\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "5d918974-4704-4919-a4eb-88117d24e47d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"FirstName\":\"{{$randomFirstName}}\",\n    \"LastName\":\"{{$randomLastName}}\",\n    \"Gender\":\"Male\",\n    \"Address\":\"lagos,Nigeria\",\n    \"Phone\":\"08057231914\",\n    \"PhotoPath\":\"tetstphoto\",\n    \"Password\":\"Password@12\",\n    \"VerifyChannel\":\"email\",\n    \"Language\":\"english\",\n    \"CompanyType\":\"Banking\",\n    \"DOB\":\"1993/01/01\",\n    \"Email\":\"Marielle12@yopmail.com\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}/api/register"
+					},
+					"response": []
+				},
+				{
+					"name": "Register- Empty First name field",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "ab85f89b-439e-49dd-b04c-cea107c111bf",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "e83995bf-28ec-4091-83b2-10b811f8ea5d",
+								"exec": [
+									"pm.test(\"Verify that Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"Verify that type returns field\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData[0].type).to.eql(\"field\");\r",
+									"});\r",
+									"pm.test(\"Verify that message returns FirstName is required\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData[0].msg).to.eql(\"FirstName is required\");\r",
+									"});\r",
+									"pm.test(\"Verify that path returns FirstName\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData[0].path).to.eql(\"FirstName\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "617c504d-1d86-4ad1-ae30-ed9754cbca62",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"FirstName\":\"\",\n    \"LastName\":\"Ajibose\",\n    \"Gender\":\"Male\",\n    \"Address\":\"lagos,Nigeria\",\n    \"Phone\":\"08057231914\",\n    \"PhotoPath\":\"tetstphoto\",\n    \"Password\":\"ajibose419\",\n    \"VerifyChannel\":\"email\",\n    \"Language\":\"english\",\n    \"CompanyType\":\"Banking\",\n    \"DOB\":\"1993/01/01\",\n    \"Email\":\"abiodun@gmail.com\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}/api/register"
+					},
+					"response": []
+				},
+				{
+					"name": "Register- Empty Last name field",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "ab85f89b-439e-49dd-b04c-cea107c111bf",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "85c75882-88f8-416e-930c-f29b29a4ff49",
+								"exec": [
+									"pm.test(\"Verify that Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"Verify that type returns field\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData[0].type).to.eql(\"field\");\r",
+									"});\r",
+									"pm.test(\"Verify that message returns LastName is required\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData[0].msg).to.eql(\"LastName is required\");\r",
+									"});\r",
+									"pm.test(\"Verify that path returns LastName\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData[0].path).to.eql(\"LastName\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "e5c54f67-de72-40a5-924e-ad2aa1f8ae80",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"FirstName\":\"Alexander\",\n    \"LastName\":\"\",\n    \"Gender\":\"Male\",\n    \"Address\":\"lagos,Nigeria\",\n    \"Phone\":\"08057231914\",\n    \"PhotoPath\":\"tetstphoto\",\n    \"Password\":\"ajibose419\",\n    \"VerifyChannel\":\"email\",\n    \"Language\":\"english\",\n    \"CompanyType\":\"Banking\",\n    \"DOB\":\"1993/01/01\",\n    \"Email\":\"abiodun@gmail.com\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}/api/register"
+					},
+					"response": []
+				},
+				{
+					"name": "Register- Empty Gender Field",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "ab85f89b-439e-49dd-b04c-cea107c111bf",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "610e02ec-80c2-4430-9288-96a8b0b41d49",
+								"exec": [
+									"pm.test(\"Verify that Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"Verify that type returns field\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData[0].type).to.eql(\"field\");\r",
+									"});\r",
+									"pm.test(\"Verify that message returns Gender is required\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData[0].msg).to.eql(\"Gender is required\");\r",
+									"});\r",
+									"pm.test(\"Verify that path returns Gender\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData[0].path).to.eql(\"Gender\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "ae356811-1f79-48d2-a1f4-a47c94662de8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"FirstName\":\"Alexander\",\n    \"LastName\":\"Ajibose\",\n    \"Gender\":\"\",\n    \"Address\":\"lagos,Nigeria\",\n    \"Phone\":\"08057231914\",\n    \"PhotoPath\":\"tetstphoto\",\n    \"Password\":\"ajibose419\",\n    \"VerifyChannel\":\"email\",\n    \"Language\":\"english\",\n    \"CompanyType\":\"Banking\",\n    \"DOB\":\"1993/01/01\",\n    \"Email\":\"abiodun@gmail.com\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}/api/register"
+					},
+					"response": []
+				},
+				{
+					"name": "Register- Empty Address Field",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "ab85f89b-439e-49dd-b04c-cea107c111bf",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "ca317a73-da3d-4e9f-9a80-962ef80e5148",
+								"exec": [
+									"pm.test(\"Verify that Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"Verify that type returns field\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData[0].type).to.eql(\"field\");\r",
+									"});\r",
+									"pm.test(\"Verify that message returns Address is required\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData[0].msg).to.eql(\"Address is required\");\r",
+									"});\r",
+									"pm.test(\"Verify that path returns Address\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData[0].path).to.eql(\"Address\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "1fcedcb1-d8f8-4b39-9e1d-d58842b5cfcd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"FirstName\":\"Alexander\",\n    \"LastName\":\"Ajibose\",\n    \"Gender\":\"Male\",\n    \"Address\":\"\",\n    \"Phone\":\"08057231914\",\n    \"PhotoPath\":\"tetstphoto\",\n    \"Password\":\"ajibose419\",\n    \"VerifyChannel\":\"email\",\n    \"Language\":\"english\",\n    \"CompanyType\":\"Banking\",\n    \"DOB\":\"1993/01/01\",\n    \"Email\":\"abiodun@gmail.com\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}/api/register"
+					},
+					"response": []
+				},
+				{
+					"name": "Register- Empty Phone number field",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "ab85f89b-439e-49dd-b04c-cea107c111bf",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "05f39363-a056-43c0-942b-af6b94a969e4",
+								"exec": [
+									"pm.test(\"Verify that Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"Verify that type returns field\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData[0].type).to.eql(\"field\");\r",
+									"});\r",
+									"pm.test(\"Verify that message returns PhoneNumber is required\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData[0].msg).to.eql(\"PhoneNumber is required\");\r",
+									"});\r",
+									"pm.test(\"Verify that path returns Phone\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData[0].path).to.eql(\"Phone\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "ab6f6b62-ef5a-41fc-ae95-39eba459eb14",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"FirstName\":\"Alexander\",\n    \"LastName\":\"Ajibose\",\n    \"Gender\":\"Male\",\n    \"Address\":\"lagos,Nigeria\",\n    \"Phone\":\"\",\n    \"PhotoPath\":\"tetstphoto\",\n    \"Password\":\"ajibose419\",\n    \"VerifyChannel\":\"email\",\n    \"Language\":\"english\",\n    \"CompanyType\":\"Banking\",\n    \"DOB\":\"1993/01/01\",\n    \"Email\":\"abiodun@gmail.com\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}/api/register"
+					},
+					"response": []
+				},
+				{
+					"name": "Register- Empty Password Field",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "ab85f89b-439e-49dd-b04c-cea107c111bf",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "89c05ecc-22f9-4e03-8617-2da846ea2ba7",
+								"exec": [
+									"pm.test(\"Verify that Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"Verify that type returns field\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData[0].type).to.eql(\"field\");\r",
+									"});\r",
+									"pm.test(\"Verify that message returns Password is required\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData[0].msg).to.eql(\"Password is required\");\r",
+									"});\r",
+									"pm.test(\"Verify that path returns Password\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData[0].path).to.eql(\"Password\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "332069e4-8875-4e92-8f49-b4a7cd8f6f5a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"FirstName\":\"Alexander\",\n    \"LastName\":\"Ajibose\",\n    \"Gender\":\"Male\",\n    \"Address\":\"lagos,Nigeria\",\n    \"Phone\":\"08057231914\",\n    \"PhotoPath\":\"tetstphoto\",\n    \"Password\":\"\",\n    \"VerifyChannel\":\"email\",\n    \"Language\":\"english\",\n    \"CompanyType\":\"Banking\",\n    \"DOB\":\"1993/01/01\",\n    \"Email\":\"abiodun@gmail.com\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}/api/register"
+					},
+					"response": []
+				},
+				{
+					"name": "Register-Empty Date of Birth Field",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "ab85f89b-439e-49dd-b04c-cea107c111bf",
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "76047162-fa9f-4ad3-99de-d3fad28db82f",
+								"exec": [
+									"pm.test(\"Verify that Status code is 400\", function () {\r",
+									"    pm.response.to.have.status(400);\r",
+									"});\r",
+									"pm.test(\"Verify that type returns field\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData[0].type).to.eql(\"field\");\r",
+									"});\r",
+									"pm.test(\"Verify that message returns Date of Birth is required\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData[0].msg).to.eql(\"Date of Birth is required\");\r",
+									"});\r",
+									"pm.test(\"Verify that path returns DOB\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData[0].path).to.eql(\"DOB\");\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "79f9ba91-3083-405a-ac94-0e865eb1f3af",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"FirstName\":\"Alexander\",\n    \"LastName\":\"Ajibose\",\n    \"Gender\":\"Male\",\n    \"Address\":\"lagos,Nigeria\",\n    \"Phone\":\"08057231914\",\n    \"PhotoPath\":\"tetstphoto\",\n    \"Password\":\"ajibose419\",\n    \"VerifyChannel\":\"email\",\n    \"Language\":\"english\",\n    \"CompanyType\":\"Banking\",\n    \"DOB\":\"\",\n    \"Email\":\"abiodun@gmail.com\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}/api/register"
+					},
+					"response": []
+				},
+				{
+					"name": "Register- Empty Email Address",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "ab85f89b-439e-49dd-b04c-cea107c111bf",
+								"exec": [
+									"pm.globals.set(\"phoneNumber\", parseInt(234 + `${_.random(1000000, 9999999)}`));"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "0e8ebe61-c7f1-4a46-83e9-aa7ec46780ae",
+								"exec": [
+									"pm.test(\"Verify that Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"pm.test(\"Verify that status returns Success\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.status).to.eql(\"Success\");\r",
+									"});\r",
+									"pm.test(\"Verify that message returns Successfully registered user\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.message).to.eql(\"Successfully registered user\");\r",
+									"});\r",
+									"pm.test(\"Verify that data exist\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    pm.expect(jsonData.data).to.exist;\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "84b2316c-da4e-4d41-a0ea-fbdeac522cec",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"FirstName\":\"{{$randomFirstName}}\",\n    \"LastName\":\"{{$randomLastName}}\",\n    \"Gender\":\"Male\",\n    \"Address\":\"lagos,Nigeria\",\n    \"Phone\":\"08057231914\",\n    \"PhotoPath\":\"tetstphoto\",\n    \"Password\":\"Password@12\",\n    \"VerifyChannel\":\"email\",\n    \"Language\":\"english\",\n    \"CompanyType\":\"Banking\",\n    \"DOB\":\"1993/01/01\",\n    \"Email\":\"\"\n\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}/api/register"
+					},
+					"response": []
+				}
+			],
+			"id": "f6df7584-c312-4ec4-a941-04e4fe0edf12"
+		},
+		{
+			"name": "Send OTP to Registered Email",
+			"item": [
+				{
+					"name": "RegisterSendMail",
+					"id": "11d87fe7-5306-48ae-b81e-c0759ee5b6e5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Email\":\"abiodun@yopmail.com\",\n    \"Medium\":\"Email\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}/api/register/sendMail"
+					},
+					"response": []
+				},
+				{
+					"name": "RegisterSendMail- Empty Email field",
+					"id": "804b0426-812a-4350-96fe-412999f8a556",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Email\":\"\",\n    \"Medium\":\"Email\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}/api/register/sendMail"
+					},
+					"response": []
+				},
+				{
+					"name": "RegisterSendMail- Empty Medium field",
+					"id": "b15537e7-d8e6-4332-b1a4-0949c273b62a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Email\":\"abiodun@gmail.com\",\n    \"Medium\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}/api/register/sendMail"
+					},
+					"response": []
+				}
+			],
+			"id": "bc942820-b825-4801-a8e7-4bf43d410152"
+		},
+		{
+			"name": "Registration Verification",
+			"item": [
+				{
+					"name": "RegisterationVerify- Successful",
+					"id": "b357f4ee-ed72-47c7-9162-149936de3d43",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Email\":\"abiodun@gmail.com\",\n    \"Token\":\"256495\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/register/verify"
+					},
+					"response": []
+				},
+				{
+					"name": "RegisterationVerify- Empty Email field",
+					"id": "e3694384-72f3-4899-98c1-54d8ac8e1d6e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Email\":\"\",\n    \"Token\":\"256495\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/register/verify"
+					},
+					"response": []
+				},
+				{
+					"name": "RegisterationVerify- Empty Token field",
+					"id": "95df5dd0-bf05-4cdd-8975-80ca5c2d4dc7",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Email\":\"abiodun@gmail.com\",\n    \"Token\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}api/register/verify"
+					},
+					"response": []
+				}
+			],
+			"id": "fdc6ce19-ef31-43fe-80f6-4e4342979d66"
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "7fedcc3d-d0f0-4dc5-8000-80ca6a79013c",
+								"exec": [
+									"// Assuming the login response has the access token in the 'token' field",
+									"//const jsonResponse = pm.response.json();",
+									"//const accessToken = jsonResponse.accessToken;",
+									"",
+									"// Set the access token in the environment variable",
+									"//pm.environment.set('accessToken', accessToken);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "00f52749-72cd-4e95-91a6-6444bc3ac3a2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Phone\":\"08057231914\",\n    \"Password\":\"ajibose419\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Login- Empty PhoneNo",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "7fedcc3d-d0f0-4dc5-8000-80ca6a79013c",
+								"exec": [
+									"// Assuming the login response has the access token in the 'token' field",
+									"//const jsonResponse = pm.response.json();",
+									"//const accessToken = jsonResponse.accessToken;",
+									"",
+									"// Set the access token in the environment variable",
+									"//pm.environment.set('accessToken', accessToken);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "792bd6e1-c16e-4a28-a273-4444b9713d99",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Phone\":\"\",\n    \"Password\":\"tester319\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}/api/login"
+					},
+					"response": []
+				},
+				{
+					"name": "Login- Empty Password",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "7fedcc3d-d0f0-4dc5-8000-80ca6a79013c",
+								"exec": [
+									"// Assuming the login response has the access token in the 'token' field",
+									"//const jsonResponse = pm.response.json();",
+									"//const accessToken = jsonResponse.accessToken;",
+									"",
+									"// Set the access token in the environment variable",
+									"//pm.environment.set('accessToken', accessToken);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "de68b73b-23f7-4530-9f19-413cef0ba378",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Phone\":\"08057231914\",\n    \"Password\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}/login"
+					},
+					"response": []
+				}
+			],
+			"id": "38bfc21f-48df-432a-a92e-92e9da9de63c"
+		},
+		{
+			"name": "Refresh Token",
+			"item": [
+				{
+					"name": "RefreshToken",
+					"id": "9158e28c-57a3-41e8-aba6-3e3f6d3bccdd",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Email\":\"abiodun@gmail.com\",\n    \"RefreshToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoianVzdCBhIHJlZnJlc2ggdG9rZW4iLCJpYXQiOjE3MDU3NzY0OTgsImV4cCI6MTcwNjM4MTI5OH0.32qdL228NPsYTUMbbxaxDHpBSy1FvHnlL87Dx7bzPN0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}/api/refreshToken"
+					},
+					"response": []
+				},
+				{
+					"name": "RefreshToken- Empty Email field",
+					"id": "0a262ca0-9a82-4ce2-a1bd-187dbbff5c34",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Email\":\"\",\n    \"RefreshToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoianVzdCBhIHJlZnJlc2ggdG9rZW4iLCJpYXQiOjE3MDU3NzY0OTgsImV4cCI6MTcwNjM4MTI5OH0.32qdL228NPsYTUMbbxaxDHpBSy1FvHnlL87Dx7bzPN0\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}/api/refreshToken"
+					},
+					"response": []
+				},
+				{
+					"name": "RefreshToken- Empty RefreshToken field",
+					"id": "3cadd822-5629-4365-90dc-fbb285f51a88",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Email\":\"abiodun@gmail.com\",\n    \"RefreshToken\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}/api/refreshToken"
+					},
+					"response": []
+				}
+			],
+			"id": "7b7a391b-b939-4a07-9d2f-1d5b0b810bde"
+		},
+		{
+			"name": "Send Email-Forgot Password",
+			"item": [
+				{
+					"name": "ForgotPasswordSendMail-Successful",
+					"id": "3d0e2010-5536-4661-84d8-aea5fcac2231",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Email\":\"abiodun@gmail.com\",\n    \"DOB\":\"1993-01-01\",\n    \"Medium\":\"Email\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}/api/forgotPassword/sendMail"
+					},
+					"response": []
+				},
+				{
+					"name": "ForgotPasswordSendMail- Empty Email field",
+					"id": "d79c5c29-9c17-4cd8-98b6-b3d59a021878",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Email\":\"\",\n    \"DOB\":\"1993-01-01\",\n    \"Medium\":\"Email\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}/api/forgotPassword/sendMail"
+					},
+					"response": []
+				},
+				{
+					"name": "ForgotPasswordSendMail- Empty DOB field",
+					"id": "621f80d4-f914-448c-8d6c-5500c2d2424b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Email\":\"abiodun@gmail.com\",\n    \"DOB\":\"\",\n    \"Medium\":\"Email\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}/api/forgotPassword/sendMail"
+					},
+					"response": []
+				},
+				{
+					"name": "ForgotPasswordSendMail- Empty Medium field",
+					"id": "52ed9354-b56f-41b3-a1be-6bc744da3af8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Email\":\"abiodun@gmail.com\",\n    \"DOB\":\"1993-01-01\",\n    \"Medium\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}/api/forgotPassword/sendMail"
+					},
+					"response": []
+				}
+			],
+			"id": "3076b2bf-f34e-4252-a86e-ea386f103bef"
+		},
+		{
+			"name": "Forgot Password Verification",
+			"item": [
+				{
+					"name": "ForgotPasswordVerify",
+					"id": "bf412eeb-e6f2-4e81-acd5-d00d32d3745c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Email\":\"abiodun@gmail.com\",\n    \"Token\":\"325933\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}/api/forgotPassword/verify"
+					},
+					"response": []
+				},
+				{
+					"name": "ForgotPasswordVerify- Empty Email field",
+					"id": "237f8c84-2e58-48ac-b990-b68d519ed21e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Email\":\"\",\n    \"Token\":\"325933\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}/api/forgotPassword/verify"
+					},
+					"response": []
+				},
+				{
+					"name": "ForgotPasswordVerify- Empty Token field",
+					"id": "aea9086c-030d-4451-b201-3f704274cd4e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": {
+								"token": "{{accessToken}}"
+							}
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"Email\":\"abiodun@gmail.com\",\n    \"Token\":\"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{BaseUrl}}/api/forgotPassword/verify"
+					},
+					"response": []
+				}
+			],
+			"id": "f8b25411-e320-487d-a9f9-734e12dcfade"
+		},
+		{
+			"name": "New Folder",
+			"item": [],
+			"id": "39fee73c-c067-4a53-91fb-92fdddd51eb4"
+		},
+		{
+			"name": "New Folder",
+			"item": [],
+			"id": "9f42db7e-301f-446f-9277-a402da869eb5"
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": {}
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "4725bbf8-091f-4c66-b860-cc58f9407513",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "ca8af606-72b3-468f-9a31-dd4c15ee52de",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "BaseUrl",
+			"value": "localhost:3000",
+			"type": "string",
+			"disabled": true
+		},
+		{
+			"key": "accessToken",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6MjUsIkZpcnN0TmFtZSI6IkFsZXhhbmRlciIsIkxhc3ROYW1lIjoiQWppYm9zZSIsIkRPQiI6IjE5OTItMTItMzFUMjM6MDA6MDAuMDAwWiIsIkdlbmRlciI6Ik1hbGUiLCJBZGRyZXNzIjoibGFnb3MsTmlnZXJpYSIsIlBob25lIjoiMDgwNTcyMzE5MTQiLCJFbWFpbCI6ImFiaW9kdW5AZ21haWwuY29tIiwiUGhvdG9QYXRoIjoidGV0c3RwaG90byIsIlBhc3N3b3JkIjoiJDJiJDEwJFYvRS5YekFnaERZRXZLdnAvQmE3V3VHMjRZM21BQWN1dnliVEtEWnZQcXpvT3FESmR0VjBLIiwiVmVyaWZ5Q2hhbm5lbCI6ImVtYWlsIiwiSXNWZXJpZmllZCI6MSwiTGFuZ3VhZ2UiOiJlbmdsaXNoIiwiQ29tcGFueVR5cGUiOiJCYW5raW5nIiwiUmVmcmVzaFRva2VuIjoiZXlKaGJHY2lPaUpJVXpJMU5pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SmtZWFJoSWpvaWFuVnpkQ0JoSUhKbFpuSmxjMmdnZEc5clpXNGlMQ0pwWVhRaU9qRTNNRFUzTnpRMU1UUXNJbVY0Y0NJNk1UY3dOak0zT1RNeE5IMC42YmNNNTVESXJNUjdVbDZFZXhxUHlobHRKYjFiZ1Y0UjdKaWJRajZ1YW1ZIiwiaWF0IjoxNzA1Nzc0OTM1LCJleHAiOjE3MDU3Nzg1MzV9.B4t-0BcLvo2H-pG8MJcQdWS6lc1L57dwayRC5YodNHY",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}

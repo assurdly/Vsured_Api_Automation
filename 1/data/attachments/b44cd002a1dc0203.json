@@ -1,0 +1,13 @@
+{
+    "Server": "Cowboy",
+    "Report-To": "{\"group\":\"heroku-nel\",\"max_age\":3600,\"endpoints\":[{\"url\":\"https://nel.heroku.com/reports?ts=1706514234&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=SBCp6FizKBnuHG%2Fg83itEJmzssFXk8%2BywwR2RSN9%2Fp0%3D\"}]}",
+    "Reporting-Endpoints": "heroku-nel=https://nel.heroku.com/reports?ts=1706514234&sid=929419e7-33ea-4e2f-85f0-7d8b7cd5cbd6&s=SBCp6FizKBnuHG%2Fg83itEJmzssFXk8%2BywwR2RSN9%2Fp0%3D",
+    "Nel": "{\"report_to\":\"heroku-nel\",\"max_age\":3600,\"success_fraction\":0.005,\"failure_fraction\":0.05,\"response_headers\":[\"Via\"]}",
+    "Connection": "keep-alive",
+    "X-Powered-By": "Express",
+    "Content-Type": "application/json; charset=utf-8",
+    "Content-Length": "360",
+    "Etag": "W/\"168-2dVLmQvb3IKNNDSiZJujzj9kRzs\"",
+    "Date": "Mon, 29 Jan 2024 07:43:54 GMT",
+    "Via": "1.1 vegur"
+}

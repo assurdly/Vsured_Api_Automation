@@ -1,0 +1,4 @@
+{
+    "Email":"",
+    "RefreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoianVzdCBhIHJlZnJlc2ggdG9rZW4iLCJpYXQiOjE3MDU3NzY0OTgsImV4cCI6MTcwNjM4MTI5OH0.32qdL228NPsYTUMbbxaxDHpBSy1FvHnlL87Dx7bzPN0"
+}

@@ -883,14 +883,14 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"Phone\":\"08057231914\",\n    \"Password\":\"ajibose419\"\n}",
+									"raw": "{\n    \"Channel\":\"08145075789\",\n    \"Password\":\"111111\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
 										}
 									}
 								},
-								"url": "{{BaseUrl}}/login"
+								"url": "{{BaseUrl}}/api/login"
 							},
 							"response": []
 						},

@@ -1019,9 +1019,9 @@
 											"    var jsonData = pm.response.json();\r",
 											"    pm.expect(jsonData[0].msg).to.eql(\"Password is required\");\r",
 											"});\r",
-											"pm.test(\"Verify that path returns Channel\", function () {\r",
+											"pm.test(\"Verify that path returns Password\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData[0].path).to.eql(\"Channel\");\r",
+											"    pm.expect(jsonData[0].path).to.eql(\"Password\");\r",
 											"});"
 										],
 										"type": "text/javascript"

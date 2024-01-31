@@ -1071,7 +1071,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"Email\":\"abiodun@gmail.com\",\n    \"RefreshToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoianVzdCBhIHJlZnJlc2ggdG9rZW4iLCJpYXQiOjE3MDU3NzY0OTgsImV4cCI6MTcwNjM4MTI5OH0.32qdL228NPsYTUMbbxaxDHpBSy1FvHnlL87Dx7bzPN0\"\n}",
+									"raw": "{\n    \"Channel\":\"abiodun@gmail.com\",\n    \"RefreshToken\":\"{{$Refresh_token}}\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"

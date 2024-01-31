@@ -1249,6 +1249,32 @@
 						},
 						{
 							"name": "ForgotPasswordSendMail- Empty Channel field",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "ed60f2c4-98e1-40fd-89ef-32de21a50e2a",
+										"exec": [
+											"pm.test(\"Verify that Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"pm.test(\"Verify that type returns field\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].type).to.eql(\"field\");\r",
+											"});\r",
+											"pm.test(\"Verify that message includes Channel is required\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].msg).to.include(\"Channel is required\");\r",
+											"});\r",
+											"pm.test(\"Verify that path returns Channel\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].path).to.eql(\"Channel\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "d79c5c29-9c17-4cd8-98b6-b3d59a021878",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -1277,6 +1303,32 @@
 						},
 						{
 							"name": "ForgotPasswordSendMail- Empty DOB field",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "2b302a46-712c-4cbf-b33b-077f5f02ab65",
+										"exec": [
+											"pm.test(\"Verify that Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"pm.test(\"Verify that type returns field\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].type).to.eql(\"field\");\r",
+											"});\r",
+											"pm.test(\"Verify that message includes Must be date format\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].msg).to.include(\"Must be date format\");\r",
+											"});\r",
+											"pm.test(\"Verify that path returns DOB\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].path).to.eql(\"DOB\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "621f80d4-f914-448c-8d6c-5500c2d2424b",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -1305,6 +1357,32 @@
 						},
 						{
 							"name": "ForgotPasswordSendMail- Empty Medium field",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "57e4e6d5-5293-4031-b556-44066e1eaacc",
+										"exec": [
+											"pm.test(\"Verify that Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"pm.test(\"Verify that type returns field\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].type).to.eql(\"field\");\r",
+											"});\r",
+											"pm.test(\"Verify that message equals Medium is required\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].msg).to.include(\"Medium is required\");\r",
+											"});\r",
+											"pm.test(\"Verify that path returns Medium\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].path).to.eql(\"Medium\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "52ed9354-b56f-41b3-a1be-6bc744da3af8",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -1354,7 +1432,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"Email\":\"abiodun@gmail.com\",\n    \"Token\":\"325933\"\n}",
+									"raw": "{\n    \"Channel\":\"08145075789\",\n    \"DOB\":\"1993-01-01\",\n    \"Medium\":\"SMS\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"

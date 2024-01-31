@@ -1174,13 +1174,13 @@
 											"    var jsonData = pm.response.json();\r",
 											"    pm.expect(jsonData[0].type).to.eql(\"field\");\r",
 											"});\r",
-											"pm.test(\"Verify that message includes Channel is required\", function () {\r",
+											"pm.test(\"Verify that message returns RefreshToken is required\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData[0].msg).to.include(\"Channel is required\");\r",
+											"    pm.expect(jsonData[0].msg).to.eql(\"RefreshToken is required\");\r",
 											"});\r",
-											"pm.test(\"Verify that path returns Channel\", function () {\r",
+											"pm.test(\"Verify that path returns RefreshToken\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData[0].path).to.eql(\"Channel\");\r",
+											"    pm.expect(jsonData[0].path).to.eql(\"RefreshToken\");\r",
 											"});"
 										],
 										"type": "text/javascript"

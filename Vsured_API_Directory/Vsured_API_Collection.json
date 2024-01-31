@@ -1712,10 +1712,10 @@
 					"id": "e9ec08ad-dc39-4792-909a-69ff1633003b"
 				},
 				{
-					"name": "New Folder Copy 7",
+					"name": "GetAllCommunity",
 					"item": [
 						{
-							"name": "GetAllCommunity Copy",
+							"name": "GetAllCommunity",
 							"id": "e7239a83-6b23-46f9-abbc-fde9904e6d5d",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -1731,10 +1731,10 @@
 					"id": "4f859c78-0d09-4f57-8662-88a0dbb50aee"
 				},
 				{
-					"name": "New Folder Copy 8",
+					"name": "CreateCommunity",
 					"item": [
 						{
-							"name": "CreateCommunity Copy",
+							"name": "CreateCommunity",
 							"id": "72af0526-7892-4b0a-b011-73fe4a968e0e",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true

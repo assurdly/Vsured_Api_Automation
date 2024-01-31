@@ -1120,13 +1120,13 @@
 											"    var jsonData = pm.response.json();\r",
 											"    pm.expect(jsonData[0].type).to.eql(\"field\");\r",
 											"});\r",
-											"pm.test(\"Verify that message returns FirstName is required\", function () {\r",
+											"pm.test(\"Verify that message includes Channel is required\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData[0].msg).to.eql(\"FirstName is required\");\r",
+											"    pm.expect(jsonData[0].msg).to.include(\"Channel is required\");\r",
 											"});\r",
-											"pm.test(\"Verify that path returns FirstName\", function () {\r",
+											"pm.test(\"Verify that path returns Channel\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData[0].path).to.eql(\"FirstName\");\r",
+											"    pm.expect(jsonData[0].path).to.eql(\"Channel\");\r",
 											"});"
 										],
 										"type": "text/javascript"
@@ -1161,6 +1161,32 @@
 						},
 						{
 							"name": "RefreshToken- Empty RefreshToken field",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "72c2e00d-8a87-441c-8bbe-1df41abacee0",
+										"exec": [
+											"pm.test(\"Verify that Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"pm.test(\"Verify that type returns field\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].type).to.eql(\"field\");\r",
+											"});\r",
+											"pm.test(\"Verify that message includes Channel is required\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].msg).to.include(\"Channel is required\");\r",
+											"});\r",
+											"pm.test(\"Verify that path returns Channel\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].path).to.eql(\"Channel\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "3cadd822-5629-4365-90dc-fbb285f51a88",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true

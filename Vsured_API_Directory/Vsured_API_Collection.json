@@ -1071,7 +1071,7 @@
 											"});\r",
 											"pm.test(\"Verify that message returns token generated successfully\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.value).to.eql(100);\r",
+											"    pm.expect(jsonData.message).to.eql(\"Token Generated Successfully\");\r",
 											"});\r",
 											""
 										],
@@ -1106,7 +1106,33 @@
 							"response": []
 						},
 						{
-							"name": "RefreshToken- Empty Email field",
+							"name": "RefreshToken- Empty channel field",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "7217300b-c242-47cf-85c7-2a9f1a3ea97f",
+										"exec": [
+											"pm.test(\"Verify that Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"pm.test(\"Verify that type returns field\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].type).to.eql(\"field\");\r",
+											"});\r",
+											"pm.test(\"Verify that message returns FirstName is required\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].msg).to.eql(\"FirstName is required\");\r",
+											"});\r",
+											"pm.test(\"Verify that path returns FirstName\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].path).to.eql(\"FirstName\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "0a262ca0-9a82-4ce2-a1bd-187dbbff5c34",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -1122,7 +1148,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"Email\":\"\",\n    \"RefreshToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoianVzdCBhIHJlZnJlc2ggdG9rZW4iLCJpYXQiOjE3MDU3NzY0OTgsImV4cCI6MTcwNjM4MTI5OH0.32qdL228NPsYTUMbbxaxDHpBSy1FvHnlL87Dx7bzPN0\"\n}",
+									"raw": "{\n    \"Channel\":\"\",\n    \"RefreshToken\":\"{{Refresh_token}}\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1150,7 +1176,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"Email\":\"abiodun@gmail.com\",\n    \"RefreshToken\":\"\"\n}",
+									"raw": "{\n    \"Channel\":\"08145075789\",\n    \"RefreshToken\":\"\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"

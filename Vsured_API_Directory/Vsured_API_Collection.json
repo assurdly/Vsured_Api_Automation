@@ -1236,7 +1236,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"Email\":\"abiodun@gmail.com\",\n    \"DOB\":\"1993-01-01\",\n    \"Medium\":\"Email\"\n}",
+									"raw": "{\n    \"Channel\":\"08145075789\",\n    \"DOB\":\"1993-01-01\",\n    \"Medium\":\"SMS\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1248,7 +1248,7 @@
 							"response": []
 						},
 						{
-							"name": "ForgotPasswordSendMail- Empty Email field",
+							"name": "ForgotPasswordSendMail- Empty Channel field",
 							"id": "d79c5c29-9c17-4cd8-98b6-b3d59a021878",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -1264,7 +1264,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"Email\":\"\",\n    \"DOB\":\"1993-01-01\",\n    \"Medium\":\"Email\"\n}",
+									"raw": "{\n    \"Channel\":\"\",\n    \"DOB\":\"1993-01-01\",\n    \"Medium\":\"SMS\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1292,7 +1292,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"Email\":\"abiodun@gmail.com\",\n    \"DOB\":\"\",\n    \"Medium\":\"Email\"\n}",
+									"raw": "{\n    \"Channel\":\"08145075789\",\n    \"DOB\":\"\",\n    \"Medium\":\"SMS\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1320,7 +1320,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"Email\":\"abiodun@gmail.com\",\n    \"DOB\":\"1993-01-01\",\n    \"Medium\":\"\"\n}",
+									"raw": "{\n    \"Channel\":\"08145075789\",\n    \"DOB\":\"1993-01-01\",\n    \"Medium\":\"\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"

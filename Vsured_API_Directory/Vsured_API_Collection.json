@@ -1056,6 +1056,29 @@
 					"item": [
 						{
 							"name": "RefreshToken",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "4525cffd-3b5e-48ad-b52c-84ee7b624abd",
+										"exec": [
+											"pm.test(\"Verify that Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that status returns success\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+											"});\r",
+											"pm.test(\"Verify that message returns token generated successfully\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.value).to.eql(100);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "9158e28c-57a3-41e8-aba6-3e3f6d3bccdd",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -1071,7 +1094,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"Channel\":\"08145075789\",\n    \"RefreshToken\":\"{{$Refresh_token}}\"\n}",
+									"raw": "{\n    \"Channel\":\"08145075789\",\n    \"RefreshToken\":\"{{Refresh_token}}\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"

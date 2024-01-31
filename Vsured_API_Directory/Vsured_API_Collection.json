@@ -1071,7 +1071,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"Channel\":\"abiodun@gmail.com\",\n    \"RefreshToken\":\"{{$Refresh_token}}\"\n}",
+									"raw": "{\n    \"Channel\":\"08145075789\",\n    \"RefreshToken\":\"{{$Refresh_token}}\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"

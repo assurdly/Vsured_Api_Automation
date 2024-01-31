@@ -1558,13 +1558,13 @@
 			"id": "39fee73c-c067-4a53-91fb-92fdddd51eb4"
 		},
 		{
-			"name": "New Folder",
+			"name": "Community",
 			"item": [
 				{
-					"name": "New Folder",
+					"name": "GetSubAdminById",
 					"item": [
 						{
-							"name": "GetSubAdminById Copy",
+							"name": "GetSubAdminById",
 							"id": "52129da3-5d3d-4b36-b2ae-1b283507a448",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -1580,10 +1580,10 @@
 					"id": "cc53c12a-bc95-4f55-ac26-d6a120de99d0"
 				},
 				{
-					"name": "New Folder Copy",
+					"name": "GetAllSubAdmin",
 					"item": [
 						{
-							"name": "GetAllSubAdmin Copy",
+							"name": "GetAllSubAdmin",
 							"id": "aa0ee8c4-9ee3-4d5c-80e9-17a3570d7cb1",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -1599,10 +1599,10 @@
 					"id": "a2bc8ff6-c1d2-4d9c-800f-4d81e07b529c"
 				},
 				{
-					"name": "New Folder Copy 2",
+					"name": "createSubAdmin",
 					"item": [
 						{
-							"name": "createSubAdmin Copy",
+							"name": "createSubAdmin",
 							"id": "7835db3d-1512-4a94-ad86-819de9fc51f9",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -1627,10 +1627,10 @@
 					"id": "dc25c086-08e9-4c42-9ee8-992545e10a13"
 				},
 				{
-					"name": "New Folder Copy 3",
+					"name": "GetCheckersById",
 					"item": [
 						{
-							"name": "GetCheckersById Copy",
+							"name": "GetCheckersById",
 							"id": "2640a6bd-7b44-4ba0-ac81-2b8bb31816c2",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -1646,117 +1646,117 @@
 					"id": "7775ff81-aa36-4263-9a13-5276623e1c3d"
 				},
 				{
-					"name": "New Folder Copy 4",
-					"item": [],
+					"name": "GetAllcheckers",
+					"item": [
+						{
+							"name": "GetAllcheckers",
+							"id": "92dfcffb-8aef-4135-927a-90d3ea82ef88",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{BaseUrl}}/api/community/checkers/all"
+							},
+							"response": []
+						}
+					],
 					"id": "9e94a14a-e559-4249-bd5f-83a4b8393e80"
 				},
 				{
-					"name": "New Folder Copy 5",
-					"item": [],
+					"name": "Createcheckers",
+					"item": [
+						{
+							"name": "Createcheckers",
+							"id": "d438592c-1b25-4d20-9604-77cacd1a8e2d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\n    {\n        \"FirstName\":\"Checker1 firstname\",\n        \"LastName\":\"Checker1 LastName\",\n        \"Phone\":\"08057231914\",\n        \"Email\":\"abiodun@ggmail.com\",\n        \"DOB\":\"1991-01-01\",\n        \"Gender\":\"Male\",\n        \"NIN\":\"23454323456\",\n        \"CommunityId\":\"717fae8c-190e-440e-9d8f-82fe4cbd734e\",\n        \"CheckPoint\":\"test CheckPoint\"\n\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/community/checkers/create"
+							},
+							"response": []
+						}
+					],
 					"id": "06aefc30-e8a9-43e1-be39-fcb46e3c070f"
 				},
 				{
-					"name": "New Folder Copy 6",
-					"item": [],
+					"name": "GetCommunityById",
+					"item": [
+						{
+							"name": "GetCommunityById",
+							"id": "14f5e413-5a96-4d65-9149-27dc7dcfc733",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{BaseUrl}}/api/community/717fae8c-190e-440e-9d8f-82fe4cbd734e"
+							},
+							"response": []
+						}
+					],
 					"id": "e9ec08ad-dc39-4792-909a-69ff1633003b"
 				},
 				{
 					"name": "New Folder Copy 7",
-					"item": [],
+					"item": [
+						{
+							"name": "GetAllCommunity Copy",
+							"id": "e7239a83-6b23-46f9-abbc-fde9904e6d5d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{BaseUrl}}/api/community"
+							},
+							"response": []
+						}
+					],
 					"id": "4f859c78-0d09-4f57-8662-88a0dbb50aee"
 				},
 				{
 					"name": "New Folder Copy 8",
-					"item": [],
+					"item": [
+						{
+							"name": "CreateCommunity Copy",
+							"id": "72af0526-7892-4b0a-b011-73fe4a968e0e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "  {\n        \"Name\":\"Test Community 2\",\n        \"Address\":\"test address 2\",\n        \"Phone\":\"08093781185\",\n        \"Email\":\"alexanderprofesssor@gmail.com\"\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/community/create"
+							},
+							"response": []
+						}
+					],
 					"id": "d64818e4-1875-4a18-a3e3-277fc32a99c2"
-				},
-				{
-					"name": "New Folder Copy 9",
-					"item": [],
-					"id": "48b2e2a3-bdc3-4959-8b15-ac0ddb7b0d84"
-				},
-				{
-					"name": "GetAllcheckers Copy",
-					"id": "92dfcffb-8aef-4135-927a-90d3ea82ef88",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": "{{BaseUrl}}/api/community/checkers/all"
-					},
-					"response": []
-				},
-				{
-					"name": "Createcheckers Copy",
-					"id": "d438592c-1b25-4d20-9604-77cacd1a8e2d",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "\n    {\n        \"FirstName\":\"Checker1 firstname\",\n        \"LastName\":\"Checker1 LastName\",\n        \"Phone\":\"08057231914\",\n        \"Email\":\"abiodun@ggmail.com\",\n        \"DOB\":\"1991-01-01\",\n        \"Gender\":\"Male\",\n        \"NIN\":\"23454323456\",\n        \"CommunityId\":\"717fae8c-190e-440e-9d8f-82fe4cbd734e\",\n        \"CheckPoint\":\"test CheckPoint\"\n\n    }",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "{{BaseUrl}}/api/community/checkers/create"
-					},
-					"response": []
-				},
-				{
-					"name": "GetCommunityById Copy",
-					"id": "14f5e413-5a96-4d65-9149-27dc7dcfc733",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": "{{BaseUrl}}/api/community/717fae8c-190e-440e-9d8f-82fe4cbd734e"
-					},
-					"response": []
-				},
-				{
-					"name": "GetAllCommunity Copy",
-					"id": "e7239a83-6b23-46f9-abbc-fde9904e6d5d",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "GET",
-						"header": [],
-						"url": "{{BaseUrl}}/api/community"
-					},
-					"response": []
-				},
-				{
-					"name": "CreateCommunity Copy",
-					"id": "72af0526-7892-4b0a-b011-73fe4a968e0e",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "  {\n        \"Name\":\"Test Community 2\",\n        \"Address\":\"test address 2\",\n        \"Phone\":\"08093781185\",\n        \"Email\":\"alexanderprofesssor@gmail.com\"\n    }",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": "{{BaseUrl}}/api/community/create"
-					},
-					"response": []
 				}
 			],
 			"id": "9f42db7e-301f-446f-9277-a402da869eb5"

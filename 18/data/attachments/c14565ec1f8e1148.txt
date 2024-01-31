@@ -1,0 +1,1 @@
+[{"type":"field","msg":"Channel is required. In the form of Email or phone number","path":"Channel","location":"body"}]

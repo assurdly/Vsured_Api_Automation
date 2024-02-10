@@ -2113,7 +2113,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\"FirstName\":\"tetst name1\",\n\"LastName\":\"test name2\",\n\"Phone\":\"08093781185\",\n\"Email\":\"alexanderprofesssor@gmail.com\",\n\"PhotoPath\":\"testpath\",\n\"CommunityId\":\"717fae8c-190e-440e-9d8f-82fe4cbd734e\"\n}",
+									"raw": "{\n\"FirstName\":\"{{$randomFirstName}}\",\n\"LastName\":\"{{$randomLastName}}\",\n\"Phone\":\"08093781186\",\n\"Email\":\"{{$randomFirstName}}{{$randomLastName}}@gmail.com\",\n\"PhotoPath\":\"testpath\",\n\"CommunityId\":\"{{commununityId}}\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2125,7 +2125,7 @@
 							"response": []
 						},
 						{
-							"name": "createSubAdmin Copy",
+							"name": "createSubAdmin-Empty First name field",
 							"id": "f6b2fe75-6e64-4c3b-aa37-4660543a1562",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true

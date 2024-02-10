@@ -1998,12 +1998,43 @@
 							"response": []
 						},
 						{
-							"name": "CreateCommunity Copy 4",
+							"name": "CreateCommunity(NM)-Empty email field",
 							"id": "1d1e6c1b-c375-44d5-b705-e759a48b0087",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "  {\n        \"Name\":\"Test Community 2\",\n        \"Address\":\"test address 2\",\n        \"Phone\":\"08093781185\",\n        \"Email\":\"\"\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/community/create"
+							},
+							"response": []
+						},
+						{
+							"name": "CreateCommunity-No Auth Token",
+							"id": "d9820d54-eaad-494b-a34e-fe8c639d8b69",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
 								"method": "POST",
 								"header": [],
 								"body": {
@@ -2020,8 +2051,8 @@
 							"response": []
 						},
 						{
-							"name": "CreateCommunity Copy 5",
-							"id": "d9820d54-eaad-494b-a34e-fe8c639d8b69",
+							"name": "CreateCommunity Copy 6",
+							"id": "81562f93-3b5f-4334-b5de-e6b8dfe26da7",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},

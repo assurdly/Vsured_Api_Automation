@@ -1849,6 +1849,36 @@
 					"item": [
 						{
 							"name": "GetCommunityById-Successful",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "8c3fec91-4075-4fbf-a5de-a0d0d1fc816e",
+										"exec": [
+											"pm.test(\"Verify that Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that status is success\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns Successfully fetched commununity\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Successfully Fetched Community\");\r",
+											"});\r",
+											"pm.test(\"Verify that response data exist\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.data).to.exist;\r",
+											"});\r",
+											"pm.test(\"Verify that commununity id returned is correct\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.data.CommunityId).to.eql(pm.collectionVariables.get('commununityId'));\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "14f5e413-5a96-4d65-9149-27dc7dcfc733",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true

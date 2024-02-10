@@ -1867,12 +1867,18 @@
 					"name": "GetAllCommunity",
 					"item": [
 						{
-							"name": "GetAllCommunity",
+							"name": "GetAllCommunity-Successful",
 							"id": "e7239a83-6b23-46f9-abbc-fde9904e6d5d",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
 								"method": "GET",
 								"header": [],
 								"url": "{{BaseUrl}}/api/community"

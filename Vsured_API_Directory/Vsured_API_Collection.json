@@ -1897,12 +1897,37 @@
 							"response": []
 						},
 						{
-							"name": "GetCommunityById Copy",
+							"name": "GetCommunityById-No Auth Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "6619a738-20a0-4327-8d5f-368aa6dec81f",
+										"exec": [
+											"pm.test(\"Verify that Status code is 401\", function () {\r",
+											"    pm.response.to.have.status(401);\r",
+											"});\r",
+											"pm.test(\"Verify that status is failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message is Request UnAuthorized\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Request UnAuthorized\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "283992c3-18ed-4426-96b0-77235eb8c982",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "noauth"
+								},
 								"method": "GET",
 								"header": [],
 								"url": "{{BaseUrl}}/api/community/717fae8c-190e-440e-9d8f-82fe4cbd734e"
@@ -1910,12 +1935,40 @@
 							"response": []
 						},
 						{
-							"name": "GetCommunityById Copy 2",
+							"name": "GetCommunityById-Invalid Auth Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "87b43ac2-6603-4014-adc4-f202b7876013",
+										"exec": [
+											"pm.test(\"Verify that Status code is 403\", function () {\r",
+											"    pm.response.to.have.status(403);\r",
+											"});\r",
+											"pm.test(\"Verify that status is failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns Invalid token\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Request Forbidden, Invalid Token\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "598c7e1d-010e-4145-9b81-e5c5570d11fe",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6NDAsIkZpcnN0TmFtZSI6IkFiaW9kdW4iLCJMYXN0TmFtZSI6Ik9sYW5peWkiLCJET0IiOiIxOTkzLTAxGHCxVDAwOjAwOjAwLjAwMFoiLCJHZW5kZXIiOiJNYWxlIiwiQWRkcmVzcyI6ImxhZ29zLE5pZ2VyaWEiLCJQaG9uZSI6IjA4MTQ1MDc1Nzg5IiwiRW1haWwiOm51bGwsIlBob3RvUGF0aCI6InRlc3RpbmcucG5nIiwiUGFzc3dvcmQiOiIkMmIkMTAkUmYuUDIueHpQb1BvTFkzdS56Z0NVLklXTUd0bDk3Nm1OZ28zSDZCbmlPQ21OS2pRYXJ2UksiLCJJc1ZlcmlmaWVkIjoxLCJMYW5ndWFnZSI6ImVuZ2xpc2giLCJDb21wYW55VHlwZSI6IkJhbmtpbmciLCJSZWZyZXNoVG9rZW4iOiJleUpoYkdjaU9pSklVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKa1lYUmhJam9pYW5WemRDQmhJSEpsWm5KbGMyZ2dkRzlyWlc0aUxDSnBZWFFpT2pFM01EYzFORGd4TmpNc0ltVjRjQ0k2TVRjd09ERTFNamsyTTMwLnRJQXlxX25ZaWZ6dmxsQW9MakFhZHJoWXktb1dSdll0SWJ6czJNVWR1aVkiLCJpYXQiOjE3MDc1Njk0MTMsImV4cCI6MTcwNzU3MzAxM30.jH9HWOJdF87w_zqUZZZvgaQeb_D8DAAtxiNSDGrTdYM"
+									}
+								},
 								"method": "GET",
 								"header": [],
 								"url": "{{BaseUrl}}/api/community/717fae8c-190e-440e-9d8f-82fe4cbd734e"

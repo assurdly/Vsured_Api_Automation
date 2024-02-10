@@ -1942,17 +1942,23 @@
 							"response": []
 						},
 						{
-							"name": "CreateCommunity-Empty",
+							"name": "CreateCommunity-Empty Address",
 							"id": "fbb086c3-93cc-4648-82c4-3427246b0fae",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
 								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "  {\n        \"Name\":\"Test Community 2\",\n        \"Address\":\"test address 2\",\n        \"Phone\":\"08093781185\",\n        \"Email\":\"alexanderprofesssor@gmail.com\"\n    }",
+									"raw": "  {\n        \"Name\":\"Test Community 2\",\n        \"Address\":\"\",\n        \"Phone\":\"08093781185\",\n        \"Email\":\"alexanderprofesssor@gmail.com\"\n    }",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1964,17 +1970,23 @@
 							"response": []
 						},
 						{
-							"name": "CreateCommunity Copy 3",
+							"name": "CreateCommunity-Empty Phone number field",
 							"id": "b328c635-8f6e-403e-b651-6a41e99bb523",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
 								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "  {\n        \"Name\":\"Test Community 2\",\n        \"Address\":\"test address 2\",\n        \"Phone\":\"08093781185\",\n        \"Email\":\"alexanderprofesssor@gmail.com\"\n    }",
+									"raw": "  {\n        \"Name\":\"Test Community 2\",\n        \"Address\":\"test address 2\",\n        \"Phone\":\"\",\n        \"Email\":\"alexanderprofesssor@gmail.com\"\n    }",
 									"options": {
 										"raw": {
 											"language": "json"

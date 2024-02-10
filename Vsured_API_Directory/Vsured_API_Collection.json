@@ -1862,7 +1862,7 @@
 								},
 								"method": "GET",
 								"header": [],
-								"url": "{{BaseUrl}}/api/community/{{Id}}"
+								"url": "{{BaseUrl}}/api/community/{{commununityId}}"
 							},
 							"response": []
 						},
@@ -1919,7 +1919,7 @@
 											"});\r",
 											"pm.test(\"Get id\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.collectionVariables.set(\"Id\", jsonData.data[0].id);\r",
+											"    pm.collectionVariables.set(\"Id\", jsonData.data[0].Id);\r",
 											"});\r",
 											"pm.test(\"Get Community id\", function () {\r",
 											"    var jsonData = pm.response.json();\r",

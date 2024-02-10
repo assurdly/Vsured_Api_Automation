@@ -2141,7 +2141,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\"FirstName\":\"tetst name1\",\n\"LastName\":\"test name2\",\n\"Phone\":\"08093781185\",\n\"Email\":\"alexanderprofesssor@gmail.com\",\n\"PhotoPath\":\"testpath\",\n\"CommunityId\":\"717fae8c-190e-440e-9d8f-82fe4cbd734e\"\n}",
+									"raw": "{\n\"FirstName\":\"\",\n\"LastName\":\"test name2\",\n\"Phone\":\"08093781185\",\n\"Email\":\"alexanderprofesssor@gmail.com\",\n\"PhotoPath\":\"testpath\",\n\"CommunityId\":\"717fae8c-190e-440e-9d8f-82fe4cbd734e\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2153,7 +2153,7 @@
 							"response": []
 						},
 						{
-							"name": "createSubAdmin Copy 2",
+							"name": "createSubAdmin-Empty last name field",
 							"id": "2990ad3b-aa53-4545-a930-35e2b54e2eae",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -2169,7 +2169,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\"FirstName\":\"tetst name1\",\n\"LastName\":\"test name2\",\n\"Phone\":\"08093781185\",\n\"Email\":\"alexanderprofesssor@gmail.com\",\n\"PhotoPath\":\"testpath\",\n\"CommunityId\":\"717fae8c-190e-440e-9d8f-82fe4cbd734e\"\n}",
+									"raw": "{\n\"FirstName\":\"tetst name1\",\n\"LastName\":\"\",\n\"Phone\":\"08093781185\",\n\"Email\":\"alexanderprofesssor@gmail.com\",\n\"PhotoPath\":\"testpath\",\n\"CommunityId\":\"717fae8c-190e-440e-9d8f-82fe4cbd734e\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2181,7 +2181,7 @@
 							"response": []
 						},
 						{
-							"name": "createSubAdmin Copy 3",
+							"name": "createSubAdmin-Empty phone number field",
 							"id": "9aef5d53-1fac-4843-9c11-ec5c2aefd7ad",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -2197,7 +2197,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\"FirstName\":\"tetst name1\",\n\"LastName\":\"test name2\",\n\"Phone\":\"08093781185\",\n\"Email\":\"alexanderprofesssor@gmail.com\",\n\"PhotoPath\":\"testpath\",\n\"CommunityId\":\"717fae8c-190e-440e-9d8f-82fe4cbd734e\"\n}",
+									"raw": "{\n\"FirstName\":\"tetst name1\",\n\"LastName\":\"test name2\",\n\"Phone\":\"\",\n\"Email\":\"alexanderprofesssor@gmail.com\",\n\"PhotoPath\":\"testpath\",\n\"CommunityId\":\"717fae8c-190e-440e-9d8f-82fe4cbd734e\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2245,6 +2245,44 @@
 						{
 							"name": "GetAllSubAdmin",
 							"id": "aa0ee8c4-9ee3-4d5c-80e9-17a3570d7cb1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "{{BaseUrl}}/api/community/subAdmins/all"
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllSubAdmin Copy",
+							"id": "d5dbcb90-d565-45b7-8009-514f09251e5b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "{{BaseUrl}}/api/community/subAdmins/all"
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllSubAdmin Copy 2",
+							"id": "a10bac29-d389-423a-9220-e52343f17c42",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},

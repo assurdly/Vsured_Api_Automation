@@ -1878,6 +1878,32 @@
 								"url": "{{BaseUrl}}/api/community"
 							},
 							"response": []
+						},
+						{
+							"name": "GetAllCommunity Copy",
+							"id": "2c276559-02c7-456f-b090-4ff9dd3e9960",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{BaseUrl}}/api/community"
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllCommunity Copy 2",
+							"id": "94b7641c-79fc-42ee-b6e0-f0252964203c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{BaseUrl}}/api/community"
+							},
+							"response": []
 						}
 					],
 					"id": "4f859c78-0d09-4f57-8662-88a0dbb50aee"
@@ -2080,8 +2106,8 @@
 									"script": {
 										"id": "d4901a91-86c7-4c90-aaee-965977e3bb37",
 										"exec": [
-											"pm.test(\"Verify that Status code is 401\", function () {\r",
-											"    pm.response.to.have.status(401);\r",
+											"pm.test(\"Verify that Status code is 403\", function () {\r",
+											"    pm.response.to.have.status(403);\r",
 											"});\r",
 											"pm.test(\"Verify that status is failed\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
@@ -2089,7 +2115,7 @@
 											"});\r",
 											"pm.test(\"Verify that response message is Request UnAuthorized\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.message).to.eql(\"Request UnAuthorized\");\r",
+											"    pm.expect(jsonData.message).to.eql(\"Request Forbidden, Invalid Token\");\r",
 											"});"
 										],
 										"type": "text/javascript"

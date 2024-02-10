@@ -1892,11 +1892,17 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
 								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "  {\n        \"Name\":\"Test Community 2\",\n        \"Address\":\"test address 2\",\n        \"Phone\":\"08093781185\",\n        \"Email\":\"alexanderprofesssor@gmail.com\"\n    }",
+									"raw": "  {\n        \"Name\":\"{{$randomFirstName}}\",\n        \"Address\":\"{{$randomStreetAddress}}\",\n        \"Phone\":\"08093781185\",\n        \"Email\":\"{{$randomFirstName}}{{$randomLastName}}@yopmail.com\"\n    }",
 									"options": {
 										"raw": {
 											"language": "json"

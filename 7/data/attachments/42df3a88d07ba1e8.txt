@@ -1,4 +1,0 @@
-{
-    "Channel":"abiodun@gmail.com",
-    "RefreshToken":"{{$Refresh_token}}"
-}

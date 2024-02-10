@@ -1,1 +1,0 @@
-{"status":"Success","message":"Successfully registered user","data":{"FirstName":"Dahlia","LastName":"Gutmann","Gender":"Male","Address":"lagos,Nigeria","Phone":"08057231914","PhotoPath":"tetstphoto","Password":"Password@12","VerifyChannel":"email","Language":"english","CompanyType":"Banking","DOB":"1993-01-01T00:00:00.000Z","Email":"Nina12@yopmail.com"}}

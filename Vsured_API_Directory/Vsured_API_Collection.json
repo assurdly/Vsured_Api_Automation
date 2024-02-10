@@ -1914,17 +1914,23 @@
 							"response": []
 						},
 						{
-							"name": "CreateCommunity Copy",
+							"name": "CreateCommunity-Empty name field",
 							"id": "f8f45c9c-2459-4585-bb76-694a84d576f2",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
 								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "  {\n        \"Name\":\"Test Community 2\",\n        \"Address\":\"test address 2\",\n        \"Phone\":\"08093781185\",\n        \"Email\":\"alexanderprofesssor@gmail.com\"\n    }",
+									"raw": "  {\n        \"Name\":\"\",\n        \"Address\":\"test address 2\",\n        \"Phone\":\"08093781185\",\n        \"Email\":\"alexanderprofesssor@gmail.com\"\n    }",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -1936,7 +1942,7 @@
 							"response": []
 						},
 						{
-							"name": "CreateCommunity Copy 2",
+							"name": "CreateCommunity-Empty",
 							"id": "fbb086c3-93cc-4648-82c4-3427246b0fae",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true

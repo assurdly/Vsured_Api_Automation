@@ -2027,6 +2027,28 @@
 						},
 						{
 							"name": "CreateCommunity-No Auth Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "c367820b-0c10-468a-b41d-a862eaec2af6",
+										"exec": [
+											"pm.test(\"Verify that Status code is 401\", function () {\r",
+											"    pm.response.to.have.status(401);\r",
+											"});\r",
+											"pm.test(\"Verify that status is failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message is Request UnAuthorized\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Request UnAuthorized\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "d9820d54-eaad-494b-a34e-fe8c639d8b69",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -2051,12 +2073,40 @@
 							"response": []
 						},
 						{
-							"name": "CreateCommunity Copy 6",
+							"name": "CreateCommunity-Invalid Auth token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "d4901a91-86c7-4c90-aaee-965977e3bb37",
+										"exec": [
+											"pm.test(\"Verify that Status code is 401\", function () {\r",
+											"    pm.response.to.have.status(401);\r",
+											"});\r",
+											"pm.test(\"Verify that status is failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message is Request UnAuthorized\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Request UnAuthorized\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "81562f93-3b5f-4334-b5de-e6b8dfe26da7",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6NDAsIkZpcnN0TmFtZSI6IkFiaW9kdW4iLCJMYXN0TmFtZSI3hp9sYW5peWkiLCJET0IiOiIxOTkzLTAxLTAxVDAwOjAwOjAwLjAwMFoiLCJHZW5kZXIiOiJNYWxlIiwiQWRkcmVzcyI6ImxhZ29zLE5pZ2VyaWEiLCJQaG9uZSI6IjA4MTQ1MDc1Nzg5IiwiRW1haWwiOm51bGwsIlBob3RvUGF0aCI6InRlc3RpbmcucG5nIiwiUGFzc3dvcmQiOiIkMmIkMTAkUmYuUDIueHpQb1BvTFkzdS56Z0NVLklXTUd0bDk3Nm1OZ28zSDZCbmlPQ21OS2pRYXJ2UksiLCJJc1ZlcmlmaWVkIjoxLCJMYW5ndWFnZSI6ImVuZ2xpc2giLCJDb21wYW55VHlwZSI6IkJhbmtpbmciLCJSZWZyZXNoVG9rZW4iOiJleUpoYkdjaU9pSklVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKa1lYUmhJam9pYW5WemRDQmhJSEpsWm5KbGMyZ2dkRzlyWlc0aUxDSnBZWFFpT2pFM01EWTNPRFEzT0RJc0ltVjRjQ0k2TVRjd056TTRPVFU0TW4wLllQWDhpSzFMb0RHSEpTSTB1MHM5WGpqcXBQdmVaS2RLbVdpeko1WVY2NU0iLCJpYXQiOjE3MDc1NDE2MTMsImV4cCI6MTcwNzU0NTIxM30.fYK2E9LIA0aRd6S9CPJtBqK3AOLx_ZnCSiRfHGEvsmE"
+									}
+								},
 								"method": "POST",
 								"header": [],
 								"body": {

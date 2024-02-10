@@ -1906,6 +1906,116 @@
 								"url": "{{BaseUrl}}/api/community/create"
 							},
 							"response": []
+						},
+						{
+							"name": "CreateCommunity Copy",
+							"id": "f8f45c9c-2459-4585-bb76-694a84d576f2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "  {\n        \"Name\":\"Test Community 2\",\n        \"Address\":\"test address 2\",\n        \"Phone\":\"08093781185\",\n        \"Email\":\"alexanderprofesssor@gmail.com\"\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/community/create"
+							},
+							"response": []
+						},
+						{
+							"name": "CreateCommunity Copy 2",
+							"id": "fbb086c3-93cc-4648-82c4-3427246b0fae",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "  {\n        \"Name\":\"Test Community 2\",\n        \"Address\":\"test address 2\",\n        \"Phone\":\"08093781185\",\n        \"Email\":\"alexanderprofesssor@gmail.com\"\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/community/create"
+							},
+							"response": []
+						},
+						{
+							"name": "CreateCommunity Copy 3",
+							"id": "b328c635-8f6e-403e-b651-6a41e99bb523",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "  {\n        \"Name\":\"Test Community 2\",\n        \"Address\":\"test address 2\",\n        \"Phone\":\"08093781185\",\n        \"Email\":\"alexanderprofesssor@gmail.com\"\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/community/create"
+							},
+							"response": []
+						},
+						{
+							"name": "CreateCommunity Copy 4",
+							"id": "1d1e6c1b-c375-44d5-b705-e759a48b0087",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "  {\n        \"Name\":\"Test Community 2\",\n        \"Address\":\"test address 2\",\n        \"Phone\":\"08093781185\",\n        \"Email\":\"alexanderprofesssor@gmail.com\"\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/community/create"
+							},
+							"response": []
+						},
+						{
+							"name": "CreateCommunity Copy 5",
+							"id": "d9820d54-eaad-494b-a34e-fe8c639d8b69",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "  {\n        \"Name\":\"Test Community 2\",\n        \"Address\":\"test address 2\",\n        \"Phone\":\"08093781185\",\n        \"Email\":\"alexanderprofesssor@gmail.com\"\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/community/create"
+							},
+							"response": []
 						}
 					],
 					"id": "d64818e4-1875-4a18-a3e3-277fc32a99c2"

@@ -1,1 +1,0 @@
-{"status":"failed","message":"SMS sending failed, please try again"}

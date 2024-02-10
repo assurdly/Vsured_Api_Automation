@@ -1868,6 +1868,38 @@
 					"item": [
 						{
 							"name": "GetAllCommunity-Successful",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "9f809f7f-dd7d-4ee5-936b-32a94aaef8d8",
+										"exec": [
+											"pm.test(\"Verify that Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that status is success\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns Successfully fetched commununity \", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Successfully Fetched Community\");\r",
+											"});\r",
+											"pm.test(\"Get id\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.collectionVariables.set('Id', jsonData.data[0].id)\r",
+											"    pm.expect(jsonData.value).to.eql(100);\r",
+											"});\r",
+											"pm.test(\"Get Community id\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.collectionVariables.set('commununityId', jsonData.data[0].id)\r",
+											"    pm.expect(jsonData.value).to.eql(100);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "e7239a83-6b23-46f9-abbc-fde9904e6d5d",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true

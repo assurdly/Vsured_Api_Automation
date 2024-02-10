@@ -1561,558 +1561,6 @@
 			"name": "Community",
 			"item": [
 				{
-					"name": "GetSubAdminById",
-					"item": [
-						{
-							"name": "GetSubAdminById",
-							"id": "52129da3-5d3d-4b36-b2ae-1b283507a448",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{Auth_token}}"
-									}
-								},
-								"method": "GET",
-								"header": [],
-								"url": "{{BaseUrl}}/api/community/subAdmins/1"
-							},
-							"response": []
-						}
-					],
-					"id": "cc53c12a-bc95-4f55-ac26-d6a120de99d0"
-				},
-				{
-					"name": "GetAllSubAdmin",
-					"item": [
-						{
-							"name": "GetAllSubAdmin",
-							"id": "aa0ee8c4-9ee3-4d5c-80e9-17a3570d7cb1",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{Auth_token}}"
-									}
-								},
-								"method": "GET",
-								"header": [],
-								"url": "{{BaseUrl}}/api/community/subAdmins/all"
-							},
-							"response": []
-						}
-					],
-					"id": "a2bc8ff6-c1d2-4d9c-800f-4d81e07b529c"
-				},
-				{
-					"name": "createSubAdmin",
-					"item": [
-						{
-							"name": "createSubAdmin-Successful",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "31ec3538-800c-4045-b0f5-8f310e0cd0d6",
-										"exec": [
-											"pm.test(\"Verify that Status code is 200\", function () {\r",
-											"    pm.response.to.have.status(200);\r",
-											"});\r",
-											"pm.test(\"Verify that status is success\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
-											"});\r",
-											"pm.test(\"Verify that response message is Successfully created commununity\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.message).to.eql(\"Successfully Created Community\");\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"id": "7835db3d-1512-4a94-ad86-819de9fc51f9",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{Auth_token}}"
-									}
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n\"FirstName\":\"tetst name1\",\n\"LastName\":\"test name2\",\n\"Phone\":\"08093781185\",\n\"Email\":\"alexanderprofesssor@gmail.com\",\n\"PhotoPath\":\"testpath\",\n\"CommunityId\":\"717fae8c-190e-440e-9d8f-82fe4cbd734e\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{BaseUrl}}/api/community/subAdmin/create"
-							},
-							"response": []
-						},
-						{
-							"name": "createSubAdmin Copy",
-							"id": "f6b2fe75-6e64-4c3b-aa37-4660543a1562",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{Auth_token}}"
-									}
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n\"FirstName\":\"tetst name1\",\n\"LastName\":\"test name2\",\n\"Phone\":\"08093781185\",\n\"Email\":\"alexanderprofesssor@gmail.com\",\n\"PhotoPath\":\"testpath\",\n\"CommunityId\":\"717fae8c-190e-440e-9d8f-82fe4cbd734e\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{BaseUrl}}/api/community/subAdmin/create"
-							},
-							"response": []
-						},
-						{
-							"name": "createSubAdmin Copy 2",
-							"id": "2990ad3b-aa53-4545-a930-35e2b54e2eae",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{Auth_token}}"
-									}
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n\"FirstName\":\"tetst name1\",\n\"LastName\":\"test name2\",\n\"Phone\":\"08093781185\",\n\"Email\":\"alexanderprofesssor@gmail.com\",\n\"PhotoPath\":\"testpath\",\n\"CommunityId\":\"717fae8c-190e-440e-9d8f-82fe4cbd734e\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{BaseUrl}}/api/community/subAdmin/create"
-							},
-							"response": []
-						},
-						{
-							"name": "createSubAdmin Copy 3",
-							"id": "9aef5d53-1fac-4843-9c11-ec5c2aefd7ad",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{Auth_token}}"
-									}
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n\"FirstName\":\"tetst name1\",\n\"LastName\":\"test name2\",\n\"Phone\":\"08093781185\",\n\"Email\":\"alexanderprofesssor@gmail.com\",\n\"PhotoPath\":\"testpath\",\n\"CommunityId\":\"717fae8c-190e-440e-9d8f-82fe4cbd734e\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{BaseUrl}}/api/community/subAdmin/create"
-							},
-							"response": []
-						},
-						{
-							"name": "createSubAdmin Copy 4",
-							"id": "8a6496da-7f56-42fa-94f0-d7009599475a",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{Auth_token}}"
-									}
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n\"FirstName\":\"tetst name1\",\n\"LastName\":\"test name2\",\n\"Phone\":\"08093781185\",\n\"Email\":\"alexanderprofesssor@gmail.com\",\n\"PhotoPath\":\"testpath\",\n\"CommunityId\":\"717fae8c-190e-440e-9d8f-82fe4cbd734e\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{BaseUrl}}/api/community/subAdmin/create"
-							},
-							"response": []
-						}
-					],
-					"id": "dc25c086-08e9-4c42-9ee8-992545e10a13"
-				},
-				{
-					"name": "GetCheckersById",
-					"item": [
-						{
-							"name": "GetCheckersById",
-							"id": "2640a6bd-7b44-4ba0-ac81-2b8bb31816c2",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": "{{BaseUrl}}/api/community/checkers/1"
-							},
-							"response": []
-						}
-					],
-					"id": "7775ff81-aa36-4263-9a13-5276623e1c3d"
-				},
-				{
-					"name": "GetAllcheckers",
-					"item": [
-						{
-							"name": "GetAllcheckers",
-							"id": "92dfcffb-8aef-4135-927a-90d3ea82ef88",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "GET",
-								"header": [],
-								"url": "{{BaseUrl}}/api/community/checkers/all"
-							},
-							"response": []
-						}
-					],
-					"id": "9e94a14a-e559-4249-bd5f-83a4b8393e80"
-				},
-				{
-					"name": "Createcheckers",
-					"item": [
-						{
-							"name": "Createcheckers",
-							"id": "d438592c-1b25-4d20-9604-77cacd1a8e2d",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "\n    {\n        \"FirstName\":\"Checker1 firstname\",\n        \"LastName\":\"Checker1 LastName\",\n        \"Phone\":\"08057231914\",\n        \"Email\":\"abiodun@ggmail.com\",\n        \"DOB\":\"1991-01-01\",\n        \"Gender\":\"Male\",\n        \"NIN\":\"23454323456\",\n        \"CommunityId\":\"717fae8c-190e-440e-9d8f-82fe4cbd734e\",\n        \"CheckPoint\":\"test CheckPoint\"\n\n    }",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{BaseUrl}}/api/community/checkers/create"
-							},
-							"response": []
-						}
-					],
-					"id": "06aefc30-e8a9-43e1-be39-fcb46e3c070f"
-				},
-				{
-					"name": "GetCommunityById",
-					"item": [
-						{
-							"name": "GetCommunityById-Successful",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "8c3fec91-4075-4fbf-a5de-a0d0d1fc816e",
-										"exec": [
-											"pm.test(\"Verify that Status code is 200\", function () {\r",
-											"    pm.response.to.have.status(200);\r",
-											"});\r",
-											"pm.test(\"Verify that status is success\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
-											"});\r",
-											"pm.test(\"Verify that response message returns Successfully fetched commununity\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.message).to.eql(\"Successfully Fetched Community\");\r",
-											"});\r",
-											"pm.test(\"Verify that response data exist\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.data).to.exist;\r",
-											"});\r",
-											"pm.test(\"Verify that commununity id returned is correct\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.data.CommunityId).to.eql(pm.collectionVariables.get('commununityId'));\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"id": "14f5e413-5a96-4d65-9149-27dc7dcfc733",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{Auth_token}}"
-									}
-								},
-								"method": "GET",
-								"header": [],
-								"url": "{{BaseUrl}}/api/community/{{commununityId}}"
-							},
-							"response": []
-						},
-						{
-							"name": "GetCommunityById-No Auth Token",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "6619a738-20a0-4327-8d5f-368aa6dec81f",
-										"exec": [
-											"pm.test(\"Verify that Status code is 401\", function () {\r",
-											"    pm.response.to.have.status(401);\r",
-											"});\r",
-											"pm.test(\"Verify that status is failed\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
-											"});\r",
-											"pm.test(\"Verify that response message is Request UnAuthorized\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.message).to.eql(\"Request UnAuthorized\");\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"id": "283992c3-18ed-4426-96b0-77235eb8c982",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "noauth"
-								},
-								"method": "GET",
-								"header": [],
-								"url": "{{BaseUrl}}/api/community/717fae8c-190e-440e-9d8f-82fe4cbd734e"
-							},
-							"response": []
-						},
-						{
-							"name": "GetCommunityById-Invalid Auth Token",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "87b43ac2-6603-4014-adc4-f202b7876013",
-										"exec": [
-											"pm.test(\"Verify that Status code is 403\", function () {\r",
-											"    pm.response.to.have.status(403);\r",
-											"});\r",
-											"pm.test(\"Verify that status is failed\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
-											"});\r",
-											"pm.test(\"Verify that response message returns Invalid token\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.message).to.eql(\"Request Forbidden, Invalid Token\");\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"id": "598c7e1d-010e-4145-9b81-e5c5570d11fe",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6NDAsIkZpcnN0TmFtZSI6IkFiaW9kdW4iLCJMYXN0TmFtZSI6Ik9sYW5peWkiLCJET0IiOiIxOTkzLTAxGHCxVDAwOjAwOjAwLjAwMFoiLCJHZW5kZXIiOiJNYWxlIiwiQWRkcmVzcyI6ImxhZ29zLE5pZ2VyaWEiLCJQaG9uZSI6IjA4MTQ1MDc1Nzg5IiwiRW1haWwiOm51bGwsIlBob3RvUGF0aCI6InRlc3RpbmcucG5nIiwiUGFzc3dvcmQiOiIkMmIkMTAkUmYuUDIueHpQb1BvTFkzdS56Z0NVLklXTUd0bDk3Nm1OZ28zSDZCbmlPQ21OS2pRYXJ2UksiLCJJc1ZlcmlmaWVkIjoxLCJMYW5ndWFnZSI6ImVuZ2xpc2giLCJDb21wYW55VHlwZSI6IkJhbmtpbmciLCJSZWZyZXNoVG9rZW4iOiJleUpoYkdjaU9pSklVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKa1lYUmhJam9pYW5WemRDQmhJSEpsWm5KbGMyZ2dkRzlyWlc0aUxDSnBZWFFpT2pFM01EYzFORGd4TmpNc0ltVjRjQ0k2TVRjd09ERTFNamsyTTMwLnRJQXlxX25ZaWZ6dmxsQW9MakFhZHJoWXktb1dSdll0SWJ6czJNVWR1aVkiLCJpYXQiOjE3MDc1Njk0MTMsImV4cCI6MTcwNzU3MzAxM30.jH9HWOJdF87w_zqUZZZvgaQeb_D8DAAtxiNSDGrTdYM"
-									}
-								},
-								"method": "GET",
-								"header": [],
-								"url": "{{BaseUrl}}/api/community/717fae8c-190e-440e-9d8f-82fe4cbd734e"
-							},
-							"response": []
-						}
-					],
-					"id": "e9ec08ad-dc39-4792-909a-69ff1633003b"
-				},
-				{
-					"name": "GetAllCommunity",
-					"item": [
-						{
-							"name": "GetAllCommunity-Successful",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "9f809f7f-dd7d-4ee5-936b-32a94aaef8d8",
-										"exec": [
-											"pm.test(\"Verify that Status code is 200\", function () {\r",
-											"    pm.response.to.have.status(200);\r",
-											"});\r",
-											"pm.test(\"Verify that status is success\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
-											"});\r",
-											"pm.test(\"Verify that response message returns Successfully fetched commununity \", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.message).to.eql(\"Successfully Fetched Community\");\r",
-											"});\r",
-											"pm.test(\"Get id\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.collectionVariables.set(\"Id\", jsonData.data[0].Id);\r",
-											"});\r",
-											"pm.test(\"Get Community id\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.collectionVariables.set(\"commununityId\", jsonData.data[0].CommunityId);\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"id": "e7239a83-6b23-46f9-abbc-fde9904e6d5d",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{Auth_token}}"
-									}
-								},
-								"method": "GET",
-								"header": [],
-								"url": "{{BaseUrl}}/api/community"
-							},
-							"response": []
-						},
-						{
-							"name": "GetAllCommunity-No Auth Token",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "5f881f48-3858-4fff-9715-478bf794edac",
-										"exec": [
-											"pm.test(\"Verify that Status code is 401\", function () {\r",
-											"    pm.response.to.have.status(401);\r",
-											"});\r",
-											"pm.test(\"Verify that status is failed\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
-											"});\r",
-											"pm.test(\"Verify that response message is Request UnAuthorized\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.message).to.eql(\"Request UnAuthorized\");\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"id": "2c276559-02c7-456f-b090-4ff9dd3e9960",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "noauth"
-								},
-								"method": "GET",
-								"header": [],
-								"url": "{{BaseUrl}}/api/community"
-							},
-							"response": []
-						},
-						{
-							"name": "GetAllCommunity-Invalid Auth Token",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "ad6804e3-84d8-4ba1-8377-e61d8b0a0527",
-										"exec": [
-											"pm.test(\"Verify that Status code is 403\", function () {\r",
-											"    pm.response.to.have.status(403);\r",
-											"});\r",
-											"pm.test(\"Verify that status is failed\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
-											"});\r",
-											"pm.test(\"Verify that response message returns Invalid token\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.message).to.eql(\"Request Forbidden, Invalid Token\");\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"id": "94b7641c-79fc-42ee-b6e0-f0252964203c",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6NDAsIkZpcnN0TmFtZSI6IkFiaW9kdW4iLCJMYXN0TmFtZSI6Ik9sYfr5eWkiLCJET0IiOiIxOTkzLTAxLTAxVDAwOjAwOjAwLjAwMFoiLCJHZW5kZXIiOiJNYWxlIiwiQWRkcmVzcyI6ImxhZ29zLE5pZ2VyaWEiLCJQaG9uZSI6IjA4MTQ1MDc1Nzg5IiwiRW1haWwiOm51bGwsIlBob3RvUGF0aCI6InRlc3RpbmcucG5nIiwiUGFzc3dvcmQiOiIkMmIkMTAkUmYuUDIueHpQb1BvTFkzdS56Z0NVLklXTUd0bDk3Nm1OZ28zSDZCbmlPQ21OS2pRYXJ2UksiLCJJc1ZlcmlmaWVkIjoxLCJMYW5ndWFnZSI6ImVuZ2xpc2giLCJDb21wYW55VHlwZSI6IkJhbmtpbmciLCJSZWZyZXNoVG9rZW4iOiJleUpoYkdjaU9pSklVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKa1lYUmhJam9pYW5WemRDQmhJSEpsWm5KbGMyZ2dkRzlyWlc0aUxDSnBZWFFpT2pFM01EYzFORFExTWpjc0ltVjRjQ0k2TVRjd09ERTBPVE15TjMwLlY2cDBObjR5bG5zR1BEcTlsb2FzaGljRWdtb2xQSG5vaXRZd1MzXy1URFUiLCJpYXQiOjE3MDc1NDU0MzAsImV4cCI6MTcwNzU0OTAzMH0.2BAS726SNx1lBVSBUITkE7SWwbJhaLI-sU9qYrLDags"
-									}
-								},
-								"method": "GET",
-								"header": [],
-								"url": "{{BaseUrl}}/api/community"
-							},
-							"response": []
-						}
-					],
-					"id": "4f859c78-0d09-4f57-8662-88a0dbb50aee"
-				},
-				{
 					"name": "CreateCommunity",
 					"item": [
 						{
@@ -2354,6 +1802,558 @@
 						}
 					],
 					"id": "d64818e4-1875-4a18-a3e3-277fc32a99c2"
+				},
+				{
+					"name": "GetAllCommunity",
+					"item": [
+						{
+							"name": "GetAllCommunity-Successful",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "9f809f7f-dd7d-4ee5-936b-32a94aaef8d8",
+										"exec": [
+											"pm.test(\"Verify that Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that status is success\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns Successfully fetched commununity \", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Successfully Fetched Community\");\r",
+											"});\r",
+											"pm.test(\"Get id\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.collectionVariables.set(\"Id\", jsonData.data[0].Id);\r",
+											"});\r",
+											"pm.test(\"Get Community id\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.collectionVariables.set(\"commununityId\", jsonData.data[0].CommunityId);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "e7239a83-6b23-46f9-abbc-fde9904e6d5d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "{{BaseUrl}}/api/community"
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllCommunity-No Auth Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "5f881f48-3858-4fff-9715-478bf794edac",
+										"exec": [
+											"pm.test(\"Verify that Status code is 401\", function () {\r",
+											"    pm.response.to.have.status(401);\r",
+											"});\r",
+											"pm.test(\"Verify that status is failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message is Request UnAuthorized\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Request UnAuthorized\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "2c276559-02c7-456f-b090-4ff9dd3e9960",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": "{{BaseUrl}}/api/community"
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllCommunity-Invalid Auth Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "ad6804e3-84d8-4ba1-8377-e61d8b0a0527",
+										"exec": [
+											"pm.test(\"Verify that Status code is 403\", function () {\r",
+											"    pm.response.to.have.status(403);\r",
+											"});\r",
+											"pm.test(\"Verify that status is failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns Invalid token\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Request Forbidden, Invalid Token\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "94b7641c-79fc-42ee-b6e0-f0252964203c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6NDAsIkZpcnN0TmFtZSI6IkFiaW9kdW4iLCJMYXN0TmFtZSI6Ik9sYfr5eWkiLCJET0IiOiIxOTkzLTAxLTAxVDAwOjAwOjAwLjAwMFoiLCJHZW5kZXIiOiJNYWxlIiwiQWRkcmVzcyI6ImxhZ29zLE5pZ2VyaWEiLCJQaG9uZSI6IjA4MTQ1MDc1Nzg5IiwiRW1haWwiOm51bGwsIlBob3RvUGF0aCI6InRlc3RpbmcucG5nIiwiUGFzc3dvcmQiOiIkMmIkMTAkUmYuUDIueHpQb1BvTFkzdS56Z0NVLklXTUd0bDk3Nm1OZ28zSDZCbmlPQ21OS2pRYXJ2UksiLCJJc1ZlcmlmaWVkIjoxLCJMYW5ndWFnZSI6ImVuZ2xpc2giLCJDb21wYW55VHlwZSI6IkJhbmtpbmciLCJSZWZyZXNoVG9rZW4iOiJleUpoYkdjaU9pSklVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKa1lYUmhJam9pYW5WemRDQmhJSEpsWm5KbGMyZ2dkRzlyWlc0aUxDSnBZWFFpT2pFM01EYzFORFExTWpjc0ltVjRjQ0k2TVRjd09ERTBPVE15TjMwLlY2cDBObjR5bG5zR1BEcTlsb2FzaGljRWdtb2xQSG5vaXRZd1MzXy1URFUiLCJpYXQiOjE3MDc1NDU0MzAsImV4cCI6MTcwNzU0OTAzMH0.2BAS726SNx1lBVSBUITkE7SWwbJhaLI-sU9qYrLDags"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "{{BaseUrl}}/api/community"
+							},
+							"response": []
+						}
+					],
+					"id": "4f859c78-0d09-4f57-8662-88a0dbb50aee"
+				},
+				{
+					"name": "GetCommunityById",
+					"item": [
+						{
+							"name": "GetCommunityById-Successful",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "8c3fec91-4075-4fbf-a5de-a0d0d1fc816e",
+										"exec": [
+											"pm.test(\"Verify that Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that status is success\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns Successfully fetched commununity\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Successfully Fetched Community\");\r",
+											"});\r",
+											"pm.test(\"Verify that response data exist\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.data).to.exist;\r",
+											"});\r",
+											"pm.test(\"Verify that commununity id returned is correct\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.data.CommunityId).to.eql(pm.collectionVariables.get('commununityId'));\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "14f5e413-5a96-4d65-9149-27dc7dcfc733",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "{{BaseUrl}}/api/community/{{commununityId}}"
+							},
+							"response": []
+						},
+						{
+							"name": "GetCommunityById-No Auth Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "6619a738-20a0-4327-8d5f-368aa6dec81f",
+										"exec": [
+											"pm.test(\"Verify that Status code is 401\", function () {\r",
+											"    pm.response.to.have.status(401);\r",
+											"});\r",
+											"pm.test(\"Verify that status is failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message is Request UnAuthorized\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Request UnAuthorized\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "283992c3-18ed-4426-96b0-77235eb8c982",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": "{{BaseUrl}}/api/community/717fae8c-190e-440e-9d8f-82fe4cbd734e"
+							},
+							"response": []
+						},
+						{
+							"name": "GetCommunityById-Invalid Auth Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "87b43ac2-6603-4014-adc4-f202b7876013",
+										"exec": [
+											"pm.test(\"Verify that Status code is 403\", function () {\r",
+											"    pm.response.to.have.status(403);\r",
+											"});\r",
+											"pm.test(\"Verify that status is failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns Invalid token\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Request Forbidden, Invalid Token\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "598c7e1d-010e-4145-9b81-e5c5570d11fe",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6NDAsIkZpcnN0TmFtZSI6IkFiaW9kdW4iLCJMYXN0TmFtZSI6Ik9sYW5peWkiLCJET0IiOiIxOTkzLTAxGHCxVDAwOjAwOjAwLjAwMFoiLCJHZW5kZXIiOiJNYWxlIiwiQWRkcmVzcyI6ImxhZ29zLE5pZ2VyaWEiLCJQaG9uZSI6IjA4MTQ1MDc1Nzg5IiwiRW1haWwiOm51bGwsIlBob3RvUGF0aCI6InRlc3RpbmcucG5nIiwiUGFzc3dvcmQiOiIkMmIkMTAkUmYuUDIueHpQb1BvTFkzdS56Z0NVLklXTUd0bDk3Nm1OZ28zSDZCbmlPQ21OS2pRYXJ2UksiLCJJc1ZlcmlmaWVkIjoxLCJMYW5ndWFnZSI6ImVuZ2xpc2giLCJDb21wYW55VHlwZSI6IkJhbmtpbmciLCJSZWZyZXNoVG9rZW4iOiJleUpoYkdjaU9pSklVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKa1lYUmhJam9pYW5WemRDQmhJSEpsWm5KbGMyZ2dkRzlyWlc0aUxDSnBZWFFpT2pFM01EYzFORGd4TmpNc0ltVjRjQ0k2TVRjd09ERTFNamsyTTMwLnRJQXlxX25ZaWZ6dmxsQW9MakFhZHJoWXktb1dSdll0SWJ6czJNVWR1aVkiLCJpYXQiOjE3MDc1Njk0MTMsImV4cCI6MTcwNzU3MzAxM30.jH9HWOJdF87w_zqUZZZvgaQeb_D8DAAtxiNSDGrTdYM"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "{{BaseUrl}}/api/community/717fae8c-190e-440e-9d8f-82fe4cbd734e"
+							},
+							"response": []
+						}
+					],
+					"id": "e9ec08ad-dc39-4792-909a-69ff1633003b"
+				},
+				{
+					"name": "createSubAdmin",
+					"item": [
+						{
+							"name": "createSubAdmin-Successful",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "31ec3538-800c-4045-b0f5-8f310e0cd0d6",
+										"exec": [
+											"pm.test(\"Verify that Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that status is success\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message is Successfully created commununity\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Successfully Created Community\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "7835db3d-1512-4a94-ad86-819de9fc51f9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"FirstName\":\"tetst name1\",\n\"LastName\":\"test name2\",\n\"Phone\":\"08093781185\",\n\"Email\":\"alexanderprofesssor@gmail.com\",\n\"PhotoPath\":\"testpath\",\n\"CommunityId\":\"717fae8c-190e-440e-9d8f-82fe4cbd734e\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/community/subAdmin/create"
+							},
+							"response": []
+						},
+						{
+							"name": "createSubAdmin Copy",
+							"id": "f6b2fe75-6e64-4c3b-aa37-4660543a1562",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"FirstName\":\"tetst name1\",\n\"LastName\":\"test name2\",\n\"Phone\":\"08093781185\",\n\"Email\":\"alexanderprofesssor@gmail.com\",\n\"PhotoPath\":\"testpath\",\n\"CommunityId\":\"717fae8c-190e-440e-9d8f-82fe4cbd734e\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/community/subAdmin/create"
+							},
+							"response": []
+						},
+						{
+							"name": "createSubAdmin Copy 2",
+							"id": "2990ad3b-aa53-4545-a930-35e2b54e2eae",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"FirstName\":\"tetst name1\",\n\"LastName\":\"test name2\",\n\"Phone\":\"08093781185\",\n\"Email\":\"alexanderprofesssor@gmail.com\",\n\"PhotoPath\":\"testpath\",\n\"CommunityId\":\"717fae8c-190e-440e-9d8f-82fe4cbd734e\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/community/subAdmin/create"
+							},
+							"response": []
+						},
+						{
+							"name": "createSubAdmin Copy 3",
+							"id": "9aef5d53-1fac-4843-9c11-ec5c2aefd7ad",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"FirstName\":\"tetst name1\",\n\"LastName\":\"test name2\",\n\"Phone\":\"08093781185\",\n\"Email\":\"alexanderprofesssor@gmail.com\",\n\"PhotoPath\":\"testpath\",\n\"CommunityId\":\"717fae8c-190e-440e-9d8f-82fe4cbd734e\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/community/subAdmin/create"
+							},
+							"response": []
+						},
+						{
+							"name": "createSubAdmin Copy 4",
+							"id": "8a6496da-7f56-42fa-94f0-d7009599475a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"FirstName\":\"tetst name1\",\n\"LastName\":\"test name2\",\n\"Phone\":\"08093781185\",\n\"Email\":\"alexanderprofesssor@gmail.com\",\n\"PhotoPath\":\"testpath\",\n\"CommunityId\":\"717fae8c-190e-440e-9d8f-82fe4cbd734e\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/community/subAdmin/create"
+							},
+							"response": []
+						}
+					],
+					"id": "dc25c086-08e9-4c42-9ee8-992545e10a13"
+				},
+				{
+					"name": "GetAllSubAdmin",
+					"item": [
+						{
+							"name": "GetAllSubAdmin",
+							"id": "aa0ee8c4-9ee3-4d5c-80e9-17a3570d7cb1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "{{BaseUrl}}/api/community/subAdmins/all"
+							},
+							"response": []
+						}
+					],
+					"id": "a2bc8ff6-c1d2-4d9c-800f-4d81e07b529c"
+				},
+				{
+					"name": "GetSubAdminById",
+					"item": [
+						{
+							"name": "GetSubAdminById",
+							"id": "52129da3-5d3d-4b36-b2ae-1b283507a448",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "{{BaseUrl}}/api/community/subAdmins/1"
+							},
+							"response": []
+						}
+					],
+					"id": "cc53c12a-bc95-4f55-ac26-d6a120de99d0"
+				},
+				{
+					"name": "GetCheckersById",
+					"item": [
+						{
+							"name": "GetCheckersById",
+							"id": "2640a6bd-7b44-4ba0-ac81-2b8bb31816c2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{BaseUrl}}/api/community/checkers/1"
+							},
+							"response": []
+						}
+					],
+					"id": "7775ff81-aa36-4263-9a13-5276623e1c3d"
+				},
+				{
+					"name": "GetAllcheckers",
+					"item": [
+						{
+							"name": "GetAllcheckers",
+							"id": "92dfcffb-8aef-4135-927a-90d3ea82ef88",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{BaseUrl}}/api/community/checkers/all"
+							},
+							"response": []
+						}
+					],
+					"id": "9e94a14a-e559-4249-bd5f-83a4b8393e80"
+				},
+				{
+					"name": "Createcheckers",
+					"item": [
+						{
+							"name": "Createcheckers",
+							"id": "d438592c-1b25-4d20-9604-77cacd1a8e2d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\n    {\n        \"FirstName\":\"Checker1 firstname\",\n        \"LastName\":\"Checker1 LastName\",\n        \"Phone\":\"08057231914\",\n        \"Email\":\"abiodun@ggmail.com\",\n        \"DOB\":\"1991-01-01\",\n        \"Gender\":\"Male\",\n        \"NIN\":\"23454323456\",\n        \"CommunityId\":\"717fae8c-190e-440e-9d8f-82fe4cbd734e\",\n        \"CheckPoint\":\"test CheckPoint\"\n\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/community/checkers/create"
+							},
+							"response": []
+						}
+					],
+					"id": "06aefc30-e8a9-43e1-be39-fcb46e3c070f"
 				}
 			],
 			"id": "9f42db7e-301f-446f-9277-a402da869eb5"

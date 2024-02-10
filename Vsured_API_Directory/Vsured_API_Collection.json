@@ -1614,12 +1614,130 @@
 					"name": "createSubAdmin",
 					"item": [
 						{
-							"name": "createSubAdmin",
+							"name": "createSubAdmin-Successful",
 							"id": "7835db3d-1512-4a94-ad86-819de9fc51f9",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"FirstName\":\"tetst name1\",\n\"LastName\":\"test name2\",\n\"Phone\":\"08093781185\",\n\"Email\":\"alexanderprofesssor@gmail.com\",\n\"PhotoPath\":\"testpath\",\n\"CommunityId\":\"717fae8c-190e-440e-9d8f-82fe4cbd734e\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/community/subAdmin/create"
+							},
+							"response": []
+						},
+						{
+							"name": "createSubAdmin Copy",
+							"id": "f6b2fe75-6e64-4c3b-aa37-4660543a1562",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"FirstName\":\"tetst name1\",\n\"LastName\":\"test name2\",\n\"Phone\":\"08093781185\",\n\"Email\":\"alexanderprofesssor@gmail.com\",\n\"PhotoPath\":\"testpath\",\n\"CommunityId\":\"717fae8c-190e-440e-9d8f-82fe4cbd734e\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/community/subAdmin/create"
+							},
+							"response": []
+						},
+						{
+							"name": "createSubAdmin Copy 2",
+							"id": "2990ad3b-aa53-4545-a930-35e2b54e2eae",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"FirstName\":\"tetst name1\",\n\"LastName\":\"test name2\",\n\"Phone\":\"08093781185\",\n\"Email\":\"alexanderprofesssor@gmail.com\",\n\"PhotoPath\":\"testpath\",\n\"CommunityId\":\"717fae8c-190e-440e-9d8f-82fe4cbd734e\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/community/subAdmin/create"
+							},
+							"response": []
+						},
+						{
+							"name": "createSubAdmin Copy 3",
+							"id": "9aef5d53-1fac-4843-9c11-ec5c2aefd7ad",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"FirstName\":\"tetst name1\",\n\"LastName\":\"test name2\",\n\"Phone\":\"08093781185\",\n\"Email\":\"alexanderprofesssor@gmail.com\",\n\"PhotoPath\":\"testpath\",\n\"CommunityId\":\"717fae8c-190e-440e-9d8f-82fe4cbd734e\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/community/subAdmin/create"
+							},
+							"response": []
+						},
+						{
+							"name": "createSubAdmin Copy 4",
+							"id": "8a6496da-7f56-42fa-94f0-d7009599475a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
 								"method": "POST",
 								"header": [],
 								"body": {

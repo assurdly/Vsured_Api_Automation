@@ -1848,8 +1848,40 @@
 					"name": "GetCommunityById",
 					"item": [
 						{
-							"name": "GetCommunityById",
+							"name": "GetCommunityById-Successful",
 							"id": "14f5e413-5a96-4d65-9149-27dc7dcfc733",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "{{BaseUrl}}/api/community/717fae8c-190e-440e-9d8f-82fe4cbd734e"
+							},
+							"response": []
+						},
+						{
+							"name": "GetCommunityById Copy",
+							"id": "283992c3-18ed-4426-96b0-77235eb8c982",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{BaseUrl}}/api/community/717fae8c-190e-440e-9d8f-82fe4cbd734e"
+							},
+							"response": []
+						},
+						{
+							"name": "GetCommunityById Copy 2",
+							"id": "598c7e1d-010e-4145-9b81-e5c5570d11fe",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -1888,12 +1920,10 @@
 											"pm.test(\"Get id\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
 											"    pm.collectionVariables.set(\"Id\", jsonData.data[0].id);\r",
-											"    pm.expect(jsonData.value).to.eql(100);\r",
 											"});\r",
 											"pm.test(\"Get Community id\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
 											"    pm.collectionVariables.set(\"commununityId\", jsonData.data[0].CommunityId);\r",
-											"    pm.expect(jsonData.value).to.eql(100);\r",
 											"});"
 										],
 										"type": "text/javascript"

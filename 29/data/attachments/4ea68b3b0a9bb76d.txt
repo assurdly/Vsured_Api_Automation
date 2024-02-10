@@ -1,6 +1,0 @@
-  {
-        "Name":"Allie",
-        "Address":"8814 Leonard Mills",
-        "Phone":"08093781185",
-        "Email":"NewtonEffertz@yopmail.com"
-    }

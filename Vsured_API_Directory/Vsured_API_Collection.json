@@ -1615,6 +1615,28 @@
 					"item": [
 						{
 							"name": "createSubAdmin-Successful",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "31ec3538-800c-4045-b0f5-8f310e0cd0d6",
+										"exec": [
+											"pm.test(\"Verify that Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that status is success\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message is Successfully created commununity\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Successfully Created Community\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "7835db3d-1512-4a94-ad86-819de9fc51f9",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true

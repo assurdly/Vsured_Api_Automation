@@ -1918,12 +1918,37 @@
 							"response": []
 						},
 						{
-							"name": "GetAllCommunity Copy",
+							"name": "GetAllCommunity-No Auth Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "5f881f48-3858-4fff-9715-478bf794edac",
+										"exec": [
+											"pm.test(\"Verify that Status code is 401\", function () {\r",
+											"    pm.response.to.have.status(401);\r",
+											"});\r",
+											"pm.test(\"Verify that status is failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message is Request UnAuthorized\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Request UnAuthorized\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "2c276559-02c7-456f-b090-4ff9dd3e9960",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "noauth"
+								},
 								"method": "GET",
 								"header": [],
 								"url": "{{BaseUrl}}/api/community"
@@ -1931,12 +1956,40 @@
 							"response": []
 						},
 						{
-							"name": "GetAllCommunity Copy 2",
+							"name": "GetAllCommunity-Invalid Auth Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "ad6804e3-84d8-4ba1-8377-e61d8b0a0527",
+										"exec": [
+											"pm.test(\"Verify that Status code is 403\", function () {\r",
+											"    pm.response.to.have.status(403);\r",
+											"});\r",
+											"pm.test(\"Verify that status is failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns Invalid token\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Request Forbidden, Invalid Token\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "94b7641c-79fc-42ee-b6e0-f0252964203c",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6NDAsIkZpcnN0TmFtZSI6IkFiaW9kdW4iLCJMYXN0TmFtZSI6Ik9sYfr5eWkiLCJET0IiOiIxOTkzLTAxLTAxVDAwOjAwOjAwLjAwMFoiLCJHZW5kZXIiOiJNYWxlIiwiQWRkcmVzcyI6ImxhZ29zLE5pZ2VyaWEiLCJQaG9uZSI6IjA4MTQ1MDc1Nzg5IiwiRW1haWwiOm51bGwsIlBob3RvUGF0aCI6InRlc3RpbmcucG5nIiwiUGFzc3dvcmQiOiIkMmIkMTAkUmYuUDIueHpQb1BvTFkzdS56Z0NVLklXTUd0bDk3Nm1OZ28zSDZCbmlPQ21OS2pRYXJ2UksiLCJJc1ZlcmlmaWVkIjoxLCJMYW5ndWFnZSI6ImVuZ2xpc2giLCJDb21wYW55VHlwZSI6IkJhbmtpbmciLCJSZWZyZXNoVG9rZW4iOiJleUpoYkdjaU9pSklVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKa1lYUmhJam9pYW5WemRDQmhJSEpsWm5KbGMyZ2dkRzlyWlc0aUxDSnBZWFFpT2pFM01EYzFORFExTWpjc0ltVjRjQ0k2TVRjd09ERTBPVE15TjMwLlY2cDBObjR5bG5zR1BEcTlsb2FzaGljRWdtb2xQSG5vaXRZd1MzXy1URFUiLCJpYXQiOjE3MDc1NDU0MzAsImV4cCI6MTcwNzU0OTAzMH0.2BAS726SNx1lBVSBUITkE7SWwbJhaLI-sU9qYrLDags"
+									}
+								},
 								"method": "GET",
 								"header": [],
 								"url": "{{BaseUrl}}/api/community"
@@ -2231,6 +2284,14 @@
 			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6MjUsIkZpcnN0TmFtZSI6IkFsZXhhbmRlciIsIkxhc3ROYW1lIjoiQWppYm9zZSIsIkRPQiI6IjE5OTItMTItMzFUMjM6MDA6MDAuMDAwWiIsIkdlbmRlciI6Ik1hbGUiLCJBZGRyZXNzIjoibGFnb3MsTmlnZXJpYSIsIlBob25lIjoiMDgwNTcyMzE5MTQiLCJFbWFpbCI6ImFiaW9kdW5AZ21haWwuY29tIiwiUGhvdG9QYXRoIjoidGV0c3RwaG90byIsIlBhc3N3b3JkIjoiJDJiJDEwJFYvRS5YekFnaERZRXZLdnAvQmE3V3VHMjRZM21BQWN1dnliVEtEWnZQcXpvT3FESmR0VjBLIiwiVmVyaWZ5Q2hhbm5lbCI6ImVtYWlsIiwiSXNWZXJpZmllZCI6MSwiTGFuZ3VhZ2UiOiJlbmdsaXNoIiwiQ29tcGFueVR5cGUiOiJCYW5raW5nIiwiUmVmcmVzaFRva2VuIjoiZXlKaGJHY2lPaUpJVXpJMU5pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SmtZWFJoSWpvaWFuVnpkQ0JoSUhKbFpuSmxjMmdnZEc5clpXNGlMQ0pwWVhRaU9qRTNNRFUzTnpRMU1UUXNJbVY0Y0NJNk1UY3dOak0zT1RNeE5IMC42YmNNNTVESXJNUjdVbDZFZXhxUHlobHRKYjFiZ1Y0UjdKaWJRajZ1YW1ZIiwiaWF0IjoxNzA1Nzc0OTM1LCJleHAiOjE3MDU3Nzg1MzV9.B4t-0BcLvo2H-pG8MJcQdWS6lc1L57dwayRC5YodNHY",
 			"type": "string",
 			"disabled": true
+		},
+		{
+			"key": "Id",
+			"value": ""
+		},
+		{
+			"key": "commununityId",
+			"value": ""
 		}
 	]
 }

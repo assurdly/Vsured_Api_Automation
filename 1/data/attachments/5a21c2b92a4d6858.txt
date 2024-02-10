@@ -1,1 +1,0 @@
-{"status":"failed","message":"Email sending failed, please try again"}

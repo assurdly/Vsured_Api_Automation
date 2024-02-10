@@ -1862,7 +1862,7 @@
 								},
 								"method": "GET",
 								"header": [],
-								"url": "{{BaseUrl}}/api/community/717fae8c-190e-440e-9d8f-82fe4cbd734e"
+								"url": "{{BaseUrl}}/api/community/{{Id}}"
 							},
 							"response": []
 						},

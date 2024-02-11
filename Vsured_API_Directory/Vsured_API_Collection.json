@@ -2244,6 +2244,32 @@
 					"item": [
 						{
 							"name": "GetAllSubAdmin",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "f2a3c0f4-150a-4e5f-85f4-9f1e73eac546",
+										"exec": [
+											"pm.test(\"Verify that status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that status returns success \", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+											"});\r",
+											"pm.test(\"Verify that message returns Successfully fetch subadmin\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Successfully fetch subAdmin\");\r",
+											"});\r",
+											"pm.test(\"Verify that data exist\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.data).to.exist;\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "aa0ee8c4-9ee3-4d5c-80e9-17a3570d7cb1",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -2262,17 +2288,36 @@
 							"response": []
 						},
 						{
-							"name": "GetAllSubAdmin Copy",
+							"name": "GetAllSubAdmin-No Auth Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "d99f822c-81d9-4205-b807-c6b87de0d6fb",
+										"exec": [
+											"pm.test(\"Verify that Status code is 401\", function () {\r",
+											"    pm.response.to.have.status(401);\r",
+											"});\r",
+											"pm.test(\"Verify that status is failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message is Request UnAuthorized\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Request UnAuthorized\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "d5dbcb90-d565-45b7-8009-514f09251e5b",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{Auth_token}}"
-									}
+									"type": "noauth"
 								},
 								"method": "GET",
 								"header": [],
@@ -2281,7 +2326,29 @@
 							"response": []
 						},
 						{
-							"name": "GetAllSubAdmin Copy 2",
+							"name": "GetAllSubAdmin-Invalid Auth Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "9a97e9d2-14cc-4ea4-8795-4e7a7ecd0234",
+										"exec": [
+											"pm.test(\"Verify that Status code is 403\", function () {\r",
+											"    pm.response.to.have.status(403);\r",
+											"});\r",
+											"pm.test(\"Verify that status is failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns Invalid token\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Request Forbidden, Invalid Token\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "a10bac29-d389-423a-9220-e52343f17c42",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -2290,7 +2357,7 @@
 								"auth": {
 									"type": "bearer",
 									"bearer": {
-										"token": "{{Auth_token}}"
+										"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6NDAsIkZpcnN0TmFtZSI6IkFiaW9kdW4iLMJCYXN0TmFtZSI6Ik9sYW5peWkiLCJET0IiOiIxOTkzLTAxLTAxVDAwOjAwOjAwLjAwMFoiLCJHZW5kZXIiOiJNYWxlIiwiQWRkcmVzcyI6ImxhZ29zLE5pZ2VyaWEiLCJQaG9uZSI6IjA4MTQ1MDc1Nzg5IiwiRW1haWwiOm51bGwsIlBob3RvUGF0aCI6InRlc3RpbmcucG5nIiwiUGFzc3dvcmQiOiIkMmIkMTAkUmYuUDIueHpQb1BvTFkzdS56Z0NVLklXTUd0bDk3Nm1OZ28zSDZCbmlPQ21OS2pRYXJ2UksiLCJJc1ZlcmlmaWVkIjoxLCJMYW5ndWFnZSI6ImVuZ2xpc2giLCJDb21wYW55VHlwZSI6IkJhbmtpbmciLCJSZWZyZXNoVG9rZW4iOiJleUpoYkdjaU9pSklVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKa1lYUmhJam9pYW5WemRDQmhJSEpsWm5KbGMyZ2dkRzlyWlc0aUxDSnBZWFFpT2pFM01EYzFOekExT1RNc0ltVjRjQ0k2TVRjd09ERTNOVE01TTMwLlAtS2FEc0hiR3JEMW01SlNkQVNjd1pEaTVtM09ub0NjcTYzbWxqblJEa1UiLCJpYXQiOjE3MDc2NDI4NjYsImV4cCI6MTcwNzY0NjQ2Nn0.HDgc52JkbxfvVgLT2nTjoHuOZZL7pUmu0EjKtt6l41o"
 									}
 								},
 								"method": "GET",

@@ -1,6 +1,0 @@
-  {
-        "Name":"Henriette",
-        "Address":"6646 Keven Harbors",
-        "Phone":"08093781185",
-        "Email":"CarloOsinski@yopmail.com"
-    }

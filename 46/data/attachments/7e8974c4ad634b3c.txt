@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Eula","Address":"3646 Karen Bypass","Phone":"08093781185","Email":"BerylGerlach@yopmail.com","CommunityId":"f75107b0-5010-4ce6-b499-4b01ff5b40f4"}}

@@ -2373,7 +2373,7 @@
 					"name": "GetSubAdminById",
 					"item": [
 						{
-							"name": "GetSubAdminById",
+							"name": "GetSubAdminById-Successful",
 							"id": "52129da3-5d3d-4b36-b2ae-1b283507a448",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -2392,17 +2392,36 @@
 							"response": []
 						},
 						{
-							"name": "GetSubAdminById Copy",
+							"name": "GetSubAdminById-No Auth Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "da78a3a5-d8e0-48b7-baa6-996344273962",
+										"exec": [
+											"pm.test(\"Verify that Status code is 401\", function () {\r",
+											"    pm.response.to.have.status(401);\r",
+											"});\r",
+											"pm.test(\"Verify that status is failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message is Request UnAuthorized\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Request UnAuthorized\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "fd655b6d-3b8d-4677-bea8-b822e709039e",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{Auth_token}}"
-									}
+									"type": "noauth"
 								},
 								"method": "GET",
 								"header": [],
@@ -2516,6 +2535,109 @@
 						}
 					],
 					"id": "06aefc30-e8a9-43e1-be39-fcb46e3c070f"
+				},
+				{
+					"name": "New Folder",
+					"item": [
+						{
+							"name": "CreateBulkCheckersWithExcel Copy",
+							"id": "26bf2a0b-ef33-44fd-942b-416eadcd7d37",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "WHS1BEVfk/CheckerUpload.xlsx"
+										}
+									]
+								},
+								"url": "{{BaseUrl}}/api/community/checkers/createXls"
+							},
+							"response": []
+						}
+					],
+					"id": "7a9e5045-f64e-4075-841a-dc4d77ead28d"
+				},
+				{
+					"name": "New Folder Copy",
+					"item": [
+						{
+							"name": "GetCheckerByCommunityId Copy",
+							"id": "5c7ad576-0555-41ff-9886-5565040e827c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BaseUrl}}/api/community/checkers/:communityId",
+									"host": [
+										"{{BaseUrl}}"
+									],
+									"path": [
+										"api",
+										"community",
+										"checkers",
+										":communityId"
+									],
+									"variable": [
+										{
+											"id": "3ddc46e0-ee46-4f5e-8ce7-b9a71c5802c8",
+											"key": "communityId",
+											"value": "717fae8c-190e-440e-9d8f-82fe4cbd734e"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "8d7db36d-a101-4533-abdd-66f6af37f66a"
+				},
+				{
+					"name": "New Folder Copy 2",
+					"item": [
+						{
+							"name": "GetSubAdminByCommmunityId Copy",
+							"id": "b4a090b9-5515-4d7a-8087-959c625beaa8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BaseUrl}}/api/community/subAdmins/:communityId",
+									"host": [
+										"{{BaseUrl}}"
+									],
+									"path": [
+										"api",
+										"community",
+										"subAdmins",
+										":communityId"
+									],
+									"variable": [
+										{
+											"id": "ba21b5fc-5614-46c4-a944-f72ae37e3f91",
+											"key": "communityId",
+											"value": "717fae8c-190e-440e-9d8f-82fe4cbd734e"
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
+					"id": "69918b87-4c79-4372-bcfd-4f8aa7545807"
 				}
 			],
 			"id": "9f42db7e-301f-446f-9277-a402da869eb5"

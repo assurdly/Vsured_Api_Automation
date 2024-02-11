@@ -2390,6 +2390,63 @@
 								"url": "{{BaseUrl}}/api/community/subAdmins/1"
 							},
 							"response": []
+						},
+						{
+							"name": "GetSubAdminById Copy",
+							"id": "fd655b6d-3b8d-4677-bea8-b822e709039e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "{{BaseUrl}}/api/community/subAdmins/1"
+							},
+							"response": []
+						},
+						{
+							"name": "GetSubAdminById Copy 2",
+							"id": "d5413b0d-1c98-4cb7-a1b7-176ed4c4c7cb",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "{{BaseUrl}}/api/community/subAdmins/1"
+							},
+							"response": []
+						},
+						{
+							"name": "GetSubAdminById Copy 3",
+							"id": "839cdb0b-719d-4793-91f2-9afb0714f6db",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "{{BaseUrl}}/api/community/subAdmins/1"
+							},
+							"response": []
 						}
 					],
 					"id": "cc53c12a-bc95-4f55-ac26-d6a120de99d0"

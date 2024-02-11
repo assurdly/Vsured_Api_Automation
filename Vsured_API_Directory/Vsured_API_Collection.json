@@ -2430,7 +2430,29 @@
 							"response": []
 						},
 						{
-							"name": "GetSubAdminById Copy 2",
+							"name": "GetSubAdminById-Invalid Auth Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "4ec708aa-316a-4434-b053-49002cdf42e6",
+										"exec": [
+											"pm.test(\"Verify that Status code is 403\", function () {\r",
+											"    pm.response.to.have.status(403);\r",
+											"});\r",
+											"pm.test(\"Verify that status is failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns Invalid token\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Request Forbidden, Invalid Token\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "d5413b0d-1c98-4cb7-a1b7-176ed4c4c7cb",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -2439,26 +2461,7 @@
 								"auth": {
 									"type": "bearer",
 									"bearer": {
-										"token": "{{Auth_token}}"
-									}
-								},
-								"method": "GET",
-								"header": [],
-								"url": "{{BaseUrl}}/api/community/subAdmins/1"
-							},
-							"response": []
-						},
-						{
-							"name": "GetSubAdminById Copy 3",
-							"id": "839cdb0b-719d-4793-91f2-9afb0714f6db",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{Auth_token}}"
+										"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6NDAsIkZpcnN0TmFtZSI6IkFiaW9kdW4iLMJCYXN0TmFtZSI6Ik9sYW5peWkiLCJET0IiOiIxOTkzLTAxLTAxVDAwOjAwOjAwLjAwMFoiLCJHZW5kZXIiOiJNYWxlIiwiQWRkcmVzcyI6ImxhZ29zLE5pZ2VyaWEiLCJQaG9uZSI6IjA4MTQ1MDc1Nzg5IiwiRW1haWwiOm51bGwsIlBob3RvUGF0aCI6InRlc3RpbmcucG5nIiwiUGFzc3dvcmQiOiIkMmIkMTAkUmYuUDIueHpQb1BvTFkzdS56Z0NVLklXTUd0bDk3Nm1OZ28zSDZCbmlPQ21OS2pRYXJ2UksiLCJJc1ZlcmlmaWVkIjoxLCJMYW5ndWFnZSI6ImVuZ2xpc2giLCJDb21wYW55VHlwZSI6IkJhbmtpbmciLCJSZWZyZXNoVG9rZW4iOiJleUpoYkdjaU9pSklVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKa1lYUmhJam9pYW5WemRDQmhJSEpsWm5KbGMyZ2dkRzlyWlc0aUxDSnBZWFFpT2pFM01EYzFOekExT1RNc0ltVjRjQ0k2TVRjd09ERTNOVE01TTMwLlAtS2FEc0hiR3JEMW01SlNkQVNjd1pEaTVtM09ub0NjcTYzbWxqblJEa1UiLCJpYXQiOjE3MDc2NDI4NjYsImV4cCI6MTcwNzY0NjQ2Nn0.HDgc52JkbxfvVgLT2nTjoHuOZZL7pUmu0EjKtt6l41o"
 									}
 								},
 								"method": "GET",
@@ -2603,10 +2606,10 @@
 					"id": "8d7db36d-a101-4533-abdd-66f6af37f66a"
 				},
 				{
-					"name": "New Folder Copy 2",
+					"name": "GetSubAdminByCommmunityId",
 					"item": [
 						{
-							"name": "GetSubAdminByCommmunityId Copy",
+							"name": "GetSubAdminByCommmunityId",
 							"id": "b4a090b9-5515-4d7a-8087-959c625beaa8",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true

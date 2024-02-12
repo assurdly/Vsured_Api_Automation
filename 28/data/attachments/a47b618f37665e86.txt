@@ -1,6 +1,0 @@
-  {
-        "Name":"Jaquelin",
-        "Address":"5067 Spinka Viaduct",
-        "Phone":"08093781185",
-        "Email":"MichealDare@yopmail.com"
-    }

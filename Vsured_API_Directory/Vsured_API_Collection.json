@@ -1609,6 +1609,51 @@
 							"response": []
 						},
 						{
+							"name": "CreateCommunity Copy",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "f3b183ba-564a-4601-9b83-f0a7599e810d",
+										"exec": [
+											"for (let i = 0; i < 10; i++) {\r",
+											"\r",
+											"    let randomMobile = \"07\" + Math.random().toString().slice(2,11);\r",
+											"    console.log(randomMobile);\r",
+											"\r",
+											"}"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "0e490998-e135-4a16-b54e-ee1689915811",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "  {\n        \"Name\":\"{{$randomFirstName}}\",\n        \"Address\":\"{{$randomStreetAddress}}\",\n        \"Phone\":\"080{{$randomPhoneNumber}}\",\n        \"Email\":\"{{$randomFirstName}}{{$randomLastName}}@yopmail.com\"\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/community/create"
+							},
+							"response": []
+						},
+						{
 							"name": "CreateCommunity-Empty name field",
 							"id": "f8f45c9c-2459-4585-bb76-694a84d576f2",
 							"protocolProfileBehavior": {

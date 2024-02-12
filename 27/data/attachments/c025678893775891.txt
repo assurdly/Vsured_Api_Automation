@@ -1,6 +1,0 @@
-  {
-        "Name":"Wallace",
-        "Address":"538 Marianne Hill",
-        "Phone":"08093781185",
-        "Email":"EthaAbernathy@yopmail.com"
-    }

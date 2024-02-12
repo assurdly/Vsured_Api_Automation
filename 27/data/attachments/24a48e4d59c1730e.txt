@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Wallace","Address":"538 Marianne Hill","Phone":"08093781185","Email":"EthaAbernathy@yopmail.com","CommunityId":"0ea0d36a-c0c0-4370-9be8-d5be5fc01e0d"}}

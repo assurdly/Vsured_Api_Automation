@@ -1,6 +1,0 @@
-  {
-        "Name":"Chadrick",
-        "Address":"626 Weissnat Lakes",
-        "Phone":"08093781185",
-        "Email":"AntonetteEmmerich@yopmail.com"
-    }

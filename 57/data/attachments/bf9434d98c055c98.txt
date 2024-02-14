@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Isai","Address":"520 Kihn Ports","Phone":"080515-777-8393","Email":"KyraGerlach@yopmail.com","CommunityId":"67ddec2d-4a87-4e94-84a2-49ce4004d6ee"}}

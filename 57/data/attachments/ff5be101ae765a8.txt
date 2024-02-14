@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Desiree","Address":"6328 Scottie Forge","Phone":"080700-459-9042","Email":"MontyFerry@yopmail.com","CommunityId":"d111438f-d1bb-4296-bde5-7e9f9aad5422"}}

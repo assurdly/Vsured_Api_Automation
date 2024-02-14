@@ -19,65 +19,17 @@
 									"script": {
 										"id": "ab85f89b-439e-49dd-b04c-cea107c111bf",
 										"exec": [
-											"pm.globals.set(\"phoneNumber\", parseInt(234 + `${_.random(1000000, 9999999)}`));"
-										],
-										"type": "text/javascript"
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"id": "0e8ebe61-c7f1-4a46-83e9-aa7ec46780ae",
-										"exec": [
-											"pm.test(\"Verify that Status code is 200\", function () {\r",
-											"    pm.response.to.have.status(200);\r",
-											"});\r",
-											"pm.test(\"Verify that status returns Success\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.status).to.eql(\"Success\");\r",
-											"});\r",
-											"pm.test(\"Verify that message returns Successfully registered user\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.message).to.eql(\"Successfully registered user\");\r",
-											"});\r",
-											"pm.test(\"Verify that data exist\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.data).to.exist;\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"id": "05c2b252-81d8-44f5-8ed0-66134c657b3d",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"FirstName\":\"{{$randomFirstName}}\",\n    \"LastName\":\"{{$randomLastName}}\",\n    \"Gender\":\"Male\",\n    \"Address\":\"lagos,Nigeria\",\n    \"Phone\":\"08057231914\",\n    \"PhotoPath\":\"tetstphoto\",\n    \"Password\":\"Password@12\",\n    \"VerifyChannel\":\"email\",\n    \"Language\":\"english\",\n    \"CompanyType\":\"Banking\",\n    \"DOB\":\"1993/01/01\",\n    \"Email\":\"{{$randomFirstName}}12@yopmail.com\"\n\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{BaseUrl}}/api/register"
-							},
-							"response": []
-						},
-						{
-							"name": "Register- Successful Copy",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "ab85f89b-439e-49dd-b04c-cea107c111bf",
-										"exec": [
-											"pm.globals.set(\"phoneNumber\", parseInt(234 + `${_.random(1000000, 9999999)}`));"
+											"/*const phoneNumber = Math.floor(Math.random() * 10000000000);\r",
+											"    // Format the number as a phone number with area code\r",
+											"    const formattedPhoneNumber = \"+1\" + phoneNumber.toString().padStart(10, '0');\r",
+											"    return formattedPhoneNumber;*/\r",
+											"\r",
+											"    const phoneNumber = Math.floor(Math.random() * 100000000);\r",
+											"    // Format the number as a phone number with area code\r",
+											"    const formattedPhoneNumber = \"080\" + phoneNumber.toString().padStart(8, '0');\r",
+											"    console.log(formattedPhoneNumber);\r",
+											"\r",
+											"    pm.collectionVariables.set('phoneNumber', formattedPhoneNumber)"
 										],
 										"type": "text/javascript"
 									}
@@ -116,7 +68,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"FirstName\":\"{{$randomFirstName}}\",\n    \"LastName\":\"{{$randomLastName}}\",\n    \"Gender\":\"Male\",\n    \"Address\":\"lagos,Nigeria\",\n    \"Phone\":\"08057231914\",\n    \"PhotoPath\":\"tetstphoto\",\n    \"Password\":\"Password@12\",\n    \"VerifyChannel\":\"email\",\n    \"Language\":\"english\",\n    \"CompanyType\":\"Banking\",\n    \"DOB\":\"1993/01/01\",\n    \"Email\":\"{{$randomFirstName}}12@yopmail.com\"\n\n}",
+									"raw": "{\n    \"FirstName\":\"{{$randomFirstName}}\",\n    \"LastName\":\"{{$randomLastName}}\",\n    \"Gender\":\"Male\",\n    \"Address\":\"lagos,Nigeria\",\n    \"Phone\":\"{{phoneNumber}}\",\n    \"PhotoPath\":\"tetstphoto\",\n    \"Password\":\"Password@12\",\n    \"VerifyChannel\":\"email\",\n    \"Language\":\"english\",\n    \"CompanyType\":\"Banking\",\n    \"DOB\":\"1993/01/01\",\n    \"Email\":\"{{$randomFirstName}}12@yopmail.com\"\n\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -154,7 +106,7 @@
 											"});\r",
 											"pm.test(\"Verify that message returns User with this Phone already exist\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.message).to.eql(\"User with this Phone already exist\");\r",
+											"    pm.expect(jsonData.message).to.eql(\"User with this Phone number already exist\");\r",
 											"});\r",
 											""
 										],

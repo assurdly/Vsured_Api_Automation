@@ -12,7 +12,7 @@
 					"name": "Register",
 					"item": [
 						{
-							"name": "Register Copy",
+							"name": "Register-Successful",
 							"event": [
 								{
 									"listen": "prerequest",
@@ -25,6 +25,30 @@
 											"    console.log(formattedPhoneNumber);\r",
 											"\r",
 											"    pm.collectionVariables.set('phoneNumber', formattedPhoneNumber)"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "de9bc1e4-e4a8-40db-bea6-6fafdc0c8e5e",
+										"exec": [
+											"pm.test(\"Verify that Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that status returns Success\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"Success\");\r",
+											"});\r",
+											"pm.test(\"Verify that message returns Successfully registered user\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Successfully registered user\");\r",
+											"});\r",
+											"pm.test(\"Verify that data exist\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.data).to.exist;\r",
+											"});"
 										],
 										"type": "text/javascript"
 									}
@@ -102,54 +126,20 @@
 							"response": []
 						},
 						{
-							"name": "Register- Successful",
+							"name": "Register Copy",
 							"event": [
 								{
 									"listen": "prerequest",
 									"script": {
 										"id": "ab85f89b-439e-49dd-b04c-cea107c111bf",
 										"exec": [
-											"/*const phoneNumber = Math.floor(Math.random() * 10000000000);\r",
-											"    // Format the number as a phone number with area code\r",
-											"    const formattedPhoneNumber = \"+1\" + phoneNumber.toString().padStart(10, '0');\r",
-											"    return formattedPhoneNumber;*/\r",
-											"\r",
-											"    const phoneNumber = Math.floor(Math.random() * 100000000);\r",
-											"    // Format the number as a phone number with area code\r",
-											"    const formattedPhoneNumber = \"080\" + phoneNumber.toString().padStart(8, '0');\r",
-											"    console.log(formattedPhoneNumber);\r",
-											"\r",
-											"    pm.collectionVariables.set('phoneNumber', formattedPhoneNumber)"
-										],
-										"type": "text/javascript"
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"id": "0e8ebe61-c7f1-4a46-83e9-aa7ec46780ae",
-										"exec": [
-											"pm.test(\"Verify that Status code is 200\", function () {\r",
-											"    pm.response.to.have.status(200);\r",
-											"});\r",
-											"pm.test(\"Verify that status returns Success\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.status).to.eql(\"Success\");\r",
-											"});\r",
-											"pm.test(\"Verify that message returns Successfully registered user\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.message).to.eql(\"Successfully registered user\");\r",
-											"});\r",
-											"pm.test(\"Verify that data exist\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.data).to.exist;\r",
-											"});"
+											""
 										],
 										"type": "text/javascript"
 									}
 								}
 							],
-							"id": "b34ec00f-20c4-4c38-9c17-4faa1dc3bac5",
+							"id": "fca3d779-f1f6-4c29-bcd1-590946b30c98",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -157,15 +147,321 @@
 								"method": "POST",
 								"header": [],
 								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"FirstName\":\"{{$randomFirstName}}\",\n    \"LastName\":\"{{$randomLastName}}\",\n    \"Gender\":\"Male\",\n    \"Address\":\"lagos,Nigeria\",\n    \"Phone\":\"{{phoneNumber}}\",\n    \"PhotoPath\":\"tetstphoto\",\n    \"Password\":\"Password@12\",\n    \"VerifyChannel\":\"email\",\n    \"Language\":\"english\",\n    \"CompanyType\":\"Banking\",\n    \"DOB\":\"1993/01/01\",\n    \"Email\":\"{{$randomFirstName}}12@yopmail.com\"\n\n}",
-									"options": {
-										"raw": {
-											"language": "json"
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "postman-cloud:///1eec0465-4bc1-44c0-b159-68c4676ec721"
+										},
+										{
+											"key": "FirstName",
+											"value": "Abiodun",
+											"type": "text"
+										},
+										{
+											"key": "LastName",
+											"value": "Olaniyi",
+											"type": "text"
+										},
+										{
+											"key": "Gender",
+											"value": "Male",
+											"type": "text"
+										},
+										{
+											"key": "Address",
+											"value": "testing address",
+											"type": "text"
+										},
+										{
+											"key": "Phone",
+											"value": "08057231914",
+											"type": "text"
+										},
+										{
+											"key": "Password",
+											"value": "2222222",
+											"type": "text"
+										},
+										{
+											"key": "Language",
+											"value": "English",
+											"type": "text"
+										},
+										{
+											"key": "CompanyType",
+											"value": "Finance",
+											"type": "text"
+										},
+										{
+											"key": "DOB",
+											"value": "1993-01-01",
+											"type": "text"
+										},
+										{
+											"key": "Email",
+											"value": "alex@gmail",
+											"type": "text"
 										}
-									}
+									]
 								},
 								"url": "{{BaseUrl}}/api/register"
+							},
+							"response": []
+						},
+						{
+							"name": "Register Copy 2",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "ab85f89b-439e-49dd-b04c-cea107c111bf",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "8fcc6ab1-0817-415e-8f8b-f744cc39e213",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "postman-cloud:///1eec0465-4bc1-44c0-b159-68c4676ec721"
+										},
+										{
+											"key": "FirstName",
+											"value": "Abiodun",
+											"type": "text"
+										},
+										{
+											"key": "LastName",
+											"value": "Olaniyi",
+											"type": "text"
+										},
+										{
+											"key": "Gender",
+											"value": "Male",
+											"type": "text"
+										},
+										{
+											"key": "Address",
+											"value": "testing address",
+											"type": "text"
+										},
+										{
+											"key": "Phone",
+											"value": "08057231914",
+											"type": "text"
+										},
+										{
+											"key": "Password",
+											"value": "2222222",
+											"type": "text"
+										},
+										{
+											"key": "Language",
+											"value": "English",
+											"type": "text"
+										},
+										{
+											"key": "CompanyType",
+											"value": "Finance",
+											"type": "text"
+										},
+										{
+											"key": "DOB",
+											"value": "1993-01-01",
+											"type": "text"
+										},
+										{
+											"key": "Email",
+											"value": "alex@gmail",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{BaseUrl}}/api/lregister"
+							},
+							"response": []
+						},
+						{
+							"name": "Register Copy 3",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "ab85f89b-439e-49dd-b04c-cea107c111bf",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "30e73c94-49fc-460e-9310-d78a00cd05fa",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "postman-cloud:///1eec0465-4bc1-44c0-b159-68c4676ec721"
+										},
+										{
+											"key": "FirstName",
+											"value": "Abiodun",
+											"type": "text"
+										},
+										{
+											"key": "LastName",
+											"value": "Olaniyi",
+											"type": "text"
+										},
+										{
+											"key": "Gender",
+											"value": "Male",
+											"type": "text"
+										},
+										{
+											"key": "Address",
+											"value": "testing address",
+											"type": "text"
+										},
+										{
+											"key": "Phone",
+											"value": "08057231914",
+											"type": "text"
+										},
+										{
+											"key": "Password",
+											"value": "2222222",
+											"type": "text"
+										},
+										{
+											"key": "Language",
+											"value": "English",
+											"type": "text"
+										},
+										{
+											"key": "CompanyType",
+											"value": "Finance",
+											"type": "text"
+										},
+										{
+											"key": "DOB",
+											"value": "1993-01-01",
+											"type": "text"
+										},
+										{
+											"key": "Email",
+											"value": "alex@gmail",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{BaseUrl}}/api/lregister"
+							},
+							"response": []
+						},
+						{
+							"name": "Register Copy 4",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "ab85f89b-439e-49dd-b04c-cea107c111bf",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "b6189f2c-50c9-4ebc-972c-d34bb6629239",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "postman-cloud:///1eec0465-4bc1-44c0-b159-68c4676ec721"
+										},
+										{
+											"key": "FirstName",
+											"value": "Abiodun",
+											"type": "text"
+										},
+										{
+											"key": "LastName",
+											"value": "Olaniyi",
+											"type": "text"
+										},
+										{
+											"key": "Gender",
+											"value": "Male",
+											"type": "text"
+										},
+										{
+											"key": "Address",
+											"value": "testing address",
+											"type": "text"
+										},
+										{
+											"key": "Phone",
+											"value": "08057231914",
+											"type": "text"
+										},
+										{
+											"key": "Password",
+											"value": "2222222",
+											"type": "text"
+										},
+										{
+											"key": "Language",
+											"value": "English",
+											"type": "text"
+										},
+										{
+											"key": "CompanyType",
+											"value": "Finance",
+											"type": "text"
+										},
+										{
+											"key": "DOB",
+											"value": "1993-01-01",
+											"type": "text"
+										},
+										{
+											"key": "Email",
+											"value": "alex@gmail",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{BaseUrl}}/api/lregister"
 							},
 							"response": []
 						},

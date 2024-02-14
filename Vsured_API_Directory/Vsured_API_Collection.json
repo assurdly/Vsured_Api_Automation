@@ -19,7 +19,12 @@
 									"script": {
 										"id": "ab85f89b-439e-49dd-b04c-cea107c111bf",
 										"exec": [
-											""
+											" const phoneNumber = Math.floor(Math.random() * 100000000);\r",
+											"    // Format the number as a phone number with area code\r",
+											"    const formattedPhoneNumber = \"080\" + phoneNumber.toString().padStart(8, '0');\r",
+											"    console.log(formattedPhoneNumber);\r",
+											"\r",
+											"    pm.collectionVariables.set('phoneNumber', formattedPhoneNumber)"
 										],
 										"type": "text/javascript"
 									}
@@ -42,12 +47,12 @@
 										},
 										{
 											"key": "FirstName",
-											"value": "Abiodun",
+											"value": "{{$randomFirstName}}",
 											"type": "text"
 										},
 										{
 											"key": "LastName",
-											"value": "Olaniyi",
+											"value": "{{$randomLastName}}",
 											"type": "text"
 										},
 										{
@@ -62,12 +67,12 @@
 										},
 										{
 											"key": "Phone",
-											"value": "08057231914",
+											"value": "{{phoneNumber}}",
 											"type": "text"
 										},
 										{
 											"key": "Password",
-											"value": "2222222",
+											"value": "Password@12",
 											"type": "text"
 										},
 										{
@@ -87,7 +92,7 @@
 										},
 										{
 											"key": "Email",
-											"value": "alex@gmail",
+											"value": "{{$randomFirstName}}12@yopmail.com",
 											"type": "text"
 										}
 									]

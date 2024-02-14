@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully fetch subAdmin","data":[{"Id":1,"CommunityId":"717fae8c-190e-440e-9d8f-82fe4cbd734e","FirstName":"tetst name1","LastName":"test name2","Phone":"08093781185","Email":"alexanderprofesssor@gmail.com","PhotoPath":"testpath"}]}

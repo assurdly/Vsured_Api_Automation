@@ -1,0 +1,11 @@
+{
+    "Content-Type": "application/json",
+    "Authorization": "Bearer {{accessToken}}",
+    "User-Agent": "PostmanRuntime/7.36.3",
+    "Accept": "*/*",
+    "Cache-Control": "no-cache",
+    "Postman-Token": "8ab6af97-39a0-475e-b6a4-48c7c3902088",
+    "Host": "vsured-4c2a3d0f8868.herokuapp.comapi",
+    "Accept-Encoding": "gzip, deflate, br",
+    "Connection": "keep-alive"
+}

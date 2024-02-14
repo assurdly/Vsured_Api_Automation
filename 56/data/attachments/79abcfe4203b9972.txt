@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Georgette","Address":"520 O'Connell Summit","Phone":"080695-204-3576","Email":"CarolanneBatz@yopmail.com","CommunityId":"30d0aa10-260a-4fb7-af6f-d802718a56ee"}}

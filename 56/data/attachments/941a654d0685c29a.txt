@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Brenda","Address":"59747 Feeney Passage","Phone":"080838-633-9399","Email":"DarionWolff@yopmail.com","CommunityId":"f60546ee-8a60-4490-8b21-f6067ec4c05d"}}

@@ -1,6 +1,0 @@
-  {
-        "Name":"Lorenz",
-        "Address":"6291 Jack Mountains",
-        "Phone":"08093781185",
-        "Email":"DaneDouglas@yopmail.com"
-    }

@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully fetch subAdmin"}

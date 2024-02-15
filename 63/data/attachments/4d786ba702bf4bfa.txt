@@ -1,0 +1,15 @@
+{
+    "FirstName":"Flo",
+    "LastName":"Padberg",
+    "Gender":"Male",
+    "Address":"lagos,Nigeria",
+    "Phone":"08057231914",
+    "PhotoPath":"tetstphoto",
+    "Password":"Password@12",
+    "VerifyChannel":"email",
+    "Language":"english",
+    "CompanyType":"Banking",
+    "DOB":"1993/01/01",
+    "Email":"Marielle12@yopmail.com"
+
+}

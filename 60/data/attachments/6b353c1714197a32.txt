@@ -1,0 +1,6 @@
+  {
+        "Name":"Colt",
+        "Address":"051 John Pines",
+        "Phone":"080594-485-1101",
+        "Email":"HudsonKris@yopmail.com"
+    }

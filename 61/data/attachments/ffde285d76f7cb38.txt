@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Nayeli","Address":"0698 Blanda Vista","Phone":"080903-452-5266","Email":"BellKemmer@yopmail.com","CommunityId":"6d09b669-73d5-4ef7-a4e5-3a26e216cebf"}}

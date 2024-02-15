@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Shad","Address":"13797 Wiza Cove","Phone":"080815-494-5743","Email":"CordellKuphal@yopmail.com","CommunityId":"0920ef61-8336-4c63-852c-f338326f6505"}}

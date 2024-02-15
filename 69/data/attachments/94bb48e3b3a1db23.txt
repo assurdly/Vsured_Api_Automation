@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Marta","Address":"83467 Erdman Overpass","Phone":"080728-775-9605","Email":"BridieHuel@yopmail.com","CommunityId":"e974ad77-6287-49a9-b596-373a793d466b"}}

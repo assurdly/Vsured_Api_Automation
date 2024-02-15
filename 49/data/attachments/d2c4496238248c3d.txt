@@ -1,6 +1,0 @@
-  {
-        "Name":"Everett",
-        "Address":"8446 Clair Junctions",
-        "Phone":"080358-606-1783",
-        "Email":"JudahRutherford@yopmail.com"
-    }

@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Holden","Address":"2714 Princess Pike","Phone":"080714-762-4971","Email":"MurlConnelly@yopmail.com","CommunityId":"b02c6c91-157d-4218-9258-9c9341891172"}}

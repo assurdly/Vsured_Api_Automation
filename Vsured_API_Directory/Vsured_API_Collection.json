@@ -242,7 +242,7 @@
 							"response": []
 						},
 						{
-							"name": "Register-Successful Copy",
+							"name": "Register-Empty First name field",
 							"event": [
 								{
 									"listen": "prerequest",
@@ -264,20 +264,20 @@
 									"script": {
 										"id": "de9bc1e4-e4a8-40db-bea6-6fafdc0c8e5e",
 										"exec": [
-											"pm.test(\"Verify that Status code is 200\", function () {\r",
-											"    pm.response.to.have.status(200);\r",
+											"pm.test(\"Verify that Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
 											"});\r",
-											"pm.test(\"Verify that status returns Success\", function () {\r",
+											"pm.test(\"Verify that type returns field\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.status).to.eql(\"Success\");\r",
+											"    pm.expect(jsonData[0].type).to.eql(\"field\");\r",
 											"});\r",
-											"pm.test(\"Verify that message returns Successfully registered user\", function () {\r",
+											"pm.test(\"Verify that message returns FirstName is required\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.message).to.eql(\"Successfully registered user\");\r",
+											"    pm.expect(jsonData[0].msg).to.eql(\"FirstName is required\");\r",
 											"});\r",
-											"pm.test(\"Verify that data exist\", function () {\r",
+											"pm.test(\"Verify that path returns FirstName\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.data).to.exist;\r",
+											"    pm.expect(jsonData[0].path).to.eql(\"FirstName\");\r",
 											"});"
 										],
 										"type": "text/javascript"
@@ -301,7 +301,7 @@
 										},
 										{
 											"key": "FirstName",
-											"value": "{{$randomFirstName}}",
+											"value": "",
 											"type": "text"
 										},
 										{
@@ -361,7 +361,7 @@
 							"response": []
 						},
 						{
-							"name": "Register-Successful Copy 2",
+							"name": "Register-Empty Last Name Field",
 							"event": [
 								{
 									"listen": "prerequest",
@@ -383,20 +383,20 @@
 									"script": {
 										"id": "de9bc1e4-e4a8-40db-bea6-6fafdc0c8e5e",
 										"exec": [
-											"pm.test(\"Verify that Status code is 200\", function () {\r",
-											"    pm.response.to.have.status(200);\r",
+											"pm.test(\"Verify that Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
 											"});\r",
-											"pm.test(\"Verify that status returns Success\", function () {\r",
+											"pm.test(\"Verify that type returns field\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.status).to.eql(\"Success\");\r",
+											"    pm.expect(jsonData[0].type).to.eql(\"field\");\r",
 											"});\r",
-											"pm.test(\"Verify that message returns Successfully registered user\", function () {\r",
+											"pm.test(\"Verify that message returns LastName is required\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.message).to.eql(\"Successfully registered user\");\r",
+											"    pm.expect(jsonData[0].msg).to.eql(\"LastName is required\");\r",
 											"});\r",
-											"pm.test(\"Verify that data exist\", function () {\r",
+											"pm.test(\"Verify that path returns LastName\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.data).to.exist;\r",
+											"    pm.expect(jsonData[0].path).to.eql(\"LastName\");\r",
 											"});"
 										],
 										"type": "text/javascript"
@@ -425,7 +425,7 @@
 										},
 										{
 											"key": "LastName",
-											"value": "{{$randomLastName}}",
+											"value": "",
 											"type": "text"
 										},
 										{
@@ -718,6 +718,244 @@
 							"response": []
 						},
 						{
+							"name": "Register-Successful Copy 5",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "ab85f89b-439e-49dd-b04c-cea107c111bf",
+										"exec": [
+											" const phoneNumber = Math.floor(Math.random() * 100000000);\r",
+											"    // Format the number as a phone number with area code\r",
+											"    const formattedPhoneNumber = \"080\" + phoneNumber.toString().padStart(8, '0');\r",
+											"    console.log(formattedPhoneNumber);\r",
+											"\r",
+											"    pm.collectionVariables.set('phoneNumber', formattedPhoneNumber)"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "de9bc1e4-e4a8-40db-bea6-6fafdc0c8e5e",
+										"exec": [
+											"pm.test(\"Verify that Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that status returns Success\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"Success\");\r",
+											"});\r",
+											"pm.test(\"Verify that message returns Successfully registered user\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Successfully registered user\");\r",
+											"});\r",
+											"pm.test(\"Verify that data exist\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.data).to.exist;\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "67a7a6f4-2b9f-43ea-ba26-cbdfeb54c8bd",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "postman-cloud:///1eec0465-4bc1-44c0-b159-68c4676ec721"
+										},
+										{
+											"key": "FirstName",
+											"value": "{{$randomFirstName}}",
+											"type": "text"
+										},
+										{
+											"key": "LastName",
+											"value": "{{$randomLastName}}",
+											"type": "text"
+										},
+										{
+											"key": "Gender",
+											"value": "Male",
+											"type": "text"
+										},
+										{
+											"key": "Address",
+											"value": "testing address",
+											"type": "text"
+										},
+										{
+											"key": "Phone",
+											"value": "{{phoneNumber}}",
+											"type": "text"
+										},
+										{
+											"key": "Password",
+											"value": "Password@12",
+											"type": "text"
+										},
+										{
+											"key": "Language",
+											"value": "English",
+											"type": "text"
+										},
+										{
+											"key": "CompanyType",
+											"value": "Finance",
+											"type": "text"
+										},
+										{
+											"key": "DOB",
+											"value": "1993-01-01",
+											"type": "text"
+										},
+										{
+											"key": "Email",
+											"value": "{{$randomFirstName}}12@yopmail.com",
+											"type": "text"
+										},
+										{
+											"key": "UserRole",
+											"value": "COMMUNITY_ADMIN",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{BaseUrl}}/api/register"
+							},
+							"response": []
+						},
+						{
+							"name": "Register-Successful Copy 6",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "ab85f89b-439e-49dd-b04c-cea107c111bf",
+										"exec": [
+											" const phoneNumber = Math.floor(Math.random() * 100000000);\r",
+											"    // Format the number as a phone number with area code\r",
+											"    const formattedPhoneNumber = \"080\" + phoneNumber.toString().padStart(8, '0');\r",
+											"    console.log(formattedPhoneNumber);\r",
+											"\r",
+											"    pm.collectionVariables.set('phoneNumber', formattedPhoneNumber)"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "de9bc1e4-e4a8-40db-bea6-6fafdc0c8e5e",
+										"exec": [
+											"pm.test(\"Verify that Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that status returns Success\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"Success\");\r",
+											"});\r",
+											"pm.test(\"Verify that message returns Successfully registered user\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Successfully registered user\");\r",
+											"});\r",
+											"pm.test(\"Verify that data exist\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.data).to.exist;\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "65675bc1-970b-4011-87b7-c7c28cfa5ed1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "postman-cloud:///1eec0465-4bc1-44c0-b159-68c4676ec721"
+										},
+										{
+											"key": "FirstName",
+											"value": "{{$randomFirstName}}",
+											"type": "text"
+										},
+										{
+											"key": "LastName",
+											"value": "{{$randomLastName}}",
+											"type": "text"
+										},
+										{
+											"key": "Gender",
+											"value": "Male",
+											"type": "text"
+										},
+										{
+											"key": "Address",
+											"value": "testing address",
+											"type": "text"
+										},
+										{
+											"key": "Phone",
+											"value": "{{phoneNumber}}",
+											"type": "text"
+										},
+										{
+											"key": "Password",
+											"value": "Password@12",
+											"type": "text"
+										},
+										{
+											"key": "Language",
+											"value": "English",
+											"type": "text"
+										},
+										{
+											"key": "CompanyType",
+											"value": "Finance",
+											"type": "text"
+										},
+										{
+											"key": "DOB",
+											"value": "1993-01-01",
+											"type": "text"
+										},
+										{
+											"key": "Email",
+											"value": "{{$randomFirstName}}12@yopmail.com",
+											"type": "text"
+										},
+										{
+											"key": "UserRole",
+											"value": "COMMUNITY_ADMIN",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{BaseUrl}}/api/register"
+							},
+							"response": []
+						},
+						{
 							"name": "Register- Already Registered Email",
 							"event": [
 								{
@@ -762,122 +1000,6 @@
 								"body": {
 									"mode": "raw",
 									"raw": "{\n    \"FirstName\":\"{{$randomFirstName}}\",\n    \"LastName\":\"{{$randomLastName}}\",\n    \"Gender\":\"Male\",\n    \"Address\":\"lagos,Nigeria\",\n    \"Phone\":\"08057231914\",\n    \"PhotoPath\":\"tetstphoto\",\n    \"Password\":\"Password@12\",\n    \"VerifyChannel\":\"email\",\n    \"Language\":\"english\",\n    \"CompanyType\":\"Banking\",\n    \"DOB\":\"1993/01/01\",\n    \"Email\":\"Marielle12@yopmail.com\"\n\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{BaseUrl}}/api/register"
-							},
-							"response": []
-						},
-						{
-							"name": "Register- Empty First name field",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "ab85f89b-439e-49dd-b04c-cea107c111bf",
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"id": "e83995bf-28ec-4091-83b2-10b811f8ea5d",
-										"exec": [
-											"pm.test(\"Verify that Status code is 400\", function () {\r",
-											"    pm.response.to.have.status(400);\r",
-											"});\r",
-											"pm.test(\"Verify that type returns field\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData[0].type).to.eql(\"field\");\r",
-											"});\r",
-											"pm.test(\"Verify that message returns FirstName is required\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData[0].msg).to.eql(\"FirstName is required\");\r",
-											"});\r",
-											"pm.test(\"Verify that path returns FirstName\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData[0].path).to.eql(\"FirstName\");\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"id": "617c504d-1d86-4ad1-ae30-ed9754cbca62",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"FirstName\":\"\",\n    \"LastName\":\"Ajibose\",\n    \"Gender\":\"Male\",\n    \"Address\":\"lagos,Nigeria\",\n    \"Phone\":\"08057231914\",\n    \"PhotoPath\":\"tetstphoto\",\n    \"Password\":\"ajibose419\",\n    \"VerifyChannel\":\"email\",\n    \"Language\":\"english\",\n    \"CompanyType\":\"Banking\",\n    \"DOB\":\"1993/01/01\",\n    \"Email\":\"abiodun@gmail.com\"\n\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{BaseUrl}}/api/register"
-							},
-							"response": []
-						},
-						{
-							"name": "Register- Empty Last name field",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "ab85f89b-439e-49dd-b04c-cea107c111bf",
-										"exec": [
-											""
-										],
-										"type": "text/javascript"
-									}
-								},
-								{
-									"listen": "test",
-									"script": {
-										"id": "85c75882-88f8-416e-930c-f29b29a4ff49",
-										"exec": [
-											"pm.test(\"Verify that Status code is 400\", function () {\r",
-											"    pm.response.to.have.status(400);\r",
-											"});\r",
-											"pm.test(\"Verify that type returns field\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData[0].type).to.eql(\"field\");\r",
-											"});\r",
-											"pm.test(\"Verify that message returns LastName is required\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData[0].msg).to.eql(\"LastName is required\");\r",
-											"});\r",
-											"pm.test(\"Verify that path returns LastName\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData[0].path).to.eql(\"LastName\");\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"id": "e5c54f67-de72-40a5-924e-ad2aa1f8ae80",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"FirstName\":\"Alexander\",\n    \"LastName\":\"\",\n    \"Gender\":\"Male\",\n    \"Address\":\"lagos,Nigeria\",\n    \"Phone\":\"08057231914\",\n    \"PhotoPath\":\"tetstphoto\",\n    \"Password\":\"ajibose419\",\n    \"VerifyChannel\":\"email\",\n    \"Language\":\"english\",\n    \"CompanyType\":\"Banking\",\n    \"DOB\":\"1993/01/01\",\n    \"Email\":\"abiodun@gmail.com\"\n\n}",
 									"options": {
 										"raw": {
 											"language": "json"

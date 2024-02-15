@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Trenton","Address":"07886 Fritsch Street","Phone":"080757-395-5179","Email":"SylvesterBatz@yopmail.com","CommunityId":"ce3a9844-73f4-4dab-acc8-9e331786d83f"}}

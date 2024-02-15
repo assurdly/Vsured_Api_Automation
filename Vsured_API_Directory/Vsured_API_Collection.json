@@ -1802,6 +1802,111 @@
 					"name": "Send OTP to Registered Email",
 					"item": [
 						{
+							"name": "RegisterSendMail Copy",
+							"id": "6f8ba969-7799-42ce-818f-738b4a160df9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{accessToken}}"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"Channel\":\"08145075789\",\n    \"Medium\":\"SMS\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/register/sendMail"
+							},
+							"response": []
+						},
+						{
+							"name": "RegisterSendMail Copy 2",
+							"id": "58d64fb9-433b-4c27-947d-ad5a1c86b9d9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{accessToken}}"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"Channel\":\"08145075789\",\n    \"Medium\":\"SMS\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/register/sendMail"
+							},
+							"response": []
+						},
+						{
+							"name": "RegisterSendMail Copy 3",
+							"id": "04b0e864-532a-443c-86e9-3b373977f9b1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{accessToken}}"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"Channel\":\"08145075789\",\n    \"Medium\":\"SMS\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/register/sendMail"
+							},
+							"response": []
+						},
+						{
 							"name": "RegisterSendMail",
 							"id": "11d87fe7-5306-48ae-b81e-c0759ee5b6e5",
 							"protocolProfileBehavior": {

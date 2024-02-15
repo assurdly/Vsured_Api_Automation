@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Kendrick","Address":"450 Rhea Prairie","Phone":"080448-338-8155","Email":"WilburnLesch@yopmail.com","CommunityId":"5f021e3b-81ae-49c6-beb1-2e1b8a1eab3b"}}

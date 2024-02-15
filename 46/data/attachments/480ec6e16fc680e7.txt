@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Abraham","Address":"29166 Will Dale","Phone":"08093781185","Email":"LedaLakin@yopmail.com","CommunityId":"67d01868-bca0-4ccc-81eb-891d44303a7f"}}

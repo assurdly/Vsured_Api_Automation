@@ -1,4 +1,0 @@
-{
-    "Email":"abiodun@yopmail.com",
-    "Medium":"Email"
-}

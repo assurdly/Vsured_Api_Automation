@@ -1,6 +1,0 @@
-  {
-        "Name":"Isaac",
-        "Address":"308 Stefan Fort",
-        "Phone":"080621-315-9102",
-        "Email":"MagdalenSchowalter@yopmail.com"
-    }

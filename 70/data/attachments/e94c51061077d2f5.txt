@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Lavonne","Address":"37776 Kerluke Ports","Phone":"080419-307-5446","Email":"PietroGraham@yopmail.com","CommunityId":"6ca63988-fafc-4e09-a875-5fd3d2e8ad4e"}}

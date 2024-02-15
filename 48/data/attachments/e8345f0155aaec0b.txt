@@ -1,8 +1,0 @@
-{
-"FirstName":"Kirk",
-"LastName":"Friesen",
-"Phone":"08093781186",
-"Email":"AdanGleichner@gmail.com",
-"PhotoPath":"testpath",
-"CommunityId":""
-}

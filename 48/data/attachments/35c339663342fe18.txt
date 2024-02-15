@@ -1,6 +1,0 @@
-  {
-        "Name":"Eileen",
-        "Address":"6555 Bruen Pass",
-        "Phone":"080423-311-2824",
-        "Email":"MollieMacGyver@yopmail.com"
-    }

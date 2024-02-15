@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Jade","Address":"86433 Jack Rapids","Phone":"080311-385-3520","Email":"KeyshawnDickens@yopmail.com","CommunityId":"a389f760-2937-4d39-87db-b525f817dbe9"}}

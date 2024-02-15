@@ -1,6 +1,0 @@
-  {
-        "Name":"Jaunita",
-        "Address":"5002 Parisian Skyway",
-        "Phone":"080574-875-5898",
-        "Email":"TiannaFunk@yopmail.com"
-    }

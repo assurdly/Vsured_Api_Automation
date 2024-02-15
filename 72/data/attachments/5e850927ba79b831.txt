@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Fabian","Address":"2478 Russel Plains","Phone":"080856-779-1055","Email":"GayPouros@yopmail.com","CommunityId":"0c5571ed-e2b6-4e42-899b-48a3df606d75"}}

@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Jaunita","Address":"5002 Parisian Skyway","Phone":"080574-875-5898","Email":"TiannaFunk@yopmail.com","CommunityId":"e46b3951-d46d-4981-a5a2-f91f8c426e13"}}

@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Hudson","Address":"522 Cicero Springs","Phone":"080317-733-9480","Email":"EstherDickinson@yopmail.com","CommunityId":"23d76520-4012-4f5d-b616-1423156d65c5"}}

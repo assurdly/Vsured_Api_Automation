@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Meggie","Address":"925 Sawayn Gateway","Phone":"080514-654-8342","Email":"ManuelaJones@yopmail.com","CommunityId":"b2415790-25d1-44b0-b398-16216385bf21"}}

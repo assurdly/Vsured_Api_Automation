@@ -1,6 +1,0 @@
-  {
-        "Name":"Geovany",
-        "Address":"74554 Weimann Spring",
-        "Phone":"08093781185",
-        "Email":"CourtneyDaniel@yopmail.com"
-    }

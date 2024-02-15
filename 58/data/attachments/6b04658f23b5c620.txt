@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Louvenia","Address":"02545 Macejkovic Ville","Phone":"080633-497-6621","Email":"GertrudeGulgowski@yopmail.com","CommunityId":"1729a5a1-3418-4bd3-8fd1-0d166ea0aab7"}}

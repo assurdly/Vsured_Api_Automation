@@ -1461,21 +1461,22 @@
 									"script": {
 										"id": "de9bc1e4-e4a8-40db-bea6-6fafdc0c8e5e",
 										"exec": [
-											"pm.test(\"Verify that Status code is 200\", function () {\r",
-											"    pm.response.to.have.status(200);\r",
+											"pm.test(\"Verify that Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
 											"});\r",
-											"pm.test(\"Verify that status returns Success\", function () {\r",
+											"pm.test(\"Verify that type returns field\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.status).to.eql(\"Success\");\r",
+											"    pm.expect(jsonData[0].type).to.eql(\"field\");\r",
 											"});\r",
-											"pm.test(\"Verify that message returns Successfully registered user\", function () {\r",
+											"pm.test(\"Verify that message returns Email is invalid\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.message).to.eql(\"Successfully registered user\");\r",
+											"    pm.expect(jsonData[0].msg).to.eql(\"Email is invalid\");\r",
 											"});\r",
-											"pm.test(\"Verify that data exist\", function () {\r",
+											"pm.test(\"Verify that path returns Email\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.data).to.exist;\r",
-											"});"
+											"    pm.expect(jsonData[0].path).to.eql(\"Email\");\r",
+											"});\r",
+											""
 										],
 										"type": "text/javascript"
 									}

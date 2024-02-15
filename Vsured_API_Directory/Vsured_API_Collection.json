@@ -840,7 +840,7 @@
 							"response": []
 						},
 						{
-							"name": "Register-Empty Phone number Field Copy",
+							"name": "Register-Invalid Phone number Field",
 							"event": [
 								{
 									"listen": "prerequest",

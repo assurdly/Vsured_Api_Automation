@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Frederique","Address":"83532 Welch Plains","Phone":"080653-421-5844","Email":"KevinFahey@yopmail.com","CommunityId":"d9167c86-e067-44dd-803f-46740c6005e7"}}

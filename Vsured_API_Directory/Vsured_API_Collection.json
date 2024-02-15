@@ -1701,21 +1701,19 @@
 									"script": {
 										"id": "de9bc1e4-e4a8-40db-bea6-6fafdc0c8e5e",
 										"exec": [
-											"pm.test(\"Verify that Status code is 200\", function () {\r",
-											"    pm.response.to.have.status(200);\r",
+											"pm.test(\"Verify that Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
 											"});\r",
-											"pm.test(\"Verify that status returns Success\", function () {\r",
+											"pm.test(\"Verify that response status returns failed\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.status).to.eql(\"Success\");\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
 											"});\r",
-											"pm.test(\"Verify that message returns Successfully registered user\", function () {\r",
+											"pm.test(\"Verify that message returns Invalid role passed\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.message).to.eql(\"Successfully registered user\");\r",
+											"    pm.expect(jsonData.message).to.eql(\"Invalid role passed\");\r",
 											"});\r",
-											"pm.test(\"Verify that data exist\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.data).to.exist;\r",
-											"});"
+											"\r",
+											""
 										],
 										"type": "text/javascript"
 									}
@@ -1788,7 +1786,7 @@
 										},
 										{
 											"key": "UserRole",
-											"value": "COMMUNITY_ADMIN",
+											"value": "XXXXXXXXXX",
 											"type": "text"
 										}
 									]

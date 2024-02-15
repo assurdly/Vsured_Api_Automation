@@ -1,8 +1,0 @@
-{
-"FirstName":"Godfrey",
-"LastName":"Dibbert",
-"Phone":"08093781186",
-"Email":"JulianaCrist@gmail.com",
-"PhotoPath":"testpath",
-"CommunityId":""
-}

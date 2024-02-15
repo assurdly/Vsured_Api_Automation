@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Kenny","Address":"739 Mosciski Corner","Phone":"080713-620-2361","Email":"BorisChristiansen@yopmail.com","CommunityId":"e3e4dff0-8229-40ae-aac8-254f9ef26dc6"}}

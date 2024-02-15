@@ -1,6 +1,0 @@
-  {
-        "Name":"Janick",
-        "Address":"42650 Sarina Locks",
-        "Phone":"08093781185",
-        "Email":"LeilaniAuer@yopmail.com"
-    }

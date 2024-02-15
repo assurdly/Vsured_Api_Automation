@@ -920,7 +920,7 @@
 										},
 										{
 											"key": "Phone",
-											"value": "abcdefghijk",
+											"value": "{{$randomFirstName}}",
 											"type": "text"
 										},
 										{
@@ -1222,21 +1222,22 @@
 									"script": {
 										"id": "de9bc1e4-e4a8-40db-bea6-6fafdc0c8e5e",
 										"exec": [
-											"pm.test(\"Verify that Status code is 200\", function () {\r",
-											"    pm.response.to.have.status(200);\r",
+											"pm.test(\"Verify that Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
 											"});\r",
-											"pm.test(\"Verify that status returns Success\", function () {\r",
+											"pm.test(\"Verify that type returns field\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.status).to.eql(\"Success\");\r",
+											"    pm.expect(jsonData[0].type).to.eql(\"field\");\r",
 											"});\r",
-											"pm.test(\"Verify that message returns Successfully registered user\", function () {\r",
+											"pm.test(\"Verify that message returns Date of Birth is required\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.message).to.eql(\"Successfully registered user\");\r",
+											"    pm.expect(jsonData[0].msg).to.eql(\"Date of Birth is required\");\r",
 											"});\r",
-											"pm.test(\"Verify that data exist\", function () {\r",
+											"pm.test(\"Verify that path returns DOB\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.data).to.exist;\r",
-											"});"
+											"    pm.expect(jsonData[0].path).to.eql(\"DOB\");\r",
+											"});\r",
+											""
 										],
 										"type": "text/javascript"
 									}
@@ -1299,7 +1300,7 @@
 										},
 										{
 											"key": "DOB",
-											"value": "1993-01-01",
+											"value": "",
 											"type": "text"
 										},
 										{
@@ -1319,7 +1320,7 @@
 							"response": []
 						},
 						{
-							"name": "Register-Successful Copy 9",
+							"name": "Register-Empty Email field",
 							"event": [
 								{
 									"listen": "prerequest",
@@ -1362,6 +1363,244 @@
 								}
 							],
 							"id": "df676ec0-57fc-40f4-b7ba-8fc1b9dfb6f2",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "postman-cloud:///1eec0465-4bc1-44c0-b159-68c4676ec721"
+										},
+										{
+											"key": "FirstName",
+											"value": "{{$randomFirstName}}",
+											"type": "text"
+										},
+										{
+											"key": "LastName",
+											"value": "{{$randomLastName}}",
+											"type": "text"
+										},
+										{
+											"key": "Gender",
+											"value": "Male",
+											"type": "text"
+										},
+										{
+											"key": "Address",
+											"value": "testing address",
+											"type": "text"
+										},
+										{
+											"key": "Phone",
+											"value": "{{phoneNumber}}",
+											"type": "text"
+										},
+										{
+											"key": "Password",
+											"value": "Password@12",
+											"type": "text"
+										},
+										{
+											"key": "Language",
+											"value": "English",
+											"type": "text"
+										},
+										{
+											"key": "CompanyType",
+											"value": "Finance",
+											"type": "text"
+										},
+										{
+											"key": "DOB",
+											"value": "1993-01-01",
+											"type": "text"
+										},
+										{
+											"key": "Email",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "UserRole",
+											"value": "COMMUNITY_ADMIN",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{BaseUrl}}/api/register"
+							},
+							"response": []
+						},
+						{
+							"name": "Register-Invalid Email format",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "ab85f89b-439e-49dd-b04c-cea107c111bf",
+										"exec": [
+											" const phoneNumber = Math.floor(Math.random() * 100000000);\r",
+											"    // Format the number as a phone number with area code\r",
+											"    const formattedPhoneNumber = \"080\" + phoneNumber.toString().padStart(8, '0');\r",
+											"    console.log(formattedPhoneNumber);\r",
+											"\r",
+											"    pm.collectionVariables.set('phoneNumber', formattedPhoneNumber)"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "de9bc1e4-e4a8-40db-bea6-6fafdc0c8e5e",
+										"exec": [
+											"pm.test(\"Verify that Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that status returns Success\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"Success\");\r",
+											"});\r",
+											"pm.test(\"Verify that message returns Successfully registered user\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Successfully registered user\");\r",
+											"});\r",
+											"pm.test(\"Verify that data exist\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.data).to.exist;\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "aed0b408-9f07-4d66-b515-14b81f8808e1",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "postman-cloud:///1eec0465-4bc1-44c0-b159-68c4676ec721"
+										},
+										{
+											"key": "FirstName",
+											"value": "{{$randomFirstName}}",
+											"type": "text"
+										},
+										{
+											"key": "LastName",
+											"value": "{{$randomLastName}}",
+											"type": "text"
+										},
+										{
+											"key": "Gender",
+											"value": "Male",
+											"type": "text"
+										},
+										{
+											"key": "Address",
+											"value": "testing address",
+											"type": "text"
+										},
+										{
+											"key": "Phone",
+											"value": "{{phoneNumber}}",
+											"type": "text"
+										},
+										{
+											"key": "Password",
+											"value": "Password@12",
+											"type": "text"
+										},
+										{
+											"key": "Language",
+											"value": "English",
+											"type": "text"
+										},
+										{
+											"key": "CompanyType",
+											"value": "Finance",
+											"type": "text"
+										},
+										{
+											"key": "DOB",
+											"value": "1993-01-01",
+											"type": "text"
+										},
+										{
+											"key": "Email",
+											"value": "{{$randomFirstName}}12yopmailcom",
+											"type": "text"
+										},
+										{
+											"key": "UserRole",
+											"value": "COMMUNITY_ADMIN",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{BaseUrl}}/api/register"
+							},
+							"response": []
+						},
+						{
+							"name": "Register-Successful Copy 11",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "ab85f89b-439e-49dd-b04c-cea107c111bf",
+										"exec": [
+											" const phoneNumber = Math.floor(Math.random() * 100000000);\r",
+											"    // Format the number as a phone number with area code\r",
+											"    const formattedPhoneNumber = \"080\" + phoneNumber.toString().padStart(8, '0');\r",
+											"    console.log(formattedPhoneNumber);\r",
+											"\r",
+											"    pm.collectionVariables.set('phoneNumber', formattedPhoneNumber)"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "de9bc1e4-e4a8-40db-bea6-6fafdc0c8e5e",
+										"exec": [
+											"pm.test(\"Verify that Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that status returns Success\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"Success\");\r",
+											"});\r",
+											"pm.test(\"Verify that message returns Successfully registered user\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Successfully registered user\");\r",
+											"});\r",
+											"pm.test(\"Verify that data exist\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.data).to.exist;\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "4de74b20-d2d9-4244-9d7c-994ba3331a58",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},

@@ -1559,7 +1559,7 @@
 							"response": []
 						},
 						{
-							"name": "Register-Successful Copy 11",
+							"name": "Register-Empty UserRole Field",
 							"event": [
 								{
 									"listen": "prerequest",
@@ -1668,7 +1668,7 @@
 										},
 										{
 											"key": "UserRole",
-											"value": "COMMUNITY_ADMIN",
+											"value": "",
 											"type": "text"
 										}
 									]

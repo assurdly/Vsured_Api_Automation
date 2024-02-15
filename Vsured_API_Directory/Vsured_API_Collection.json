@@ -118,6 +118,11 @@
 											"key": "Email",
 											"value": "{{$randomFirstName}}12@yopmail.com",
 											"type": "text"
+										},
+										{
+											"key": "UserRole",
+											"value": "COMMUNITY_ADMIN",
+											"type": "text"
 										}
 									]
 								},

@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Osbaldo","Address":"9408 Koelpin Fall","Phone":"080280-904-3390","Email":"AlKulas@yopmail.com","CommunityId":"a786ea68-cc99-4de8-9571-8f49de6b9a03"}}

@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Madalyn","Address":"46498 Darlene Extensions","Phone":"080927-567-9869","Email":"MaudieRuecker@yopmail.com","CommunityId":"a1b4a6d9-9219-4b7e-ab97-e125080744cb"}}

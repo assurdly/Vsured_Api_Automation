@@ -1,1 +1,0 @@
-{"status":"Success","message":"Successfully registered user","data":{"FirstName":"Holden","LastName":"Paucek","Gender":"Male","Address":"lagos,Nigeria","Phone":"08061364126","PhotoPath":"","Password":"Password@12","VerifyChannel":"email","Language":"english","CompanyType":"Banking","DOB":"1993-01-01T00:00:00.000Z","Email":"Jamaal12@yopmail.com"}}

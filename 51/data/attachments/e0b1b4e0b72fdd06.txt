@@ -1,6 +1,0 @@
-  {
-        "Name":"Nash",
-        "Address":"733 Brain Via",
-        "Phone":"080797-436-5696",
-        "Email":"LurlineTowne@yopmail.com"
-    }

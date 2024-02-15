@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Daija","Address":"09979 Cyrus Brooks","Phone":"080458-667-7732","Email":"KoryTurcotte@yopmail.com","CommunityId":"a22a4826-62e8-46dc-9533-81c734afc67c"}}

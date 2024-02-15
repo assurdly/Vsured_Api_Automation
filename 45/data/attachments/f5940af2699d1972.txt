@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Cordelia","Address":"71182 Wisozk Plaza","Phone":"08093781185","Email":"LiaFeeney@yopmail.com","CommunityId":"0132f147-31e8-4fde-9bf5-7415cca4da0f"}}

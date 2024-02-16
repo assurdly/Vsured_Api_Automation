@@ -1995,7 +1995,7 @@
 					"name": "Registration Verification",
 					"item": [
 						{
-							"name": "RegisterationVerify- Successful",
+							"name": "Registeration Verification- Successful",
 							"event": [
 								{
 									"listen": "test",
@@ -2045,7 +2045,7 @@
 							"response": []
 						},
 						{
-							"name": "RegisterationVerify- Empty Channel field",
+							"name": "Registeration Verification- Empty Channel field",
 							"event": [
 								{
 									"listen": "test",
@@ -2099,7 +2099,7 @@
 							"response": []
 						},
 						{
-							"name": "RegisterationVerify- Empty Token field",
+							"name": "Registeration Verification- Empty Token field",
 							"event": [
 								{
 									"listen": "test",
@@ -2142,6 +2142,56 @@
 								"body": {
 									"mode": "raw",
 									"raw": "{\n    \"Channel\":\"08145075789\",\n    \"Token\":\"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/register/verify"
+							},
+							"response": []
+						},
+						{
+							"name": "Registeration Verification- Successful Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "1146c268-df38-45aa-ac9e-e418bff298f2",
+										"exec": [
+											"pm.test(\"Verify that Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that response status returns success\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message includes Email Verification Successful\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Email Verification Successful, please proceed to login\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "52c273e6-d03e-4dc8-bdb3-5019bd86a1ee",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{accessToken}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"Channel\":\"{{phoneNumber}}\",\n    \"Token\":\"000000\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"

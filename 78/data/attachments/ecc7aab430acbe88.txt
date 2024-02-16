@@ -1,6 +1,0 @@
-  {
-        "Name":"Alek",
-        "Address":"261 Wintheiser Manor",
-        "Phone":"080332-447-8080",
-        "Email":"JustusPrice@yopmail.com"
-    }

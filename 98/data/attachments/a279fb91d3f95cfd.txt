@@ -1,0 +1,1 @@
+{"status":"Success","message":"Successfully registered user","data":{"FirstName":"Kaycee","LastName":"Conn","Gender":"Male","Address":"testing address","Phone":"Erich","Password":"Password@12","Language":"English","CompanyType":"Finance","DOB":"1993-01-01T00:00:00.000Z","Email":"Wyatt12@yopmail.com","UserRole":"COMMUNITY_ADMIN","PhotoPath":""}}

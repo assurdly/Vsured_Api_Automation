@@ -1,1 +1,0 @@
-{"status":"Success","message":"Successfully registered user","data":{"FirstName":"Anjali","LastName":"Ullrich","Gender":"Male","Address":"testing address","Phone":"Kaycee","Password":"Password@12","Language":"English","CompanyType":"Finance","DOB":"1993-01-01T00:00:00.000Z","Email":"Deshawn12@yopmail.com","UserRole":"COMMUNITY_ADMIN","PhotoPath":""}}

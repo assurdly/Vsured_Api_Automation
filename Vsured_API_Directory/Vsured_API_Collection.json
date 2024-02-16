@@ -1806,7 +1806,7 @@
 					"name": "Send OTP to Registered Email",
 					"item": [
 						{
-							"name": "RegisterSendMail- Successful",
+							"name": "SendMail to Regstered Inbox- Successful",
 							"event": [
 								{
 									"listen": "test",
@@ -1996,21 +1996,22 @@
 									"script": {
 										"id": "1224bb6d-22be-4a70-abb0-f0c38ae21ded",
 										"exec": [
-											"pm.test(\"Verify that Status code is 200\", function () {\r",
-											"    pm.response.to.have.status(200);\r",
+											"pm.test(\"Verify that Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
 											"});\r",
-											"pm.test(\"Verify that status returns Success\", function () {\r",
+											"pm.test(\"Verify that type returns field\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+											"    pm.expect(jsonData[0].type).to.eql(\"field\");\r",
 											"});\r",
-											"pm.test(\"Verify that response message returns Token sent Successfully \", function () {\r",
+											"pm.test(\"Verify that message returns Channel is invalid\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.message).to.eql(\"Token sent successfully Via SMS\");\r",
+											"    pm.expect(jsonData[0].msg).to.eql(\"Channel is invalid\");\r",
 											"});\r",
-											"pm.test(\"Verify that response Channel gets phoneNumber\", function () {\r",
+											"pm.test(\"Verify that path returns Email\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.Channel).to.eql(pm.collectionVariables.get('phoneNumber'));\r",
-											"});"
+											"    pm.expect(jsonData[0].path).to.eql(\"Channel\");\r",
+											"});\r",
+											""
 										],
 										"type": "text/javascript"
 									}
@@ -2038,7 +2039,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"Channel\":\"{{phoneNumber}}\",\n    \"Medium\":\"SMS\"\n}",
+									"raw": "{\n    \"Channel\":\"abgjlout\",\n    \"Medium\":\"SMS\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"

@@ -3771,6 +3771,46 @@
 										],
 										"type": "text/javascript"
 									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "283c1abb-2565-4f1d-ae8f-a01ca5744d76",
+										"exec": [
+											"pm.test(\"Verify that Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that response status returns success\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns Successfully created commununity\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Successfully Created Community\");\r",
+											"});\r",
+											"pm.test(\"Verify that response name exist\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.data.Name).to.exist;\r",
+											"});\r",
+											"pm.test(\"Verify that response Address exist\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.data.Address).to.exist;\r",
+											"});\r",
+											"pm.test(\"Verify that response phone exist\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.data.Phone).to.exist;\r",
+											"});\r",
+											"pm.test(\"Verify that response Email exist\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.data.Email).to.exist;\r",
+											"});\r",
+											"pm.test(\"Get Community id\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.collectionVariables.set('commununityId', jsonData.data.CommunityId)\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
 								}
 							],
 							"id": "72af0526-7892-4b0a-b011-73fe4a968e0e",
@@ -3789,51 +3829,6 @@
 								"body": {
 									"mode": "raw",
 									"raw": "  {\n        \"Name\":\"{{$randomFirstName}}\",\n        \"Address\":\"{{$randomStreetAddress}}\",\n        \"Phone\":\"{{phoneNumber}}\",\n        \"Email\":\"{{$randomFirstName}}{{$randomLastName}}@yopmail.com\"\n    }",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{BaseUrl}}/api/community/create"
-							},
-							"response": []
-						},
-						{
-							"name": "CreateCommunity Copy",
-							"event": [
-								{
-									"listen": "prerequest",
-									"script": {
-										"id": "f3b183ba-564a-4601-9b83-f0a7599e810d",
-										"exec": [
-											"for (let i = 0; i < 10; i++) {\r",
-											"\r",
-											"    let randomMobile = \"07\" + Math.random().toString().slice(2,11);\r",
-											"    console.log(randomMobile);\r",
-											"\r",
-											"}"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"id": "0e490998-e135-4a16-b54e-ee1689915811",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{Auth_token}}"
-									}
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "  {\n        \"Name\":\"{{$randomFirstName}}\",\n        \"Address\":\"{{$randomStreetAddress}}\",\n        \"Phone\":\"080{{$randomPhoneNumber}}\",\n        \"Email\":\"{{$randomFirstName}}{{$randomLastName}}@yopmail.com\"\n    }",
 									"options": {
 										"raw": {
 											"language": "json"

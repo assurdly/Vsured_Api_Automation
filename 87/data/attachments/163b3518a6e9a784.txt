@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Irwin","Address":"0233 McKenzie Centers","Phone":"080341-879-9481","Email":"HoseaBauch@yopmail.com","CommunityId":"01bf7176-a0e2-4735-9735-58558042d9af"}}

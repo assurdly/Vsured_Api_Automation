@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Gerson","Address":"53081 Langosh Canyon","Phone":"080592-998-2645","Email":"TerranceMurphy@yopmail.com","CommunityId":"f72c8907-ce68-4b6d-b50f-505c58197c7a"}}

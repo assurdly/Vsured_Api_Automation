@@ -1,6 +1,0 @@
-  {
-        "Name":"Mitchel",
-        "Address":"48410 Rossie Divide",
-        "Phone":"080584-671-9705",
-        "Email":"AbdielAnderson@yopmail.com"
-    }

@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Mitchel","Address":"48410 Rossie Divide","Phone":"080584-671-9705","Email":"AbdielAnderson@yopmail.com","CommunityId":"9d7d8156-cf64-48a6-9701-a580f062a28b"}}

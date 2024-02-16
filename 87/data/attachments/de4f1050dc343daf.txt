@@ -1,0 +1,4 @@
+{
+    "Channel":"Zora",
+    "Token":"000000"
+}

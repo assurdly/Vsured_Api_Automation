@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Tavares","Address":"22075 Mariana Parkways","Phone":"080548-208-0938","Email":"LindseyMcKenzie@yopmail.com","CommunityId":"b8bf8212-9654-466d-8349-8d3117cdaeef"}}

@@ -1,6 +1,0 @@
-  {
-        "Name":"Houston",
-        "Address":"60943 Upton Prairie",
-        "Phone":"080790-312-2104",
-        "Email":"ShayneMann@yopmail.com"
-    }

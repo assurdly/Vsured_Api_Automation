@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Ursula","Address":"71227 Jacinto Pass","Phone":"080402-945-0786","Email":"TravisHettinger@yopmail.com","CommunityId":"44ba24c8-ec3f-45a6-80a6-b8743ad9b8ae"}}

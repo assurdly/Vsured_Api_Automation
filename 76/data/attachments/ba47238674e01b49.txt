@@ -1,6 +1,0 @@
-  {
-        "Name":"Tavares",
-        "Address":"22075 Mariana Parkways",
-        "Phone":"080548-208-0938",
-        "Email":"LindseyMcKenzie@yopmail.com"
-    }

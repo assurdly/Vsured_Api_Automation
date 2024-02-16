@@ -48,7 +48,11 @@
 											"pm.test(\"Verify that data exist\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
 											"    pm.expect(jsonData.data).to.exist;\r",
-											"});"
+											"});\r",
+											"pm.test('Get phone', ()=>{\r",
+											"    var jsonData = pm.response.json()\r",
+											"    pm.collectionVariables.set('phoneNumber', jsonData.data.Phone)\r",
+											"})"
 										],
 										"type": "text/javascript"
 									}
@@ -1802,7 +1806,7 @@
 					"name": "Send OTP to Registered Email",
 					"item": [
 						{
-							"name": "RegisterSendMail Copy",
+							"name": "RegisterSendMail- Successful",
 							"id": "6f8ba969-7799-42ce-818f-738b4a160df9",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -1825,7 +1829,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"Channel\":\"08145075789\",\n    \"Medium\":\"SMS\"\n}",
+									"raw": "{\n    \"Channel\":\"{{phoneNumber}}\",\n    \"Medium\":\"SMS\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"

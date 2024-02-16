@@ -2612,6 +2612,66 @@
 								"url": "{{BaseUrl}}/api/login"
 							},
 							"response": []
+						},
+						{
+							"name": "Login-Correct password and Wrong Password",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "7fedcc3d-d0f0-4dc5-8000-80ca6a79013c",
+										"exec": [
+											"// Assuming the login response has the access token in the 'token' field",
+											"//const jsonResponse = pm.response.json();",
+											"//const accessToken = jsonResponse.accessToken;",
+											"",
+											"// Set the access token in the environment variable",
+											"//pm.environment.set('accessToken', accessToken);"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "25d06d73-a84e-4d0e-8de6-1daca6e7efdb",
+										"exec": [
+											"pm.test(\"Verify that Status code is 404\", function () {\r",
+											"    pm.response.to.have.status(404);\r",
+											"});\r",
+											"pm.test(\"Verify that Status is Success\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message includes invalid Password\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"invalid Phone Number or Password\");\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "5e4562dd-ea40-4935-9ddc-6c8729359cde",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"Channel\":\"08145075789\",\n    \"Password\":\"232323\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/login"
+							},
+							"response": []
 						}
 					],
 					"id": "38bfc21f-48df-432a-a92e-92e9da9de63c"

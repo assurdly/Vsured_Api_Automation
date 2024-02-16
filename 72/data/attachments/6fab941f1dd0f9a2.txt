@@ -1,6 +1,0 @@
-  {
-        "Name":"Germaine",
-        "Address":"5039 Marshall Trail",
-        "Phone":"080515-281-0436",
-        "Email":"ConnerConn@yopmail.com"
-    }

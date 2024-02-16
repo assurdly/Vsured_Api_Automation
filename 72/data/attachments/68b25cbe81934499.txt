@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Germaine","Address":"5039 Marshall Trail","Phone":"080515-281-0436","Email":"ConnerConn@yopmail.com","CommunityId":"b806f9f5-390b-4357-af54-6a616fc331cf"}}

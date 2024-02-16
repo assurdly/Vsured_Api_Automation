@@ -1807,6 +1807,32 @@
 					"item": [
 						{
 							"name": "RegisterSendMail- Successful",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "1224bb6d-22be-4a70-abb0-f0c38ae21ded",
+										"exec": [
+											"pm.test(\"Verify that Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that status returns Success\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns Token sent Successfully \", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Token sent successfully Via SMS\");\r",
+											"});\r",
+											"pm.test(\"Verify that response Channel gets phoneNumber\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.Channel).to.eql(pm.collectionVariables.get('phoneNumber'));\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "6f8ba969-7799-42ce-818f-738b4a160df9",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -1841,7 +1867,7 @@
 							"response": []
 						},
 						{
-							"name": "RegisterSendMail Copy 2",
+							"name": "RegisterSendMail- Empty channel field",
 							"id": "58d64fb9-433b-4c27-947d-ad5a1c86b9d9",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -1864,7 +1890,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"Channel\":\"08145075789\",\n    \"Medium\":\"SMS\"\n}",
+									"raw": "{\n    \"Channel\":\"\",\n    \"Medium\":\"SMS\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"

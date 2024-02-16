@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Kaley","Address":"391 Yundt River","Phone":"080952-220-5342","Email":"KeyshawnBosco@yopmail.com","CommunityId":"13a9429c-d618-4083-b559-5d64435cc71d"}}

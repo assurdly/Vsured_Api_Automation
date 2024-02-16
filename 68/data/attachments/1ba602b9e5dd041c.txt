@@ -1,6 +1,0 @@
-  {
-        "Name":"Jade",
-        "Address":"86433 Jack Rapids",
-        "Phone":"080311-385-3520",
-        "Email":"KeyshawnDickens@yopmail.com"
-    }

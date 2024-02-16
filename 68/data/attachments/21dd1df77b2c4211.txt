@@ -1,6 +1,0 @@
-  {
-        "Name":"Kaley",
-        "Address":"391 Yundt River",
-        "Phone":"080952-220-5342",
-        "Email":"KeyshawnBosco@yopmail.com"
-    }

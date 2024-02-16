@@ -3478,6 +3478,28 @@
 					"item": [
 						{
 							"name": "ResetPassword",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "ee64a9a8-e70f-4060-9a66-789de51448c7",
+										"exec": [
+											"pm.test(\"Verify that Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that response status returns success\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message includes Password Reset Successful\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Password Reset Successful, Please proceed to login\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "e024c2e6-86a8-4a03-9d20-7aba5f2ee26e",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -3505,8 +3527,36 @@
 							"response": []
 						},
 						{
-							"name": "ResetPassword Copy",
+							"name": "ResetPassword-Empty new password field",
 							"id": "7aef3302-603d-45e4-9681-0ffa062e2e95",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6NDAsIkZpcnN0TmFtZSI6IkFiaW9kdW4iLCJMYXN0TmFtZSI6Ik9sYW5peWkiLCJET0IiOiIxOTkzLTAxLTAxVDAwOjAwOjAwLjAwMFoiLCJHZW5kZXIiOiJNYWxlIiwiQWRkcmVzcyI6ImxhZ29zLE5pZ2VyaWEiLCJQaG9uZSI6IjA4MTQ1MDc1Nzg5IiwiRW1haWwiOm51bGwsIlBob3RvUGF0aCI6InRlc3RpbmcucG5nIiwiUGFzc3dvcmQiOiIkMmIkMTAkYlZQZEx3VEoySExYbS4xTG5CNDQxT3ZZMzcwRHRXMnlSa2NjRjJvdVVQTDd0VHhwSUZ6NnkiLCJJc1ZlcmlmaWVkIjoxLCJMYW5ndWFnZSI6ImVuZ2xpc2giLCJDb21wYW55VHlwZSI6IkJhbmtpbmciLCJSZWZyZXNoVG9rZW4iOm51bGwsImlhdCI6MTcwNjUyNDc2MCwiZXhwIjoxNzA2NTI4MzYwfQ.1_NfeWTyYbq4oOXMrdNUiKQanhof6929YH61itIK7EU"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"NewPassword\":\"111111\",\n\"ConfirmPassword\":\"111111\",\n\"Channel\":\"08145075789\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/resetPassword"
+							},
+							"response": []
+						},
+						{
+							"name": "ResetPassword Copy 2",
+							"id": "197612c0-6218-4620-b4f4-e80abfcdd07a",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},

@@ -2552,6 +2552,73 @@
 								"url": "{{BaseUrl}}/api/login"
 							},
 							"response": []
+						},
+						{
+							"name": "Login Copy",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "7fedcc3d-d0f0-4dc5-8000-80ca6a79013c",
+										"exec": [
+											"// Assuming the login response has the access token in the 'token' field",
+											"//const jsonResponse = pm.response.json();",
+											"//const accessToken = jsonResponse.accessToken;",
+											"",
+											"// Set the access token in the environment variable",
+											"//pm.environment.set('accessToken', accessToken);"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "25d06d73-a84e-4d0e-8de6-1daca6e7efdb",
+										"exec": [
+											"pm.test(\"Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that Status is Success\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+											"});\r",
+											"pm.test(\"Verify that message returns Login successful\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Login Successful\");\r",
+											"});\r",
+											"pm.test(\"Set signin token value\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.environment.set(\"Auth_token\", jsonData.accessToken);    \r",
+											"});\r",
+											"pm.test(\"Set signin refresh token value\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.environment.set(\"Refresh_token\", jsonData.refreshToken);    \r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "057f45fa-2eaf-4f50-9212-7e025de3ac83",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"Channel\":\"08145075789\",\n    \"Password\":\"111111\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/login"
+							},
+							"response": []
 						}
 					],
 					"id": "38bfc21f-48df-432a-a92e-92e9da9de63c"

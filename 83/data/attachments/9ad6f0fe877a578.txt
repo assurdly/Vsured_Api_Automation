@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Christop","Address":"8215 Cummerata Lakes","Phone":"080636-628-9015","Email":"IsaacWehner@yopmail.com","CommunityId":"0c530fe9-2675-47a2-a71e-5bea8ad2e994"}}

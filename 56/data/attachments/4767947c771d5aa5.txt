@@ -1,6 +1,0 @@
-  {
-        "Name":"Georgette",
-        "Address":"520 O'Connell Summit",
-        "Phone":"080695-204-3576",
-        "Email":"CarolanneBatz@yopmail.com"
-    }

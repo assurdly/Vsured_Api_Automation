@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Judd","Address":"43125 Elisabeth Inlet","Phone":"080313-478-5379","Email":"LinnieDurgan@yopmail.com","CommunityId":"63cb40f4-3f75-4698-91a5-fbbc2e4b0e51"}}

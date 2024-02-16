@@ -1,6 +1,0 @@
-  {
-        "Name":"Maxwell",
-        "Address":"16169 Botsford Burgs",
-        "Phone":"080917-480-9736",
-        "Email":"ToneyKunze@yopmail.com"
-    }

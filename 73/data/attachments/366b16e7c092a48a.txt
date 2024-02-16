@@ -1,0 +1,1 @@
+{"status":"Success","message":"Successfully registered user","data":{"FirstName":"Kianna","LastName":"Bailey","Gender":"Male","Address":"testing address","Phone":"08085984677","Password":"Password@12","Language":"English","CompanyType":"Finance","DOB":"1993-01-01T00:00:00.000Z","Email":"","UserRole":"COMMUNITY_ADMIN","PhotoPath":""}}

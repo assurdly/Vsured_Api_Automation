@@ -3213,7 +3213,7 @@
 					"name": "Forgot Password Verification",
 					"item": [
 						{
-							"name": "ForgotPasswordVerify",
+							"name": "Verify Forgot Password- Successful",
 							"event": [
 								{
 									"listen": "test",
@@ -3263,7 +3263,7 @@
 							"response": []
 						},
 						{
-							"name": "ForgotPasswordVerify- Empty Channel field",
+							"name": "Verify Forgot Password- Empty Channel field",
 							"event": [
 								{
 									"listen": "test",
@@ -3317,7 +3317,7 @@
 							"response": []
 						},
 						{
-							"name": "ForgotPasswordVerify- Empty Token field",
+							"name": "Verify Forgot Password- Empty Token field",
 							"event": [
 								{
 									"listen": "test",
@@ -3378,16 +3378,16 @@
 									"script": {
 										"id": "9ae3b31c-ce3e-40a6-b32f-5b019a4778c9",
 										"exec": [
-											"pm.test(\"Verify that Status code is 200\", function () {\r",
-											"    pm.response.to.have.status(200);\r",
+											"pm.test(\"Verify that Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
 											"});\r",
-											"pm.test(\"Verify that response status returns success\", function () {\r",
+											"pm.test(\"Verify that response status returns failed\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
 											"});\r",
 											"pm.test(\"Verify that response message includes Email Verification Successful\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.message).to.eql(\"Email Verification Successful, please proceed to login\");\r",
+											"    pm.expect(jsonData.message).to.eql(\"Email Verification Failed, Please try again\");\r",
 											"});"
 										],
 										"type": "text/javascript"
@@ -3409,7 +3409,57 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"Channel\": \"{{phoneNumber}}\",\n    \"Token\": \"000000\"\n}",
+									"raw": "{\n    \"Channel\": \"{{phoneNumber}}\",\n    \"Token\": \"569876\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/forgotPassword/verify"
+							},
+							"response": []
+						},
+						{
+							"name": "Verify Forgot Password-Token with Alphabets and Special characters",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "9ae3b31c-ce3e-40a6-b32f-5b019a4778c9",
+										"exec": [
+											"pm.test(\"Verify that Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"pm.test(\"Verify that response status returns failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message includes Email Verification Successful\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Email Verification Failed, Please try again\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "caca5611-f93a-4c98-9212-7386b2224c04",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"Channel\": \"{{phoneNumber}}\",\n    \"Token\": \"abcd@#\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"

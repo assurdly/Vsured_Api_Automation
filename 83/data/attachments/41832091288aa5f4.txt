@@ -1,6 +1,0 @@
-  {
-        "Name":"Christop",
-        "Address":"8215 Cummerata Lakes",
-        "Phone":"080636-628-9015",
-        "Email":"IsaacWehner@yopmail.com"
-    }

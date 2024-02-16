@@ -1,6 +1,0 @@
-  {
-        "Name":"Claudia",
-        "Address":"110 Collins Course",
-        "Phone":"080392-585-7705",
-        "Email":"FlorianKozey@yopmail.com"
-    }

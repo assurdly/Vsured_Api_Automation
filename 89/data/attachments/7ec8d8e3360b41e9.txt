@@ -1,0 +1,6 @@
+  {
+        "Name":"Kennedi",
+        "Address":"511 Nikolaus Dale",
+        "Phone":"080959-972-7346",
+        "Email":"HenrietteLebsack@yopmail.com"
+    }

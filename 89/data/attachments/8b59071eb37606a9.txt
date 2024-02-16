@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Kennedi","Address":"511 Nikolaus Dale","Phone":"080959-972-7346","Email":"HenrietteLebsack@yopmail.com","CommunityId":"22c1febe-28e6-4d93-88f2-2575346e1207"}}

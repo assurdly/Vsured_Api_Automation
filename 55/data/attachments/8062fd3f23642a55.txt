@@ -1,6 +1,0 @@
-  {
-        "Name":"Rigoberto",
-        "Address":"89182 Runte Street",
-        "Phone":"080622-614-0373",
-        "Email":"OzellaSchneider@yopmail.com"
-    }

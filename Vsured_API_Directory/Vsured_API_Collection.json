@@ -3214,6 +3214,28 @@
 					"item": [
 						{
 							"name": "ForgotPasswordVerify",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "9ae3b31c-ce3e-40a6-b32f-5b019a4778c9",
+										"exec": [
+											"pm.test(\"Verify that Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that response status returns success\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message includes Email Verification Successful\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Email Verification Successful, please proceed to login\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "bf412eeb-e6f2-4e81-acd5-d00d32d3745c",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -3276,7 +3298,7 @@
 								"auth": {
 									"type": "bearer",
 									"bearer": {
-										"token": "{{accessToken}}"
+										"token": "{{Auth_token}}"
 									}
 								},
 								"method": "POST",
@@ -3330,7 +3352,7 @@
 								"auth": {
 									"type": "bearer",
 									"bearer": {
-										"token": "{{accessToken}}"
+										"token": "{{Auth_token}}"
 									}
 								},
 								"method": "POST",
@@ -3338,6 +3360,56 @@
 								"body": {
 									"mode": "raw",
 									"raw": "{\n    \"Channel\":\"08145075789\",\n    \"Token\":\"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/forgotPassword/verify"
+							},
+							"response": []
+						},
+						{
+							"name": "Verify Forgot Password- Wrong Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "9ae3b31c-ce3e-40a6-b32f-5b019a4778c9",
+										"exec": [
+											"pm.test(\"Verify that Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that response status returns success\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message includes Email Verification Successful\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Email Verification Successful, please proceed to login\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "a231309e-4ecf-41a0-b524-2a8c1bbd7fe3",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"Channel\": \"{{phoneNumber}}\",\n    \"Token\": \"000000\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"

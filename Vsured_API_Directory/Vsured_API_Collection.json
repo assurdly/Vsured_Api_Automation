@@ -2712,7 +2712,7 @@
 								"auth": {
 									"type": "bearer",
 									"bearer": {
-										"token": "{{accessToken}}"
+										"token": "{{Auth_token}}"
 									}
 								},
 								"method": "POST",
@@ -2747,7 +2747,7 @@
 											"});\r",
 											"pm.test(\"Verify that message includes Channel is required\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData[0].msg).to.include(\"Channel is required\");\r",
+											"    pm.expect(jsonData[0].msg).to.include(\"Channel is required. In the form of Email or phone number\");\r",
 											"});\r",
 											"pm.test(\"Verify that path returns Channel\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
@@ -2766,7 +2766,7 @@
 								"auth": {
 									"type": "bearer",
 									"bearer": {
-										"token": "{{accessToken}}"
+										"token": "{{Auth_token}}"
 									}
 								},
 								"method": "POST",

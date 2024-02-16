@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Camilla","Address":"703 Kuphal Trace","Phone":"080460-971-5642","Email":"AdityaCummings@yopmail.com","CommunityId":"ed70126c-cd73-403a-ae61-8bd339721c94"}}

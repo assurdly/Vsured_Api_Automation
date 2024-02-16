@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Nigel","Address":"45974 Jerde Brook","Phone":"080668-466-1958","Email":"MaiaHowell@yopmail.com","CommunityId":"718df779-6839-45a7-9c24-f0a5cf48a8fa"}}

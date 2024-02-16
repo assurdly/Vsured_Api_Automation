@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Kaylah","Address":"34453 Trantow Parkways","Phone":"080488-548-7561","Email":"LottieSchultz@yopmail.com","CommunityId":"f47288fa-ddd6-4fc8-a7be-ddc7e1d613ab"}}

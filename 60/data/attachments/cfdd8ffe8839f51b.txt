@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Colt","Address":"051 John Pines","Phone":"080594-485-1101","Email":"HudsonKris@yopmail.com","CommunityId":"87d8e1ee-b603-41ad-bc6c-339f080a995b"}}

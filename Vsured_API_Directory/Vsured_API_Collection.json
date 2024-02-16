@@ -49,10 +49,11 @@
 											"    var jsonData = pm.response.json();\r",
 											"    pm.expect(jsonData.data).to.exist;\r",
 											"});\r",
-											"pm.test('Get phone', ()=>{\r",
+											"pm.test('Set phone', ()=>{\r",
 											"    var jsonData = pm.response.json()\r",
 											"    pm.collectionVariables.set('phoneNumber', jsonData.data.Phone)\r",
-											"})"
+											"})\r",
+											""
 										],
 										"type": "text/javascript"
 									}
@@ -3003,14 +3004,14 @@
 								"auth": {
 									"type": "bearer",
 									"bearer": {
-										"token": "{{accessToken}}"
+										"token": "{{Auth_token}}"
 									}
 								},
 								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"Channel\":\"08145075789\",\n    \"DOB\":\"1993-01-01\",\n    \"Medium\":\"SMS\"\n}",
+									"raw": "{\n    \"Channel\":\"{{phoneNumber}}\",\n    \"DOB\":\"{{DOB}}\",\n    \"Medium\":\"SMS\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -4598,6 +4599,10 @@
 		},
 		{
 			"key": "phoneNumber",
+			"value": ""
+		},
+		{
+			"key": "DOB",
 			"value": ""
 		}
 	]

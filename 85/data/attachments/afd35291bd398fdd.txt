@@ -1,6 +1,0 @@
-  {
-        "Name":"Otha",
-        "Address":"08818 Vito Corner",
-        "Phone":"080523-912-8661",
-        "Email":"ScottieDickens@yopmail.com"
-    }

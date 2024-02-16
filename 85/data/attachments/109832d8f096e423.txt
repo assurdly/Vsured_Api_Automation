@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Gilberto","Address":"2609 Farrell Loaf","Phone":"080822-928-0245","Email":"ReedWisozk@yopmail.com","CommunityId":"4e53fcb5-b2ba-4b10-9dff-f26e24e94e6a"}}

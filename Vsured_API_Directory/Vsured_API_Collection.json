@@ -2151,6 +2151,46 @@
 								"url": "{{BaseUrl}}/api/register/verify"
 							},
 							"response": []
+						},
+						{
+							"name": "Registeration Verification- Invalid Channel details",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "1146c268-df38-45aa-ac9e-e418bff298f2",
+										"exec": [
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "8ac625cf-9ab5-4968-826d-2f893fbbcc13",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{accessToken}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"Channel\":\"{{$randomFirstName}}\",\n    \"Token\":\"000000\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/register/verify"
+							},
+							"response": []
 						}
 					],
 					"id": "fdc6ce19-ef31-43fe-80f6-4e4342979d66"
@@ -2257,7 +2297,7 @@
 											"});\r",
 											"pm.test(\"Verify that message includes Channel is required\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData[0].msg).to.include(\"Channel is required\");\r",
+											"    pm.expect(jsonData[0].msg).to.include(\"Channel is required. In the form of Email or phone number\");\r",
 											"});\r",
 											"pm.test(\"Verify that path returns Channel\", function () {\r",
 											"    var jsonData = pm.response.json();\r",

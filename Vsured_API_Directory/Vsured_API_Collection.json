@@ -2996,6 +2996,28 @@
 					"item": [
 						{
 							"name": "ForgotPasswordSendMail-Successful",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "41ed81f1-62c6-473a-952a-b84ad457bea5",
+										"exec": [
+											"pm.test(\"Verify that Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that response status returns success\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns Email Sent Successfully\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Email Sent Successfully\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "3d0e2010-5536-4661-84d8-aea5fcac2231",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -3011,7 +3033,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"Channel\":\"{{phoneNumber}}\",\n    \"DOB\":\"{{DOB}}\",\n    \"Medium\":\"SMS\"\n}",
+									"raw": "{\n    \"Channel\":\"{{phoneNumber}}\",\n    \"DOB\":\"1993-01-01\",\n    \"Medium\":\"SMS\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3058,7 +3080,7 @@
 								"auth": {
 									"type": "bearer",
 									"bearer": {
-										"token": "{{accessToken}}"
+										"token": "{{Auth_token}}"
 									}
 								},
 								"method": "POST",
@@ -3112,7 +3134,7 @@
 								"auth": {
 									"type": "bearer",
 									"bearer": {
-										"token": "{{accessToken}}"
+										"token": "{{Auth_token}}"
 									}
 								},
 								"method": "POST",
@@ -3166,7 +3188,7 @@
 								"auth": {
 									"type": "bearer",
 									"bearer": {
-										"token": "{{accessToken}}"
+										"token": "{{Auth_token}}"
 									}
 								},
 								"method": "POST",

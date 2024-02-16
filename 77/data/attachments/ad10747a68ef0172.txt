@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Camila","Address":"888 Carter Avenue","Phone":"080280-550-8444","Email":"RamonaRice@yopmail.com","CommunityId":"cb3fbd91-4a06-4b32-aa38-ccf42855a97a"}}

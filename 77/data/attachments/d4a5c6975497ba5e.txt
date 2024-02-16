@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Alayna","Address":"1238 Satterfield Station","Phone":"080394-205-4436","Email":"ReeceFritsch@yopmail.com","CommunityId":"deba42d0-9592-4636-8e35-e4efc545b24e"}}

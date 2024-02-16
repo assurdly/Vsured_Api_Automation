@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Bridgette","Address":"6405 Aniya Ports","Phone":"080959-609-0861","Email":"CliftonHuel@yopmail.com","CommunityId":"18cdaa1e-7f72-4682-9c12-54ef6c97b90d"}}

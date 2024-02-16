@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Otha","Address":"08818 Vito Corner","Phone":"080523-912-8661","Email":"ScottieDickens@yopmail.com","CommunityId":"94fac53f-496b-4755-94a7-65aecccc2d54"}}

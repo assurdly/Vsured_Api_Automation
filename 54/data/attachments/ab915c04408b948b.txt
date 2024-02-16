@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Alyce","Address":"74457 Loraine Neck","Phone":"080720-437-6613","Email":"BrookeLehner@yopmail.com","CommunityId":"dffc2730-0130-471b-8253-e95238843073"}}

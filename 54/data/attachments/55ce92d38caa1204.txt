@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Yvonne","Address":"3217 Harvey Terrace","Phone":"080452-356-4249","Email":"TressaMurray@yopmail.com","CommunityId":"0164622a-bd6c-499c-98b1-58a0f59dfcc7"}}

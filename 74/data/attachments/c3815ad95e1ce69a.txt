@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Maya","Address":"5222 Desiree Square","Phone":"080699-258-6234","Email":"HowellRoberts@yopmail.com","CommunityId":"628963a7-1d56-45f8-a4fa-33a25c03bbdb"}}

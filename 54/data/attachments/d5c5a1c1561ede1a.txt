@@ -1,6 +1,0 @@
-  {
-        "Name":"Yvonne",
-        "Address":"3217 Harvey Terrace",
-        "Phone":"080452-356-4249",
-        "Email":"TressaMurray@yopmail.com"
-    }

@@ -1987,6 +1987,67 @@
 								"url": "{{BaseUrl}}/api/register/sendMail"
 							},
 							"response": []
+						},
+						{
+							"name": "RegisterSendMail-Invalid Channel details",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "1224bb6d-22be-4a70-abb0-f0c38ae21ded",
+										"exec": [
+											"pm.test(\"Verify that Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that status returns Success\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns Token sent Successfully \", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Token sent successfully Via SMS\");\r",
+											"});\r",
+											"pm.test(\"Verify that response Channel gets phoneNumber\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.Channel).to.eql(pm.collectionVariables.get('phoneNumber'));\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "276d8a28-aaaa-40b6-a001-7585c484509e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{accessToken}}"
+									}
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"Channel\":\"{{phoneNumber}}\",\n    \"Medium\":\"SMS\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/register/sendMail"
+							},
+							"response": []
 						}
 					],
 					"id": "bc942820-b825-4801-a8e7-4bf43d410152"
@@ -2153,56 +2214,6 @@
 							"response": []
 						},
 						{
-							"name": "Registeration Verification- Successful Copy",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "1146c268-df38-45aa-ac9e-e418bff298f2",
-										"exec": [
-											"pm.test(\"Verify that Status code is 200\", function () {\r",
-											"    pm.response.to.have.status(200);\r",
-											"});\r",
-											"pm.test(\"Verify that response status returns success\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
-											"});\r",
-											"pm.test(\"Verify that response message includes Email Verification Successful\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.message).to.eql(\"Email Verification Successful, please proceed to login\");\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"id": "52c273e6-d03e-4dc8-bdb3-5019bd86a1ee",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{accessToken}}"
-									}
-								},
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"Channel\":\"{{phoneNumber}}\",\n    \"Token\":\"000000\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{BaseUrl}}/api/register/verify"
-							},
-							"response": []
-						},
-						{
 							"name": "Registeration Verification- Invalid Channel details",
 							"event": [
 								{
@@ -2232,6 +2243,106 @@
 								"body": {
 									"mode": "raw",
 									"raw": "{\n    \"Channel\":\"{{$randomFirstName}}\",\n    \"Token\":\"000000\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/register/verify"
+							},
+							"response": []
+						},
+						{
+							"name": "Registeration Verification- Token with alphabets and special characters",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "1146c268-df38-45aa-ac9e-e418bff298f2",
+										"exec": [
+											"pm.test(\"Verify that Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"pm.test(\"Verify that response status returns failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message includes Email Verification failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Email Verification Failed, Please try again\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "52c273e6-d03e-4dc8-bdb3-5019bd86a1ee",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{accessToken}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"Channel\":\"{{phoneNumber}}\",\n    \"Token\":\"abc!@#\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/register/verify"
+							},
+							"response": []
+						},
+						{
+							"name": "Registeration Verification- Wrong/Expired token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "1146c268-df38-45aa-ac9e-e418bff298f2",
+										"exec": [
+											"pm.test(\"Verify that Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"pm.test(\"Verify that response status returns failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message includes Email Verification failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Email Verification Failed, Please try again\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "cb2b1b20-3755-47e7-b199-e88f67cce56d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{accessToken}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"Channel\":\"{{phoneNumber}}\",\n    \"Token\":\"135706\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"

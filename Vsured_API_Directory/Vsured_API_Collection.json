@@ -3472,6 +3472,68 @@
 						}
 					],
 					"id": "f8b25411-e320-487d-a9f9-734e12dcfade"
+				},
+				{
+					"name": "Reset Password",
+					"item": [
+						{
+							"name": "ResetPassword",
+							"id": "e024c2e6-86a8-4a03-9d20-7aba5f2ee26e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"NewPassword\":\"Tester@12\",\n\"ConfirmPassword\":\"Tester@12\",\n\"Channel\":\"{{phoneNumber}}\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/resetPassword"
+							},
+							"response": []
+						},
+						{
+							"name": "ResetPassword Copy",
+							"id": "7aef3302-603d-45e4-9681-0ffa062e2e95",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6NDAsIkZpcnN0TmFtZSI6IkFiaW9kdW4iLCJMYXN0TmFtZSI6Ik9sYW5peWkiLCJET0IiOiIxOTkzLTAxLTAxVDAwOjAwOjAwLjAwMFoiLCJHZW5kZXIiOiJNYWxlIiwiQWRkcmVzcyI6ImxhZ29zLE5pZ2VyaWEiLCJQaG9uZSI6IjA4MTQ1MDc1Nzg5IiwiRW1haWwiOm51bGwsIlBob3RvUGF0aCI6InRlc3RpbmcucG5nIiwiUGFzc3dvcmQiOiIkMmIkMTAkYlZQZEx3VEoySExYbS4xTG5CNDQxT3ZZMzcwRHRXMnlSa2NjRjJvdVVQTDd0VHhwSUZ6NnkiLCJJc1ZlcmlmaWVkIjoxLCJMYW5ndWFnZSI6ImVuZ2xpc2giLCJDb21wYW55VHlwZSI6IkJhbmtpbmciLCJSZWZyZXNoVG9rZW4iOm51bGwsImlhdCI6MTcwNjUyNDc2MCwiZXhwIjoxNzA2NTI4MzYwfQ.1_NfeWTyYbq4oOXMrdNUiKQanhof6929YH61itIK7EU"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"NewPassword\":\"111111\",\n\"ConfirmPassword\":\"111111\",\n\"Channel\":\"08145075789\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/resetPassword"
+							},
+							"response": []
+						}
+					],
+					"id": "b8d89853-e39e-4171-ae1f-73720ad97fe5"
 				}
 			],
 			"id": "39fee73c-c067-4a53-91fb-92fdddd51eb4"

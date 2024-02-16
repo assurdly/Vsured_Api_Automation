@@ -2115,14 +2115,14 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"Email\":\"abiodun@gmail.com\",\n    \"Token\":\"\"\n}",
+									"raw": "{\n    \"Channel\":\"08145075789\",\n    \"Token\":\"\"\n}}",
 									"options": {
 										"raw": {
 											"language": "json"
 										}
 									}
 								},
-								"url": "{{BaseUrl}}api/register/verify"
+								"url": "{{BaseUrl}}/api/register/verify"
 							},
 							"response": []
 						}

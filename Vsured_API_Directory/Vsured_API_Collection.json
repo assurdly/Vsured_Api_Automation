@@ -2890,23 +2890,23 @@
 							"response": []
 						},
 						{
-							"name": "RefreshToken Copy",
+							"name": "RefreshToken-No Auth Token",
 							"event": [
 								{
 									"listen": "test",
 									"script": {
 										"id": "4525cffd-3b5e-48ad-b52c-84ee7b624abd",
 										"exec": [
-											"pm.test(\"Verify that Status code is 200\", function () {\r",
-											"    pm.response.to.have.status(200);\r",
+											"pm.test(\"Verify that Status code is 401\", function () {\r",
+											"    pm.response.to.have.status(401);\r",
 											"});\r",
-											"pm.test(\"Verify that status returns success\", function () {\r",
+											"pm.test(\"Verify that status returns status\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
 											"});\r",
-											"pm.test(\"Verify that message returns token generated successfully\", function () {\r",
+											"pm.test(\"Verify that message returns UnAuthorized\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.message).to.eql(\"Token Generated Successfully\");\r",
+											"    pm.expect(jsonData.message).to.eql(\"Request UnAuthorized\");\r",
 											"});\r",
 											""
 										],
@@ -2920,9 +2920,56 @@
 							},
 							"request": {
 								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"Channel\":\"08145075789\",\n    \"RefreshToken\":\"{{Refresh_token}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/refreshToken"
+							},
+							"response": []
+						},
+						{
+							"name": "RefreshToken-Invalid Auth Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "4525cffd-3b5e-48ad-b52c-84ee7b624abd",
+										"exec": [
+											"pm.test(\"Verify that Status code is 403\", function () {\r",
+											"    pm.response.to.have.status(403);\r",
+											"});\r",
+											"pm.test(\"Verify that status is failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message is Request UnAuthorized\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Request Forbidden, Invalid Token\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "51706fdb-5d98-45f3-b56e-88134f8c930c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
 									"type": "bearer",
 									"bearer": {
-										"token": "{{Auth_token}}"
+										"token": "{{accessToken}}"
 									}
 								},
 								"method": "POST",

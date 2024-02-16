@@ -1806,7 +1806,7 @@
 					"name": "Send OTP to Registered Email",
 					"item": [
 						{
-							"name": "SendMail to Regstered Inbox- Successful",
+							"name": "Send OTP to RegIstered Email- Successful",
 							"event": [
 								{
 									"listen": "test",
@@ -1867,7 +1867,7 @@
 							"response": []
 						},
 						{
-							"name": "RegisterSendMail- Empty channel field",
+							"name": "Send OTP to RegIstered Email- Empty channel field",
 							"event": [
 								{
 									"listen": "test",
@@ -1928,7 +1928,7 @@
 							"response": []
 						},
 						{
-							"name": "RegisterSendMail- Empty Medium Field",
+							"name": "Send OTP to RegIstered Email- Empty Medium Field",
 							"event": [
 								{
 									"listen": "test",
@@ -1989,7 +1989,7 @@
 							"response": []
 						},
 						{
-							"name": "RegisterSendMail-Invalid Channel details",
+							"name": "Send OTP to RegIstered Email-Invalid Channel details",
 							"event": [
 								{
 									"listen": "test",

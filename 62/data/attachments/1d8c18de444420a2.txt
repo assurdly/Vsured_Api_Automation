@@ -1,6 +1,0 @@
-  {
-        "Name":"Anne",
-        "Address":"835 Abbott Curve",
-        "Phone":"080497-715-6565",
-        "Email":"SageBarrows@yopmail.com"
-    }

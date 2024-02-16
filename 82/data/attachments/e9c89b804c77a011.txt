@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Luella","Address":"1509 Medhurst Keys","Phone":"080644-376-1556","Email":"MadelineWintheiser@yopmail.com","CommunityId":"0e6903d1-9e3b-4fcd-a438-b69cfdbd3cae"}}

@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Anne","Address":"835 Abbott Curve","Phone":"080497-715-6565","Email":"SageBarrows@yopmail.com","CommunityId":"2870e5a0-19ca-4e28-9ee8-e702175d73eb"}}

@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Micheal","Address":"9809 Kilback Loaf","Phone":"080380-642-7319","Email":"HankHerman@yopmail.com","CommunityId":"9215dbbc-cdf7-47cd-be0d-b30194e750ee"}}

@@ -1,6 +1,0 @@
-  {
-        "Name":"Lowell",
-        "Address":"26539 Darrel Square",
-        "Phone":"080590-618-2708",
-        "Email":"FaustoO'Reilly@yopmail.com"
-    }

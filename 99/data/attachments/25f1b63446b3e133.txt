@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Tyrese","Address":"015 Brooks Plain","Phone":"080876-687-0091","Email":"MarshallKiehn@yopmail.com","CommunityId":"0139f7ff-45e7-407d-afc6-90c66669d6d3"}}

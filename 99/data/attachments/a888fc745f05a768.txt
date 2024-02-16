@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Abigail","Address":"5690 Botsford Rest","Phone":"080568-555-4829","Email":"MathiasWeissnat@yopmail.com","CommunityId":"b4883a21-b5a4-4cbf-aade-128e767333cf"}}

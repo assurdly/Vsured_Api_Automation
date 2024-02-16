@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Verla","Address":"4926 Jannie Ranch","Phone":"08083846725","Email":"TrishaMitchell@yopmail.com","CommunityId":"ac0df76e-c8dc-4c4b-b6ef-8352afb15829"}}

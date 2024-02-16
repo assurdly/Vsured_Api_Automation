@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Ignacio","Address":"29302 Boyer Overpass","Phone":"080552-592-1595","Email":"EliezerEbert@yopmail.com","CommunityId":"07695cc8-5907-4934-b35c-d261603c311b"}}

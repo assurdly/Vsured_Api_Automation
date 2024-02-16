@@ -1,1 +1,0 @@
-{"status":"Success","message":"Successfully registered user","data":{"FirstName":"Isidro","LastName":"Gislason","Gender":"Male","Address":"testing address","Phone":"Arnaldo","Password":"Password@12","Language":"English","CompanyType":"Finance","DOB":"1993-01-01T00:00:00.000Z","Email":"Creola12@yopmail.com","UserRole":"COMMUNITY_ADMIN","PhotoPath":""}}

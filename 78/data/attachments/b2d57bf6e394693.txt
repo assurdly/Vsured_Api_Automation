@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Alek","Address":"261 Wintheiser Manor","Phone":"080332-447-8080","Email":"JustusPrice@yopmail.com","CommunityId":"d535b2be-8be3-444c-8b5d-4c786ea61368"}}

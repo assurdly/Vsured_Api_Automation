@@ -1,6 +1,0 @@
-  {
-        "Name":"Margret",
-        "Address":"27126 Hegmann Hollow",
-        "Phone":"080906-818-0073",
-        "Email":"FelixAdams@yopmail.com"
-    }

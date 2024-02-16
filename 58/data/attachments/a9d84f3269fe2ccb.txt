@@ -1,6 +1,0 @@
-  {
-        "Name":"Louvenia",
-        "Address":"02545 Macejkovic Ville",
-        "Phone":"080633-497-6621",
-        "Email":"GertrudeGulgowski@yopmail.com"
-    }

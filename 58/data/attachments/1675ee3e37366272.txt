@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Margret","Address":"27126 Hegmann Hollow","Phone":"080906-818-0073","Email":"FelixAdams@yopmail.com","CommunityId":"d9b98e7b-8068-47c8-bf1d-6477b3752c08"}}

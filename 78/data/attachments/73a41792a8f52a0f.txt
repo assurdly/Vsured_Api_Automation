@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Ross","Address":"2736 Reichel Stream","Phone":"080944-440-6073","Email":"AsiaHills@yopmail.com","CommunityId":"ff3b320f-ac82-4f73-9b0f-d59e06457387"}}

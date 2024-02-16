@@ -2576,8 +2576,8 @@
 									"script": {
 										"id": "25d06d73-a84e-4d0e-8de6-1daca6e7efdb",
 										"exec": [
-											"pm.test(\"Verify that Status code is 404\", function () {\r",
-											"    pm.response.to.have.status(404);\r",
+											"pm.test(\"Verify that Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
 											"});\r",
 											"pm.test(\"Verify that Status is Success\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
@@ -2636,16 +2636,16 @@
 									"script": {
 										"id": "25d06d73-a84e-4d0e-8de6-1daca6e7efdb",
 										"exec": [
-											"pm.test(\"Verify that Status code is 404\", function () {\r",
-											"    pm.response.to.have.status(404);\r",
+											"pm.test(\"Verify that Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
 											"});\r",
 											"pm.test(\"Verify that Status is Success\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
 											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
 											"});\r",
-											"pm.test(\"Verify that response message includes invalid Password\", function () {\r",
+											"pm.test(\"Verify that response message includes Invalid Login Credentials\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.message).to.eql(\"invalid Phone Number or Password\");\r",
+											"    pm.expect(jsonData.message).to.eql(\"Invalid Login Credentials\");\r",
 											"});\r",
 											""
 										],

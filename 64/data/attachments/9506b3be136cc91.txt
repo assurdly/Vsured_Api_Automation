@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Edgar","Address":"77453 Harber Crescent","Phone":"080757-803-4362","Email":"MyrtisLeffler@yopmail.com","CommunityId":"33daaa64-9164-470e-93e1-7a3e84b7759a"}}

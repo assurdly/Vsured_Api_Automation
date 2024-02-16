@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Angelica","Address":"3446 Carey Motorway","Phone":"080528-478-5157","Email":"DanykaMayer@yopmail.com","CommunityId":"898cab66-9cb9-4c12-b492-ebc6a4e499b1"}}

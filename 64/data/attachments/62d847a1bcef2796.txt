@@ -1,6 +1,0 @@
-  {
-        "Name":"Trenton",
-        "Address":"07886 Fritsch Street",
-        "Phone":"080757-395-5179",
-        "Email":"SylvesterBatz@yopmail.com"
-    }

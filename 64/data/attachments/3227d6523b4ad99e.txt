@@ -1,6 +1,0 @@
-  {
-        "Name":"Edgar",
-        "Address":"77453 Harber Crescent",
-        "Phone":"080757-803-4362",
-        "Email":"MyrtisLeffler@yopmail.com"
-    }

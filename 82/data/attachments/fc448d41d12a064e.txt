@@ -1,6 +1,0 @@
-  {
-        "Name":"Luella",
-        "Address":"1509 Medhurst Keys",
-        "Phone":"080644-376-1556",
-        "Email":"MadelineWintheiser@yopmail.com"
-    }

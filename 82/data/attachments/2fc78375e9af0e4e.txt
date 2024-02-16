@@ -1,4 +1,0 @@
-{
-    "Channel":"Woodrow",
-    "Token":"000000"
-}

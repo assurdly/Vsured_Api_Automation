@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Cassandre","Address":"93573 Cormier Summit","Phone":"08079195427","Email":"VelmaKrajcik@yopmail.com","CommunityId":"8eff4101-d2f1-426f-ba5c-5195108345b7"}}

@@ -3840,7 +3840,33 @@
 							"response": []
 						},
 						{
-							"name": "CreateCommunity-Empty name field",
+							"name": "Create Community-Empty name field",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "aeed5e20-9c28-46e6-99a9-d2c93fb4d50f",
+										"exec": [
+											"pm.test(\"Verify that Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"pm.test(\"Verify that type returns field\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].type).to.eql(\"field\");\r",
+											"});\r",
+											"pm.test(\"Verify that message returns Name is required\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].msg).to.eql(\"Name is required\");\r",
+											"});\r",
+											"pm.test(\"Verify that path returns Name\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].path).to.eql(\"Name\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "f8f45c9c-2459-4585-bb76-694a84d576f2",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true

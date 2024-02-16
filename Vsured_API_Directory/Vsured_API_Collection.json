@@ -3528,6 +3528,32 @@
 						},
 						{
 							"name": "ResetPassword-Empty new password field",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "82a2b51f-cd8a-495a-a73e-f4e093b87440",
+										"exec": [
+											"pm.test(\"Verify that Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"pm.test(\"Verify that type returns field\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].type).to.eql(\"field\");\r",
+											"});\r",
+											"pm.test(\"Verify that message returns NewPassword is required\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].msg).to.eql(\"NewPassword is required\");\r",
+											"});\r",
+											"pm.test(\"Verify that path returns NewPassword\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].path).to.eql(\"NewPassword\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "7aef3302-603d-45e4-9681-0ffa062e2e95",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -3536,7 +3562,89 @@
 								"auth": {
 									"type": "bearer",
 									"bearer": {
-										"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6NDAsIkZpcnN0TmFtZSI6IkFiaW9kdW4iLCJMYXN0TmFtZSI6Ik9sYW5peWkiLCJET0IiOiIxOTkzLTAxLTAxVDAwOjAwOjAwLjAwMFoiLCJHZW5kZXIiOiJNYWxlIiwiQWRkcmVzcyI6ImxhZ29zLE5pZ2VyaWEiLCJQaG9uZSI6IjA4MTQ1MDc1Nzg5IiwiRW1haWwiOm51bGwsIlBob3RvUGF0aCI6InRlc3RpbmcucG5nIiwiUGFzc3dvcmQiOiIkMmIkMTAkYlZQZEx3VEoySExYbS4xTG5CNDQxT3ZZMzcwRHRXMnlSa2NjRjJvdVVQTDd0VHhwSUZ6NnkiLCJJc1ZlcmlmaWVkIjoxLCJMYW5ndWFnZSI6ImVuZ2xpc2giLCJDb21wYW55VHlwZSI6IkJhbmtpbmciLCJSZWZyZXNoVG9rZW4iOm51bGwsImlhdCI6MTcwNjUyNDc2MCwiZXhwIjoxNzA2NTI4MzYwfQ.1_NfeWTyYbq4oOXMrdNUiKQanhof6929YH61itIK7EU"
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"NewPassword\":\"\",\n\"ConfirmPassword\":\"111111\",\n\"Channel\":\"08145075789\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/resetPassword"
+							},
+							"response": []
+						},
+						{
+							"name": "ResetPassword- Empty Confirm Password field",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "7195d3d9-c960-40a4-a72d-03738e039b66",
+										"exec": [
+											"pm.test(\"Verify that Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"pm.test(\"Verify that type returns field\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].type).to.eql(\"field\");\r",
+											"});\r",
+											"pm.test(\"Verify that message returns ConfirmPassword is required\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].msg).to.eql(\"ConfirmPassword is required\");\r",
+											"});\r",
+											"pm.test(\"Verify that path returns NewPassword\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].path).to.eql(\"ConfirmPassword\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "197612c0-6218-4620-b4f4-e80abfcdd07a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"NewPassword\":\"111111\",\n\"ConfirmPassword\":\"\",\n\"Channel\":\"08145075789\"\n}\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/resetPassword"
+							},
+							"response": []
+						},
+						{
+							"name": "ResetPassword Copy 3",
+							"id": "1d859457-8173-43b7-bd50-9fe5193b48b5",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
 									}
 								},
 								"method": "POST",
@@ -3555,8 +3663,8 @@
 							"response": []
 						},
 						{
-							"name": "ResetPassword Copy 2",
-							"id": "197612c0-6218-4620-b4f4-e80abfcdd07a",
+							"name": "ResetPassword Copy 4",
+							"id": "ee86e3f4-4f92-4742-b30b-80f85989e161",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},

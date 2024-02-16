@@ -1,6 +1,0 @@
-  {
-        "Name":"Nigel",
-        "Address":"45974 Jerde Brook",
-        "Phone":"080668-466-1958",
-        "Email":"MaiaHowell@yopmail.com"
-    }

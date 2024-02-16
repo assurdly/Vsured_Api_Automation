@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Ivory","Address":"405 Collins Via","Phone":"080683-994-0536","Email":"DesireeOrn@yopmail.com","CommunityId":"6c72a26f-9bf3-4168-88cf-6384b5a1550c"}}

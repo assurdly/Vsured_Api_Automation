@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Aaron","Address":"780 Winona Square","Phone":"080280-355-9141","Email":"EttieCummings@yopmail.com","CommunityId":"f12d06e6-f119-445f-8ea8-a3cafb860f88"}}

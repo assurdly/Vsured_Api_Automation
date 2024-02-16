@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Maeve","Address":"77897 Hahn Camp","Phone":"080271-399-5650","Email":"EarlLarkin@yopmail.com","CommunityId":"c4c77486-b64a-4156-8def-065424fb5d8d"}}

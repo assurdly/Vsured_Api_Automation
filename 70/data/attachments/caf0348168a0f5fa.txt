@@ -1,6 +1,0 @@
-  {
-        "Name":"Lavonne",
-        "Address":"37776 Kerluke Ports",
-        "Phone":"080419-307-5446",
-        "Email":"PietroGraham@yopmail.com"
-    }

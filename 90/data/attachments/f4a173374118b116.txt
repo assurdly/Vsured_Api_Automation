@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Marlon","Address":"7685 Okuneva Locks","Phone":"080991-459-9387","Email":"RigobertoHoeger@yopmail.com","CommunityId":"2123a855-7612-4696-8abd-42ca26cd0fdb"}}

@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Kattie","Address":"43132 Keenan Crossing","Phone":"080221-791-1683","Email":"VidalLarkin@yopmail.com","CommunityId":"5f5c0889-4525-4f67-8b76-c11e41138b04"}}

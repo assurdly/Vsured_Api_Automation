@@ -1,6 +1,0 @@
-  {
-        "Name":"Graham",
-        "Address":"13496 Heller Fields",
-        "Phone":"080664-928-7564",
-        "Email":"MarisolLedner@yopmail.com"
-    }

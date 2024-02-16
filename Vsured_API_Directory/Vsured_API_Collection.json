@@ -3635,7 +3635,33 @@
 							"response": []
 						},
 						{
-							"name": "ResetPassword Copy 3",
+							"name": "ResetPassword-Empty Channel field",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "634bbfc6-35d3-413d-b8dd-c1dde618cdce",
+										"exec": [
+											"pm.test(\"Verify that Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"pm.test(\"Verify that type returns field\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].type).to.eql(\"field\");\r",
+											"});\r",
+											"pm.test(\"Verify that message includes Channel is required\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].msg).to.include(\"Channel is required\");\r",
+											"});\r",
+											"pm.test(\"Verify that path returns Channel\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].path).to.eql(\"Channel\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "1d859457-8173-43b7-bd50-9fe5193b48b5",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -3651,7 +3677,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\"NewPassword\":\"111111\",\n\"ConfirmPassword\":\"111111\",\n\"Channel\":\"08145075789\"\n}\n",
+									"raw": "{\n\"NewPassword\":\"111111\",\n\"ConfirmPassword\":\"111111\",\n\"Channel\":\"\"\n}\n",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -3663,7 +3689,33 @@
 							"response": []
 						},
 						{
-							"name": "ResetPassword Copy 4",
+							"name": "ResetPassword-Mismatched newPassword and confirmPassword field",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "01507179-258f-4ecd-aef0-8fb2adc6c42f",
+										"exec": [
+											"pm.test(\"Verify that Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"pm.test(\"Verify that type returns field\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].type).to.eql(\"field\");\r",
+											"});\r",
+											"pm.test(\"Verify that message returns Password and Confirm Password must match\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].msg).to.include(\"Password and Confirm Password must match\");\r",
+											"});\r",
+											"pm.test(\"Verify that path returns ConfirmPassword\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].path).to.eql(\"ConfirmPassword\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "ee86e3f4-4f92-4742-b30b-80f85989e161",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -3672,14 +3724,14 @@
 								"auth": {
 									"type": "bearer",
 									"bearer": {
-										"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6NDAsIkZpcnN0TmFtZSI6IkFiaW9kdW4iLCJMYXN0TmFtZSI6Ik9sYW5peWkiLCJET0IiOiIxOTkzLTAxLTAxVDAwOjAwOjAwLjAwMFoiLCJHZW5kZXIiOiJNYWxlIiwiQWRkcmVzcyI6ImxhZ29zLE5pZ2VyaWEiLCJQaG9uZSI6IjA4MTQ1MDc1Nzg5IiwiRW1haWwiOm51bGwsIlBob3RvUGF0aCI6InRlc3RpbmcucG5nIiwiUGFzc3dvcmQiOiIkMmIkMTAkYlZQZEx3VEoySExYbS4xTG5CNDQxT3ZZMzcwRHRXMnlSa2NjRjJvdVVQTDd0VHhwSUZ6NnkiLCJJc1ZlcmlmaWVkIjoxLCJMYW5ndWFnZSI6ImVuZ2xpc2giLCJDb21wYW55VHlwZSI6IkJhbmtpbmciLCJSZWZyZXNoVG9rZW4iOm51bGwsImlhdCI6MTcwNjUyNDc2MCwiZXhwIjoxNzA2NTI4MzYwfQ.1_NfeWTyYbq4oOXMrdNUiKQanhof6929YH61itIK7EU"
+										"token": "{{Auth_token}}"
 									}
 								},
 								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\"NewPassword\":\"111111\",\n\"ConfirmPassword\":\"111111\",\n\"Channel\":\"08145075789\"\n}\n",
+									"raw": "{\n\"NewPassword\":\"111111\",\n\"ConfirmPassword\":\"222222\",\n\"Channel\":\"08145075789\"\n}\n",
 									"options": {
 										"raw": {
 											"language": "json"

@@ -2837,6 +2837,108 @@
 								"url": "{{BaseUrl}}/api/refreshToken"
 							},
 							"response": []
+						},
+						{
+							"name": "RefreshToken- Wrong Refresh Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "4525cffd-3b5e-48ad-b52c-84ee7b624abd",
+										"exec": [
+											"pm.test(\"Verify that Status code is 401\", function () {\r",
+											"    pm.response.to.have.status(401);\r",
+											"});\r",
+											"pm.test(\"Verify that status returns status\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that message returns UnAuthorized\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"UnAuthorized\");\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "caa52952-7279-42b3-ab56-93f13da22bf4",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"Channel\":\"08145075789\",\n    \"RefreshToken\":\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoianVzdCBhIHJlZnJlc2ggdG9rZW4rhuJpYXQiOjE3MDgwOTEzMDEsImV4cCI6MTcwODY5NjEwMX0.muTp74DEs79tJvLH9aLNCCEvby2lQcoHpbzEBOSvp7E\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/refreshToken"
+							},
+							"response": []
+						},
+						{
+							"name": "RefreshToken Copy",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "4525cffd-3b5e-48ad-b52c-84ee7b624abd",
+										"exec": [
+											"pm.test(\"Verify that Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that status returns success\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+											"});\r",
+											"pm.test(\"Verify that message returns token generated successfully\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Token Generated Successfully\");\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "8623fc38-a33e-4c8a-a9ea-78a1d48b06e8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"Channel\":\"08145075789\",\n    \"RefreshToken\":\"{{Refresh_token}}\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/refreshToken"
+							},
+							"response": []
 						}
 					],
 					"id": "7b7a391b-b939-4a07-9d2f-1d5b0b810bde"

@@ -3762,12 +3762,12 @@
 									"script": {
 										"id": "f3b183ba-564a-4601-9b83-f0a7599e810d",
 										"exec": [
-											"for (let i = 0; i < 10; i++) {\r",
+											" const phoneNumber = Math.floor(Math.random() * 100000000);\r",
+											"    // Format the number as a phone number with area code\r",
+											"    const formattedPhoneNumber = \"080\" + phoneNumber.toString().padStart(8, '0');\r",
+											"    console.log(formattedPhoneNumber);\r",
 											"\r",
-											"    let randomMobile = \"07\" + Math.random().toString().slice(2,11);\r",
-											"    console.log(randomMobile);\r",
-											"\r",
-											"}"
+											"    pm.collectionVariables.set('phoneNumber', formattedPhoneNumber)"
 										],
 										"type": "text/javascript"
 									}
@@ -3788,7 +3788,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "  {\n        \"Name\":\"{{$randomFirstName}}\",\n        \"Address\":\"{{$randomStreetAddress}}\",\n        \"Phone\":\"080{{$randomPhoneNumber}}\",\n        \"Email\":\"{{$randomFirstName}}{{$randomLastName}}@yopmail.com\"\n    }",
+									"raw": "  {\n        \"Name\":\"{{$randomFirstName}}\",\n        \"Address\":\"{{$randomStreetAddress}}\",\n        \"Phone\":\"{{phoneNumber}}\",\n        \"Email\":\"{{$randomFirstName}}{{$randomLastName}}@yopmail.com\"\n    }",
 									"options": {
 										"raw": {
 											"language": "json"

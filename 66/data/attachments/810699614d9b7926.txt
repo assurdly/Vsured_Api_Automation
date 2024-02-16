@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Christine","Address":"028 Murphy Junctions","Phone":"080270-814-3629","Email":"EverardoKertzmann@yopmail.com","CommunityId":"62e352ee-98d4-4be5-a9d2-09d0a27f5376"}}

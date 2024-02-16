@@ -1,6 +1,0 @@
-  {
-        "Name":"Kendrick",
-        "Address":"450 Rhea Prairie",
-        "Phone":"080448-338-8155",
-        "Email":"WilburnLesch@yopmail.com"
-    }

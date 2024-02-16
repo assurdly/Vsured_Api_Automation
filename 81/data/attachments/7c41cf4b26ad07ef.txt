@@ -1,6 +1,0 @@
-  {
-        "Name":"Keenan",
-        "Address":"6782 Brakus Hill",
-        "Phone":"080539-800-7141",
-        "Email":"StefanieNolan@yopmail.com"
-    }

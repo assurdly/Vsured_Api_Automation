@@ -1,6 +1,0 @@
-  {
-        "Name":"Domenic",
-        "Address":"721 Ben Inlet",
-        "Phone":"080363-331-3280",
-        "Email":"BlaiseFriesen@yopmail.com"
-    }

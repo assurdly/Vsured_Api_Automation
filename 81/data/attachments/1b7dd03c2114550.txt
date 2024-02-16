@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Domenic","Address":"721 Ben Inlet","Phone":"080363-331-3280","Email":"BlaiseFriesen@yopmail.com","CommunityId":"0b7ba3bd-e6ca-4202-8bcd-af080292ec32"}}

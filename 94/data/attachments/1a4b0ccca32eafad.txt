@@ -1,0 +1,6 @@
+  {
+        "Name":"Hal",
+        "Address":"48365 Schulist Skyway",
+        "Phone":"080798-657-0041",
+        "Email":"JoesphSchulist@yopmail.com"
+    }

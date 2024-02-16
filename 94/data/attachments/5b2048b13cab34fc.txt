@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Hal","Address":"48365 Schulist Skyway","Phone":"080798-657-0041","Email":"JoesphSchulist@yopmail.com","CommunityId":"917adb6e-004b-4cb7-b675-f079f9dab9da"}}

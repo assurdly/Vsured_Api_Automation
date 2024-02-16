@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Coy","Address":"8906 Ritchie Loaf","Phone":"080236-279-9024","Email":"KayceeLang@yopmail.com","CommunityId":"77070f1f-9e0b-4177-ab2e-1eaf831c645e"}}

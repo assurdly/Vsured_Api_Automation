@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Lyda","Address":"76336 Helena Roads","Phone":"080674-602-1358","Email":"EddieRosenbaum@yopmail.com","CommunityId":"1493d42e-8f30-4cd2-90cb-94469dc3b25a"}}

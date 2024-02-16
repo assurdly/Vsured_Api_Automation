@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Lowell","Address":"26539 Darrel Square","Phone":"080590-618-2708","Email":"FaustoO'Reilly@yopmail.com","CommunityId":"3197fc96-1f25-4480-bcae-9c43567e28c0"}}

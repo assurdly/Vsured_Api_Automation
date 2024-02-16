@@ -1,0 +1,1 @@
+{"status":"Success","message":"Successfully registered user","data":{"FirstName":"Brenda","LastName":"Flatley","Gender":"Male","Address":"testing address","Phone":"08003952189","Password":"Password@12","Language":"English","CompanyType":"Finance","DOB":"1993-01-01T00:00:00.000Z","Email":"Felipa12yopmailcom","UserRole":"COMMUNITY_ADMIN","PhotoPath":""}}

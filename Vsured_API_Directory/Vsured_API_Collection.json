@@ -1868,6 +1868,32 @@
 						},
 						{
 							"name": "RegisterSendMail- Empty channel field",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "42d5e0b0-0e34-41e9-bd42-12404cc83f22",
+										"exec": [
+											"pm.test(\"Verify that Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"pm.test(\"Verify that type returns field\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].type).to.eql(\"field\");\r",
+											"});\r",
+											"pm.test(\"Verify that message includes Channel is required\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].msg).to.eql(\"Channel is required. In the form of Email or phone number\");\r",
+											"});\r",
+											"pm.test(\"Verify that path returns Channel\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].path).to.eql(\"Channel\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "58d64fb9-433b-4c27-947d-ad5a1c86b9d9",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -1902,7 +1928,33 @@
 							"response": []
 						},
 						{
-							"name": "RegisterSendMail Copy 3",
+							"name": "RegisterSendMail- Empty Medium Field",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "8b7f6dc0-5f80-4817-96dd-df458db84e1c",
+										"exec": [
+											"pm.test(\"Verify that Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"pm.test(\"Verify that type returns field\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].type).to.eql(\"field\");\r",
+											"});\r",
+											"pm.test(\"Verify that message returns Medium is required\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].msg).to.eql(\"Medium is required\");\r",
+											"});\r",
+											"pm.test(\"Verify that path returns Medium\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].path).to.eql(\"Medium\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "04b0e864-532a-443c-86e9-3b373977f9b1",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -1925,112 +1977,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"Channel\":\"08145075789\",\n    \"Medium\":\"SMS\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{BaseUrl}}/api/register/sendMail"
-							},
-							"response": []
-						},
-						{
-							"name": "RegisterSendMail",
-							"id": "11d87fe7-5306-48ae-b81e-c0759ee5b6e5",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{accessToken}}"
-									}
-								},
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "",
-										"type": "text",
-										"disabled": true
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"Email\":\"abiodun@yopmail.com\",\n    \"Medium\":\"Email\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{BaseUrl}}/api/register/sendMail"
-							},
-							"response": []
-						},
-						{
-							"name": "RegisterSendMail- Empty Email field",
-							"id": "804b0426-812a-4350-96fe-412999f8a556",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{accessToken}}"
-									}
-								},
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "",
-										"type": "text",
-										"disabled": true
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"Email\":\"\",\n    \"Medium\":\"Email\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": "{{BaseUrl}}/api/register/sendMail"
-							},
-							"response": []
-						},
-						{
-							"name": "RegisterSendMail- Empty Medium field",
-							"id": "b15537e7-d8e6-4332-b1a4-0949c273b62a",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{accessToken}}"
-									}
-								},
-								"method": "POST",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "",
-										"type": "text",
-										"disabled": true
-									}
-								],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n    \"Email\":\"abiodun@gmail.com\",\n    \"Medium\":\"\"\n}",
+									"raw": "{\n    \"Channel\":\"08145075789\",\n    \"Medium\":\"\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -2064,7 +2011,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"Email\":\"abiodun@gmail.com\",\n    \"Token\":\"256495\"\n}",
+									"raw": "{\n    \"Channel\":\"{{phoneNumber}}\",\n    \"Token\":\"000000\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"

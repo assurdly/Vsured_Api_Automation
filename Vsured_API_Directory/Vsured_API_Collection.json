@@ -1996,6 +1996,28 @@
 					"item": [
 						{
 							"name": "RegisterationVerify- Successful",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "1146c268-df38-45aa-ac9e-e418bff298f2",
+										"exec": [
+											"pm.test(\"Verify that Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that response status returns success\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message includes Email Verification Successful\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Email Verification Successful, please proceed to login\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "b357f4ee-ed72-47c7-9162-149936de3d43",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -2018,12 +2040,38 @@
 										}
 									}
 								},
-								"url": "{{BaseUrl}}api/register/verify"
+								"url": "{{BaseUrl}}/api/register/verify"
 							},
 							"response": []
 						},
 						{
-							"name": "RegisterationVerify- Empty Email field",
+							"name": "RegisterationVerify- Empty Channel field",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "4275625d-a8b9-4935-9878-136f03221bb5",
+										"exec": [
+											"pm.test(\"Verify that Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"pm.test(\"Verify that type returns field\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].type).to.eql(\"field\");\r",
+											"});\r",
+											"pm.test(\"Verify that message includes Channel is required\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].msg).to.eql(\"Channel is required. In the form of Email or phone number\");\r",
+											"});\r",
+											"pm.test(\"Verify that path returns Channel\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].path).to.eql(\"Channel\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "e3694384-72f3-4899-98c1-54d8ac8e1d6e",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -2039,14 +2087,14 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"Email\":\"\",\n    \"Token\":\"256495\"\n}",
+									"raw": "{\n    \"Channel\":\"\",\n    \"Token\":\"515774\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
 										}
 									}
 								},
-								"url": "{{BaseUrl}}api/register/verify"
+								"url": "{{BaseUrl}}/api/register/verify"
 							},
 							"response": []
 						},

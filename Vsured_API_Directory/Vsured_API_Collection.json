@@ -2995,7 +2995,7 @@
 					"name": "Send Email-Forgot Password",
 					"item": [
 						{
-							"name": "ForgotPasswordSendMail-Successful",
+							"name": "Send OTP for ForgotPassword-Successful",
 							"event": [
 								{
 									"listen": "test",
@@ -3045,7 +3045,7 @@
 							"response": []
 						},
 						{
-							"name": "ForgotPasswordSendMail- Empty Channel field",
+							"name": "Send OTP for ForgotPassword- Empty Channel field",
 							"event": [
 								{
 									"listen": "test",
@@ -3099,7 +3099,7 @@
 							"response": []
 						},
 						{
-							"name": "ForgotPasswordSendMail- Empty DOB field",
+							"name": "Send OTP for ForgotPassword- Empty DOB field",
 							"event": [
 								{
 									"listen": "test",
@@ -3153,7 +3153,7 @@
 							"response": []
 						},
 						{
-							"name": "ForgotPasswordSendMail- Empty Medium field",
+							"name": "Send OTP for ForgotPassword- Empty Medium field",
 							"event": [
 								{
 									"listen": "test",
@@ -3222,14 +3222,14 @@
 								"auth": {
 									"type": "bearer",
 									"bearer": {
-										"token": "{{accessToken}}"
+										"token": "{{Auth_token}}"
 									}
 								},
 								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"Channel\":\"08145075789\",\n    \"Token\":\"127624\"\n}",
+									"raw": "{\n    \"Channel\": \"{{phoneNumber}}\",\n    \"Token\": \"000000\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"

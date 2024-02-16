@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Austyn","Address":"9117 Sydnee Mill","Phone":"080523-691-5715","Email":"KarsonSchroeder@yopmail.com","CommunityId":"3f2af772-a3ec-447a-82e5-2cce9bb19cf7"}}

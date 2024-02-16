@@ -1,6 +1,0 @@
-  {
-        "Name":"Madalyn",
-        "Address":"46498 Darlene Extensions",
-        "Phone":"080927-567-9869",
-        "Email":"MaudieRuecker@yopmail.com"
-    }

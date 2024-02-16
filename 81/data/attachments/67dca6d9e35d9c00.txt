@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Keenan","Address":"6782 Brakus Hill","Phone":"080539-800-7141","Email":"StefanieNolan@yopmail.com","CommunityId":"bbd050cb-16ce-47e1-95dd-de813647219a"}}

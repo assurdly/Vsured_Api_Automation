@@ -1,6 +1,0 @@
-  {
-        "Name":"Nayeli",
-        "Address":"0698 Blanda Vista",
-        "Phone":"080903-452-5266",
-        "Email":"BellKemmer@yopmail.com"
-    }

@@ -1,0 +1,1 @@
+{"status":"Success","message":"Successfully registered user","data":{"FirstName":"Carmel","LastName":"Lueilwitz","Gender":"Male","Address":"testing address","Phone":"08050769874","Password":"Password@12","Language":"English","CompanyType":"Finance","DOB":"1993-01-01T00:00:00.000Z","Email":"Kaela12yopmailcom","UserRole":"COMMUNITY_ADMIN","PhotoPath":""}}

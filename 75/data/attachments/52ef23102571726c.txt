@@ -1,6 +1,0 @@
-  {
-        "Name":"Karl",
-        "Address":"0639 Satterfield Track",
-        "Phone":"080466-903-4968",
-        "Email":"VerlaLangosh@yopmail.com"
-    }

@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Karl","Address":"0639 Satterfield Track","Phone":"080466-903-4968","Email":"VerlaLangosh@yopmail.com","CommunityId":"46ae10d7-964b-4507-8889-19d8ea82a963"}}

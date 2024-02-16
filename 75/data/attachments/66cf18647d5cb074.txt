@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Ramona","Address":"8390 Dario Ridges","Phone":"080773-488-4901","Email":"CharlotteMcGlynn@yopmail.com","CommunityId":"5eb689e2-441f-47a0-ba6e-99d5589c05f7"}}

@@ -2100,6 +2100,32 @@
 						},
 						{
 							"name": "RegisterationVerify- Empty Token field",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "e2511c0b-2999-42cb-9ae0-03761df2295c",
+										"exec": [
+											"pm.test(\"Verify that Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"pm.test(\"Verify that type returns field\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].type).to.eql(\"field\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns Token is required\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].msg).to.eql(\"Token is required\");\r",
+											"});\r",
+											"pm.test(\"Verify that path returns Token\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].path).to.eql(\"Token\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "95df5dd0-bf05-4cdd-8975-80ca5c2d4dc7",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -2115,7 +2141,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"Channel\":\"08145075789\",\n    \"Token\":\"\"\n}}",
+									"raw": "{\n    \"Channel\":\"08145075789\",\n    \"Token\":\"\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"

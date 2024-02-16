@@ -1,6 +1,0 @@
-  {
-        "Name":"Alayna",
-        "Address":"1238 Satterfield Station",
-        "Phone":"080394-205-4436",
-        "Email":"ReeceFritsch@yopmail.com"
-    }

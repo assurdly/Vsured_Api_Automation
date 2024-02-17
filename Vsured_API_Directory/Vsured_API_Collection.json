@@ -4633,7 +4633,7 @@
 							"response": []
 						},
 						{
-							"name": "createSubAdmin-Empty First name field",
+							"name": "Create SubAdmin-Empty First name field",
 							"event": [
 								{
 									"listen": "test",
@@ -4649,7 +4649,7 @@
 											"});\r",
 											"pm.test(\"Verify that response message returns Failed to create subAdmin\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData[0].msg).to.eql(\"Failed to create subAdmin\");\r",
+											"    pm.expect(jsonData.message).to.eql(\"Failed to create subAdmin\");\r",
 											"});"
 										],
 										"type": "text/javascript"
@@ -4683,7 +4683,7 @@
 							"response": []
 						},
 						{
-							"name": "createSubAdmin-Empty last name field",
+							"name": "Create SubAdmin-Empty last name field",
 							"event": [
 								{
 									"listen": "test",
@@ -4693,17 +4693,13 @@
 											"pm.test(\"Verify that Status code is 400\", function () {\r",
 											"    pm.response.to.have.status(400);\r",
 											"});\r",
-											"pm.test(\"Verify that type returns field\", function () {\r",
+											"pm.test(\"Verify that status returns failed\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData[0].type).to.eql(\"field\");\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
 											"});\r",
-											"pm.test(\"Verify that message returns Name is required\", function () {\r",
+											"pm.test(\"Verify that response message returns Failed to create subAdmin\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData[0].msg).to.eql(\"LastName is required\");\r",
-											"});\r",
-											"pm.test(\"Verify that path returns LastName\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData[0].path).to.eql(\"LastName\");\r",
+											"    pm.expect(jsonData.message).to.eql(\"Failed to create subAdmin\");\r",
 											"});"
 										],
 										"type": "text/javascript"
@@ -4747,17 +4743,13 @@
 											"pm.test(\"Verify that Status code is 400\", function () {\r",
 											"    pm.response.to.have.status(400);\r",
 											"});\r",
-											"pm.test(\"Verify that type returns field\", function () {\r",
+											"pm.test(\"Verify that status returns failed\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData[0].type).to.eql(\"field\");\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
 											"});\r",
-											"pm.test(\"Verify that message returns Phone is required\", function () {\r",
+											"pm.test(\"Verify that response message returns Failed to create subAdmin\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData[0].msg).to.eql(\"Phone is required\");\r",
-											"});\r",
-											"pm.test(\"Verify that path returns Phone\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData[0].path).to.eql(\"Phone\");\r",
+											"    pm.expect(jsonData.message).to.eql(\"Failed to create subAdmin\");\r",
 											"});"
 										],
 										"type": "text/javascript"

@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Celestino","Address":"1088 Konopelski Isle","Phone":"08028297729","Email":"KianWisoky@yopmail.com","CommunityId":"000058ed-3138-4580-ab68-13b351d344e4"}}

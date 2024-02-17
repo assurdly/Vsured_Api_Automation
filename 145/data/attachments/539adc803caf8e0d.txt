@@ -1,0 +1,6 @@
+  {
+        "Name":"Kane",
+        "Address":"351 Ella Views",
+        "Phone":"abcdefghi",
+        "Email":"NaomieKihn@yopmail.com"
+    }

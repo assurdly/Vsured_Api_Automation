@@ -1,0 +1,13 @@
+
+    {
+        "FirstName":"Garth",
+        "LastName":"Keebler",
+        "Phone":"08057231914",
+        "Email":"DeangeloAbshire@yopmail.com",
+        "DOB":"1991-01-01",
+        "Gender":"Male",
+        "NIN":"23454323456",
+        "CommunityId":"7ec0920c-22a9-4c77-9774-00baae05edc7",
+        "CheckPoint":"test CheckPoint"
+
+    }

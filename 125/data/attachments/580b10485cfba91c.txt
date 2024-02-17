@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Gabriel","Address":"91264 Keara Vista","Phone":"abcdefghi","Email":"GermaineLuettgen@yopmail.com","CommunityId":"467951da-e774-45e8-b53a-4fbc4eb9f716"}}

@@ -1,6 +1,0 @@
-  {
-        "Name":"Jayson",
-        "Address":"2480 Hettie Green",
-        "Phone":"08054795512",
-        "Email":"BradleySwift@yopmail.com"
-    }

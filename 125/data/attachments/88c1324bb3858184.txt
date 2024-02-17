@@ -1,6 +1,0 @@
-  {
-        "Name":"Gabriel",
-        "Address":"91264 Keara Vista",
-        "Phone":"abcdefghi",
-        "Email":"GermaineLuettgen@yopmail.com"
-    }

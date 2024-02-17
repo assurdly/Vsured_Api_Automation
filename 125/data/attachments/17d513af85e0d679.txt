@@ -1,6 +1,0 @@
-  {
-        "Name":"Florine",
-        "Address":"4954 Gerlach Haven",
-        "Phone":"08024553483",
-        "Email":"NikkoWuckertyopmailcom"
-    }

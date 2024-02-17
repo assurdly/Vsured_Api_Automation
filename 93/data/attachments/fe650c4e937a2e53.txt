@@ -1,6 +1,0 @@
-  {
-        "Name":"Luther",
-        "Address":"280 D'Amore Expressway",
-        "Phone":"080673-511-7028",
-        "Email":"PenelopeLynch@yopmail.com"
-    }

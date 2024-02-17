@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Madge","Address":"1777 Rogahn Point","Phone":"080674-962-2901","Email":"AlbaKulas@yopmail.com","CommunityId":"34127bf4-d8aa-4ce9-b6d6-948b3f343d1c"}}

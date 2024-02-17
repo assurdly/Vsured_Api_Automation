@@ -1,8 +1,0 @@
-{
-"FirstName":"Ike",
-"LastName":"Bins",
-"Phone":"08093781186",
-"Email":"GisselleZboncak@gmail.com",
-"PhotoPath":"testpath",
-"CommunityId":"c202e960-6661-43e2-a7c0-e304502da7a2"
-}

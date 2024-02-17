@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Clifton","Address":"390 Delta Roads","Phone":"abcdefghi","Email":"JeremieMiller@yopmail.com","CommunityId":"59cf6d9c-537c-4b9e-aa4f-6c064b0f38fc"}}

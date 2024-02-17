@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Fetched Community","data":{"Id":456,"CommunityId":"8525f39e-a2c1-4350-8143-c555bb7f47b1","Name":"Ashtyn","Address":"6636 Rath Station","Phone":"08093406452","Email":"BrisaSmithamyopmailcom"}}

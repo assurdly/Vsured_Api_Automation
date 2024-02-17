@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Shaina","Address":"268 Orlando Ranch","Phone":"08006294495","Email":"CandaceHand@yopmail.com","CommunityId":"327d7983-f871-447d-81ee-856234c3636e"}}

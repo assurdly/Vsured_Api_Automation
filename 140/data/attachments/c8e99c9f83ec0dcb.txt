@@ -1,0 +1,13 @@
+
+    {
+        "FirstName":"Leda",
+        "LastName":"Feest",
+        "Phone":"08057231914",
+        "Email":"MargueriteReichel@yopmail.com",
+        "DOB":"1991-01-01",
+        "Gender":"Male",
+        "NIN":"23454323456",
+        "CommunityId":"e9ae2602-58bc-419f-8b48-8d5b6f2fd56a",
+        "CheckPoint":"test CheckPoint"
+
+    }

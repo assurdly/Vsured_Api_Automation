@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Hunter","Address":"009 Thompson Turnpike","Phone":"08093433631","Email":"HermannWalsh@yopmail.com","CommunityId":"1eb6bc15-0706-41d6-9ef9-ddab2f84f20c"}}

@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Fetched Community","data":{"Id":597,"CommunityId":"e9ae2602-58bc-419f-8b48-8d5b6f2fd56a","Name":"Russ","Address":"903 Blaze Island","Phone":"08089996149","Email":"EmmyFunkyopmailcom"}}

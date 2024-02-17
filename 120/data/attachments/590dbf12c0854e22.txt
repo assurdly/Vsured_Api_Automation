@@ -1,6 +1,0 @@
-  {
-        "Name":"Clifton",
-        "Address":"390 Delta Roads",
-        "Phone":"abcdefghi",
-        "Email":"JeremieMiller@yopmail.com"
-    }

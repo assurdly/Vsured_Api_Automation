@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Iva","Address":"09014 Avis Ridge","Phone":"abcdefghi","Email":"TianaCremin@yopmail.com","CommunityId":"3611cf3b-3ff3-457e-87bf-5ebfdbdd9db1"}}

@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Dawson","Address":"5759 Rosenbaum Hollow","Phone":"08087927219","Email":"LouieBaumbach@yopmail.com","CommunityId":"319a5f20-b263-4617-8fcf-bfe46bccb79d"}}

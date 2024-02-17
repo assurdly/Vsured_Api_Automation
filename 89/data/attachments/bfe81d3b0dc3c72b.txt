@@ -1,1 +1,0 @@
-{"status":"Success","message":"Successfully registered user","data":{"FirstName":"Eliane","LastName":"Herzog","Gender":"Male","Address":"testing address","Phone":"08095606603","Password":"Password@12","Language":"English","CompanyType":"Finance","DOB":"1993-01-01T00:00:00.000Z","Email":"Deon12@yopmail.com","UserRole":"COMMUNITY_ADMIN","PhotoPath":""}}

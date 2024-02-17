@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Fetched Community","data":{"Id":555,"CommunityId":"45be6ffd-4b1d-46a8-a74c-679eb00a3458","Name":"Orlo","Address":"7992 Conn Fort","Phone":"08022454442","Email":"EveFraneckiyopmailcom"}}

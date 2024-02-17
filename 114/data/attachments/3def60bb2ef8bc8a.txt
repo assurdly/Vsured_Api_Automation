@@ -1,6 +1,0 @@
-  {
-        "Name":"Zander",
-        "Address":"44705 Kirlin Route",
-        "Phone":"08009807582",
-        "Email":"CletusHessel@yopmail.com"
-    }

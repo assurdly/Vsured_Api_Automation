@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Aisha","Address":"5278 Amber Islands","Phone":"08055808393","Email":"BeauFeest@yopmail.com","CommunityId":"ca7be4a5-e290-4035-940d-c17cc06e37f9"}}

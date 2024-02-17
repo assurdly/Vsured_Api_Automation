@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Zander","Address":"44705 Kirlin Route","Phone":"08009807582","Email":"CletusHessel@yopmail.com","CommunityId":"b2eb31ae-e3fd-4df8-8ae8-071c67e8b13a"}}

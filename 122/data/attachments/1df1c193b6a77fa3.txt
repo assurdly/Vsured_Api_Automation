@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Zetta","Address":"08702 Jonathon Station","Phone":"abcdefghi","Email":"QuintenSkiles@yopmail.com","CommunityId":"e4d6f565-d48e-49dc-a0e8-e77c523f4af2"}}

@@ -1,6 +1,0 @@
-  {
-        "Name":"Cassandre",
-        "Address":"93573 Cormier Summit",
-        "Phone":"08079195427",
-        "Email":"VelmaKrajcik@yopmail.com"
-    }

@@ -6094,11 +6094,117 @@
 			"name": "Member",
 			"item": [
 				{
-					"name": "New Folder",
+					"name": "Create Appointment",
 					"item": [
 						{
-							"name": "CreateAppointment Copy",
+							"name": "Create Appointment-Success",
 							"id": "c6244a05-488a-4d81-a2fb-91a188b34e64",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"value": null
+										},
+										{
+											"key": "Title",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Date",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Time",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Venue",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Description",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "CommunityId",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{BaseUrl}}/api/community/appointment/create"
+							},
+							"response": []
+						},
+						{
+							"name": "Create Appointment-Success Copy",
+							"id": "332d94e0-34eb-4607-a85c-8c6102b597b6",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"value": null
+										},
+										{
+											"key": "Title",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Date",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Time",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Venue",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Description",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "CommunityId",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{BaseUrl}}/api/community/appointment/create"
+							},
+							"response": []
+						},
+						{
+							"name": "Create Appointment-Success Copy 2",
+							"id": "f8f78676-2c7d-439c-a0bd-cfd278ac4874",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -6156,8 +6262,34 @@
 					"name": "New Folder Copy",
 					"item": [
 						{
-							"name": "GetAllAppointments Copy",
+							"name": "Get All Appointments-Successful",
 							"id": "44cef223-f668-4ae4-b571-0ceea6016c22",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{BaseUrl}}/api/community/appointment/all"
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllAppointments-No Auth Token",
+							"id": "4ab1f641-7b15-44de-93af-e3d70c132c17",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{BaseUrl}}/api/community/appointment/all"
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllAppointments Copy 3",
+							"id": "d5556650-f744-4e0e-97a1-3f4c0ac6ca51",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -6173,22 +6305,142 @@
 				},
 				{
 					"name": "New Folder Copy 2",
-					"item": [],
+					"item": [
+						{
+							"name": "GdetAppointmentById Copy",
+							"id": "a8dc3a85-6210-4cc4-9b0e-67c1cc182435",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BaseUrl}}/api/community/appointment/:Id",
+									"host": [
+										"{{BaseUrl}}"
+									],
+									"path": [
+										"api",
+										"community",
+										"appointment",
+										":Id"
+									],
+									"variable": [
+										{
+											"id": "8e01c512-7323-46af-8b90-dd8ee59ee3d6",
+											"key": "Id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
 					"id": "a66d4d22-a518-4b1c-8dd3-000e73356b4a"
 				},
 				{
 					"name": "New Folder Copy 3",
-					"item": [],
+					"item": [
+						{
+							"name": "GetAppointmentByCommunityId Copy",
+							"id": "a7fa1128-0775-49a5-a8e5-b5b7cda9ce7d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BaseUrl}}/api/community/appointment/:communityId",
+									"host": [
+										"{{BaseUrl}}"
+									],
+									"path": [
+										"api",
+										"community",
+										"appointment",
+										":communityId"
+									],
+									"variable": [
+										{
+											"id": "90b86ce6-c864-4e32-9177-3a4ed076fa88",
+											"key": "communityId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
 					"id": "e4925a0a-d785-4896-af48-6a642139fd81"
 				},
 				{
 					"name": "New Folder Copy 4",
-					"item": [],
+					"item": [
+						{
+							"name": "CreateBulkMemberWithExcel Copy",
+							"id": "17d4c16f-97c6-499a-b72a-c6b095bf930e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"value": null
+										}
+									]
+								},
+								"url": "{{BaseUrl}}/api/community/member/create"
+							},
+							"response": []
+						}
+					],
 					"id": "c51ef442-24b3-4759-b5d4-6bd434bb120d"
 				},
 				{
 					"name": "New Folder Copy 5",
-					"item": [],
+					"item": [
+						{
+							"name": "GetMemberByMemberId Copy",
+							"id": "be2212ab-c7b9-463d-9c45-7f54cd01d191",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BaseUrl}}/api/community/member/:memberId",
+									"host": [
+										"{{BaseUrl}}"
+									],
+									"path": [
+										"api",
+										"community",
+										"member",
+										":memberId"
+									],
+									"variable": [
+										{
+											"id": "6c27d9cc-01f5-4f59-a543-ba066ce0c301",
+											"key": "memberId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						}
+					],
 					"id": "dbe91312-fe65-458d-80ec-d992e94c267a"
 				}
 			],

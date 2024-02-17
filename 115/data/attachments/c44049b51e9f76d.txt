@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Claudine","Address":"654 Bailee Inlet","Phone":"abcdefghi","Email":"DelphaFarrell@yopmail.com","CommunityId":"13dcc55f-b11c-4134-912e-705dfdd13445"}}

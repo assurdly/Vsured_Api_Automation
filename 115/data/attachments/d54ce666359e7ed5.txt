@@ -1,6 +1,0 @@
-  {
-        "Name":"Claudine",
-        "Address":"654 Bailee Inlet",
-        "Phone":"abcdefghi",
-        "Email":"DelphaFarrell@yopmail.com"
-    }

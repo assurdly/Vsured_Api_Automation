@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Joanny","Address":"3842 Peggie Gardens","Phone":"08053790526","Email":"DerekMcGlynnyopmailcom","CommunityId":"d7849327-c386-404a-9850-01a0e101d99f"}}

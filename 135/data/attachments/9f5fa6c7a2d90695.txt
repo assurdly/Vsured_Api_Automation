@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Ulices","Address":"489 Hyatt Streets","Phone":"08014267322","Email":"DollyLangosh@yopmail.com","CommunityId":"291e8dd9-b1ce-4bd7-8ee7-7188690e02b2"}}

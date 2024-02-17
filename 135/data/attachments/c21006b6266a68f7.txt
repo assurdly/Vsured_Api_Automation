@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Victor","Address":"67545 Ferry Overpass","Phone":"abcdefghi","Email":"DeionProsacco@yopmail.com","CommunityId":"721f632c-7369-4cb6-be97-e0c2a3653741"}}

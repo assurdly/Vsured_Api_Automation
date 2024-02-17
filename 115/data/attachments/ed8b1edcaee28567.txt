@@ -1,6 +1,0 @@
-  {
-        "Name":"Joanny",
-        "Address":"3842 Peggie Gardens",
-        "Phone":"08053790526",
-        "Email":"DerekMcGlynnyopmailcom"
-    }

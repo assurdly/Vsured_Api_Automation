@@ -5805,7 +5805,7 @@
 					"name": "Get Checker By Community Id",
 					"item": [
 						{
-							"name": "GetCheckerByCommunityId Copy",
+							"name": "Get Checker By CommunityId- Successful",
 							"id": "5c7ad576-0555-41ff-9886-5565040e827c",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true

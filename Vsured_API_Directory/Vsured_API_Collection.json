@@ -5994,7 +5994,12 @@
 										{
 											"key": "file",
 											"type": "file",
-											"src": "WHS1BEVfk/CheckerUpload.xlsx"
+											"fileNotInWorkingDirectoryWarning": "This file isn't in your working directory. Teammates you share this request with won't be able to use this file. To make collaboration easier you can setup your working directory in Settings.",
+											"filesNotInWorkingDirectory": [
+												"WHS1BEVfk/CheckerUpload.xlsx"
+											],
+											"src": "WHS1BEVfk/CheckerUpload.xlsx",
+											"disabled": true
 										}
 									]
 								},
@@ -6003,17 +6008,36 @@
 							"response": []
 						},
 						{
-							"name": "Create Bulk Checkers With Excel Copy 2",
+							"name": "Create Bulk Checkers With Excel-No Auth Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "6d530a72-ab67-43de-9277-dd6a0e336c02",
+										"exec": [
+											"pm.test(\"Verify that Status code is 401\", function () {\r",
+											"    pm.response.to.have.status(401);\r",
+											"});\r",
+											"pm.test(\"Verify that status is failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message is Request UnAuthorized\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Request UnAuthorized\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "a213cc2e-2c85-4517-afb6-1f496bae3955",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{Auth_token}}"
-									}
+									"type": "noauth"
 								},
 								"method": "POST",
 								"header": [],
@@ -6032,7 +6056,7 @@
 							"response": []
 						},
 						{
-							"name": "Create Bulk Checkers With Excel Copy 3",
+							"name": "Create Bulk Checkers With Excel-Invalid Auth Token",
 							"id": "6f915147-b38f-4f5c-9c36-5a860cf49850",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true

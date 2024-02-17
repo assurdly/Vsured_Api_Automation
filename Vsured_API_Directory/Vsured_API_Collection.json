@@ -5392,6 +5392,34 @@
 							"response": []
 						},
 						{
+							"name": "Create checkers-Successful Copy",
+							"id": "91ddfc7d-a3ce-4b53-8762-6d354f9c954d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "\n    {\n        \"FirstName\":\"Checker1 firstname\",\n        \"LastName\":\"Checker1 LastName\",\n        \"Phone\":\"08057231914\",\n        \"Email\":\"abiodun@ggmail.com\",\n        \"DOB\":\"1991-01-01\",\n        \"Gender\":\"Male\",\n        \"NIN\":\"23454323456\",\n        \"CommunityId\":\"717fae8c-190e-440e-9d8f-82fe4cbd734e\",\n        \"CheckPoint\":\"test CheckPoint\"\n\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/community/checkers/create"
+							},
+							"response": []
+						},
+						{
 							"name": "Createcheckers Copy",
 							"id": "02bf1882-5d34-44ae-a45c-b487051acc8e",
 							"protocolProfileBehavior": {

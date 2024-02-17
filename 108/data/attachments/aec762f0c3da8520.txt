@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Aron","Address":"2620 Kyleigh Fork","Phone":"08041846368","Email":"WilmaMraz@yopmail.com","CommunityId":"16cc9020-5d81-47c8-b65c-5ec726dad19d"}}

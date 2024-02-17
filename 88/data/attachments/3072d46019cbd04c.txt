@@ -1,6 +1,0 @@
-  {
-        "Name":"Pat",
-        "Address":"938 Delaney Club",
-        "Phone":"080726-333-2798",
-        "Email":"PatriciaGrimes@yopmail.com"
-    }

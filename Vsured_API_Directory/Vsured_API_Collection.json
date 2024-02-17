@@ -5536,7 +5536,37 @@
 					"name": "Get All checkers",
 					"item": [
 						{
-							"name": "GetAllcheckers",
+							"name": "Get All checkers-Successful",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "f84cf630-6a0e-4446-a928-e58f88a3bb9f",
+										"exec": [
+											"pm.test(\"Verify that status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that status returns success \", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+											"});\r",
+											"pm.test(\"Verify that message returns Successfully fetch Checkers\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Successfully fetch Checkers\");\r",
+											"});\r",
+											"pm.test(\"Verify that data exist\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.data).to.exist;\r",
+											"});\r",
+											"pm.test(\"Get Checker id\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.collectionVariables.set(\"checkerId\", jsonData.data[0].Id);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "92dfcffb-8aef-4135-927a-90d3ea82ef88",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -5555,12 +5585,37 @@
 							"response": []
 						},
 						{
-							"name": "GetAllcheckers Copy",
+							"name": "Get All checkers-No Auth Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "a82d039d-3e94-4af0-9250-893d1f983481",
+										"exec": [
+											"pm.test(\"Verify that Status code is 401\", function () {\r",
+											"    pm.response.to.have.status(401);\r",
+											"});\r",
+											"pm.test(\"Verify that status is failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message is Request UnAuthorized\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Request UnAuthorized\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "c3094a41-ff3c-4358-9385-b8891636d6cb",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "noauth"
+								},
 								"method": "GET",
 								"header": [],
 								"url": "{{BaseUrl}}/api/community/checkers/all"
@@ -5568,12 +5623,40 @@
 							"response": []
 						},
 						{
-							"name": "GetAllcheckers Copy 2",
+							"name": "Get All checkers-Invalid Auth Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "5a2b7cc4-db1c-462b-be27-2036c9c3ee0b",
+										"exec": [
+											"pm.test(\"Verify that Status code is 403\", function () {\r",
+											"    pm.response.to.have.status(403);\r",
+											"});\r",
+											"pm.test(\"Verify that status is failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns Invalid token\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Request Forbidden, Invalid Token\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "71fae379-3e06-45c5-85a2-dc50ae5b4361",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQaG9uZSI6IjA4MTQ1MDc1Nzg5IiwiRW1haWwiOm51bGwsIk5hbWUiOiJBYmlvZHVuIE9sYW5peWkiLCJpYXQiOhC1MDgxODkyNTgsImV4cCI6MTcwODE5Mjg1OH0.QghYKedpw0V20PhQcunbvkiLIGSVtDlE7rgwQlrqgIM"
+									}
+								},
 								"method": "GET",
 								"header": [],
 								"url": "{{BaseUrl}}/api/community/checkers/all"
@@ -5755,6 +5838,10 @@
 		},
 		{
 			"key": "subAdminId",
+			"value": ""
+		},
+		{
+			"key": "checkerId",
 			"value": ""
 		}
 	]

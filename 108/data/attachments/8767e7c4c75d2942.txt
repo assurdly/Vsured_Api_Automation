@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Thad","Address":"195 Violet Island","Phone":"08059215008","Email":"EzraMraz@yopmail.com","CommunityId":"bd442dd3-4b27-430f-8468-13b004289d96"}}

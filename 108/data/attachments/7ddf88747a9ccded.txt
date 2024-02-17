@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Cesar","Address":"7541 Celestine Run","Phone":"08086991942","Email":"AndreanneBeier@yopmail.com","CommunityId":"c01b9098-8ff5-4971-adc1-0cab7be4fd86"}}

@@ -1,6 +1,0 @@
-  {
-        "Name":"Cesar",
-        "Address":"7541 Celestine Run",
-        "Phone":"08086991942",
-        "Email":"AndreanneBeier@yopmail.com"
-    }

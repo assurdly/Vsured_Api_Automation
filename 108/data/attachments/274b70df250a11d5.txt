@@ -1,6 +1,0 @@
-  {
-        "Name":"Thad",
-        "Address":"195 Violet Island",
-        "Phone":"08059215008",
-        "Email":"EzraMraz@yopmail.com"
-    }

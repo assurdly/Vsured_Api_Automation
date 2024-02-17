@@ -1,0 +1,6 @@
+  {
+        "Name":"Katrine",
+        "Address":"24545 Hassie Corners",
+        "Phone":"abcdefghi",
+        "Email":"AnastasiaErdman@yopmail.com"
+    }

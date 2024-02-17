@@ -4907,6 +4907,10 @@
 											"pm.test(\"Verify that data exist\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
 											"    pm.expect(jsonData.data).to.exist;\r",
+											"});\r",
+											"pm.test(\"Get subAdmin id\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.collectionVariables.set(\"subAdminId\", jsonData.data[0].Id);\r",
 											"});"
 										],
 										"type": "text/javascript"
@@ -5017,6 +5021,37 @@
 					"item": [
 						{
 							"name": "Get SubAdmin By Id-Successful",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "a06fec33-aa70-4017-9224-91987f106a19",
+										"exec": [
+											"pm.test(\"Verify that Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that status is success\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns Successfully fetch subAdmin\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Successfully fetch subAdmin\");\r",
+											"});\r",
+											"pm.test(\"Verify that response data exist\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.data).to.exist;\r",
+											"});\r",
+											"pm.test(\"Verify that commununity id returned is correct\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.data.Id).to.eql(pm.collectionVariables.get('Id'));\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "52129da3-5d3d-4b36-b2ae-1b283507a448",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -5030,7 +5065,7 @@
 								},
 								"method": "GET",
 								"header": [],
-								"url": "{{BaseUrl}}/api/community/subAdmins/1"
+								"url": "{{BaseUrl}}/api/community/subAdmins/{{subAdminId}}"
 							},
 							"response": []
 						},
@@ -5409,6 +5444,10 @@
 		},
 		{
 			"key": "DOB",
+			"value": ""
+		},
+		{
+			"key": "subAdminId",
 			"value": ""
 		}
 	]

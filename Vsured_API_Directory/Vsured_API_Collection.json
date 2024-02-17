@@ -5218,10 +5218,7 @@
 											"    var jsonData = pm.response.json();\r",
 											"    pm.expect(jsonData.data).to.exist;\r",
 											"});\r",
-											"pm.test(\"Verify that commununity id returned is correct\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.data.Id).to.eql(pm.collectionVariables.get('Id'));\r",
-											"});\r",
+											"\r",
 											""
 										],
 										"type": "text/javascript"

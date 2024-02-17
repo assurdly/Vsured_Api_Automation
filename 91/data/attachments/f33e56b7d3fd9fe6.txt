@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Heath","Address":"94729 Jude Spring","Phone":"080297-653-9165","Email":"JeramieTremblay@yopmail.com","CommunityId":"6ec51a56-a446-4efc-bafd-b4a781ee36a2"}}

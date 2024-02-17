@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Pat","Address":"523 Jon Parkways","Phone":"08005233870","Email":"GilesFramiyopmailcom","CommunityId":"6cec9803-0bac-4a8a-b0e4-5902af30f89b"}}

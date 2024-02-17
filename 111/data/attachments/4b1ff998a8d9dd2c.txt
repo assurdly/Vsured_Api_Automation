@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Laverne","Address":"711 Koss Harbors","Phone":"abcdefghi","Email":"ElinorGoyette@yopmail.com","CommunityId":"91e19f76-599e-4742-8794-a90f8b9aba75"}}

@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Fetched Community","data":{"Id":441,"CommunityId":"48f2e3ca-3935-4217-8710-f8d40c1256a4","Name":"Lewis","Address":"632 Orn Villages","Phone":"08005574073","Email":"MalikaVandervortyopmailcom"}}

@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Fetched Community","data":{"Id":583,"CommunityId":"9580345b-8e59-4c68-854b-117d633f6f09","Name":"Dayana","Address":"1054 Karianne Prairie","Phone":"08023100081","Email":"EllsworthBodeyopmailcom"}}

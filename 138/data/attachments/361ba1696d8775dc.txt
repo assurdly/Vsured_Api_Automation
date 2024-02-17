@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Nakia","Address":"7732 Doyle Turnpike","Phone":"abcdefghi","Email":"EverardoFlatley@yopmail.com","CommunityId":"5beae713-3b7e-4395-885b-b351a2f0669e"}}

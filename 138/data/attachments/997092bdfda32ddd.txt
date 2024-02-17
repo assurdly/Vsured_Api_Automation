@@ -1,0 +1,13 @@
+
+    {
+        "FirstName":"Dianna",
+        "LastName":"Ruecker",
+        "Phone":"08057231914",
+        "Email":"AlfordSchaefer@yopmail.com",
+        "DOB":"1991-01-01",
+        "Gender":"Male",
+        "NIN":"23454323456",
+        "CommunityId":"9580345b-8e59-4c68-854b-117d633f6f09",
+        "CheckPoint":"test CheckPoint"
+
+    }

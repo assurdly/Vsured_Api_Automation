@@ -1,8 +1,0 @@
-{
-"FirstName":"Murray",
-"LastName":"Gaylord",
-"Phone":"08093781185",
-"Email":"ShaniyaPouros@yopmail.com",
-"PhotoPath":"testpath",
-"CommunityId":"bb3063fa-beda-4914-870b-37a01be0f4b9"
-}

@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Rosemarie","Address":"47760 Strosin Spring","Phone":"abcdefghi","Email":"LennieO'Kon@yopmail.com","CommunityId":"4b14b539-ff95-403d-94f9-407e275df438"}}

@@ -1,0 +1,13 @@
+
+    {
+        "FirstName":"Deshaun",
+        "LastName":"Gleichner",
+        "Phone":"08057231914",
+        "Email":"SydniRohan@yopmail.com",
+        "DOB":"1991-01-01",
+        "Gender":"Male",
+        "NIN":"23454323456",
+        "CommunityId":"090967e0-0914-4118-9b5f-1a6be8445f78",
+        "CheckPoint":"test CheckPoint"
+
+    }

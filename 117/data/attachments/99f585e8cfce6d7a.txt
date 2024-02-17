@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Braden","Address":"88046 Karli Cliff","Phone":"08099753561","Email":"ErnieRyan@yopmail.com","CommunityId":"def3fa75-357c-4d12-a495-f9c3002cb603"}}

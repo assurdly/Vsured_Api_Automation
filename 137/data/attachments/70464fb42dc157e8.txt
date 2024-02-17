@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Garett","Address":"303 Richard Loop","Phone":"08058872523","Email":"AlexysWilliamson@yopmail.com","CommunityId":"12717688-b045-4ca3-8a39-510811395112"}}

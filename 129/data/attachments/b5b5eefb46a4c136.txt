@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Dejah","Address":"8509 Danika Islands","Phone":"abcdefghi","Email":"ElzaProsacco@yopmail.com","CommunityId":"2239fc9f-978b-4808-a195-008656d15278"}}

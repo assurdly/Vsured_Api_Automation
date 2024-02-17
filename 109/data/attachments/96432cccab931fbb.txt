@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Jamir","Address":"56471 Lenny Key","Phone":"08063675013","Email":"OctaviaBradtke@yopmail.com","CommunityId":"2dfecd70-5d5a-4491-b888-aad35d2540f3"}}

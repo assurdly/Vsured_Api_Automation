@@ -6092,7 +6092,106 @@
 		},
 		{
 			"name": "Member",
-			"item": [],
+			"item": [
+				{
+					"name": "New Folder",
+					"item": [
+						{
+							"name": "CreateAppointment Copy",
+							"id": "c6244a05-488a-4d81-a2fb-91a188b34e64",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"value": null
+										},
+										{
+											"key": "Title",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Date",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Time",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Venue",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Description",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "CommunityId",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{BaseUrl}}/api/community/appointment/create"
+							},
+							"response": []
+						}
+					],
+					"id": "988b61ed-b1b5-407e-8c20-9180a8ba9c25"
+				},
+				{
+					"name": "New Folder Copy",
+					"item": [
+						{
+							"name": "GetAllAppointments Copy",
+							"id": "44cef223-f668-4ae4-b571-0ceea6016c22",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{BaseUrl}}/api/community/appointment/all"
+							},
+							"response": []
+						}
+					],
+					"id": "ec7287e2-c4cb-4a0f-9022-70f8f3c69969"
+				},
+				{
+					"name": "New Folder Copy 2",
+					"item": [],
+					"id": "a66d4d22-a518-4b1c-8dd3-000e73356b4a"
+				},
+				{
+					"name": "New Folder Copy 3",
+					"item": [],
+					"id": "e4925a0a-d785-4896-af48-6a642139fd81"
+				},
+				{
+					"name": "New Folder Copy 4",
+					"item": [],
+					"id": "c51ef442-24b3-4759-b5d4-6bd434bb120d"
+				},
+				{
+					"name": "New Folder Copy 5",
+					"item": [],
+					"id": "dbe91312-fe65-458d-80ec-d992e94c267a"
+				}
+			],
 			"id": "81aa31f5-9bd4-4980-b02e-73dc40113b75"
 		}
 	],

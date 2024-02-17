@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Sherman","Address":"64253 Oscar Neck","Phone":"080309-471-4393","Email":"LaurelO'Connell@yopmail.com","CommunityId":"ed6294ad-f8ea-4d13-b9e7-fbf212ea9bee"}}

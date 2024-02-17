@@ -1,6 +1,0 @@
-  {
-        "Name":"Sherman",
-        "Address":"64253 Oscar Neck",
-        "Phone":"080309-471-4393",
-        "Email":"LaurelO'Connell@yopmail.com"
-    }

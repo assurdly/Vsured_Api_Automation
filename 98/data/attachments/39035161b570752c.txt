@@ -1,6 +1,0 @@
-  {
-        "Name":"Caden",
-        "Address":"7780 Feeney Court",
-        "Phone":"080251-543-6266",
-        "Email":"JordanMurphy@yopmail.com"
-    }

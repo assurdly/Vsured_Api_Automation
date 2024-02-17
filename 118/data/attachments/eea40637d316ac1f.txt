@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Gavin","Address":"5833 Gerry Wall","Phone":"abcdefghi","Email":"TorreyDaugherty@yopmail.com","CommunityId":"6c71b2b7-47af-42bb-9c8f-a0c3fc443969"}}

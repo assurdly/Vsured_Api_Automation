@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Caden","Address":"7780 Feeney Court","Phone":"080251-543-6266","Email":"JordanMurphy@yopmail.com","CommunityId":"7ccdb0a1-292a-4d80-bb34-f6a338b5aca3"}}

@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Mikel","Address":"71367 Treutel Rapids","Phone":"08063043728","Email":"BusterEbert@yopmail.com","CommunityId":"5a3d4490-739c-4602-a3de-761dc5db2390"}}

@@ -5802,36 +5802,7 @@
 					"id": "7775ff81-aa36-4263-9a13-5276623e1c3d"
 				},
 				{
-					"name": "New Folder",
-					"item": [
-						{
-							"name": "CreateBulkCheckersWithExcel Copy",
-							"id": "26bf2a0b-ef33-44fd-942b-416eadcd7d37",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "formdata",
-									"formdata": [
-										{
-											"key": "file",
-											"type": "file",
-											"src": "WHS1BEVfk/CheckerUpload.xlsx"
-										}
-									]
-								},
-								"url": "{{BaseUrl}}/api/community/checkers/createXls"
-							},
-							"response": []
-						}
-					],
-					"id": "7a9e5045-f64e-4075-841a-dc4d77ead28d"
-				},
-				{
-					"name": "New Folder Copy",
+					"name": "Get Checker By Community Id",
 					"item": [
 						{
 							"name": "GetCheckerByCommunityId Copy",
@@ -5863,9 +5834,131 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "GetCheckerByCommunityId Copy 2",
+							"id": "c4696626-2d0f-472a-ab26-bb3b7b14d756",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BaseUrl}}/api/community/checkers/:communityId",
+									"host": [
+										"{{BaseUrl}}"
+									],
+									"path": [
+										"api",
+										"community",
+										"checkers",
+										":communityId"
+									],
+									"variable": [
+										{
+											"id": "3ddc46e0-ee46-4f5e-8ce7-b9a71c5802c8",
+											"key": "communityId",
+											"value": "717fae8c-190e-440e-9d8f-82fe4cbd734e"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetCheckerByCommunityId Copy 3",
+							"id": "9191445b-5b0d-480b-b0f2-439330994c16",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BaseUrl}}/api/community/checkers/:communityId",
+									"host": [
+										"{{BaseUrl}}"
+									],
+									"path": [
+										"api",
+										"community",
+										"checkers",
+										":communityId"
+									],
+									"variable": [
+										{
+											"id": "3ddc46e0-ee46-4f5e-8ce7-b9a71c5802c8",
+											"key": "communityId",
+											"value": "717fae8c-190e-440e-9d8f-82fe4cbd734e"
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "GetCheckerByCommunityId Copy 4",
+							"id": "8cc09a63-dfea-424d-ab9d-a3ba9a0d90a4",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BaseUrl}}/api/community/checkers/:communityId",
+									"host": [
+										"{{BaseUrl}}"
+									],
+									"path": [
+										"api",
+										"community",
+										"checkers",
+										":communityId"
+									],
+									"variable": [
+										{
+											"id": "3ddc46e0-ee46-4f5e-8ce7-b9a71c5802c8",
+											"key": "communityId",
+											"value": "717fae8c-190e-440e-9d8f-82fe4cbd734e"
+										}
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"id": "8d7db36d-a101-4533-abdd-66f6af37f66a"
+				},
+				{
+					"name": "Create Bulk Checkers With Excel",
+					"item": [
+						{
+							"name": "Create Bulk Checkers With Excel",
+							"id": "26bf2a0b-ef33-44fd-942b-416eadcd7d37",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "WHS1BEVfk/CheckerUpload.xlsx"
+										}
+									]
+								},
+								"url": "{{BaseUrl}}/api/community/checkers/createXls"
+							},
+							"response": []
+						}
+					],
+					"id": "7a9e5045-f64e-4075-841a-dc4d77ead28d"
 				}
 			],
 			"id": "9f42db7e-301f-446f-9277-a402da869eb5"

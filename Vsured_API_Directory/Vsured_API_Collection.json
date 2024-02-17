@@ -5819,35 +5819,42 @@
 								},
 								"method": "GET",
 								"header": [],
-								"url": {
-									"raw": "{{BaseUrl}}/api/community/checkers/:communityId",
-									"host": [
-										"{{BaseUrl}}"
-									],
-									"path": [
-										"api",
-										"community",
-										"checkers",
-										":communityId"
-									],
-									"variable": [
-										{
-											"id": "3ddc46e0-ee46-4f5e-8ce7-b9a71c5802c8",
-											"key": "communityId",
-											"value": "717fae8c-190e-440e-9d8f-82fe4cbd734e"
-										}
-									]
-								}
+								"url": "{{BaseUrl}}/api/community/checkers/{{commununityId}}"
 							},
 							"response": []
 						},
 						{
-							"name": "GetCheckerByCommunityId Copy 2",
+							"name": "Get Checker By CommunityId-No Auth Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "73d712d9-17ef-4bd5-b724-85692fa30825",
+										"exec": [
+											"pm.test(\"Verify that Status code is 401\", function () {\r",
+											"    pm.response.to.have.status(401);\r",
+											"});\r",
+											"pm.test(\"Verify that status is failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message is Request UnAuthorized\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Request UnAuthorized\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "c4696626-2d0f-472a-ab26-bb3b7b14d756",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "noauth"
+								},
 								"method": "GET",
 								"header": [],
 								"url": {

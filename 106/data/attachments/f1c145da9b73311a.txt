@@ -1,6 +1,0 @@
-  {
-        "Name":"Vella",
-        "Address":"3369 Olson Estate",
-        "Phone":"08031983486",
-        "Email":"AniyaGutmann@yopmail.com"
-    }

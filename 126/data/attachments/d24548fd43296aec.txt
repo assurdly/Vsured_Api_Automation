@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Fetched Community","data":{"Id":499,"CommunityId":"826729d8-5db6-40b4-a26f-6aa8cfd1d933","Name":"Joel","Address":"02370 Syble Mountain","Phone":"08067153257","Email":"BertaSchambergeryopmailcom"}}

@@ -1,4 +1,0 @@
-{
-    "Channel":"Zetta",
-    "Token":"000000"
-}

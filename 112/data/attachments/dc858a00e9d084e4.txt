@@ -1,6 +1,0 @@
-  {
-        "Name":"Trudie",
-        "Address":"4214 Haag Square",
-        "Phone":"08059467766",
-        "Email":"AxelMurray@yopmail.com"
-    }

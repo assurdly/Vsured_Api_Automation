@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Trudie","Address":"4214 Haag Square","Phone":"08059467766","Email":"AxelMurray@yopmail.com","CommunityId":"165362e5-a78f-4d65-a431-faaa6c4633c4"}}

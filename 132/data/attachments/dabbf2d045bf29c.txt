@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Chelsie","Address":"929 Wolf Plains","Phone":"abcdefghi","Email":"MonroeO'Hara@yopmail.com","CommunityId":"bb3cdaa7-2dab-4b7a-a3e2-822301f992d1"}}

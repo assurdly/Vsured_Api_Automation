@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Kaelyn","Address":"2022 Torphy Fork","Phone":"08001675619","Email":"TedCrona@yopmail.com","CommunityId":"aca02e35-c615-48d4-aad2-8a4a72e07603"}}

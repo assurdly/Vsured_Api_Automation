@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Fetched Community","data":{"Id":506,"CommunityId":"f4916b60-062c-4eff-b499-179fb7b47159","Name":"Vida","Address":"13276 Vincenza Point","Phone":"08075707565","Email":"BlakeSchroederyopmailcom"}}

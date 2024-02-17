@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Mayra","Address":"5856 Margarett Manor","Phone":"08083160457","Email":"KaceyHettingeryopmailcom","CommunityId":"4c42c4c6-b997-47b8-8b87-45b88dadc1db"}}

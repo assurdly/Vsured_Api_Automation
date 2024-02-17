@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Summer","Address":"752 Myrtis Rue","Phone":"080272-961-8951","Email":"LailaVonRueden@yopmail.com","CommunityId":"28fb287c-7396-467c-a41e-723dae628150"}}

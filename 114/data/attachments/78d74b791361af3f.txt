@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Orie","Address":"50078 Carroll Plaza","Phone":"abcdefghi","Email":"ErnestineDurgan@yopmail.com","CommunityId":"02e8d8a2-eee1-44cd-9bbe-bbd19724a3fe"}}

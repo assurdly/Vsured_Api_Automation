@@ -4583,7 +4583,7 @@
 					"name": "createSubAdmin",
 					"item": [
 						{
-							"name": "create SubAdmin-Successful",
+							"name": "Create SubAdmin-Successful",
 							"event": [
 								{
 									"listen": "test",

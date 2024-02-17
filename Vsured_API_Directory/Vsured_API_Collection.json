@@ -5880,43 +5880,40 @@
 							"response": []
 						},
 						{
-							"name": "GetCheckerByCommunityId Copy 3",
+							"name": "Get Checker By CommunityId-Invalid Auth Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "c373445c-b3c7-4101-a022-fc09167a4616",
+										"exec": [
+											"pm.test(\"Verify that Status code is 403\", function () {\r",
+											"    pm.response.to.have.status(403);\r",
+											"});\r",
+											"pm.test(\"Verify that status is failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns Invalid token\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Request Forbidden, Invalid Token\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "9191445b-5b0d-480b-b0f2-439330994c16",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
-								"method": "GET",
-								"header": [],
-								"url": {
-									"raw": "{{BaseUrl}}/api/community/checkers/:communityId",
-									"host": [
-										"{{BaseUrl}}"
-									],
-									"path": [
-										"api",
-										"community",
-										"checkers",
-										":communityId"
-									],
-									"variable": [
-										{
-											"id": "3ddc46e0-ee46-4f5e-8ce7-b9a71c5802c8",
-											"key": "communityId",
-											"value": "717fae8c-190e-440e-9d8f-82fe4cbd734e"
-										}
-									]
-								}
-							},
-							"response": []
-						},
-						{
-							"name": "GetCheckerByCommunityId Copy 4",
-							"id": "8cc09a63-dfea-424d-ab9d-a3ba9a0d90a4",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiIhg5R5cCI6IkpXVCJ9.eyJQaG9uZSI6IjA4MTQ1MDc1Nzg5IiwiRW1haWwiOm51bGwsIk5hbWUiOiJBYmlvZHVuIE9sYW5peWkiLCJpYXQiOjE3MDgyMDM3NDgsImV4cCI6MTcwODIwNzM0OH0.E4l2BUOycGIwBRYbMsvMGfPkdgVL2l8ya24DvAWV32I"
+									}
+								},
 								"method": "GET",
 								"header": [],
 								"url": {

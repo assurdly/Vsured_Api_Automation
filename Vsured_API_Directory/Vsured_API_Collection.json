@@ -4634,6 +4634,32 @@
 						},
 						{
 							"name": "createSubAdmin-Empty First name field",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "f88439f7-238f-4355-9bef-a6a360d7194b",
+										"exec": [
+											"pm.test(\"Verify that Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"pm.test(\"Verify that type returns field\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].type).to.eql(\"field\");\r",
+											"});\r",
+											"pm.test(\"Verify that message returns Name is required\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].msg).to.eql(\"FirstName is required\");\r",
+											"});\r",
+											"pm.test(\"Verify that path returns FirstName\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].path).to.eql(\"FirstName\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "f6b2fe75-6e64-4c3b-aa37-4660543a1562",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -4662,6 +4688,32 @@
 						},
 						{
 							"name": "createSubAdmin-Empty last name field",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "f31b8ed7-60cd-4cfc-a01a-d05bec77986b",
+										"exec": [
+											"pm.test(\"Verify that Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"pm.test(\"Verify that type returns field\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].type).to.eql(\"field\");\r",
+											"});\r",
+											"pm.test(\"Verify that message returns Name is required\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].msg).to.eql(\"LastName is required\");\r",
+											"});\r",
+											"pm.test(\"Verify that path returns LastName\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].path).to.eql(\"LastName\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "2990ad3b-aa53-4545-a930-35e2b54e2eae",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -4690,6 +4742,32 @@
 						},
 						{
 							"name": "createSubAdmin-Empty phone number field",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "ea013531-8deb-4936-86de-ef2a8b7f1f91",
+										"exec": [
+											"pm.test(\"Verify that Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"pm.test(\"Verify that type returns field\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].type).to.eql(\"field\");\r",
+											"});\r",
+											"pm.test(\"Verify that message returns Phone is required\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].msg).to.eql(\"Phone is required\");\r",
+											"});\r",
+											"pm.test(\"Verify that path returns Phone\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].path).to.eql(\"Phone\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "9aef5d53-1fac-4843-9c11-ec5c2aefd7ad",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true

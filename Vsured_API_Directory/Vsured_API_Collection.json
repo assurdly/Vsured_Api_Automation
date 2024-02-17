@@ -4339,7 +4339,7 @@
 											"});\r",
 											"pm.test(\"Get Community id\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.collectionVariables.set(\"commununityId\", jsonData.data[0].CommunityId);\r",
+											"    pm.collectionVariables.set(\"commununityId\", jsonData.data[jsonData.data.length - 1].CommunityId);\r",
 											"});"
 										],
 										"type": "text/javascript"

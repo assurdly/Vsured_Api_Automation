@@ -5042,7 +5042,7 @@
 											"    var jsonData = pm.response.json();\r",
 											"    pm.expect(jsonData.data).to.exist;\r",
 											"});\r",
-											"pm.test(\"Verify that commununity id returned is correct\", function () {\r",
+											"pm.test(\"Verify that subAdmin id returned is correct\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
 											"    pm.expect(jsonData.data.Id).to.eql(pm.collectionVariables.get('Id'));\r",
 											"});\r",
@@ -5671,6 +5671,37 @@
 					"item": [
 						{
 							"name": "Get Checkers By Id-Successful",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "23acba9e-c533-429d-9695-2b61af581e1a",
+										"exec": [
+											"pm.test(\"Verify that Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that status is success\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns Successfully fetch Checkers\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Successfully fetch Checkers\");\r",
+											"});\r",
+											"pm.test(\"Verify that response data exist\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.data).to.exist;\r",
+											"});\r",
+											"pm.test(\"Verify that checkerId returned is correct\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.data.Id).to.eql(pm.collectionVariables.get('checkerId'));\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "2640a6bd-7b44-4ba0-ac81-2b8bb31816c2",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -5689,28 +5720,81 @@
 							"response": []
 						},
 						{
-							"name": "GetCheckersById Copy",
+							"name": "Get Checkers By Id-No Auth Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "0087074b-45ea-4d79-b8ac-678a173fd593",
+										"exec": [
+											"pm.test(\"Verify that Status code is 401\", function () {\r",
+											"    pm.response.to.have.status(401);\r",
+											"});\r",
+											"pm.test(\"Verify that status is failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message is Request UnAuthorized\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Request UnAuthorized\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "1fa08422-005d-428f-aec1-6bd4f70884d9",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "noauth"
+								},
 								"method": "GET",
 								"header": [],
-								"url": "{{BaseUrl}}/api/community/checkers/1"
+								"url": "{{BaseUrl}}/api/community/checkers/{{checkerId}}"
 							},
 							"response": []
 						},
 						{
-							"name": "GetCheckersById Copy 2",
+							"name": "Get Checkers By Id-Invalid Auth Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "26bc3b72-7d24-42ee-8ba5-012135b88859",
+										"exec": [
+											"pm.test(\"Verify that Status code is 403\", function () {\r",
+											"    pm.response.to.have.status(403);\r",
+											"});\r",
+											"pm.test(\"Verify that status is failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns Invalid token\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Request Forbidden, Invalid Token\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "9aa0bde5-7c4b-4f0e-b64f-202f96e5021b",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQaG9uZSI6IjA4MTA9KDc1Nzg5IiwiRW1haWwiOm51bGwsIk5hbWUiOiJBYmlvZHVuIE9sYW5peWkiLCJpYXQiOjE3MDgxODkyNTgsImV4cCI6MTcwODE5Mjg1OH0.QghYKedpw0V20PhQcunbvkiLIGSVtDlE7rgwQlrqgIM"
+									}
+								},
 								"method": "GET",
 								"header": [],
-								"url": "{{BaseUrl}}/api/community/checkers/1"
+								"url": "{{BaseUrl}}/api/community/checkers/{{checkerId}}"
 							},
 							"response": []
 						}

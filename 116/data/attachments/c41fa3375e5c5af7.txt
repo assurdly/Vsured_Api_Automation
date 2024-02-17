@@ -1,6 +1,0 @@
-  {
-        "Name":"Micaela",
-        "Address":"6335 Okuneva Isle",
-        "Phone":"abcdefghi",
-        "Email":"MonroeDonnelly@yopmail.com"
-    }

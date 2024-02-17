@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Mertie","Address":"540 Kiel Pine","Phone":"08033706217","Email":"DarwinProsacco@yopmail.com","CommunityId":"cb031849-ca29-4b73-b93d-fa101d26b0fb"}}

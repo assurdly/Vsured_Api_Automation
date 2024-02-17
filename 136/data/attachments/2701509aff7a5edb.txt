@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully fetch Checkers","data":{"Id":3,"FirstName":"Ivory","LastName":"Mueller","Phone":"08057231914","Email":"DewayneBogisich@yopmail.com","DOB":"1991-01-01T00:00:00.000Z","Gender":"Male","NIN":"23454323456","CommunityId":"928091ee-5b32-4994-a377-1736ef12601a","CheckPoint":"test CheckPoint"}}

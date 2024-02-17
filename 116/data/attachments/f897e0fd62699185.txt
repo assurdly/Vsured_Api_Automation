@@ -1,6 +1,0 @@
-  {
-        "Name":"Samara",
-        "Address":"97978 Demetris Fork",
-        "Phone":"08095549313",
-        "Email":"LeoraTorpyopmailcom"
-    }

@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Milton","Address":"10502 Tromp Dam","Phone":"08036054138","Email":"ShaneGislason@yopmail.com","CommunityId":"be79bbd4-69a6-4951-932e-2b4d23ff70c3"}}

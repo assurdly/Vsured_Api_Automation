@@ -1,6 +1,0 @@
-  {
-        "Name":"Chesley",
-        "Address":"7661 Joey Harbor",
-        "Phone":"080567-516-3209",
-        "Email":"TiaBuckridge@yopmail.com"
-    }

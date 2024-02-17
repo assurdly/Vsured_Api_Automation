@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Deondre","Address":"454 Spencer Isle","Phone":"080268-517-6380","Email":"NicholeRunte@yopmail.com","CommunityId":"ed9617ff-327b-4478-942f-f39811e087af"}}

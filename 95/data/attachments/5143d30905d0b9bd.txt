@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Chesley","Address":"7661 Joey Harbor","Phone":"080567-516-3209","Email":"TiaBuckridge@yopmail.com","CommunityId":"4b07df41-de28-4d37-bc54-0f84f63946b2"}}

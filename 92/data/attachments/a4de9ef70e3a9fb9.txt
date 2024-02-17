@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Ewald","Address":"2756 Raoul Rapids","Phone":"080729-301-8716","Email":"TessieUllrich@yopmail.com","CommunityId":"2e3a74e1-b734-4207-bc4f-b88da8507008"}}

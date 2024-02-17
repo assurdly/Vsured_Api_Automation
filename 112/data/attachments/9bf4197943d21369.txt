@@ -1,0 +1,1 @@
+{"status":"failed","message":"Email Verification Failed, Please try again"}

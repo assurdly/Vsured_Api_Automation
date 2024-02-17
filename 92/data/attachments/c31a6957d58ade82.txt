@@ -1,6 +1,0 @@
-  {
-        "Name":"Ewald",
-        "Address":"2756 Raoul Rapids",
-        "Phone":"080729-301-8716",
-        "Email":"TessieUllrich@yopmail.com"
-    }

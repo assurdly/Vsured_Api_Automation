@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Elisabeth","Address":"9088 McKenzie Pass","Phone":"080380-633-9987","Email":"MariliePollich@yopmail.com","CommunityId":"06240a2d-383d-420d-8d5c-a6a324dcd3ca"}}

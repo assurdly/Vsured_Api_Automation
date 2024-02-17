@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Layla","Address":"985 Bruen Crescent","Phone":"abcdefghi","Email":"GonzaloHahn@yopmail.com","CommunityId":"69307a0f-3f39-47d2-931d-be7ede6e00f8"}}

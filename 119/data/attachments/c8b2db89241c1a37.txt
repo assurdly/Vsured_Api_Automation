@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Dudley","Address":"36152 Buckridge Course","Phone":"08060516334","Email":"DillanZiemann@yopmail.com","CommunityId":"5378c997-1b4a-43b7-abf8-3dfe53690f4c"}}

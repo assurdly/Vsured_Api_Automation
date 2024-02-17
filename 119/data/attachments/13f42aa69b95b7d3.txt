@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Robbie","Address":"3933 Russel Port","Phone":"abcdefghi","Email":"EdaLebsack@yopmail.com","CommunityId":"608f9a12-8edc-4a46-8a38-9104b83c7b7f"}}

@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Angus","Address":"3332 Dare Walks","Phone":"08054768367","Email":"MarianaKoeppyopmailcom","CommunityId":"babecf2c-19b0-4608-8d5b-a66b3b4623f9"}}

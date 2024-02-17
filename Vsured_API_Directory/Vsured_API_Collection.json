@@ -5364,7 +5364,7 @@
 					"name": "Createcheckers",
 					"item": [
 						{
-							"name": "Createcheckers",
+							"name": "Create checkers-Successful",
 							"id": "d438592c-1b25-4d20-9604-77cacd1a8e2d",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true

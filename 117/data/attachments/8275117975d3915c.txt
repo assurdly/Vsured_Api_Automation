@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Alberto","Address":"63660 Waters Viaduct","Phone":"abcdefghi","Email":"BennyHoeger@yopmail.com","CommunityId":"0f8fc6e1-3d89-43dd-8443-b57bd7b6ad47"}}

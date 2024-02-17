@@ -1,6 +1,0 @@
-  {
-        "Name":"Quinten",
-        "Address":"03884 Mable Lock",
-        "Phone":"080771-823-6112",
-        "Email":"BurdetteDickinson@yopmail.com"
-    }

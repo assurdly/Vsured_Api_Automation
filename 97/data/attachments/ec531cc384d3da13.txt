@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Quinten","Address":"03884 Mable Lock","Phone":"080771-823-6112","Email":"BurdetteDickinson@yopmail.com","CommunityId":"725e861c-997e-4b27-9b0f-a558ab67f556"}}

@@ -1,4 +1,0 @@
-{
-    "Channel":"Malinda",
-    "Token":"000000"
-}

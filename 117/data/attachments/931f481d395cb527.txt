@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Zola","Address":"383 Dicki Meadows","Phone":"08077056036","Email":"AdolphHomenickyopmailcom","CommunityId":"bb3063fa-beda-4914-870b-37a01be0f4b9"}}

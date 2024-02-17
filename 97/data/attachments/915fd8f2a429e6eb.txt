@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Rosalee","Address":"3721 Crist Shores","Phone":"080654-312-7496","Email":"CarloLegros@yopmail.com","CommunityId":"db05b6e7-d067-478f-a0de-1a19fa10bda7"}}

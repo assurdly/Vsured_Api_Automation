@@ -1,0 +1,1 @@
+{"status":"Success","message":"Successfully registered user","data":{"FirstName":"Raoul","LastName":"Zboncak","Gender":"Male","Address":"testing address","Phone":"08011607809","Password":"Password@12","Language":"English","CompanyType":"Finance","DOB":"1993-01-01T00:00:00.000Z","Email":"","UserRole":"COMMUNITY_ADMIN","PhotoPath":""}}

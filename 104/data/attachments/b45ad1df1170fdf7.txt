@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Test Community 2","Address":"test address 2","Phone":"","Email":"alexanderprofesssor@gmail.com","CommunityId":"0b6595ca-5a7f-4c7c-89e0-41bf3fe159c7"}}

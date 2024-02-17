@@ -1,1 +1,0 @@
-{"status":"Success","message":"Successfully registered user","data":{"FirstName":"Victoria","LastName":"Wintheiser","Gender":"Male","Address":"testing address","Phone":"08068562208","Password":"Password@12","Language":"English","CompanyType":"Finance","DOB":"1993-01-01T00:00:00.000Z","Email":"Estell12yopmailcom","UserRole":"COMMUNITY_ADMIN","PhotoPath":""}}

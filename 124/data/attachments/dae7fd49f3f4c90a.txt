@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Marcelle","Address":"195 Hackett Village","Phone":"abcdefghi","Email":"FranciscaMcKenzie@yopmail.com","CommunityId":"d7ee2690-1d2f-416d-9cf0-1bfcf19385bc"}}

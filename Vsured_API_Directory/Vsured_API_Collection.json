@@ -4580,7 +4580,7 @@
 					"id": "e9ec08ad-dc39-4792-909a-69ff1633003b"
 				},
 				{
-					"name": "createSubAdmin",
+					"name": "Create SubAdmin",
 					"item": [
 						{
 							"name": "Create SubAdmin-Successful",
@@ -4830,7 +4830,29 @@
 							"response": []
 						},
 						{
-							"name": "createSubAdmin-No Auth Copy",
+							"name": "Create SubAdmin-Invalid Auth token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "3f45ef0a-8614-45b8-92c7-f8244267e9e2",
+										"exec": [
+											"pm.test(\"Verify that Status code is 403\", function () {\r",
+											"    pm.response.to.have.status(403);\r",
+											"});\r",
+											"pm.test(\"Verify that status is failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns Invalid token\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Request Forbidden, Invalid Token\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "b0b39dec-9784-48d1-86c7-5d1550edc57b",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -4861,10 +4883,10 @@
 					"id": "dc25c086-08e9-4c42-9ee8-992545e10a13"
 				},
 				{
-					"name": "GetAllSubAdmin",
+					"name": "Get All SubAdmin",
 					"item": [
 						{
-							"name": "GetAllSubAdmin",
+							"name": "Get All SubAdmin",
 							"event": [
 								{
 									"listen": "test",
@@ -4909,7 +4931,7 @@
 							"response": []
 						},
 						{
-							"name": "GetAllSubAdmin-No Auth Token",
+							"name": "Get All SubAdmin-No Auth Token",
 							"event": [
 								{
 									"listen": "test",
@@ -4947,7 +4969,7 @@
 							"response": []
 						},
 						{
-							"name": "GetAllSubAdmin-Invalid Auth Token",
+							"name": "Get All SubAdmin-Invalid Auth Token",
 							"event": [
 								{
 									"listen": "test",

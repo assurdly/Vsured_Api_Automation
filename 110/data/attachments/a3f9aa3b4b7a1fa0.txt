@@ -1,6 +1,0 @@
-  {
-        "Name":"Kristopher",
-        "Address":"813 Feil Station",
-        "Phone":"08010286958",
-        "Email":"SimTrantowyopmailcom"
-    }

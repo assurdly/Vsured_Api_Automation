@@ -1,6 +1,0 @@
-  {
-        "Name":"Alessandra",
-        "Address":"677 Autumn Port",
-        "Phone":"abcdefghi",
-        "Email":"ChrisHartmann@yopmail.com"
-    }

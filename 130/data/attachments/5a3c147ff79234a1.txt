@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Hosea","Address":"434 Seamus Estates","Phone":"08000159868","Email":"JasonHamillyopmailcom","CommunityId":"f0a63f8c-b46c-4b18-b097-5947a8fc14e6"}}

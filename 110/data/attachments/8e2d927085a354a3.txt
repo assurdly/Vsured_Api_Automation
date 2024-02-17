@@ -1,6 +1,0 @@
-  {
-        "Name":"Douglas",
-        "Address":"860 Lebsack Prairie",
-        "Phone":"08043320537",
-        "Email":"JoeCrona@yopmail.com"
-    }

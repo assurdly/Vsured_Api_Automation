@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Ulises","Address":"963 Antoinette View","Phone":"08098802509","Email":"AlyciaBartell@yopmail.com","CommunityId":"432dc469-2883-4e2d-8ddd-c233ff6360be"}}

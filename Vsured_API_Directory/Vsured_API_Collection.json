@@ -6065,7 +6065,7 @@
 								"auth": {
 									"type": "bearer",
 									"bearer": {
-										"token": "{{Auth_token}}"
+										"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQaG9uZSI6IjA4MTQ1MDc1Nzg5IiwiRW1haWwiOm51bGwsIk5hbWUiOiJBYmlvZHVuIE9sYW5peWkiLCJpYXQiOjE3MSdyMDM3NDgsImV4cCI6MTcwODIwNzM0OH0.E4l2BUOycGIwBRYbMsvMGfPkdgVL2l8ya24DvAWV32I"
 									}
 								},
 								"method": "POST",

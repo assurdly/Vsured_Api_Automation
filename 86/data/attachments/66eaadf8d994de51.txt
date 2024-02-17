@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Fay","Address":"753 Alvis Roads","Phone":"080381-444-7979","Email":"LillyOrtiz@yopmail.com","CommunityId":"cda021d5-3f54-4fe4-8872-a82889550257"}}

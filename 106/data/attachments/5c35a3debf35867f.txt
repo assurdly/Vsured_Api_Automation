@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Vella","Address":"3369 Olson Estate","Phone":"08031983486","Email":"AniyaGutmann@yopmail.com","CommunityId":"c6f437a7-3944-4013-acae-8b729156ab25"}}

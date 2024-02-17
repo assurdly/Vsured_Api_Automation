@@ -1,6 +1,0 @@
-  {
-        "Name":"Laurel",
-        "Address":"647 Hirthe Trail",
-        "Phone":"080867-509-1076",
-        "Email":"KatrinaLarkin@yopmail.com"
-    }

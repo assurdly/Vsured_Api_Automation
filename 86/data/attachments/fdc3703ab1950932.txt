@@ -1,6 +1,0 @@
-  {
-        "Name":"Fay",
-        "Address":"753 Alvis Roads",
-        "Phone":"080381-444-7979",
-        "Email":"LillyOrtiz@yopmail.com"
-    }

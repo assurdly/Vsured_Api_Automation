@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Laurel","Address":"647 Hirthe Trail","Phone":"080867-509-1076","Email":"KatrinaLarkin@yopmail.com","CommunityId":"f7b9b8bd-0594-44d3-a03c-855fc621f100"}}

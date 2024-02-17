@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Fetched Community","data":{"Id":492,"CommunityId":"70d3adb5-70aa-4838-bf44-8b79ae06b2b6","Name":"Florine","Address":"4954 Gerlach Haven","Phone":"08024553483","Email":"NikkoWuckertyopmailcom"}}

@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Houston","Address":"63868 Kiehn Burg","Phone":"08074431469","Email":"HeatherHaag@yopmail.com","CommunityId":"00a1f366-b750-4fbf-8179-7cd3fe088f51"}}

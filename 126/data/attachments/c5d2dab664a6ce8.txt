@@ -1,8 +1,0 @@
-{
-"FirstName":"Willis",
-"LastName":"Lindgren",
-"Phone":"08093781185",
-"Email":"AdamBeahan@yopmail.com",
-"PhotoPath":"testpath",
-"CommunityId":"826729d8-5db6-40b4-a26f-6aa8cfd1d933"
-}

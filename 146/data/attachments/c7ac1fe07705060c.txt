@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Lindsey","Address":"765 Selmer Freeway","Phone":"abcdefghi","Email":"SandrineGlover@yopmail.com","CommunityId":"a15e4899-ca59-4152-8c6e-7b10c5e6576a"}}

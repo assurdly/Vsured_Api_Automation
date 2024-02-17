@@ -1,6 +1,0 @@
-  {
-        "Name":"Morris",
-        "Address":"0078 Rice Orchard",
-        "Phone":"08047970708",
-        "Email":"LorenRolfson@yopmail.com"
-    }

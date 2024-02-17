@@ -1,6 +1,0 @@
-  {
-        "Name":"Joel",
-        "Address":"02370 Syble Mountain",
-        "Phone":"08067153257",
-        "Email":"BertaSchambergeryopmailcom"
-    }

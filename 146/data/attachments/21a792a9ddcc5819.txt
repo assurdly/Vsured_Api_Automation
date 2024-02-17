@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Fetched Community","data":{"Id":625,"CommunityId":"b15d7b66-2e6b-495f-af9e-98e909591864","Name":"Francesco","Address":"2808 Huels View","Phone":"08098479159","Email":"RobertoCroninyopmailcom"}}

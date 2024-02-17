@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Domenica","Address":"6202 Sawayn Isle","Phone":"abcdefghi","Email":"JaquelinGlover@yopmail.com","CommunityId":"666a18a9-442d-44fc-9e5f-d06ad9f6adfb"}}

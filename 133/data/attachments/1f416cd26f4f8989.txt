@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Leone","Address":"62860 Barbara Heights","Phone":"08066100910","Email":"GastonOrtiz@yopmail.com","CommunityId":"a72f571e-a589-45e1-8769-260c39876257"}}

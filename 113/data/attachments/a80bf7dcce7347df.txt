@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Ivory","Address":"41072 Etha Islands","Phone":"abcdefghi","Email":"RupertBogisich@yopmail.com","CommunityId":"4f447cd0-8268-46f2-a35b-9b1d9a3d2cc1"}}

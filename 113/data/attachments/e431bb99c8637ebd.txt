@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Cydney","Address":"913 Halvorson Drive","Phone":"08067224626","Email":"TierraBergeyopmailcom","CommunityId":"16b66c68-75b9-46a2-9de8-1380417c2bcb"}}

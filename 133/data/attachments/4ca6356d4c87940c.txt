@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Fetched Community","data":{"Id":548,"CommunityId":"262e5000-52a6-4900-993f-21bbbda669aa","Name":"Sigrid","Address":"804 Mauricio Lock","Phone":"08006981418","Email":"RaymundoRippinyopmailcom"}}

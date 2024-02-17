@@ -1,0 +1,6 @@
+  {
+        "Name":"Domenica",
+        "Address":"6202 Sawayn Isle",
+        "Phone":"abcdefghi",
+        "Email":"JaquelinGlover@yopmail.com"
+    }

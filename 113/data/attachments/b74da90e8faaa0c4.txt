@@ -1,6 +1,0 @@
-  {
-        "Name":"Pansy",
-        "Address":"29605 Balistreri Estate",
-        "Phone":"08032702869",
-        "Email":"JaydenLesch@yopmail.com"
-    }

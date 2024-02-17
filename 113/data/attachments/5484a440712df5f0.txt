@@ -1,6 +1,0 @@
-  {
-        "Name":"Cydney",
-        "Address":"913 Halvorson Drive",
-        "Phone":"08067224626",
-        "Email":"TierraBergeyopmailcom"
-    }

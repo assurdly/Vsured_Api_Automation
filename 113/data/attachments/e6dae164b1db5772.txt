@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Pansy","Address":"29605 Balistreri Estate","Phone":"08032702869","Email":"JaydenLesch@yopmail.com","CommunityId":"e630ecf2-b727-4eab-b0c5-a5799d28eaa8"}}

@@ -4733,7 +4733,7 @@
 							"response": []
 						},
 						{
-							"name": "createSubAdmin-Empty phone number field",
+							"name": "Create SubAdmin-Empty phone number field",
 							"event": [
 								{
 									"listen": "test",

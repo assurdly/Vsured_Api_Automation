@@ -4597,9 +4597,9 @@
 											"    var jsonData = pm.response.json();\r",
 											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
 											"});\r",
-											"pm.test(\"Verify that response message is Successfully created commununity\", function () {\r",
+											"pm.test(\"Verify that response message is Successfully created subAdmin\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.message).to.eql(\"Successfully Created Community\");\r",
+											"    pm.expect(jsonData.message).to.eql(\"Successfully Created subAdmin\");\r",
 											"});"
 										],
 										"type": "text/javascript"

@@ -5013,10 +5013,10 @@
 					"id": "a2bc8ff6-c1d2-4d9c-800f-4d81e07b529c"
 				},
 				{
-					"name": "GetSubAdminById",
+					"name": "Get SubAdmin By Id",
 					"item": [
 						{
-							"name": "GetSubAdminById-Successful",
+							"name": "Get SubAdmin By Id-Successful",
 							"id": "52129da3-5d3d-4b36-b2ae-1b283507a448",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true

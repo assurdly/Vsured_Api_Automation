@@ -5951,6 +5951,99 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "WHS1BEVfk/CheckerUpload.xlsx"
+										}
+									]
+								},
+								"url": "{{BaseUrl}}/api/community/checkers/createXls"
+							},
+							"response": []
+						},
+						{
+							"name": "Create Bulk Checkers With Excel-Empty file field",
+							"id": "4a49b841-fcfb-45e3-97d0-bc7a7d809f38",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "WHS1BEVfk/CheckerUpload.xlsx"
+										}
+									]
+								},
+								"url": "{{BaseUrl}}/api/community/checkers/createXls"
+							},
+							"response": []
+						},
+						{
+							"name": "Create Bulk Checkers With Excel Copy 2",
+							"id": "a213cc2e-2c85-4517-afb6-1f496bae3955",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"src": "WHS1BEVfk/CheckerUpload.xlsx"
+										}
+									]
+								},
+								"url": "{{BaseUrl}}/api/community/checkers/createXls"
+							},
+							"response": []
+						},
+						{
+							"name": "Create Bulk Checkers With Excel Copy 3",
+							"id": "6f915147-b38f-4f5c-9c36-5a860cf49850",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
 								"method": "POST",
 								"header": [],
 								"body": {

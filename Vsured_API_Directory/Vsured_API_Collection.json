@@ -6276,11 +6276,36 @@
 						},
 						{
 							"name": "GetAllAppointments-No Auth Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "9d163424-ad4f-4ac4-9b23-decdda94a83e",
+										"exec": [
+											"pm.test(\"Verify that Status code is 401\", function () {\r",
+											"    pm.response.to.have.status(401);\r",
+											"});\r",
+											"pm.test(\"Verify that status is failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message is Request UnAuthorized\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Request UnAuthorized\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "4ab1f641-7b15-44de-93af-e3d70c132c17",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "noauth"
+								},
 								"method": "GET",
 								"header": [],
 								"url": "{{BaseUrl}}/api/community/appointment/all"
@@ -6288,12 +6313,18 @@
 							"response": []
 						},
 						{
-							"name": "GetAllAppointments Copy 3",
+							"name": "Get All Appointments-Invalid Auth Token",
 							"id": "d5556650-f744-4e0e-97a1-3f4c0ac6ca51",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiIsIbV3cCI6IkpXVCJ9.eyJQaG9uZSI6IjA4MTQ1MDc1Nzg5IiwiRW1haWwiOm51bGwsIk5hbWUiOiJBYmlvZHVuIE9sYW5peWkiLCJpYXQiOjE3MSdyMDM3NDgsImV4cCI6MTcwODIwNzM0OH0.E4l2BUOycGIwBRYbMsvMGfPkdgVL2l8ya24DvAWV32I"
+									}
+								},
 								"method": "GET",
 								"header": [],
 								"url": "{{BaseUrl}}/api/community/appointment/all"

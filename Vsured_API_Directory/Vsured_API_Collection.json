@@ -5361,10 +5361,32 @@
 					"id": "69918b87-4c79-4372-bcfd-4f8aa7545807"
 				},
 				{
-					"name": "Createcheckers",
+					"name": "Create checkers",
 					"item": [
 						{
 							"name": "Create checkers-Successful",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "9c310ccf-8065-4728-92bd-a5c8c7b8d3a9",
+										"exec": [
+											"pm.test(\"Verify that Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that status is success\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns Successfully Created Checker\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Successfully Created Checker\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "d438592c-1b25-4d20-9604-77cacd1a8e2d",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -5380,7 +5402,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "\n    {\n        \"FirstName\":\"Checker1 firstname\",\n        \"LastName\":\"Checker1 LastName\",\n        \"Phone\":\"08057231914\",\n        \"Email\":\"abiodun@ggmail.com\",\n        \"DOB\":\"1991-01-01\",\n        \"Gender\":\"Male\",\n        \"NIN\":\"23454323456\",\n        \"CommunityId\":\"717fae8c-190e-440e-9d8f-82fe4cbd734e\",\n        \"CheckPoint\":\"test CheckPoint\"\n\n    }",
+									"raw": "\n    {\n        \"FirstName\":\"{{$randomFirstName}}\",\n        \"LastName\":\"{{$randomLastName}}\",\n        \"Phone\":\"08057231914\",\n        \"Email\":\"{{$randomFirstName}}{{$randomLastName}}@yopmail.com\",\n        \"DOB\":\"1991-01-01\",\n        \"Gender\":\"Male\",\n        \"NIN\":\"23454323456\",\n        \"CommunityId\":\"{{commununityId}}\",\n        \"CheckPoint\":\"test CheckPoint\"\n\n    }",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -5511,6 +5533,57 @@
 					"id": "06aefc30-e8a9-43e1-be39-fcb46e3c070f"
 				},
 				{
+					"name": "Get All checkers",
+					"item": [
+						{
+							"name": "GetAllcheckers",
+							"id": "92dfcffb-8aef-4135-927a-90d3ea82ef88",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "{{BaseUrl}}/api/community/checkers/all"
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllcheckers Copy",
+							"id": "c3094a41-ff3c-4358-9385-b8891636d6cb",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{BaseUrl}}/api/community/checkers/all"
+							},
+							"response": []
+						},
+						{
+							"name": "GetAllcheckers Copy 2",
+							"id": "71fae379-3e06-45c5-85a2-dc50ae5b4361",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{BaseUrl}}/api/community/checkers/all"
+							},
+							"response": []
+						}
+					],
+					"id": "9e94a14a-e559-4249-bd5f-83a4b8393e80"
+				},
+				{
 					"name": "GetCheckersById",
 					"item": [
 						{
@@ -5525,28 +5598,35 @@
 								"url": "{{BaseUrl}}/api/community/checkers/1"
 							},
 							"response": []
-						}
-					],
-					"id": "7775ff81-aa36-4263-9a13-5276623e1c3d"
-				},
-				{
-					"name": "GetAllcheckers",
-					"item": [
+						},
 						{
-							"name": "GetAllcheckers",
-							"id": "92dfcffb-8aef-4135-927a-90d3ea82ef88",
+							"name": "GetCheckersById Copy",
+							"id": "1fa08422-005d-428f-aec1-6bd4f70884d9",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": "{{BaseUrl}}/api/community/checkers/all"
+								"url": "{{BaseUrl}}/api/community/checkers/1"
+							},
+							"response": []
+						},
+						{
+							"name": "GetCheckersById Copy 2",
+							"id": "9aa0bde5-7c4b-4f0e-b64f-202f96e5021b",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": "{{BaseUrl}}/api/community/checkers/1"
 							},
 							"response": []
 						}
 					],
-					"id": "9e94a14a-e559-4249-bd5f-83a4b8393e80"
+					"id": "7775ff81-aa36-4263-9a13-5276623e1c3d"
 				},
 				{
 					"name": "New Folder",

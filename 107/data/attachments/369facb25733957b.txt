@@ -1,0 +1,1 @@
+[{"type":"field","value":"","msg":"ConfirmPassword is required","path":"ConfirmPassword","location":"body"},{"type":"field","value":"","msg":"Password and Confirm Password must match","path":"ConfirmPassword","location":"body"}]

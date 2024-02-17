@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Patience","Address":"11557 Hayes Tunnel","Phone":"080862-737-8319","Email":"CaesarOsinski@yopmail.com","CommunityId":"6271391b-366a-4e23-96ca-f08e7634b6c9"}}

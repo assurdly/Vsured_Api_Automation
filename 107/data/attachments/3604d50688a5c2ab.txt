@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Anibal","Address":"285 Renner Cliffs","Phone":"08047803772","Email":"YeseniaBoehm@yopmail.com","CommunityId":"0d1c713b-e1e7-4560-8dd7-9842df0c0655"}}

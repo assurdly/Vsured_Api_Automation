@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Fay","Address":"632 Fritsch Skyway","Phone":"abcdefghi","Email":"AraceliKiehn@yopmail.com","CommunityId":"7bead961-e4e4-4a3e-b2aa-504e8d93bca5"}}

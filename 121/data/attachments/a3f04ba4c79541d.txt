@@ -1,6 +1,0 @@
-  {
-        "Name":"Fay",
-        "Address":"632 Fritsch Skyway",
-        "Phone":"abcdefghi",
-        "Email":"AraceliKiehn@yopmail.com"
-    }

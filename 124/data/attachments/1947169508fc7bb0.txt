@@ -1,6 +1,0 @@
-  {
-        "Name":"Anais",
-        "Address":"9864 Flo Ford",
-        "Phone":"08039277572",
-        "Email":"RachelHilllyopmailcom"
-    }

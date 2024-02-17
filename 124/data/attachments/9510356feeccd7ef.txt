@@ -1,6 +1,0 @@
-  {
-        "Name":"Jake",
-        "Address":"57440 Williamson Drive",
-        "Phone":"08072273424",
-        "Email":"OsbaldoPfeffer@yopmail.com"
-    }

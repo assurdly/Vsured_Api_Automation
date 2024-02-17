@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Jake","Address":"57440 Williamson Drive","Phone":"08072273424","Email":"OsbaldoPfeffer@yopmail.com","CommunityId":"f3ac4c8d-e74e-4273-9917-5e0d3c298d15"}}

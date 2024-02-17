@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Fetched Community","data":{"Id":485,"CommunityId":"4298f9c2-b6f1-4063-95f4-5f1f4914e599","Name":"Anais","Address":"9864 Flo Ford","Phone":"08039277572","Email":"RachelHilllyopmailcom"}}

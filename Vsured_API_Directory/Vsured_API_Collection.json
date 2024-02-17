@@ -3949,6 +3949,32 @@
 						},
 						{
 							"name": "CreateCommunity-Empty Phone number field",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "292f28f2-f5b7-4914-b8a2-0d1552de965a",
+										"exec": [
+											"pm.test(\"Verify that Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"pm.test(\"Verify that type returns field\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].type).to.eql(\"field\");\r",
+											"});\r",
+											"pm.test(\"Verify that message returns Phone is required\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].msg).to.eql(\"Phone is required\");\r",
+											"});\r",
+											"pm.test(\"Verify that path returns Phone\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData[0].path).to.eql(\"Phone\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "b328c635-8f6e-403e-b651-6a41e99bb523",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true

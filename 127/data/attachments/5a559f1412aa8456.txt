@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Jared","Address":"86990 Kailyn Gateway","Phone":"abcdefghi","Email":"SanfordKris@yopmail.com","CommunityId":"46c8027d-8595-4520-804b-5c989505977b"}}

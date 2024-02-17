@@ -1,6 +1,0 @@
-  {
-        "Name":"Flavio",
-        "Address":"394 Jenkins Inlet",
-        "Phone":"abcdefghi",
-        "Email":"DanaFriesen@yopmail.com"
-    }

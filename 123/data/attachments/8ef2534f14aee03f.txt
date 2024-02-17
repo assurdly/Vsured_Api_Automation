@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Keaton","Address":"681 Mohamed Grove","Phone":"08062962231","Email":"BritneyCorwin@yopmail.com","CommunityId":"cd8f9bfa-5e32-45e9-b305-d280dc5947a5"}}

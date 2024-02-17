@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Peyton","Address":"68628 Lynch Squares","Phone":"08027134080","Email":"ShannyStantonyopmailcom","CommunityId":"5c912f4f-59ea-4819-913a-e479311f029a"}}

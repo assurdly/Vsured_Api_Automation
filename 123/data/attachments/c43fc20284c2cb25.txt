@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Flavio","Address":"394 Jenkins Inlet","Phone":"abcdefghi","Email":"DanaFriesen@yopmail.com","CommunityId":"facb47fd-7a8d-4cab-a2b8-456dd84a0972"}}

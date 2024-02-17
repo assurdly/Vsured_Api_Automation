@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Dexter","Address":"07752 Howard Spurs","Phone":"08069613333","Email":"ChelseyHoeger@yopmail.com","CommunityId":"37694dc9-2a88-4df4-9e75-4ade8eb80416"}}

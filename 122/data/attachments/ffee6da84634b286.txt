@@ -1,6 +1,0 @@
-  {
-        "Name":"Dexter",
-        "Address":"07752 Howard Spurs",
-        "Phone":"08069613333",
-        "Email":"ChelseyHoeger@yopmail.com"
-    }

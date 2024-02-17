@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Fetched Community","data":{"Id":471,"CommunityId":"faa6ecb2-f309-4566-b6f8-b319dc16498f","Name":"Corine","Address":"347 Fabian Walks","Phone":"08009628932","Email":"AlessiaHermannyopmailcom"}}

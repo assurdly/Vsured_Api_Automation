@@ -1,0 +1,6 @@
+  {
+        "Name":"Winston",
+        "Address":"29396 Feest Dale",
+        "Phone":"abcdefghi",
+        "Email":"JaydenStrosin@yopmail.com"
+    }

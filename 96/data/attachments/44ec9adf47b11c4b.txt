@@ -1,6 +1,0 @@
-  {
-        "Name":"Gustave",
-        "Address":"8021 Rath Knoll",
-        "Phone":"080959-220-3266",
-        "Email":"MatildeTurcotte@yopmail.com"
-    }

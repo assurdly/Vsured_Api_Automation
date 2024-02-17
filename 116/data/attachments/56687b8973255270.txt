@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Fetched Community","data":{"Id":426,"CommunityId":"6d383521-ca4e-472c-9162-2ddf6d1a164c","Name":"Samara","Address":"97978 Demetris Fork","Phone":"08095549313","Email":"LeoraTorpyopmailcom"}}

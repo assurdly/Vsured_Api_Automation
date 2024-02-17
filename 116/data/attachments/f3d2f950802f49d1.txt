@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Micaela","Address":"6335 Okuneva Isle","Phone":"abcdefghi","Email":"MonroeDonnelly@yopmail.com","CommunityId":"00e82c0f-b70e-40d8-8a3a-e645180b25d6"}}

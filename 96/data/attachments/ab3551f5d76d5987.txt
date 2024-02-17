@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Gustave","Address":"8021 Rath Knoll","Phone":"080959-220-3266","Email":"MatildeTurcotte@yopmail.com","CommunityId":"b8990551-6ecc-4ef1-9612-ce4b6b333310"}}

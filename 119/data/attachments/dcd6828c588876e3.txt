@@ -1,6 +1,0 @@
-  {
-        "Name":"Robbie",
-        "Address":"3933 Russel Port",
-        "Phone":"abcdefghi",
-        "Email":"EdaLebsack@yopmail.com"
-    }

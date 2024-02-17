@@ -5070,6 +5070,47 @@
 							"response": []
 						},
 						{
+							"name": "Get SubAdmin By Id-Invalid Id",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "a06fec33-aa70-4017-9224-91987f106a19",
+										"exec": [
+											"pm.test(\"Verify that Status code is 400\", function () {\r",
+											"    pm.response.to.have.status(400);\r",
+											"});\r",
+											"pm.test(\"Verify that status returns failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns Failed to create subAdmin\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Failed to create subAdmin\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "1da73caa-7890-40bd-a2e5-57b46e8521a9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": "{{BaseUrl}}/api/community/subAdmins/1000000"
+							},
+							"response": []
+						},
+						{
 							"name": "GetSubAdminById-No Auth Token",
 							"event": [
 								{
@@ -5152,10 +5193,41 @@
 					"id": "cc53c12a-bc95-4f55-ac26-d6a120de99d0"
 				},
 				{
-					"name": "GetSubAdminByCommmunityId",
+					"name": "Get SubAdmin By CommmunityId",
 					"item": [
 						{
-							"name": "GetSubAdminByCommmunityId",
+							"name": "Get SubAdmin By CommmunityId",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "d3415097-3370-44b3-a9b9-d50b57f15d21",
+										"exec": [
+											"pm.test(\"Verify that Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that status is success\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns Successfully fetch subAdmin\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Successfully fetch subAdmin\");\r",
+											"});\r",
+											"pm.test(\"Verify that response data exist\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.data).to.exist;\r",
+											"});\r",
+											"pm.test(\"Verify that commununity id returned is correct\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.data.Id).to.eql(pm.collectionVariables.get('Id'));\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "b4a090b9-5515-4d7a-8087-959c625beaa8",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -5169,24 +5241,7 @@
 								},
 								"method": "GET",
 								"header": [],
-								"url": {
-									"raw": "{{BaseUrl}}/api/community/subAdmins/:communityId",
-									"host": [
-										"{{BaseUrl}}"
-									],
-									"path": [
-										"api",
-										"community",
-										"subAdmins",
-										":communityId"
-									],
-									"variable": [
-										{
-											"key": "communityId",
-											"value": "{{commununityId}}"
-										}
-									]
-								}
+								"url": "{{BaseUrl}}/api/community/subAdmins/{{commununityId}}"
 							},
 							"response": []
 						},

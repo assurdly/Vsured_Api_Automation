@@ -4783,8 +4783,55 @@
 							"response": []
 						},
 						{
-							"name": "createSubAdmin Copy 4",
+							"name": "Create SubAdmin-No Auth",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "266a8937-3c2c-4ae6-be9b-34f7af4e3442",
+										"exec": [
+											"pm.test(\"Verify that Status code is 401\", function () {\r",
+											"    pm.response.to.have.status(401);\r",
+											"});\r",
+											"pm.test(\"Verify that status is failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message is Request UnAuthorized\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Request UnAuthorized\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "8a6496da-7f56-42fa-94f0-d7009599475a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\"FirstName\":\"tetst name1\",\n\"LastName\":\"test name2\",\n\"Phone\":\"08093781185\",\n\"Email\":\"alexanderprofesssor@gmail.com\",\n\"PhotoPath\":\"testpath\",\n\"CommunityId\":\"717fae8c-190e-440e-9d8f-82fe4cbd734e\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/community/subAdmin/create"
+							},
+							"response": []
+						},
+						{
+							"name": "createSubAdmin-No Auth Copy",
+							"id": "b0b39dec-9784-48d1-86c7-5d1550edc57b",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
@@ -4792,7 +4839,7 @@
 								"auth": {
 									"type": "bearer",
 									"bearer": {
-										"token": "{{Auth_token}}"
+										"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQaG9uZSI6IjA4MTQ1MDc1G7u5IiwiRW1haWwiOm51bGwsIk5hbWUiOiJBYmlvZHVuIE9sYW5peWkiLCJpYXQiOjE3MDgxNzgyNzMsImV4cCI6MTcwODE4MTg3M30.qLNbyD3Z25wzpEDgqdNOrr9lLenKFGeeTKjeIgd85eA"
 									}
 								},
 								"method": "POST",

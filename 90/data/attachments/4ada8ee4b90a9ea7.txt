@@ -1,6 +1,0 @@
-  {
-        "Name":"Kattie",
-        "Address":"43132 Keenan Crossing",
-        "Phone":"080221-791-1683",
-        "Email":"VidalLarkin@yopmail.com"
-    }

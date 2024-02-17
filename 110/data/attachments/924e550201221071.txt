@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Alessandra","Address":"677 Autumn Port","Phone":"abcdefghi","Email":"ChrisHartmann@yopmail.com","CommunityId":"486cb1ef-a2f3-419e-b4fe-0d2ab4573037"}}

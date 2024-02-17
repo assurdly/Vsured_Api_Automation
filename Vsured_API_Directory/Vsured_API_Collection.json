@@ -3752,10 +3752,10 @@
 			"name": "Community",
 			"item": [
 				{
-					"name": "CreateCommunity",
+					"name": "Create Community",
 					"item": [
 						{
-							"name": "CreateCommunity",
+							"name": "Create Community",
 							"event": [
 								{
 									"listen": "prerequest",
@@ -3948,7 +3948,7 @@
 							"response": []
 						},
 						{
-							"name": "CreateCommunity-Empty Phone number field",
+							"name": "Create Community-Empty Phone number field",
 							"event": [
 								{
 									"listen": "test",
@@ -4002,7 +4002,7 @@
 							"response": []
 						},
 						{
-							"name": "CreateCommunity(NM)-Empty email field",
+							"name": "Create Community(NM)-Empty email field",
 							"event": [
 								{
 									"listen": "test",
@@ -4072,7 +4072,7 @@
 							"response": []
 						},
 						{
-							"name": "CreateCommunity-Invalid phone number field",
+							"name": "Create Community-Invalid phone number field",
 							"event": [
 								{
 									"listen": "prerequest",
@@ -4142,7 +4142,7 @@
 							"response": []
 						},
 						{
-							"name": "CreateCommunity-Invalid Email format",
+							"name": "Create Community-Invalid Email format",
 							"event": [
 								{
 									"listen": "prerequest",
@@ -4212,7 +4212,7 @@
 							"response": []
 						},
 						{
-							"name": "CreateCommunity-No Auth Token",
+							"name": "Create Community-No Auth Token",
 							"event": [
 								{
 									"listen": "test",
@@ -4259,7 +4259,7 @@
 							"response": []
 						},
 						{
-							"name": "CreateCommunity-Invalid Auth token",
+							"name": "Create Community-Invalid Auth token",
 							"event": [
 								{
 									"listen": "test",
@@ -4498,7 +4498,7 @@
 							"response": []
 						},
 						{
-							"name": "GetCommunityById-No Auth Token",
+							"name": "Get Community By community Id-No Auth Token",
 							"event": [
 								{
 									"listen": "test",
@@ -4536,7 +4536,7 @@
 							"response": []
 						},
 						{
-							"name": "GetCommunityById-Invalid Auth Token",
+							"name": "Get Community By community Id-Invalid Auth Token",
 							"event": [
 								{
 									"listen": "test",
@@ -4578,140 +4578,6 @@
 						}
 					],
 					"id": "e9ec08ad-dc39-4792-909a-69ff1633003b"
-				},
-				{
-					"name": "GetCommunityById Copy",
-					"item": [
-						{
-							"name": "Get Community By CommunityId-Successful",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "8c3fec91-4075-4fbf-a5de-a0d0d1fc816e",
-										"exec": [
-											"pm.test(\"Verify that Status code is 200\", function () {\r",
-											"    pm.response.to.have.status(200);\r",
-											"});\r",
-											"pm.test(\"Verify that status is success\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
-											"});\r",
-											"pm.test(\"Verify that response message returns Successfully fetched commununity\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.message).to.eql(\"Successfully Fetched Community\");\r",
-											"});\r",
-											"pm.test(\"Verify that response data exist\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.data).to.exist;\r",
-											"});\r",
-											"pm.test(\"Verify that commununity id returned is correct\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.data.CommunityId).to.eql(pm.collectionVariables.get('commununityId'));\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"id": "70443679-a4e1-4781-803a-4481d67618bb",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{Auth_token}}"
-									}
-								},
-								"method": "GET",
-								"header": [],
-								"url": "{{BaseUrl}}/api/community/{{commununityId}}"
-							},
-							"response": []
-						},
-						{
-							"name": "GetCommunityById-No Auth Token",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "6619a738-20a0-4327-8d5f-368aa6dec81f",
-										"exec": [
-											"pm.test(\"Verify that Status code is 401\", function () {\r",
-											"    pm.response.to.have.status(401);\r",
-											"});\r",
-											"pm.test(\"Verify that status is failed\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
-											"});\r",
-											"pm.test(\"Verify that response message is Request UnAuthorized\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.message).to.eql(\"Request UnAuthorized\");\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"id": "0e0fd976-6050-4b00-8f5a-e850ffed23b3",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "noauth"
-								},
-								"method": "GET",
-								"header": [],
-								"url": "{{BaseUrl}}/api/community/717fae8c-190e-440e-9d8f-82fe4cbd734e"
-							},
-							"response": []
-						},
-						{
-							"name": "GetCommunityById-Invalid Auth Token",
-							"event": [
-								{
-									"listen": "test",
-									"script": {
-										"id": "87b43ac2-6603-4014-adc4-f202b7876013",
-										"exec": [
-											"pm.test(\"Verify that Status code is 403\", function () {\r",
-											"    pm.response.to.have.status(403);\r",
-											"});\r",
-											"pm.test(\"Verify that status is failed\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
-											"});\r",
-											"pm.test(\"Verify that response message returns Invalid token\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.message).to.eql(\"Request Forbidden, Invalid Token\");\r",
-											"});"
-										],
-										"type": "text/javascript"
-									}
-								}
-							],
-							"id": "c30ed402-6fe7-4d8c-b3cc-0e5eba1557dd",
-							"protocolProfileBehavior": {
-								"disableBodyPruning": true
-							},
-							"request": {
-								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZCI6NDAsIkZpcnN0TmFtZSI6IkFiaW9kdW4iLCJMYXN0TmFtZSI6Ik9sYW5peWkiLCJET0IiOiIxOTkzLTAxGHCxVDAwOjAwOjAwLjAwMFoiLCJHZW5kZXIiOiJNYWxlIiwiQWRkcmVzcyI6ImxhZ29zLE5pZ2VyaWEiLCJQaG9uZSI6IjA4MTQ1MDc1Nzg5IiwiRW1haWwiOm51bGwsIlBob3RvUGF0aCI6InRlc3RpbmcucG5nIiwiUGFzc3dvcmQiOiIkMmIkMTAkUmYuUDIueHpQb1BvTFkzdS56Z0NVLklXTUd0bDk3Nm1OZ28zSDZCbmlPQ21OS2pRYXJ2UksiLCJJc1ZlcmlmaWVkIjoxLCJMYW5ndWFnZSI6ImVuZ2xpc2giLCJDb21wYW55VHlwZSI6IkJhbmtpbmciLCJSZWZyZXNoVG9rZW4iOiJleUpoYkdjaU9pSklVekkxTmlJc0luUjVjQ0k2SWtwWFZDSjkuZXlKa1lYUmhJam9pYW5WemRDQmhJSEpsWm5KbGMyZ2dkRzlyWlc0aUxDSnBZWFFpT2pFM01EYzFORGd4TmpNc0ltVjRjQ0k2TVRjd09ERTFNamsyTTMwLnRJQXlxX25ZaWZ6dmxsQW9MakFhZHJoWXktb1dSdll0SWJ6czJNVWR1aVkiLCJpYXQiOjE3MDc1Njk0MTMsImV4cCI6MTcwNzU3MzAxM30.jH9HWOJdF87w_zqUZZZvgaQeb_D8DAAtxiNSDGrTdYM"
-									}
-								},
-								"method": "GET",
-								"header": [],
-								"url": "{{BaseUrl}}/api/community/717fae8c-190e-440e-9d8f-82fe4cbd734e"
-							},
-							"response": []
-						}
-					],
-					"id": "176d7872-09ab-4a37-bd92-0558de8c2a5b"
 				},
 				{
 					"name": "createSubAdmin",

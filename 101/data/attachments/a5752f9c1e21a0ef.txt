@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Chance","Address":"780 Davis Hills","Phone":"080613-377-5641","Email":"JordonCollier@yopmail.com","CommunityId":"2f7e32c8-7264-4a9b-8df3-64e5e5b536ec"}}

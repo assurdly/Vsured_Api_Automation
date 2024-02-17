@@ -1,6 +1,0 @@
-  {
-        "Name":"Chance",
-        "Address":"780 Davis Hills",
-        "Phone":"080613-377-5641",
-        "Email":"JordonCollier@yopmail.com"
-    }

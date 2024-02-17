@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Leone","Address":"647 Breitenberg Ports","Phone":"08086011509","Email":"TellyKautzer@yopmail.com","CommunityId":"786a0870-3b6d-49c4-9071-9ef587c301d5"}}

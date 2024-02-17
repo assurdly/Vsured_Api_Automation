@@ -1,0 +1,1 @@
+{"status":"Success","message":"Successfully registered user","data":{"FirstName":"Dariana","LastName":"Wuckert","Gender":"Male","Address":"testing address","Phone":"08002546634","Password":"Password@12","Language":"English","CompanyType":"Finance","DOB":"1993-01-01T00:00:00.000Z","Email":"Maximo12yopmailcom","UserRole":"COMMUNITY_ADMIN","PhotoPath":""}}

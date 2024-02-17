@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Maritza","Address":"8479 Pacocha Manor","Phone":"080317-359-5029","Email":"LorenzVandervort@yopmail.com","CommunityId":"99907031-0c18-4567-941b-819d54e2d6be"}}

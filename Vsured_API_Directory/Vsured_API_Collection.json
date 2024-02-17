@@ -5077,8 +5077,8 @@
 									"script": {
 										"id": "a06fec33-aa70-4017-9224-91987f106a19",
 										"exec": [
-											"pm.test(\"Verify that Status code is 400\", function () {\r",
-											"    pm.response.to.have.status(400);\r",
+											"pm.test(\"Verify that Status code is 404\", function () {\r",
+											"    pm.response.to.have.status(404);\r",
 											"});\r",
 											"pm.test(\"Verify that status returns failed\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
@@ -5086,7 +5086,7 @@
 											"});\r",
 											"pm.test(\"Verify that response message returns Failed to create subAdmin\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.message).to.eql(\"Failed to create subAdmin\");\r",
+											"    pm.expect(jsonData.message).to.eql(\"Failed to fetch SubAdmins\");\r",
 											"});"
 										],
 										"type": "text/javascript"
@@ -5196,7 +5196,7 @@
 					"name": "Get SubAdmin By CommmunityId",
 					"item": [
 						{
-							"name": "Get SubAdmin By CommmunityId",
+							"name": "Get SubAdmin By CommmunityId-Successful",
 							"event": [
 								{
 									"listen": "test",
@@ -5246,12 +5246,37 @@
 							"response": []
 						},
 						{
-							"name": "GetSubAdminByCommmunityId Copy",
+							"name": "Get SubAdmin By CommmunityId-No Auth token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "3627479e-efdd-4562-aefc-985018816b92",
+										"exec": [
+											"pm.test(\"Verify that Status code is 401\", function () {\r",
+											"    pm.response.to.have.status(401);\r",
+											"});\r",
+											"pm.test(\"Verify that status is failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message is Request UnAuthorized\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Request UnAuthorized\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "ef7dcb79-245e-4e11-847f-bb20117b8831",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "noauth"
+								},
 								"method": "GET",
 								"header": [],
 								"url": {
@@ -5277,12 +5302,40 @@
 							"response": []
 						},
 						{
-							"name": "GetSubAdminByCommmunityId Copy 2",
+							"name": "Get SubAdmin By CommmunityId-Invalid Auth Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "8d6222c2-032b-4a8b-a9a2-690e6fb95f09",
+										"exec": [
+											"pm.test(\"Verify that Status code is 403\", function () {\r",
+											"    pm.response.to.have.status(403);\r",
+											"});\r",
+											"pm.test(\"Verify that status is failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns Invalid token\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Request Forbidden, Invalid Token\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "d9499014-b7cb-4d20-aad4-c037bae9e0d7",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJQaG9uZSI6IjA4MTQ1MDc1G7u5IiwiRW1haWwiOm51bGwsIk5hbWUiOiJBYmlvZHVuIE9sYW5peWkiLCJpYXQiOjE3MDgxNzgyNzMsImV4cCI6MTcwODE4MTg3M30.qLNbyD3Z25wzpEDgqdNOrr9lLenKFGeeTKjeIgd85eA"
+									}
+								},
 								"method": "GET",
 								"header": [],
 								"url": {

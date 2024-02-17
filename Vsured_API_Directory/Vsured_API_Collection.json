@@ -4003,6 +4003,48 @@
 						},
 						{
 							"name": "CreateCommunity(NM)-Empty email field",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "7a80f289-406c-4c46-b3c8-88e9aabe2b37",
+										"exec": [
+											"pm.test(\"Verify that Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that response status returns success\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns Successfully created commununity\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Successfully Created Community\");\r",
+											"});\r",
+											"pm.test(\"Verify that response name exist\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.data.Name).to.exist;\r",
+											"});\r",
+											"pm.test(\"Verify that response Address exist\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.data.Address).to.exist;\r",
+											"});\r",
+											"pm.test(\"Verify that response phone exist\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.data.Phone).to.exist;\r",
+											"});\r",
+											"pm.test(\"Verify that response Email exist\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.data.Email).to.exist;\r",
+											"});\r",
+											"pm.test(\"Get Community id\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.collectionVariables.set('commununityId', jsonData.data.CommunityId)\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "1d1e6c1b-c375-44d5-b705-e759a48b0087",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -4019,6 +4061,176 @@
 								"body": {
 									"mode": "raw",
 									"raw": "  {\n        \"Name\":\"Test Community 2\",\n        \"Address\":\"test address 2\",\n        \"Phone\":\"08093781185\",\n        \"Email\":\"\"\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/community/create"
+							},
+							"response": []
+						},
+						{
+							"name": "CreateCommunity-Invalid phone number field",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "f3b183ba-564a-4601-9b83-f0a7599e810d",
+										"exec": [
+											" const phoneNumber = Math.floor(Math.random() * 100000000);\r",
+											"    // Format the number as a phone number with area code\r",
+											"    const formattedPhoneNumber = \"080\" + phoneNumber.toString().padStart(8, '0');\r",
+											"    console.log(formattedPhoneNumber);\r",
+											"\r",
+											"    pm.collectionVariables.set('phoneNumber', formattedPhoneNumber)"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "283c1abb-2565-4f1d-ae8f-a01ca5744d76",
+										"exec": [
+											"pm.test(\"Verify that Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that response status returns success\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns Successfully created commununity\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Successfully Created Community\");\r",
+											"});\r",
+											"pm.test(\"Verify that response name exist\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.data.Name).to.exist;\r",
+											"});\r",
+											"pm.test(\"Verify that response Address exist\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.data.Address).to.exist;\r",
+											"});\r",
+											"pm.test(\"Verify that response phone exist\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.data.Phone).to.exist;\r",
+											"});\r",
+											"pm.test(\"Verify that response Email exist\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.data.Email).to.exist;\r",
+											"});\r",
+											"pm.test(\"Get Community id\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.collectionVariables.set('commununityId', jsonData.data.CommunityId)\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "a0b489b1-0b31-494c-9ea8-2973aa832c15",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "  {\n        \"Name\":\"{{$randomFirstName}}\",\n        \"Address\":\"{{$randomStreetAddress}}\",\n        \"Phone\":\"{{phoneNumber}}\",\n        \"Email\":\"{{$randomFirstName}}{{$randomLastName}}@yopmail.com\"\n    }",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": "{{BaseUrl}}/api/community/create"
+							},
+							"response": []
+						},
+						{
+							"name": "CreateCommunity Copy 2",
+							"event": [
+								{
+									"listen": "prerequest",
+									"script": {
+										"id": "f3b183ba-564a-4601-9b83-f0a7599e810d",
+										"exec": [
+											" const phoneNumber = Math.floor(Math.random() * 100000000);\r",
+											"    // Format the number as a phone number with area code\r",
+											"    const formattedPhoneNumber = \"080\" + phoneNumber.toString().padStart(8, '0');\r",
+											"    console.log(formattedPhoneNumber);\r",
+											"\r",
+											"    pm.collectionVariables.set('phoneNumber', formattedPhoneNumber)"
+										],
+										"type": "text/javascript"
+									}
+								},
+								{
+									"listen": "test",
+									"script": {
+										"id": "283c1abb-2565-4f1d-ae8f-a01ca5744d76",
+										"exec": [
+											"pm.test(\"Verify that Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that response status returns success\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns Successfully created commununity\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Successfully Created Community\");\r",
+											"});\r",
+											"pm.test(\"Verify that response name exist\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.data.Name).to.exist;\r",
+											"});\r",
+											"pm.test(\"Verify that response Address exist\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.data.Address).to.exist;\r",
+											"});\r",
+											"pm.test(\"Verify that response phone exist\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.data.Phone).to.exist;\r",
+											"});\r",
+											"pm.test(\"Verify that response Email exist\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.data.Email).to.exist;\r",
+											"});\r",
+											"pm.test(\"Get Community id\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.collectionVariables.set('commununityId', jsonData.data.CommunityId)\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "23dc2252-99a0-48bb-85ed-823083a39143",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "  {\n        \"Name\":\"{{$randomFirstName}}\",\n        \"Address\":\"{{$randomStreetAddress}}\",\n        \"Phone\":\"{{phoneNumber}}\",\n        \"Email\":\"{{$randomFirstName}}{{$randomLastName}}@yopmail.com\"\n    }",
 									"options": {
 										"raw": {
 											"language": "json"

@@ -1,6 +1,0 @@
-  {
-        "Name":"Beaulah",
-        "Address":"6894 Rempel Pike",
-        "Phone":"08074657697",
-        "Email":"EliJacobs@yopmail.com"
-    }

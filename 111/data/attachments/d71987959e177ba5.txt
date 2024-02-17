@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Beaulah","Address":"6894 Rempel Pike","Phone":"08074657697","Email":"EliJacobs@yopmail.com","CommunityId":"f11a92b5-3df4-4823-bdde-7d5669cde423"}}

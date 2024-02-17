@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Moriah","Address":"89851 Ledner Views","Phone":"08038070264","Email":"KaleSimonisyopmailcom","CommunityId":"e0b5e982-dc25-40d1-b9d3-3b372ac6a70c"}}

@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Murl","Address":"5955 Chauncey Extensions","Phone":"abcdefghi","Email":"JovannyRosenbaum@yopmail.com","CommunityId":"fd5e341b-93ef-401f-b8ad-9c815682f9c7"}}

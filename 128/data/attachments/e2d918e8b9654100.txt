@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Madelynn","Address":"74874 Marvin Junction","Phone":"08004508746","Email":"MadisenStanton@yopmail.com","CommunityId":"80db0cd7-eea9-4579-8079-5cd50d35414f"}}

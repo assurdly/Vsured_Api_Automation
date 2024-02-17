@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Katrine","Address":"24545 Hassie Corners","Phone":"abcdefghi","Email":"AnastasiaErdman@yopmail.com","CommunityId":"f19cdf4b-a684-4cc0-b3af-85b796c5ee35"}}

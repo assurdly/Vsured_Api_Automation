@@ -1,6 +1,0 @@
-  {
-        "Name":"Madelynn",
-        "Address":"74874 Marvin Junction",
-        "Phone":"08004508746",
-        "Email":"MadisenStanton@yopmail.com"
-    }

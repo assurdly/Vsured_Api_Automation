@@ -1,4 +1,0 @@
-{
-    "Channel":"",
-    "RefreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoianVzdCBhIHJlZnJlc2ggdG9rZW4iLCJpYXQiOjE3MDgxODQ2OTIsImV4cCI6MTcwODc4OTQ5Mn0.gRteHrhQ6p3G4fBx-pcXMh8S7ZoVvKQ0QcKNvrguDiU"
-}

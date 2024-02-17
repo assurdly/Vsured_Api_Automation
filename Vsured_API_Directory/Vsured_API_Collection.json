@@ -5667,18 +5667,24 @@
 					"id": "9e94a14a-e559-4249-bd5f-83a4b8393e80"
 				},
 				{
-					"name": "GetCheckersById",
+					"name": "Get Checkers By Id",
 					"item": [
 						{
-							"name": "GetCheckersById",
+							"name": "Get Checkers By Id-Successful",
 							"id": "2640a6bd-7b44-4ba0-ac81-2b8bb31816c2",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
 								"method": "GET",
 								"header": [],
-								"url": "{{BaseUrl}}/api/community/checkers/1"
+								"url": "{{BaseUrl}}/api/community/checkers/{{checkerId}}"
 							},
 							"response": []
 						},

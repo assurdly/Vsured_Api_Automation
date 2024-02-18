@@ -6616,6 +6616,28 @@
 						},
 						{
 							"name": "Get All Appointments-Invalid Auth Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "f2533c6d-fb6c-4966-9fa9-70158f15f7ad",
+										"exec": [
+											"pm.test(\"Verify that Status code is 403\", function () {\r",
+											"    pm.response.to.have.status(403);\r",
+											"});\r",
+											"pm.test(\"Verify that status is failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns Invalid token\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Request Forbidden, Invalid Token\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "d5556650-f744-4e0e-97a1-3f4c0ac6ca51",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -6903,6 +6925,9 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "noauth"
+								},
 								"method": "GET",
 								"header": [],
 								"url": {
@@ -7012,11 +7037,36 @@
 						},
 						{
 							"name": "Create Bulk Member With Excel-No Auth Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "8750b763-c076-422d-bb3d-65f9d1dfb359",
+										"exec": [
+											"pm.test(\"Verify that Status code is 401\", function () {\r",
+											"    pm.response.to.have.status(401);\r",
+											"});\r",
+											"pm.test(\"Verify that status is failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message is Request UnAuthorized\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Request UnAuthorized\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "c1eefc02-39f7-435b-b89c-a7d04620fee9",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "noauth"
+								},
 								"method": "POST",
 								"header": [],
 								"body": {
@@ -7065,6 +7115,124 @@
 						{
 							"name": "Get Member By MemberId",
 							"id": "be2212ab-c7b9-463d-9c45-7f54cd01d191",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BaseUrl}}/api/community/member/:memberId",
+									"host": [
+										"{{BaseUrl}}"
+									],
+									"path": [
+										"api",
+										"community",
+										"member",
+										":memberId"
+									],
+									"variable": [
+										{
+											"id": "6c27d9cc-01f5-4f59-a543-ba066ce0c301",
+											"key": "memberId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Member By MemberId Copy",
+							"id": "64ea3f73-496c-49a6-8320-3073bdf5c9d5",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BaseUrl}}/api/community/member/:memberId",
+									"host": [
+										"{{BaseUrl}}"
+									],
+									"path": [
+										"api",
+										"community",
+										"member",
+										":memberId"
+									],
+									"variable": [
+										{
+											"id": "6c27d9cc-01f5-4f59-a543-ba066ce0c301",
+											"key": "memberId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Member By MemberId-No Auth Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "6490428c-f1f0-4be5-906f-e736e1c929ae",
+										"exec": [
+											"pm.test(\"Verify that Status code is 401\", function () {\r",
+											"    pm.response.to.have.status(401);\r",
+											"});\r",
+											"pm.test(\"Verify that status is failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message is Request UnAuthorized\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Request UnAuthorized\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "8deed1f5-c5c8-4fdb-be19-55de009898a0",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BaseUrl}}/api/community/member/:memberId",
+									"host": [
+										"{{BaseUrl}}"
+									],
+									"path": [
+										"api",
+										"community",
+										"member",
+										":memberId"
+									],
+									"variable": [
+										{
+											"id": "6c27d9cc-01f5-4f59-a543-ba066ce0c301",
+											"key": "memberId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Member By MemberId Copy 3",
+							"id": "66ed5846-374e-4871-885b-a2eedc6d71fa",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},

@@ -6525,7 +6525,7 @@
 					"id": "988b61ed-b1b5-407e-8c20-9180a8ba9c25"
 				},
 				{
-					"name": "New Folder Copy",
+					"name": "Get All Appointments",
 					"item": [
 						{
 							"name": "Get All Appointments-Successful",
@@ -6624,7 +6624,7 @@
 								"auth": {
 									"type": "bearer",
 									"bearer": {
-										"token": "eyJhbGciOiJIUzI1NiIsIbV3cCI6IkpXVCJ9.eyJQaG9uZSI6IjA4MTQ1MDc1Nzg5IiwiRW1haWwiOm51bGwsIk5hbWUiOiJBYmlvZHVuIE9sYW5peWkiLCJpYXQiOjE3MSdyMDM3NDgsImV4cCI6MTcwODIwNzM0OH0.E4l2BUOycGIwBRYbMsvMGfPkdgVL2l8ya24DvAWV32I"
+										"token": "eyJhbGciOiJIUzI1NifTybV3cCI6IkpXVCJ9.eyJQaG9uZSI6IjA4MTQ1MDc1Nzg5IiwiRW1haWwiOm51bGwsIk5hbWUiOiJBYmlvZHVuIE9sYW5peWkiLCJpYXQiOjE3MSdyMDM3NDgsImV4cCI6MTcwODIwNzM0OH0.E4l2BUOycGIwBRYbMsvMGfPkdgVL2l8ya24DvAWV32I"
 									}
 								},
 								"method": "GET",
@@ -6637,15 +6637,132 @@
 					"id": "ec7287e2-c4cb-4a0f-9022-70f8f3c69969"
 				},
 				{
-					"name": "New Folder Copy 2",
+					"name": "Get Appointment By Id",
 					"item": [
 						{
-							"name": "GdetAppointmentById Copy",
+							"name": "Get Appointment By Id",
 							"id": "a8dc3a85-6210-4cc4-9b0e-67c1cc182435",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BaseUrl}}/api/community/appointment/:Id",
+									"host": [
+										"{{BaseUrl}}"
+									],
+									"path": [
+										"api",
+										"community",
+										"appointment",
+										":Id"
+									],
+									"variable": [
+										{
+											"id": "8e01c512-7323-46af-8b90-dd8ee59ee3d6",
+											"key": "Id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Appointment By Id Copy",
+							"id": "d6b2a5f0-dd04-4627-8141-dfec74ea578a",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BaseUrl}}/api/community/appointment/:Id",
+									"host": [
+										"{{BaseUrl}}"
+									],
+									"path": [
+										"api",
+										"community",
+										"appointment",
+										":Id"
+									],
+									"variable": [
+										{
+											"id": "8e01c512-7323-46af-8b90-dd8ee59ee3d6",
+											"key": "Id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Appointment By Id Copy 2",
+							"id": "f25e5434-d713-49b0-986a-a719fa881c7d",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BaseUrl}}/api/community/appointment/:Id",
+									"host": [
+										"{{BaseUrl}}"
+									],
+									"path": [
+										"api",
+										"community",
+										"appointment",
+										":Id"
+									],
+									"variable": [
+										{
+											"id": "8e01c512-7323-46af-8b90-dd8ee59ee3d6",
+											"key": "Id",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Appointment By Id Copy 3",
+							"id": "6cd2f66d-493e-461e-9e26-775824292804",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
 								"method": "GET",
 								"header": [],
 								"url": {
@@ -6674,10 +6791,10 @@
 					"id": "a66d4d22-a518-4b1c-8dd3-000e73356b4a"
 				},
 				{
-					"name": "New Folder Copy 3",
+					"name": "Get Appointment By CommunityId",
 					"item": [
 						{
-							"name": "GetAppointmentByCommunityId Copy",
+							"name": "Get Appointment By CommunityId",
 							"id": "a7fa1128-0775-49a5-a8e5-b5b7cda9ce7d",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -6711,10 +6828,10 @@
 					"id": "e4925a0a-d785-4896-af48-6a642139fd81"
 				},
 				{
-					"name": "New Folder Copy 4",
+					"name": "Create Bulk Member With Excel",
 					"item": [
 						{
-							"name": "CreateBulkMemberWithExcel Copy",
+							"name": "Create Bulk Member With Excel",
 							"id": "17d4c16f-97c6-499a-b72a-c6b095bf930e",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -6740,10 +6857,10 @@
 					"id": "c51ef442-24b3-4759-b5d4-6bd434bb120d"
 				},
 				{
-					"name": "New Folder Copy 5",
+					"name": "Get Member By MemberId",
 					"item": [
 						{
-							"name": "GetMemberByMemberId Copy",
+							"name": "Get Member By MemberId",
 							"id": "be2212ab-c7b9-463d-9c45-7f54cd01d191",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true

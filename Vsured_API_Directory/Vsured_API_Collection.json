@@ -6546,10 +6546,6 @@
 											"    var jsonData = pm.response.json();\r",
 											"    pm.expect(jsonData.message).to.eql(\"Successfully fetch Appointment\");\r",
 											"});\r",
-											"pm.test(\"Get id\", function () {\r",
-											"    var jsonData = pm.response.json();\r",
-											"    pm.collectionVariables.set(\"Id\", jsonData.data[0].Id);\r",
-											"});\r",
 											"pm.test(\"set Appointment id\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
 											"    pm.collectionVariables.set(\"appointmentId\", jsonData.data[jsonData.data.length - 1].Id);\r",
@@ -6662,7 +6658,30 @@
 					"name": "Get Appointment By Id",
 					"item": [
 						{
-							"name": "Get Appointment By Id",
+							"name": "Get Appointment By Id-Successful",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "c1ae56f4-0a88-457c-8e8f-a23acfd02d74",
+										"exec": [
+											"pm.test(\"Verify that Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that status is success\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns Successfully fetch Appointment\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Successfully fetch Appointment\");\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "a8dc3a85-6210-4cc4-9b0e-67c1cc182435",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -6676,30 +6695,12 @@
 								},
 								"method": "GET",
 								"header": [],
-								"url": {
-									"raw": "{{BaseUrl}}/api/community/appointment/:Id",
-									"host": [
-										"{{BaseUrl}}"
-									],
-									"path": [
-										"api",
-										"community",
-										"appointment",
-										":Id"
-									],
-									"variable": [
-										{
-											"id": "8e01c512-7323-46af-8b90-dd8ee59ee3d6",
-											"key": "Id",
-											"value": ""
-										}
-									]
-								}
+								"url": "{{BaseUrl}}/api/community/appointment/{{appointmentId}}"
 							},
 							"response": []
 						},
 						{
-							"name": "Get Appointment By Id Copy",
+							"name": "Get Appointment By Id-Invalid/Wrong Id",
 							"id": "d6b2a5f0-dd04-4627-8141-dfec74ea578a",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -7379,6 +7380,10 @@
 		},
 		{
 			"key": "checkerId",
+			"value": ""
+		},
+		{
+			"key": "appointmentId",
 			"value": ""
 		}
 	]

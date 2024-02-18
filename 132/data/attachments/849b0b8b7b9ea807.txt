@@ -1,8 +1,0 @@
-{
-"FirstName":"Rosetta",
-"LastName":"Green",
-"Phone":"08093781185",
-"Email":"MeghanKuhn@yopmail.com",
-"PhotoPath":"testpath",
-"CommunityId":"163b973d-3acd-44d5-b35d-a83d2b63c533"
-}

@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Adriana","Address":"74783 Purdy Pines","Phone":"08000920394","Email":"TraceWisozk@yopmail.com","CommunityId":"aac41d1a-9f72-4963-9fe8-5e52372d5026"}}

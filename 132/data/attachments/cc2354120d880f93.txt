@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Ceasar","Address":"1616 Jakubowski Drives","Phone":"08081778041","Email":"JadenKerlukeyopmailcom","CommunityId":"163b973d-3acd-44d5-b35d-a83d2b63c533"}}

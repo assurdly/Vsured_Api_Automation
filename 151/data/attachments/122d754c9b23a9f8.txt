@@ -1,0 +1,6 @@
+  {
+        "Name":"Vinnie",
+        "Address":"686 McGlynn Overpass",
+        "Phone":"abcdefghi",
+        "Email":"TorranceBeier@yopmail.com"
+    }

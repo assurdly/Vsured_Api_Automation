@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Efren","Address":"9162 Amy Extensions","Phone":"08052074921","Email":"AngieRutherford@yopmail.com","CommunityId":"5b0d80f2-7dbd-4d16-8791-f838c415ebd0"}}

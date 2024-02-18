@@ -1,6 +1,0 @@
-  {
-        "Name":"Moriah",
-        "Address":"89851 Ledner Views",
-        "Phone":"08038070264",
-        "Email":"KaleSimonisyopmailcom"
-    }

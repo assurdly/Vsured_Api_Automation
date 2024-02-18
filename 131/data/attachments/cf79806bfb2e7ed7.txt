@@ -1,6 +1,0 @@
-  {
-        "Name":"Efren",
-        "Address":"9162 Amy Extensions",
-        "Phone":"08052074921",
-        "Email":"AngieRutherford@yopmail.com"
-    }

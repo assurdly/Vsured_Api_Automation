@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Ruth","Address":"103 Howell Loop","Phone":"08065678223","Email":"LilyKuvalisyopmailcom","CommunityId":"9a37f6af-b9f6-4925-a03d-f16c475c9699"}}

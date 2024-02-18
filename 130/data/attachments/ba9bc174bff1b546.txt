@@ -1,8 +1,0 @@
-{
-"FirstName":"Quinton",
-"LastName":"King",
-"Phone":"08093781185",
-"Email":"MajorBarrows@yopmail.com",
-"PhotoPath":"testpath",
-"CommunityId":"f0a63f8c-b46c-4b18-b097-5947a8fc14e6"
-}

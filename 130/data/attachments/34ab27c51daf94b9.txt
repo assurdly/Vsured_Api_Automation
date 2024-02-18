@@ -1,6 +1,0 @@
-  {
-        "Name":"Katelyn",
-        "Address":"0438 Stehr Forges",
-        "Phone":"abcdefghi",
-        "Email":"OrlandBahringer@yopmail.com"
-    }

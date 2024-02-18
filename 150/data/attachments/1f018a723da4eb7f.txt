@@ -1,0 +1,13 @@
+
+    {
+        "FirstName":"Ova",
+        "LastName":"Kessler",
+        "Phone":"08057231914",
+        "Email":"CydneyVolkman@yopmail.com",
+        "DOB":"1991-01-01",
+        "Gender":"Male",
+        "NIN":"23454323456",
+        "CommunityId":"9a37f6af-b9f6-4925-a03d-f16c475c9699",
+        "CheckPoint":"test CheckPoint"
+
+    }

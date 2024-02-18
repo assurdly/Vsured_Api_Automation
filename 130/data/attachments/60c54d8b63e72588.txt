@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Katelyn","Address":"0438 Stehr Forges","Phone":"abcdefghi","Email":"OrlandBahringer@yopmail.com","CommunityId":"09627537-94a7-4cec-beb6-b223b13786e5"}}

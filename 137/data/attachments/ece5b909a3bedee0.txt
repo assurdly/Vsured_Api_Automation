@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Gerda","Address":"687 Shea Court","Phone":"08078470776","Email":"TeaganAbernathyyopmailcom","CommunityId":"090967e0-0914-4118-9b5f-1a6be8445f78"}}

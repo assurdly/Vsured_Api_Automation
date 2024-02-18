@@ -1,6 +1,0 @@
-  {
-        "Name":"Garett",
-        "Address":"303 Richard Loop",
-        "Phone":"08058872523",
-        "Email":"AlexysWilliamson@yopmail.com"
-    }

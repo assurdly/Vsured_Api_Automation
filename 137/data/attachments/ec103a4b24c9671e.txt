@@ -1,6 +1,0 @@
-  {
-        "Name":"Rosemarie",
-        "Address":"47760 Strosin Spring",
-        "Phone":"abcdefghi",
-        "Email":"LennieO'Kon@yopmail.com"
-    }

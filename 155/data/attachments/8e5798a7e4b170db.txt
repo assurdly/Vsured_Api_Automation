@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Zackary","Address":"46498 Grimes Manors","Phone":"08041144257","Email":"FranciscaLarkin@yopmail.com","CommunityId":"1b87c196-8443-45df-a6d9-3a31eca6ff48"}}

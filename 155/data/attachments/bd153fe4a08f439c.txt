@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Delores","Address":"401 Jacobs Street","Phone":"abcdefghi","Email":"TimmothySawayn@yopmail.com","CommunityId":"49625b73-4e26-410a-859f-59d94826f4af"}}

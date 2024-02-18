@@ -1,6 +1,0 @@
-  {
-        "Name":"Victor",
-        "Address":"67545 Ferry Overpass",
-        "Phone":"abcdefghi",
-        "Email":"DeionProsacco@yopmail.com"
-    }

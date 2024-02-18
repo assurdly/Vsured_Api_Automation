@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Hettie","Address":"4322 Alison Freeway","Phone":"08025945738","Email":"MathildeMurazikyopmailcom","CommunityId":"fc18ea07-203e-439f-ba58-eb60a4f087c8"}}

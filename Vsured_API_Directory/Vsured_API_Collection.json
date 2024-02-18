@@ -6714,17 +6714,36 @@
 							"response": []
 						},
 						{
-							"name": "Get Appointment By Id Copy 2",
+							"name": "Get Appointment By Id-No Auth Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "ac9298c9-80b0-4a1c-baf3-01df02912d51",
+										"exec": [
+											"pm.test(\"Verify that Status code is 401\", function () {\r",
+											"    pm.response.to.have.status(401);\r",
+											"});\r",
+											"pm.test(\"Verify that status is failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message is Request UnAuthorized\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Request UnAuthorized\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "f25e5434-d713-49b0-986a-a719fa881c7d",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
 								"auth": {
-									"type": "bearer",
-									"bearer": {
-										"token": "{{Auth_token}}"
-									}
+									"type": "noauth"
 								},
 								"method": "GET",
 								"header": [],
@@ -6823,6 +6842,121 @@
 								}
 							},
 							"response": []
+						},
+						{
+							"name": "Get Appointment By CommunityId Copy",
+							"id": "c426f76e-0f12-4b15-bff0-f426540708ba",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BaseUrl}}/api/community/appointment/:communityId",
+									"host": [
+										"{{BaseUrl}}"
+									],
+									"path": [
+										"api",
+										"community",
+										"appointment",
+										":communityId"
+									],
+									"variable": [
+										{
+											"id": "90b86ce6-c864-4e32-9177-3a4ed076fa88",
+											"key": "communityId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Appointment By CommunityId-No Auth Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "545cc1c4-259b-4a26-a3f7-fc1ddfcb9f7f",
+										"exec": [
+											"pm.test(\"Verify that Status code is 401\", function () {\r",
+											"    pm.response.to.have.status(401);\r",
+											"});\r",
+											"pm.test(\"Verify that status is failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message is Request UnAuthorized\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Request UnAuthorized\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "63c6bf18-cce0-49bd-94b0-f2ce7d830d9e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BaseUrl}}/api/community/appointment/:communityId",
+									"host": [
+										"{{BaseUrl}}"
+									],
+									"path": [
+										"api",
+										"community",
+										"appointment",
+										":communityId"
+									],
+									"variable": [
+										{
+											"id": "90b86ce6-c864-4e32-9177-3a4ed076fa88",
+											"key": "communityId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Appointment By CommunityId Copy 3",
+							"id": "fd4efbd9-9b29-48a3-a798-e6350aa60350",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{BaseUrl}}/api/community/appointment/:communityId",
+									"host": [
+										"{{BaseUrl}}"
+									],
+									"path": [
+										"api",
+										"community",
+										"appointment",
+										":communityId"
+									],
+									"variable": [
+										{
+											"id": "90b86ce6-c864-4e32-9177-3a4ed076fa88",
+											"key": "communityId",
+											"value": ""
+										}
+									]
+								}
+							},
+							"response": []
 						}
 					],
 					"id": "e4925a0a-d785-4896-af48-6a642139fd81"
@@ -6833,6 +6967,75 @@
 						{
 							"name": "Create Bulk Member With Excel",
 							"id": "17d4c16f-97c6-499a-b72a-c6b095bf930e",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"value": null
+										}
+									]
+								},
+								"url": "{{BaseUrl}}/api/community/member/create"
+							},
+							"response": []
+						},
+						{
+							"name": "Create Bulk Member With Excel Copy",
+							"id": "e1931a21-9a09-45f6-b41f-d753c67bd50c",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"value": null
+										}
+									]
+								},
+								"url": "{{BaseUrl}}/api/community/member/create"
+							},
+							"response": []
+						},
+						{
+							"name": "Create Bulk Member With Excel-No Auth Token",
+							"id": "c1eefc02-39f7-435b-b89c-a7d04620fee9",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"value": null
+										}
+									]
+								},
+								"url": "{{BaseUrl}}/api/community/member/create"
+							},
+							"response": []
+						},
+						{
+							"name": "Create Bulk Member With Excel Copy 3",
+							"id": "ce8eb20b-26d8-448a-b6c1-46c0930b000e",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},

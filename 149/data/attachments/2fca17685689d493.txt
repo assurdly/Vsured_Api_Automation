@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Eddie","Address":"54373 Reynolds Keys","Phone":"08062617812","Email":"ValerieYundtyopmailcom","CommunityId":"5cb3a81e-a8ba-479a-960b-f164bba912db"}}

@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Ricky","Address":"4719 Urban Skyway","Phone":"08011187305","Email":"MadelynWiegandyopmailcom","CommunityId":"23dac800-4b9d-4d48-bba7-8d65e06aad25"}}

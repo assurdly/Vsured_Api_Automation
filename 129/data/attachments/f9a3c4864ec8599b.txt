@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Loraine","Address":"97841 Reichel Turnpike","Phone":"08049544911","Email":"MorrisTreutel@yopmail.com","CommunityId":"09cbe15c-0ad2-4850-b43c-8236d7565fb4"}}

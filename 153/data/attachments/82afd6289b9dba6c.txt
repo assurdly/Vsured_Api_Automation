@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Kareem","Address":"4175 Stoltenberg Walk","Phone":"08074141754","Email":"KendraVeum@yopmail.com","CommunityId":"b0ba99f9-100c-422a-901c-26d04b02283d"}}

@@ -1,8 +1,0 @@
-{
-"FirstName":"Noemie",
-"LastName":"Romaguera",
-"Phone":"08093781185",
-"Email":"DiegoBoyle@yopmail.com",
-"PhotoPath":"testpath",
-"CommunityId":"262e5000-52a6-4900-993f-21bbbda669aa"
-}

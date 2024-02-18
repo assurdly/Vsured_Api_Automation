@@ -1,4 +1,0 @@
-{
-    "Channel":"Destini",
-    "Token":"000000"
-}

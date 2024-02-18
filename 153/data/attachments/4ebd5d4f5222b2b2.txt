@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Lloyd","Address":"19203 Timothy Wells","Phone":"abcdefghi","Email":"ThurmanMohr@yopmail.com","CommunityId":"24deb3e5-a4fd-4012-b17d-df65126b6f20"}}

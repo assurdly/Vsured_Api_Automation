@@ -1,8 +1,0 @@
-{
-"FirstName":"Zelda",
-"LastName":"Moore",
-"Phone":"08093781185",
-"Email":"DuncanCruickshank@yopmail.com",
-"PhotoPath":"testpath",
-"CommunityId":"45be6ffd-4b1d-46a8-a74c-679eb00a3458"
-}

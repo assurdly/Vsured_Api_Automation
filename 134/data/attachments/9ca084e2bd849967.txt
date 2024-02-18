@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Orlo","Address":"7992 Conn Fort","Phone":"08022454442","Email":"EveFraneckiyopmailcom","CommunityId":"45be6ffd-4b1d-46a8-a74c-679eb00a3458"}}

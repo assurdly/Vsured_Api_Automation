@@ -1,6 +1,0 @@
-  {
-        "Name":"Rahsaan",
-        "Address":"907 Jerry Island",
-        "Phone":"abcdefghi",
-        "Email":"RupertLegros@yopmail.com"
-    }

@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Milan","Address":"25631 Philip Field","Phone":"abcdefghi","Email":"TimmothyConsidine@yopmail.com","CommunityId":"7990aeee-b537-46fb-9830-77ce0042c69a"}}

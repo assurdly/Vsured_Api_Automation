@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Obie","Address":"77567 Yadira Lodge","Phone":"08085394844","Email":"GennaroLeuschkeyopmailcom","CommunityId":"4e2d526b-6740-4b05-89ff-28c32895918e"}}

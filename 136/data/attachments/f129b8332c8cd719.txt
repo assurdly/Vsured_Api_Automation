@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Joelle","Address":"0190 Ledner Manor","Phone":"08054008897","Email":"RosaliaSchroederyopmailcom","CommunityId":"23704de5-f8a4-4a36-be50-19e94c9c55a3"}}

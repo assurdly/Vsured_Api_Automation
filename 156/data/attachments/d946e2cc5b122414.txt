@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Ryann","Address":"31609 Kunze Street","Phone":"08092261206","Email":"BenjaminDicki@yopmail.com","CommunityId":"b6f0cd1c-7e67-4bd9-8031-4f070163f6a3"}}

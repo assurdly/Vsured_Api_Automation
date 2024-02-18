@@ -1,6 +1,0 @@
-  {
-        "Name":"Milan",
-        "Address":"25631 Philip Field",
-        "Phone":"abcdefghi",
-        "Email":"TimmothyConsidine@yopmail.com"
-    }

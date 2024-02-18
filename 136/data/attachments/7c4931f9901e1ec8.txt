@@ -1,6 +1,0 @@
-  {
-        "Name":"Mertie",
-        "Address":"540 Kiel Pine",
-        "Phone":"08033706217",
-        "Email":"DarwinProsacco@yopmail.com"
-    }

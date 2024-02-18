@@ -4337,7 +4337,7 @@
 											"    var jsonData = pm.response.json();\r",
 											"    pm.collectionVariables.set(\"Id\", jsonData.data[0].Id);\r",
 											"});\r",
-											"pm.test(\"Get Community id\", function () {\r",
+											"pm.test(\"Set Community id\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
 											"    pm.collectionVariables.set(\"commununityId\", jsonData.data[jsonData.data.length - 1].CommunityId);\r",
 											"});"
@@ -6529,6 +6529,36 @@
 					"item": [
 						{
 							"name": "Get All Appointments-Successful",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "c7582077-d100-491e-b81d-200436cfb3ef",
+										"exec": [
+											"pm.test(\"Verify that Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that status is success\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns Successfully fetch Appointment\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Successfully fetch Appointment\");\r",
+											"});\r",
+											"pm.test(\"Get id\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.collectionVariables.set(\"Id\", jsonData.data[0].Id);\r",
+											"});\r",
+											"pm.test(\"set Appointment id\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.collectionVariables.set(\"appointmentId\", jsonData.data[jsonData.data.length - 1].Id);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "44cef223-f668-4ae4-b571-0ceea6016c22",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true

@@ -6098,11 +6098,43 @@
 					"item": [
 						{
 							"name": "Create Appointment-Success",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "b7e1b331-a620-4534-a910-875d49093ba2",
+										"exec": [
+											"pm.test(\"Verify that Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that response status returns Success\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns Successfully created Appointment\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Successfully Created Appointment\");\r",
+											"});\r",
+											"pm.test(\"Verify that data exist\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.data).to.exist;\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "c6244a05-488a-4d81-a2fb-91a188b34e64",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
 								"method": "POST",
 								"header": [],
 								"body": {
@@ -6111,36 +6143,36 @@
 										{
 											"key": "file",
 											"type": "file",
-											"value": null
+											"src": "postman-cloud:///1eec0465-4bc1-44c0-b159-68c4676ec721"
 										},
 										{
 											"key": "Title",
-											"value": "",
+											"value": "{{$randomFirstName}}s Party",
 											"type": "text"
 										},
 										{
 											"key": "Date",
-											"value": "",
+											"value": "2024-10-10",
 											"type": "text"
 										},
 										{
 											"key": "Time",
-											"value": "",
+											"value": "10:00",
 											"type": "text"
 										},
 										{
 											"key": "Venue",
-											"value": "",
+											"value": "{{$randomStreetAddress}}",
 											"type": "text"
 										},
 										{
 											"key": "Description",
-											"value": "",
+											"value": "Enjoy your self",
 											"type": "text"
 										},
 										{
 											"key": "CommunityId",
-											"value": "",
+											"value": "{{commununityId}}",
 											"type": "text"
 										}
 									]
@@ -6151,11 +6183,43 @@
 						},
 						{
 							"name": "Create Appointment-Success Copy",
-							"id": "332d94e0-34eb-4607-a85c-8c6102b597b6",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "b7e1b331-a620-4534-a910-875d49093ba2",
+										"exec": [
+											"pm.test(\"Verify that Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that response status returns Success\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns Successfully created Appointment\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Successfully Created Appointment\");\r",
+											"});\r",
+											"pm.test(\"Verify that data exist\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.data).to.exist;\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "08608e9c-d9e8-473c-8cda-20dcf319e2b9",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
 								"method": "POST",
 								"header": [],
 								"body": {
@@ -6164,36 +6228,36 @@
 										{
 											"key": "file",
 											"type": "file",
-											"value": null
+											"src": "postman-cloud:///1eec0465-4bc1-44c0-b159-68c4676ec721"
 										},
 										{
 											"key": "Title",
-											"value": "",
+											"value": "{{$randomFirstName}}s Party",
 											"type": "text"
 										},
 										{
 											"key": "Date",
-											"value": "",
+											"value": "2024-10-10",
 											"type": "text"
 										},
 										{
 											"key": "Time",
-											"value": "",
+											"value": "10:00",
 											"type": "text"
 										},
 										{
 											"key": "Venue",
-											"value": "",
+											"value": "{{$randomStreetAddress}}",
 											"type": "text"
 										},
 										{
 											"key": "Description",
-											"value": "",
+											"value": "Enjoy your self",
 											"type": "text"
 										},
 										{
 											"key": "CommunityId",
-											"value": "",
+											"value": "{{commununityId}}",
 											"type": "text"
 										}
 									]
@@ -6204,11 +6268,43 @@
 						},
 						{
 							"name": "Create Appointment-Success Copy 2",
-							"id": "f8f78676-2c7d-439c-a0bd-cfd278ac4874",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "b7e1b331-a620-4534-a910-875d49093ba2",
+										"exec": [
+											"pm.test(\"Verify that Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that response status returns Success\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns Successfully created Appointment\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Successfully Created Appointment\");\r",
+											"});\r",
+											"pm.test(\"Verify that data exist\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.data).to.exist;\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "93170389-de25-4777-adc4-4ef70ad966db",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
 								"method": "POST",
 								"header": [],
 								"body": {
@@ -6217,36 +6313,36 @@
 										{
 											"key": "file",
 											"type": "file",
-											"value": null
+											"src": "postman-cloud:///1eec0465-4bc1-44c0-b159-68c4676ec721"
 										},
 										{
 											"key": "Title",
-											"value": "",
+											"value": "{{$randomFirstName}}s Party",
 											"type": "text"
 										},
 										{
 											"key": "Date",
-											"value": "",
+											"value": "2024-10-10",
 											"type": "text"
 										},
 										{
 											"key": "Time",
-											"value": "",
+											"value": "10:00",
 											"type": "text"
 										},
 										{
 											"key": "Venue",
-											"value": "",
+											"value": "{{$randomStreetAddress}}",
 											"type": "text"
 										},
 										{
 											"key": "Description",
-											"value": "",
+											"value": "Enjoy your self",
 											"type": "text"
 										},
 										{
 											"key": "CommunityId",
-											"value": "",
+											"value": "{{commununityId}}",
 											"type": "text"
 										}
 									]
@@ -6257,11 +6353,43 @@
 						},
 						{
 							"name": "Create Appointment-Success Copy 3",
-							"id": "f8c16be6-f751-4bf3-ac9f-ed1c370ce6e8",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "b7e1b331-a620-4534-a910-875d49093ba2",
+										"exec": [
+											"pm.test(\"Verify that Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that response status returns Success\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns Successfully created Appointment\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Successfully Created Appointment\");\r",
+											"});\r",
+											"pm.test(\"Verify that data exist\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.data).to.exist;\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "350d68a5-656d-42b1-9826-6e477d6c53e0",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
 								"method": "POST",
 								"header": [],
 								"body": {
@@ -6270,36 +6398,36 @@
 										{
 											"key": "file",
 											"type": "file",
-											"value": null
+											"src": "postman-cloud:///1eec0465-4bc1-44c0-b159-68c4676ec721"
 										},
 										{
 											"key": "Title",
-											"value": "",
+											"value": "{{$randomFirstName}}s Party",
 											"type": "text"
 										},
 										{
 											"key": "Date",
-											"value": "",
+											"value": "2024-10-10",
 											"type": "text"
 										},
 										{
 											"key": "Time",
-											"value": "",
+											"value": "10:00",
 											"type": "text"
 										},
 										{
 											"key": "Venue",
-											"value": "",
+											"value": "{{$randomStreetAddress}}",
 											"type": "text"
 										},
 										{
 											"key": "Description",
-											"value": "",
+											"value": "Enjoy your self",
 											"type": "text"
 										},
 										{
 											"key": "CommunityId",
-											"value": "",
+											"value": "{{commununityId}}",
 											"type": "text"
 										}
 									]
@@ -6310,11 +6438,43 @@
 						},
 						{
 							"name": "Create Appointment-Success Copy 4",
-							"id": "c1822fee-9081-4c33-8332-8de13db1148f",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "b7e1b331-a620-4534-a910-875d49093ba2",
+										"exec": [
+											"pm.test(\"Verify that Status code is 200\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"pm.test(\"Verify that response status returns Success\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"success\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns Successfully created Appointment\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Successfully Created Appointment\");\r",
+											"});\r",
+											"pm.test(\"Verify that data exist\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.data).to.exist;\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"id": "0fc59a4d-8d88-4d1c-a5c1-45c66dcf3f16",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
 								"method": "POST",
 								"header": [],
 								"body": {
@@ -6323,36 +6483,36 @@
 										{
 											"key": "file",
 											"type": "file",
-											"value": null
+											"src": "postman-cloud:///1eec0465-4bc1-44c0-b159-68c4676ec721"
 										},
 										{
 											"key": "Title",
-											"value": "",
+											"value": "{{$randomFirstName}}s Party",
 											"type": "text"
 										},
 										{
 											"key": "Date",
-											"value": "",
+											"value": "2024-10-10",
 											"type": "text"
 										},
 										{
 											"key": "Time",
-											"value": "",
+											"value": "10:00",
 											"type": "text"
 										},
 										{
 											"key": "Venue",
-											"value": "",
+											"value": "{{$randomStreetAddress}}",
 											"type": "text"
 										},
 										{
 											"key": "Description",
-											"value": "",
+											"value": "Enjoy your self",
 											"type": "text"
 										},
 										{
 											"key": "CommunityId",
-											"value": "",
+											"value": "{{commununityId}}",
 											"type": "text"
 										}
 									]

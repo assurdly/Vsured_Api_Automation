@@ -6254,6 +6254,112 @@
 								"url": "{{BaseUrl}}/api/community/appointment/create"
 							},
 							"response": []
+						},
+						{
+							"name": "Create Appointment-Success Copy 3",
+							"id": "f8c16be6-f751-4bf3-ac9f-ed1c370ce6e8",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"value": null
+										},
+										{
+											"key": "Title",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Date",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Time",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Venue",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Description",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "CommunityId",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{BaseUrl}}/api/community/appointment/create"
+							},
+							"response": []
+						},
+						{
+							"name": "Create Appointment-Success Copy 4",
+							"id": "c1822fee-9081-4c33-8332-8de13db1148f",
+							"protocolProfileBehavior": {
+								"disableBodyPruning": true
+							},
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "file",
+											"type": "file",
+											"value": null
+										},
+										{
+											"key": "Title",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Date",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Time",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Venue",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "Description",
+											"value": "",
+											"type": "text"
+										},
+										{
+											"key": "CommunityId",
+											"value": "",
+											"type": "text"
+										}
+									]
+								},
+								"url": "{{BaseUrl}}/api/community/appointment/create"
+							},
+							"response": []
 						}
 					],
 					"id": "988b61ed-b1b5-407e-8c20-9180a8ba9c25"
@@ -6268,6 +6374,12 @@
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "{{Auth_token}}"
+									}
+								},
 								"method": "GET",
 								"header": [],
 								"url": "{{BaseUrl}}/api/community/appointment/all"

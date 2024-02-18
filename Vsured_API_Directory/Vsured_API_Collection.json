@@ -6701,6 +6701,28 @@
 						},
 						{
 							"name": "Get Appointment By Id-Invalid/Wrong Id",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "39b82fb1-25ba-41d3-99d0-075dd48d40ea",
+										"exec": [
+											"pm.test(\"Verify that Status code is 404\", function () {\r",
+											"    pm.response.to.have.status(404);\r",
+											"});\r",
+											"pm.test(\"Verify that response status returns failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns failed to fetch Appointment\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Failed to fetch Appointment\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "d6b2a5f0-dd04-4627-8141-dfec74ea578a",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -6714,25 +6736,7 @@
 								},
 								"method": "GET",
 								"header": [],
-								"url": {
-									"raw": "{{BaseUrl}}/api/community/appointment/:Id",
-									"host": [
-										"{{BaseUrl}}"
-									],
-									"path": [
-										"api",
-										"community",
-										"appointment",
-										":Id"
-									],
-									"variable": [
-										{
-											"id": "8e01c512-7323-46af-8b90-dd8ee59ee3d6",
-											"key": "Id",
-											"value": ""
-										}
-									]
-								}
+								"url": "{{BaseUrl}}/api/community/appointment/5645"
 							},
 							"response": []
 						},

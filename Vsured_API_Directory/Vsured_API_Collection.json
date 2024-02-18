@@ -6792,7 +6792,29 @@
 							"response": []
 						},
 						{
-							"name": "Get Appointment By Id Copy 3",
+							"name": "Get Appointment By Id-Invalid Auth Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "7f0e121e-a870-419c-bfb6-6ef37b37c16c",
+										"exec": [
+											"pm.test(\"Verify that Status code is 403\", function () {\r",
+											"    pm.response.to.have.status(403);\r",
+											"});\r",
+											"pm.test(\"Verify that status is failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns Invalid token\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Request Forbidden, Invalid Token\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "6cd2f66d-493e-461e-9e26-775824292804",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
@@ -6953,12 +6975,40 @@
 							"response": []
 						},
 						{
-							"name": "Get Appointment By CommunityId Copy 3",
+							"name": "Get Appointment By CommunityId-Invalid Auth Token",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"id": "f4b523ba-838f-4274-a4c1-9ba2befd46b5",
+										"exec": [
+											"pm.test(\"Verify that Status code is 403\", function () {\r",
+											"    pm.response.to.have.status(403);\r",
+											"});\r",
+											"pm.test(\"Verify that status is failed\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"});\r",
+											"pm.test(\"Verify that response message returns Invalid token\", function () {\r",
+											"    var jsonData = pm.response.json();\r",
+											"    pm.expect(jsonData.message).to.eql(\"Request Forbidden, Invalid Token\");\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
 							"id": "fd4efbd9-9b29-48a3-a798-e6350aa60350",
 							"protocolProfileBehavior": {
 								"disableBodyPruning": true
 							},
 							"request": {
+								"auth": {
+									"type": "bearer",
+									"bearer": {
+										"token": "eyJhbGciOiJIUzI1NifTybV3cCI6IkpXVCJ9.eyJQaG9uZSI6IjA4MTQ1MDc1Nzg5IiwiRW1haWwiOm51bGwsIk5hbWUiOiJBYmlvZHVuIE9sYW5peWkiLCJpYXQiOjE3MSdyMDM3NDgsImV4cCI6MTcwODIwNzM0OH0.E4l2BUOycGIwBRYbMsvMGfPkdgVL2l8ya24DvAWV32I"
+									}
+								},
 								"method": "GET",
 								"header": [],
 								"url": {

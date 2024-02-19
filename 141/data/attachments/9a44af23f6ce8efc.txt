@@ -1,8 +1,0 @@
-{
-"FirstName":"Merlin",
-"LastName":"Bartell",
-"Phone":"08093781185",
-"Email":"LolitaMraz@yopmail.com",
-"PhotoPath":"testpath",
-"CommunityId":"3d4a349f-1b0e-481c-b6f0-571526551938"
-}

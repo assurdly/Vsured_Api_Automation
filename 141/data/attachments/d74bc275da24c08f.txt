@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Fetched Community","data":{"Id":604,"CommunityId":"3d4a349f-1b0e-481c-b6f0-571526551938","Name":"Kassandra","Address":"9115 Immanuel Summit","Phone":"08028046337","Email":"LeviDeckowyopmailcom"}}

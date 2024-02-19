@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Emmett","Address":"9981 Labadie Court","Phone":"08084317580","Email":"PreciousFeest@yopmail.com","CommunityId":"53a9057a-fcce-4039-92e1-b4d7b49d1756"}}

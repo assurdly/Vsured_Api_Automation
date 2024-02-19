@@ -1,6 +1,0 @@
-  {
-        "Name":"Dortha",
-        "Address":"328 Darby Pike",
-        "Phone":"abcdefghi",
-        "Email":"JedMuller@yopmail.com"
-    }

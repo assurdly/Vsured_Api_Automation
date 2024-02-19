@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Dortha","Address":"328 Darby Pike","Phone":"abcdefghi","Email":"JedMuller@yopmail.com","CommunityId":"82e406ad-dbee-46d3-9f28-0c1c56a177be"}}

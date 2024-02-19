@@ -1,6 +1,0 @@
-  {
-        "Name":"Emmett",
-        "Address":"9981 Labadie Court",
-        "Phone":"08084317580",
-        "Email":"PreciousFeest@yopmail.com"
-    }

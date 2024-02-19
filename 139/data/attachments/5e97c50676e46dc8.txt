@@ -1,8 +1,0 @@
-{
-"FirstName":"Antonio",
-"LastName":"Runolfsdottir",
-"Phone":"08093781185",
-"Email":"GastonLind@yopmail.com",
-"PhotoPath":"testpath",
-"CommunityId":"c05386a1-6fd9-473f-b85f-eafc24c3e50a"
-}

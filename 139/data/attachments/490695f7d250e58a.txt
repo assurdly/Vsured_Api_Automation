@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Malvina","Address":"817 Effie Mews","Phone":"08030258373","Email":"EricDenesikyopmailcom","CommunityId":"c05386a1-6fd9-473f-b85f-eafc24c3e50a"}}

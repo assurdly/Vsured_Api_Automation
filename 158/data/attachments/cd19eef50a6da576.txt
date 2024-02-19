@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Leatha","Address":"20416 Alden Trafficway","Phone":"abcdefghi","Email":"ZackaryZiemann@yopmail.com","CommunityId":"d91f6606-40f6-4996-92f7-707eb299172f"}}

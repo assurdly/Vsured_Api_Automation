@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Alvina","Address":"10813 Adeline Hill","Phone":"abcdefghi","Email":"CathrineSawayn@yopmail.com","CommunityId":"c03f40a4-03b2-47f7-8c96-98913a4740b2"}}

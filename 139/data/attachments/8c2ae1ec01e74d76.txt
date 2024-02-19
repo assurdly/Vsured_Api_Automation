@@ -1,6 +1,0 @@
-  {
-        "Name":"Malvina",
-        "Address":"817 Effie Mews",
-        "Phone":"08030258373",
-        "Email":"EricDenesikyopmailcom"
-    }

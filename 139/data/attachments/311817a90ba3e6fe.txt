@@ -1,6 +1,0 @@
-  {
-        "Name":"Alvina",
-        "Address":"10813 Adeline Hill",
-        "Phone":"abcdefghi",
-        "Email":"CathrineSawayn@yopmail.com"
-    }

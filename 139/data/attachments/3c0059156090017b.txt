@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Bell","Address":"55742 Jewel Stravenue","Phone":"08046172398","Email":"SammyAnderson@yopmail.com","CommunityId":"5709ebdd-edbf-4f29-8b9c-7fe5b325dffd"}}

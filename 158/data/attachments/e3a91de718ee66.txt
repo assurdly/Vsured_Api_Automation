@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Fetched Community","data":{"Id":674,"CommunityId":"75d9affe-ecf7-4903-9b2d-dffc4b83b5aa","Name":"Hiram","Address":"550 Brekke Oval","Phone":"08078255709","Email":"DonnaDuBuqueyopmailcom"}}

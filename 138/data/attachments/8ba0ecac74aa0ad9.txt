@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Jamey","Address":"55075 Roselyn Locks","Phone":"08071093287","Email":"RosendoDonnelly@yopmail.com","CommunityId":"3e7f28b1-a767-4b9d-a058-c11bc24bff0d"}}

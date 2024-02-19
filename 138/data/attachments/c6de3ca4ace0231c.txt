@@ -1,6 +1,0 @@
-  {
-        "Name":"Nakia",
-        "Address":"7732 Doyle Turnpike",
-        "Phone":"abcdefghi",
-        "Email":"EverardoFlatley@yopmail.com"
-    }

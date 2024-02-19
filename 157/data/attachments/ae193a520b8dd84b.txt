@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Casimer","Address":"16636 Kavon Trail","Phone":"abcdefghi","Email":"DeangeloGulgowski@yopmail.com","CommunityId":"ff2eb3c1-d94f-47ce-9c8c-d26a7a136f35"}}

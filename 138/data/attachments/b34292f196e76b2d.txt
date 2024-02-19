@@ -1,6 +1,0 @@
-  {
-        "Name":"Jamey",
-        "Address":"55075 Roselyn Locks",
-        "Phone":"08071093287",
-        "Email":"RosendoDonnelly@yopmail.com"
-    }

@@ -1,0 +1,6 @@
+  {
+        "Name":"Casper",
+        "Address":"998 Roberts Passage",
+        "Phone":"08010659468",
+        "Email":"ParisHalvorsonyopmailcom"
+    }

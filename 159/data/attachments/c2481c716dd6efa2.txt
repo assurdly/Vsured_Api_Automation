@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Created Community","data":{"Name":"Nathan","Address":"0023 Laney Port","Phone":"08033609081","Email":"EunaLarson@yopmail.com","CommunityId":"61903915-dfbe-436a-bf60-f40947aa1140"}}

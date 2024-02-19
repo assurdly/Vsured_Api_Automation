@@ -6754,25 +6754,7 @@
 							"request": {
 								"method": "GET",
 								"header": [],
-								"url": {
-									"raw": "{{BaseUrl}}/api/community/appointment/:communityId",
-									"host": [
-										"{{BaseUrl}}"
-									],
-									"path": [
-										"api",
-										"community",
-										"appointment",
-										":communityId"
-									],
-									"variable": [
-										{
-											"id": "90b86ce6-c864-4e32-9177-3a4ed076fa88",
-											"key": "communityId",
-											"value": ""
-										}
-									]
-								}
+								"url": "{{BaseUrl}}/api/community/appointment/{{commununityId}}"
 							},
 							"response": []
 						},

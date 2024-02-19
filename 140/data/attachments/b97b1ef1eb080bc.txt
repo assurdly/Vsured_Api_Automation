@@ -1,6 +1,0 @@
-  {
-        "Name":"Iva",
-        "Address":"09014 Avis Ridge",
-        "Phone":"abcdefghi",
-        "Email":"TianaCremin@yopmail.com"
-    }

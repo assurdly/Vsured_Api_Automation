@@ -1,6 +1,0 @@
-  {
-        "Name":"Hunter",
-        "Address":"009 Thompson Turnpike",
-        "Phone":"08093433631",
-        "Email":"HermannWalsh@yopmail.com"
-    }

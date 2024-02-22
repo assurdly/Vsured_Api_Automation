@@ -1,6 +1,0 @@
-  {
-        "Name":"Felicita",
-        "Address":"240 Kuvalis Route",
-        "Phone":"abcdefghi",
-        "Email":"JensenWolf@yopmail.com"
-    }

@@ -1,6 +1,0 @@
-  {
-        "Name":"Jenifer",
-        "Address":"857 Josiah Stravenue",
-        "Phone":"08060072024",
-        "Email":"ZulaHirtheyopmailcom"
-    }

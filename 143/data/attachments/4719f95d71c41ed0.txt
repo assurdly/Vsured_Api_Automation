@@ -1,6 +1,0 @@
-  {
-        "Name":"Madelyn",
-        "Address":"907 Ullrich Walks",
-        "Phone":"08065570719",
-        "Email":"CoreneMorissette@yopmail.com"
-    }

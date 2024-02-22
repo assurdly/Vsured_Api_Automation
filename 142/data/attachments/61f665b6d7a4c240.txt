@@ -1,6 +1,0 @@
-  {
-        "Name":"Andre",
-        "Address":"426 Jamie Points",
-        "Phone":"08003170729",
-        "Email":"RaulMcLaughlin@yopmail.com"
-    }

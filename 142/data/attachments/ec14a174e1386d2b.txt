@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Andre","Address":"426 Jamie Points","Phone":"08003170729","Email":"RaulMcLaughlin@yopmail.com","CommunityId":"d9def770-ba52-40e1-86bc-27ce95af0850"}}

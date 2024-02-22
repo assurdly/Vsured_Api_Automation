@@ -1,0 +1,1 @@
+[{"type":"field","value":"08085941647","msg":"Invalid phone number","path":"Phone","location":"body"},{"type":"field","value":"Julianne12yopmailcom","msg":"A valid email is required","path":"Email","location":"body"}]

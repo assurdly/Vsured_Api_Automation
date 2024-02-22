@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Fetched Community","data":{"Id":611,"CommunityId":"dd975c9c-195a-47b6-bfeb-a4c8689835ec","Name":"Floyd","Address":"040 Gwen View","Phone":"08059599343","Email":"TrudieNaderyopmailcom"}}

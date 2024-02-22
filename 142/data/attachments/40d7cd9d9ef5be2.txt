@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Winston","Address":"29396 Feest Dale","Phone":"abcdefghi","Email":"JaydenStrosin@yopmail.com","CommunityId":"6822d8b8-dd89-4309-98a3-44e45c45ee1a"}}

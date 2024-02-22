@@ -1,1 +1,0 @@
-[{"type":"field","value":"","msg":"Medium is required","path":"Medium","location":"body"}]

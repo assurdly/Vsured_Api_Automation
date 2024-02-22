@@ -1,6 +1,0 @@
-  {
-        "Name":"Domenic",
-        "Address":"192 Nicole Drives",
-        "Phone":"abcdefghi",
-        "Email":"AlexandreNolan@yopmail.com"
-    }

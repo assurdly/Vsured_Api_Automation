@@ -1,5 +1,0 @@
-{
-"NewPassword":"Tester@12",
-"ConfirmPassword":"Tester@12",
-"Channel":"08079135022"
-}

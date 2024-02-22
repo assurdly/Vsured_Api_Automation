@@ -1,6 +1,0 @@
-  {
-        "Name":"Donnie",
-        "Address":"10819 Botsford Inlet",
-        "Phone":"08076619454",
-        "Email":"MargaretLarson@yopmail.com"
-    }

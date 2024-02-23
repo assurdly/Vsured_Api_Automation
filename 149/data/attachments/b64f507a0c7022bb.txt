@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Fetched Community","data":{"Id":632,"CommunityId":"5cb3a81e-a8ba-479a-960b-f164bba912db","Name":"Eddie","Address":"54373 Reynolds Keys","Phone":"08062617812","Email":"ValerieYundtyopmailcom"}}

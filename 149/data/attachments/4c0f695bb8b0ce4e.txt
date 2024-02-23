@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"FirstName":"Jesus","LastName":"Shanahan","Phone":"08057231914","Email":"GeovannyWilkinson@yopmail.com","DOB":"1991-01-01","Gender":"Male","NIN":"23454323456","CommunityId":"5cb3a81e-a8ba-479a-960b-f164bba912db","CheckPoint":"test CheckPoint"}}

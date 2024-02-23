@@ -1,6 +1,0 @@
-  {
-        "Name":"Lauren",
-        "Address":"4387 Loyal Burgs",
-        "Phone":"abcdefghi",
-        "Email":"ReymundoMcKenzie@yopmail.com"
-    }

@@ -1,8 +1,0 @@
-{
-"FirstName":"Alf",
-"LastName":"Hermiston",
-"Phone":"08093781185",
-"Email":"BlazeKoelpin@yopmail.com",
-"PhotoPath":"testpath",
-"CommunityId":"5cb3a81e-a8ba-479a-960b-f164bba912db"
-}

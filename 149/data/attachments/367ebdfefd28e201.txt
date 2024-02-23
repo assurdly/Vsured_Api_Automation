@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Roderick","Address":"9680 Price Ramp","Phone":"08061176189","Email":"DiamondNienow@yopmail.com","CommunityId":"84bbd0a3-59b3-497e-a21a-3a624c93149e"}}

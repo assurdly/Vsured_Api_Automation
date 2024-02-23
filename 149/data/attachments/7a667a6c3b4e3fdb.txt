@@ -1,6 +1,0 @@
-  {
-        "Name":"Roderick",
-        "Address":"9680 Price Ramp",
-        "Phone":"08061176189",
-        "Email":"DiamondNienow@yopmail.com"
-    }

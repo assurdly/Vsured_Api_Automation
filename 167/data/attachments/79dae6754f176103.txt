@@ -1,0 +1,1 @@
+[{"type":"field","value":"08042214686","msg":"Invalid phone number","path":"Phone","location":"body"},{"type":"field","value":"","msg":"Please Pass the User Role","path":"UserRole","location":"body"}]

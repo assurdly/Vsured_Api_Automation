@@ -1,6 +1,0 @@
-  {
-        "Name":"Nico",
-        "Address":"5799 Bins Wells",
-        "Phone":"abcdefghi",
-        "Email":"VitoGibson@yopmail.com"
-    }

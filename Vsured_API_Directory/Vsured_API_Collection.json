@@ -2003,11 +2003,11 @@
 											"\r",
 											"pm.test(\"Verify that message returns Invalid Channel passed\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData[0].msg).to.eql(\"Invalid Channel passed\");\r",
+											"    pm.expect(jsonData.message).to.eql(\"Invalid Channel passed\");\r",
 											"});\r",
 											"pm.test(\"Verify that response status returns failed\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData[0].path).to.eql(\"Invalid Channel passed\");\r",
+											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
 											"});\r",
 											""
 										],

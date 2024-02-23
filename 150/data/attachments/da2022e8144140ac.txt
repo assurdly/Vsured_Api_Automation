@@ -1,6 +1,0 @@
-  {
-        "Name":"Brisa",
-        "Address":"563 Randy Plains",
-        "Phone":"08053143213",
-        "Email":"GreenHerman@yopmail.com"
-    }

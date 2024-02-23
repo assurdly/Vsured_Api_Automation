@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Patsy","Address":"49764 Beier Flats","Phone":"abcdefghi","Email":"AshleighNikolaus@yopmail.com","CommunityId":"74d1be25-2ffe-492d-9fe1-09bd330d8c31"}}

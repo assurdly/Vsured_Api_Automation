@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Brisa","Address":"563 Randy Plains","Phone":"08053143213","Email":"GreenHerman@yopmail.com","CommunityId":"0dbea8e5-c7b4-45f2-aaba-1d9594df7a8c"}}

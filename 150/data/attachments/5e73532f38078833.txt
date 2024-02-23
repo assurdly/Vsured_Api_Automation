@@ -1,6 +1,0 @@
-  {
-        "Name":"Ruth",
-        "Address":"103 Howell Loop",
-        "Phone":"08065678223",
-        "Email":"LilyKuvalisyopmailcom"
-    }

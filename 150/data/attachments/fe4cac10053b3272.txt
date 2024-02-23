@@ -1,6 +1,0 @@
-  {
-        "Name":"Patsy",
-        "Address":"49764 Beier Flats",
-        "Phone":"abcdefghi",
-        "Email":"AshleighNikolaus@yopmail.com"
-    }

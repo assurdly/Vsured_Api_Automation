@@ -1,6 +1,0 @@
-  {
-        "Name":"Lou",
-        "Address":"12526 Alejandra Dale",
-        "Phone":"08029115361",
-        "Email":"AnaisHoppe@yopmail.com"
-    }

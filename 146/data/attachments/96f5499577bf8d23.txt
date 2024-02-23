@@ -1,1 +1,0 @@
-{"status":"Success","message":"Successfully registered user","data":{"FirstName":"Jaida","LastName":"Prosacco","Gender":"Male","Address":"testing address","Phone":"08086265578","Password":"Password@12","Language":"English","CompanyType":"Finance","DOB":"1993-01-01T00:00:00.000Z","Email":"Abelardo12yopmailcom","UserRole":"COMMUNITY_ADMIN","PhotoPath":""}}

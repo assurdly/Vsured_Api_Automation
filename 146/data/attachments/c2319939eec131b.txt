@@ -1,6 +1,0 @@
-  {
-        "Name":"Lindsey",
-        "Address":"765 Selmer Freeway",
-        "Phone":"abcdefghi",
-        "Email":"SandrineGlover@yopmail.com"
-    }

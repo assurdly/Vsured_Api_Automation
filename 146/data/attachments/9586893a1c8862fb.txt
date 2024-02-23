@@ -1,6 +1,0 @@
-  {
-        "Name":"Francesco",
-        "Address":"2808 Huels View",
-        "Phone":"08098479159",
-        "Email":"RobertoCroninyopmailcom"
-    }

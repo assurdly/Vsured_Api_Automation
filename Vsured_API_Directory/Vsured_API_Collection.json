@@ -3961,7 +3961,7 @@
 											"});\r",
 											"pm.test(\"Verify that message returns Phone is required\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData[0].msg).to.eql(\"Phone is required\");\r",
+											"    pm.expect(jsonData[0].msg).to.eql(\"Phone field is required\");\r",
 											"});\r",
 											"pm.test(\"Verify that path returns Phone\", function () {\r",
 											"    var jsonData = pm.response.json();\r",

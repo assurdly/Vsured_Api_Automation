@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Fetched Community","data":{"Id":618,"CommunityId":"7ec0920c-22a9-4c77-9774-00baae05edc7","Name":"Bessie","Address":"728 Hartmann Spring","Phone":"08099837944","Email":"DestineeLebsackyopmailcom"}}

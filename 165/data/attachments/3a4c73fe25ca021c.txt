@@ -1,0 +1,1 @@
+[{"type":"field","value":"08000382822","msg":"Invalid phone number","path":"Phone","location":"body"},{"type":"field","value":"Doyle12yopmailcom","msg":"A valid email is required","path":"Email","location":"body"}]

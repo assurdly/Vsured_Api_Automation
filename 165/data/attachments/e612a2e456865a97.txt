@@ -1,0 +1,1 @@
+[{"type":"field","value":"08050124183","msg":"Invalid phone number","path":"Phone","location":"body"},{"type":"field","value":"","msg":"Password is required","path":"Password","location":"body"},{"type":"field","value":"","msg":"password length must not be less than 6","path":"Password","location":"body"}]

@@ -4692,11 +4692,11 @@
 											"});\r",
 											"pm.test(\"Verify that status returns failed\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.status).to.eql(\"failed\");\r",
+											"    pm.expect(jsonData[0].type).to.eql(\"field\");\r",
 											"});\r",
-											"pm.test(\"Verify that response message returns Failed to create subAdmin\", function () {\r",
+											"pm.test(\"Verify that response message returns LastName field is required\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.message).to.eql(\"Failed to create subAdmin\");\r",
+											"    pm.expect(jsonData[0].msg).to.eql(\"LastName field is required\");\r",
 											"});"
 										],
 										"type": "text/javascript"

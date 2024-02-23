@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Alysha","Address":"7314 Kessler Squares","Phone":"08086380565","Email":"ArturoMcClureyopmailcom","CommunityId":"7ca9d3d9-57ea-49d4-9105-d98da57d1f90"}}

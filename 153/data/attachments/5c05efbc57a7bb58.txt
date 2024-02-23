@@ -1,6 +1,0 @@
-  {
-        "Name":"Kareem",
-        "Address":"4175 Stoltenberg Walk",
-        "Phone":"08074141754",
-        "Email":"KendraVeum@yopmail.com"
-    }

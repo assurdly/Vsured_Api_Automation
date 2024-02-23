@@ -4642,11 +4642,11 @@
 											"});\r",
 											"pm.test(\"Verify that response type returns field\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.type[0]).to.eql(\"field\");\r",
+											"    pm.expect(jsonData[0].type).to.eql(\"field\");\r",
 											"});\r",
 											"pm.test(\"Verify that response message returns FirstName field is required\", function () {\r",
 											"    var jsonData = pm.response.json();\r",
-											"    pm.expect(jsonData.msg[0]).to.eql(\"FirstName field is required\");\r",
+											"    pm.expect(jsonData[0].msg).to.eql(\"FirstName field is required\");\r",
 											"});"
 										],
 										"type": "text/javascript"

@@ -1,6 +1,0 @@
-  {
-        "Name":"Fannie",
-        "Address":"7809 Daugherty Square",
-        "Phone":"08042565481",
-        "Email":"JewellNolanyopmailcom"
-    }

@@ -1,6 +1,0 @@
-  {
-        "Name":"Britney",
-        "Address":"73977 Kadin Square",
-        "Phone":"08056843019",
-        "Email":"UlicesHilpert@yopmail.com"
-    }

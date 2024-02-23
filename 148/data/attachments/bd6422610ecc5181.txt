@@ -1,6 +1,0 @@
-  {
-        "Name":"Teresa",
-        "Address":"7438 Kara Isle",
-        "Phone":"abcdefghi",
-        "Email":"MattGaylord@yopmail.com"
-    }

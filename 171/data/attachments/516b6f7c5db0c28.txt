@@ -1,0 +1,1 @@
+[{"type":"field","value":"08098389230","msg":"Invalid phone number","path":"Phone","location":"body"},{"type":"field","value":"","msg":"Date of Birth is required","path":"DOB","location":"body"}]

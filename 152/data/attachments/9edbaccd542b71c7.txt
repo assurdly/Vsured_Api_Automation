@@ -1,6 +1,0 @@
-  {
-        "Name":"Geovanni",
-        "Address":"789 Ethelyn Key",
-        "Phone":"08069606741",
-        "Email":"DamonHeidenreich@yopmail.com"
-    }

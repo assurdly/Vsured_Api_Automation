@@ -1,6 +1,0 @@
-  {
-        "Name":"Declan",
-        "Address":"24720 Towne Parkways",
-        "Phone":"abcdefghi",
-        "Email":"BrandiRice@yopmail.com"
-    }

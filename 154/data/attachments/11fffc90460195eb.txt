@@ -1,6 +1,0 @@
-  {
-        "Name":"Evan",
-        "Address":"12147 Elna Pine",
-        "Phone":"08071114865",
-        "Email":"TheresiaRogahnyopmailcom"
-    }

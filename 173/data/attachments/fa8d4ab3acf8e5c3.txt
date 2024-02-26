@@ -1,0 +1,6 @@
+  {
+        "Name":"Tristin",
+        "Address":"653 Boehm Station",
+        "Phone":"abcdefghi",
+        "Email":"XzavierPfeffer@yopmail.com"
+    }

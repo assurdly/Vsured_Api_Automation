@@ -1,0 +1,6 @@
+  {
+        "Name":"Garett",
+        "Address":"5473 Balistreri Avenue",
+        "Phone":"abcdefghi",
+        "Email":"LeilaReynolds@yopmail.com"
+    }

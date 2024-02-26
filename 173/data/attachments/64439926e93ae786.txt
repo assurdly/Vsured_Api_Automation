@@ -1,0 +1,6 @@
+  {
+        "Name":"Fred",
+        "Address":"9066 Roberto Forge",
+        "Phone":"08081023087",
+        "Email":"VeronicaWalker@yopmail.com"
+    }

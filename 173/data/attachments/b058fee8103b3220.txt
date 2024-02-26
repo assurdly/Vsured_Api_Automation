@@ -1,0 +1,1 @@
+[{"type":"field","value":"08014083247","msg":"Invalid phone number","path":"Phone","location":"body"},{"type":"field","value":"Elmore12yopmailcom","msg":"A valid email is required","path":"Email","location":"body"}]

@@ -1,0 +1,13 @@
+
+    {
+        "FirstName":"Khalid",
+        "LastName":"Goldner",
+        "Phone":"08057231914",
+        "Email":"QueenieOberbrunner@yopmail.com",
+        "DOB":"1991-01-01",
+        "Gender":"Male",
+        "NIN":"23454323456",
+        "CommunityId":"",
+        "CheckPoint":"test CheckPoint"
+
+    }

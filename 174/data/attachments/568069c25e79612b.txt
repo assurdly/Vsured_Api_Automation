@@ -1,0 +1,1 @@
+[{"type":"field","value":"08060019357","msg":"Invalid phone number","path":"Phone","location":"body"},{"type":"field","value":"Ova12yopmailcom","msg":"A valid email is required","path":"Email","location":"body"}]

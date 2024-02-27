@@ -1,0 +1,8 @@
+{
+"FirstName":"Marcelino",
+"LastName":"Konopelski",
+"Phone":"08093781185",
+"Email":"ZoraTorp@yopmail.com",
+"PhotoPath":"testpath",
+"CommunityId":""
+}

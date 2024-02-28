@@ -1,8 +1,0 @@
-{
-"FirstName":"Gracie",
-"LastName":"Klocko",
-"Phone":"08093781185",
-"Email":"BettyNitzsche@yopmail.com",
-"PhotoPath":"testpath",
-"CommunityId":"d70eae24-6127-4b2e-b541-0613d2a7e675"
-}

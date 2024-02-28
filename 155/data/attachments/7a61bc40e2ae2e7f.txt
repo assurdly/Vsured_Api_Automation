@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Fetched Community","data":{"Id":653,"CommunityId":"d70eae24-6127-4b2e-b541-0613d2a7e675","Name":"Vergie","Address":"40640 Fernando Shore","Phone":"08005996854","Email":"HassieRatkeyopmailcom"}}

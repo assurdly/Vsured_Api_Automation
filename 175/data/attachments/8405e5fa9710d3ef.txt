@@ -1,0 +1,6 @@
+  {
+        "Name":"Conrad",
+        "Address":"342 Ubaldo Station",
+        "Phone":"abcdefghi",
+        "Email":"DeangeloKozey@yopmail.com"
+    }

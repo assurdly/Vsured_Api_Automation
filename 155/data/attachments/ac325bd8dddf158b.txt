@@ -1,6 +1,0 @@
-  {
-        "Name":"Delores",
-        "Address":"401 Jacobs Street",
-        "Phone":"abcdefghi",
-        "Email":"TimmothySawayn@yopmail.com"
-    }

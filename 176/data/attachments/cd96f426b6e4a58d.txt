@@ -1,0 +1,1 @@
+[{"type":"field","value":"08049289411","msg":"Invalid phone number","path":"Phone","location":"body"},{"type":"field","value":"","msg":"A valid email is required","path":"Email","location":"body"}]

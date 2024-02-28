@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Yvonne","Address":"0813 Beth Points","Phone":"abcdefghi","Email":"DeonteKutch@yopmail.com","CommunityId":"0f436cfb-cd9d-4a45-9341-80f3bc334c9d"}}

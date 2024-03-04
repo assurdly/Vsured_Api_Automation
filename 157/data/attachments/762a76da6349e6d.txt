@@ -1,6 +1,0 @@
-  {
-        "Name":"Ariel",
-        "Address":"811 Krajcik Tunnel",
-        "Phone":"abcdefghi",
-        "Email":"HazleO'Conner@yopmail.com"
-    }

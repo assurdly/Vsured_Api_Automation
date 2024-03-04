@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Fetched Community","data":{"Id":667,"CommunityId":"2c74fd66-f314-4303-bc72-47d4f68a3cf2","Name":"Casper","Address":"998 Roberts Passage","Phone":"08010659468","Email":"ParisHalvorsonyopmailcom"}}

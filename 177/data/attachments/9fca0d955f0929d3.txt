@@ -1,0 +1,1 @@
+[{"type":"field","value":"08057231914","msg":"invalid phone number","path":"Phone","location":"body"},{"type":"field","msg":"checkpoint field is required","path":"Checkpoint","location":"body"}]

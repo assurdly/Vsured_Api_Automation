@@ -1,6 +1,0 @@
-  {
-        "Name":"Jerrod",
-        "Address":"96709 Cruickshank Circles",
-        "Phone":"08022031259",
-        "Email":"JameyFrami@yopmail.com"
-    }

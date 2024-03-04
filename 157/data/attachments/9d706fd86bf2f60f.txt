@@ -1,6 +1,0 @@
-  {
-        "Name":"Scottie",
-        "Address":"4156 Ullrich Spur",
-        "Phone":"08095272968",
-        "Email":"BlaiseSchowalteryopmailcom"
-    }

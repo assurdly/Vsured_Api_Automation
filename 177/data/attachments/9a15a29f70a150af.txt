@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Fetched Community","data":{"Id":681,"CommunityId":"0e9ceaaa-8bd0-4bf9-8987-102d3192d9ed","Name":"Waldo","Address":"89565 Volkman Lodge","Phone":"08026314738","Email":"AmyaLedneryopmailcom"}}

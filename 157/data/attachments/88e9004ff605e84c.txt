@@ -1,4 +1,0 @@
-{
-    "Channel":"08145075789",
-    "RefreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoianVzdCBhIHJlZnJlc2ggdG9rZW4iLCJpYXQiOjE3MDgzMjM1NjIsImV4cCI6MTcwODkyODM2Mn0.ABW71juIFL0_TnLz7sEnqJ7Yj7Kfxt6KCDo7d6cLHOQ"
-}

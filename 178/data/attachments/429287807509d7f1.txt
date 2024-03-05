@@ -1,0 +1,13 @@
+
+    {
+        "FirstName":"Javon",
+        "LastName":"Carroll",
+        "Phone":"08057231914",
+        "Email":"ElmerSchaefer@yopmail.com",
+        "DOB":"1991-01-01",
+        "Gender":"Male",
+        "NIN":"23454323456",
+        "CommunityId":"0e9ceaaa-8bd0-4bf9-8987-102d3192d9ed",
+        "CheckPoint":"test CheckPoint"
+
+    }

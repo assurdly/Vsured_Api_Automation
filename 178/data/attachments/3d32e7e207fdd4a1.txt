@@ -1,0 +1,1 @@
+[{"type":"field","value":"08089521943","msg":"invalid phone number","path":"Phone","location":"body"},{"type":"field","value":"MayaLittelyopmailcom","msg":"inavlid Email","path":"Email","location":"body"},{"type":"field","msg":"Community field is required","path":"CommunityId","location":"body"}]

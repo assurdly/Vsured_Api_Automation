@@ -1,8 +1,0 @@
-{
-"FirstName":"Josefina",
-"LastName":"Streich",
-"Phone":"08093781185",
-"Email":"PriceReilly@yopmail.com",
-"PhotoPath":"testpath",
-"CommunityId":""
-}

@@ -1,6 +1,0 @@
-  {
-        "Name":"Alex",
-        "Address":"79727 Zetta Port",
-        "Phone":"08006862261",
-        "Email":"JacquelynSchaden@yopmail.com"
-    }

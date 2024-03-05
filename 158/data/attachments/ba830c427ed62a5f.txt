@@ -1,6 +1,0 @@
-  {
-        "Name":"",
-        "Address":"test address 2",
-        "Phone":"08093781185",
-        "Email":"alexanderprofesssor@gmail.com"
-    }

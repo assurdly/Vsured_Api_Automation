@@ -1,6 +1,0 @@
-  {
-        "Name":"Hiram",
-        "Address":"550 Brekke Oval",
-        "Phone":"08078255709",
-        "Email":"DonnaDuBuqueyopmailcom"
-    }

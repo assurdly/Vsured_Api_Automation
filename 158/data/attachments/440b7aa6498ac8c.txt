@@ -1,1 +1,0 @@
-{"status":"Success","message":"Successfully registered user","data":{"FirstName":"Harmon","LastName":"Walter","Gender":"Male","Address":"testing address","Phone":"08005297555","Password":"Password@12","Language":"English","CompanyType":"Finance","DOB":"1993-01-01T00:00:00.000Z","Email":"Uriel12yopmailcom","UserRole":"COMMUNITY_ADMIN","PhotoPath":""}}

@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Leonardo","Address":"838 Turcotte Tunnel","Phone":"08078941505","Email":"PeterCasper@yopmail.com","CommunityId":"4d887283-e2b7-4512-b7bc-9da9d1b8cb01"}}

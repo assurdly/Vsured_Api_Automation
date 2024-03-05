@@ -1,6 +1,0 @@
-  {
-        "Name":"Leonardo",
-        "Address":"838 Turcotte Tunnel",
-        "Phone":"08078941505",
-        "Email":"PeterCasper@yopmail.com"
-    }

@@ -1,6 +1,0 @@
-  {
-        "Name":"Sofia",
-        "Address":"972 Connie Lock",
-        "Phone":"08035399263",
-        "Email":"MosheGradyyopmailcom"
-    }

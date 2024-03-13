@@ -1,6 +1,0 @@
-  {
-        "Name":"Imani",
-        "Address":"8053 Harris Flats",
-        "Phone":"abcdefghi",
-        "Email":"LuellaSpinka@yopmail.com"
-    }

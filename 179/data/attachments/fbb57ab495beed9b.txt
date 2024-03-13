@@ -1,0 +1,4 @@
+{
+    "Channel":"Lupe",
+    "Token":"000000"
+}

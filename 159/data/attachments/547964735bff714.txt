@@ -1,1 +1,0 @@
-{"status":"success","message":"Successfully Created Community","data":{"Name":"Naomi","Address":"743 Pouros Crossing","Phone":"abcdefghi","Email":"MervinJohns@yopmail.com","CommunityId":"9c6a3cf9-5b80-486b-8ffe-cacd466ec776"}}

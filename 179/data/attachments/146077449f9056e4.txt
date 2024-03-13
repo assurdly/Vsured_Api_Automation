@@ -1,0 +1,6 @@
+  {
+        "Name":"Darius",
+        "Address":"12249 Amari View",
+        "Phone":"abcdefghi",
+        "Email":"DaphneyJenkins@yopmail.com"
+    }

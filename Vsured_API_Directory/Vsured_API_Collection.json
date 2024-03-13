@@ -150,7 +150,8 @@
 											"\r",
 											"    pm.collectionVariables.set('phoneNumber', formattedPhoneNumber)"
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								},
 								{
@@ -179,7 +180,8 @@
 											"})\r",
 											""
 										],
-										"type": "text/javascript"
+										"type": "text/javascript",
+										"packages": {}
 									}
 								}
 							],
@@ -200,7 +202,7 @@
 										},
 										{
 											"key": "FirstName",
-											"value": "{{$randomFirstName}}",
+											"value": "Gee",
 											"type": "text"
 										},
 										{
@@ -210,7 +212,7 @@
 										},
 										{
 											"key": "Gender",
-											"value": "Male",
+											"value": "Female",
 											"type": "text"
 										},
 										{
@@ -220,12 +222,12 @@
 										},
 										{
 											"key": "Phone",
-											"value": "{{phoneNumber}}",
+											"value": "08035530336",
 											"type": "text"
 										},
 										{
 											"key": "Password",
-											"value": "Password@12",
+											"value": "Password@1",
 											"type": "text"
 										},
 										{
@@ -245,7 +247,7 @@
 										},
 										{
 											"key": "Email",
-											"value": "{{$randomFirstName}}12@yopmail.com",
+											"value": "{{$randomFirstName}}@mailsac.com",
 											"type": "text"
 										},
 										{

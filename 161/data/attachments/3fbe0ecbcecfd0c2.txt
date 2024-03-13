@@ -1,6 +1,0 @@
-  {
-        "Name":"Jeffry",
-        "Address":"1186 Kunze Pass",
-        "Phone":"08068178015",
-        "Email":"ValentineLindgrenyopmailcom"
-    }

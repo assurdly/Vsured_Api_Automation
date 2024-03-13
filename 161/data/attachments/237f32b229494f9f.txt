@@ -1,6 +1,0 @@
-  {
-        "Name":"Maximillian",
-        "Address":"9531 Mante Village",
-        "Phone":"abcdefghi",
-        "Email":"LibbieKlein@yopmail.com"
-    }

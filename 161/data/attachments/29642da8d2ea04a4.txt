@@ -1,6 +1,0 @@
-  {
-        "Name":"Conrad",
-        "Address":"7040 Lauren Well",
-        "Phone":"08061873381",
-        "Email":"DeonRau@yopmail.com"
-    }

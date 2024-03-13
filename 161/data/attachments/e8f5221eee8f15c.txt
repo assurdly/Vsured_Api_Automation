@@ -1,8 +1,0 @@
-{
-"FirstName":"Curtis",
-"LastName":"Daugherty",
-"Phone":"08093781185",
-"Email":"FlorineWindler@yopmail.com",
-"PhotoPath":"testpath",
-"CommunityId":"0e9ceaaa-8bd0-4bf9-8987-102d3192d9ed"
-}

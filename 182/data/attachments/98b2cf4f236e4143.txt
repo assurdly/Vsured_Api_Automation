@@ -1,0 +1,1 @@
+{"status":"success","message":"Successfully Fetched Community","data":{"Id":686,"CommunityId":"COM 7d9e9d182169","Name":"Alex","Address":"aaaaaaaaa","Phone":"+2348145075789","Email":"alex@gmail.com","IsActive":1}}

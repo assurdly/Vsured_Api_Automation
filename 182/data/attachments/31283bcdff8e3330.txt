@@ -1,0 +1,1 @@
+[{"type":"field","value":"08056037718","msg":"invalid phone number","path":"Phone","location":"body"},{"type":"field","value":"HollyDuBuqueyopmailcom","msg":"inavlid Email","path":"Email","location":"body"}]

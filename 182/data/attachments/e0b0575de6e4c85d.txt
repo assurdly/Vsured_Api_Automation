@@ -1,0 +1,13 @@
+
+    {
+        "FirstName":"Hillary",
+        "LastName":"Boehm",
+        "Phone":"08057231914",
+        "Email":"VanKihn@yopmail.com",
+        "DOB":"1991-01-01",
+        "Gender":"Male",
+        "NIN":"23454323456",
+        "CommunityId":"COM 7d9e9d182169",
+        "CheckPoint":"test CheckPoint"
+
+    }

@@ -1,1 +1,0 @@
-[{"type":"field","value":"08058706465","msg":"Invalid phone number","path":"Phone","location":"body"},{"type":"field","value":"","msg":"A valid email is required","path":"Email","location":"body"}]

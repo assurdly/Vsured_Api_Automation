@@ -1,6 +1,0 @@
-  {
-        "Name":"Alphonso",
-        "Address":"34112 Ottis Extensions",
-        "Phone":"08084637458",
-        "Email":"HillardHauckyopmailcom"
-    }

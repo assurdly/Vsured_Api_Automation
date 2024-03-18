@@ -1,6 +1,0 @@
-  {
-        "Name":"Jana",
-        "Address":"6279 Zion Fields",
-        "Phone":"08042239960",
-        "Email":"KarleeMetz@yopmail.com"
-    }

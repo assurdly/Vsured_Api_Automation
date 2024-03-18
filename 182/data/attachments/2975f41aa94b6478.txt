@@ -1,0 +1,1 @@
+[{"type":"field","value":"08035353153","msg":"Invalid phone number","path":"Phone","location":"body"},{"type":"field","value":"","msg":"Date of Birth must be in YYYY-MM-DD format","path":"DOB","location":"body"}]

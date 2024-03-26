@@ -1,6 +1,0 @@
-  {
-        "Name":"Rosa",
-        "Address":"90272 Douglas Walks",
-        "Phone":"08012926843",
-        "Email":"HoraceLeuschke@yopmail.com"
-    }

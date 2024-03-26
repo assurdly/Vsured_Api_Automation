@@ -1,6 +1,0 @@
-  {
-        "Name":"Trenton",
-        "Address":"13037 Garret Squares",
-        "Phone":"abcdefghi",
-        "Email":"SoniaWill@yopmail.com"
-    }

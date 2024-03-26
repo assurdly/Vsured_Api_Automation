@@ -1,4 +1,0 @@
-{
-    "Channel":"Rhea",
-    "Token":"000000"
-}

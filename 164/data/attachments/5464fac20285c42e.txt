@@ -1,6 +1,0 @@
-  {
-        "Name":"Marge",
-        "Address":"869 Abraham Forge",
-        "Phone":"08056987627",
-        "Email":"FrederickJast@yopmail.com"
-    }

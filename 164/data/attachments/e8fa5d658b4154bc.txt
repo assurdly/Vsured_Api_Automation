@@ -1,1 +1,0 @@
-[{"type":"field","value":"08030476051","msg":"Invalid phone number","path":"Phone","location":"body"},{"type":"field","value":"Justen12yopmailcom","msg":"A valid email is required","path":"Email","location":"body"}]

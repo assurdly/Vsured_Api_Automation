@@ -1,1 +1,0 @@
-[{"type":"field","value":"08001952456","msg":"Invalid phone number","path":"Phone","location":"body"},{"type":"field","value":"","msg":"Language is required","path":"Language","location":"body"}]

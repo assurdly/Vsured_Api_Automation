@@ -1,6 +1,0 @@
-  {
-        "Name":"Bethany",
-        "Address":"1256 Noemi Estate",
-        "Phone":"08030921451",
-        "Email":"GarnettHoweyopmailcom"
-    }

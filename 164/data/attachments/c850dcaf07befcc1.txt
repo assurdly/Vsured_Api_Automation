@@ -1,4 +1,0 @@
-{
-    "Channel":"abgjlout",
-    "Medium":"SMS"
-}
